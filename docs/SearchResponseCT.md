@@ -14,5 +14,5 @@ Name | Type | Description | Notes
 **unrecognized** | [**list[Filter]**](Filter.md) | The array of filters that were not recognized by the MolecularMatch search engine. | [optional] 
 **ambiguous_narrative** | **list[str]** | if true include a human readable ambiguous narrative.  This enables the consumer to activate \&quot;did you mean\&quot; search capability. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

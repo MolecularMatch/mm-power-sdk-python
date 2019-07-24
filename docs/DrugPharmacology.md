@@ -15,5 +15,5 @@ Name | Type | Description | Notes
 **volume_of_distribution** | **str** | The Vd of a drug represents the degree to which it is distributed into body tissue compared to the plasma. | [optional] 
 **clearance** | **str** | A pharmacokinetic measurement of the rate of removal of the drug from plasma, expressed as mL/min; reflects the rate of elimination of the drug. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

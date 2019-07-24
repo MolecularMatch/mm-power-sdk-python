@@ -14,5 +14,5 @@ Name | Type | Description | Notes
 **generated_by_term** | **str** | The inferring term. | [optional] 
 **alias** | **str** | The displayable form of the term. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

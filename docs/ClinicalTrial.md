@@ -52,5 +52,5 @@ Name | Type | Description | Notes
 **tags** | [**list[ClinicalTrialTags]**](ClinicalTrialTags.md) | Concept associations established for this trial. | [optional] 
 **molecular_alterations** | [**list[ClinicalTrialMolecularAlterations]**](ClinicalTrialMolecularAlterations.md) | Molecular concept associations established for this trial. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

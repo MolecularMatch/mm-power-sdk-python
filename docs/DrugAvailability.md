@@ -10,5 +10,5 @@ Name | Type | Description | Notes
 **pre_market_cancelled** | **bool** | Whether the drug was cancelled before market-availability. | 
 **post_market_cancelled** | **bool** | Whether the drug was cancelled after market-availability. | 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

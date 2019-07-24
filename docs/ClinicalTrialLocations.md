@@ -29,5 +29,5 @@ Name | Type | Description | Notes
 **email_backup** | **str** | Site backup contact email address. | [optional] 
 **is_in_institution** | **bool** | If an institutionId was provided for search, indicates if this site is associated with the institution. | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

@@ -14,5 +14,5 @@ Name | Type | Description | Notes
 **exclude_filter_only** | **bool** | To create a soft include filter, add excludeFilterOnly&#x3D;true (and specify filterType of include. | [optional] 
 **error** | **str** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 

@@ -9,5 +9,5 @@ Name | Type | Description | Notes
 **arm_group_label** | **list[str]** | If multiple Arms or Groups have been specified, indicate which Arm Groups this intervention applies to. | [optional] 
 **other_name** | **list[str]** |  | [optional] 
 
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
 
