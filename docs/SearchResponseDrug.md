@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **total** | **int** | The total number of records that match this search. | 
 **total_pages** | **int** | The number of results pages for this search based on the limit provided in the request. | 
 **page** | **int** | The results page number this response corresponds to. | 
-**rows** | [**list[SearchResponseDrugRows]**](SearchResponseDrugRows.md) | The array of results records.  Rows must be cast accordingly to ct, drug, publication, etc. | [optional] 
+**rows** | [**list[SearchResponseDrugRows]**](SearchResponseDrugRows.md) | The array of drugs that match the search criteria. | [optional] 
 **rationalized** | [**list[Filter]**](Filter.md) | The array of filters and how they were interpreted by the MolecularMatch search engine. | [optional] 
 **unrecognized** | [**list[Filter]**](Filter.md) | The array of filters that were not recognized by the MolecularMatch search engine. | [optional] 
 **ambiguous_narrative** | **list[str]** | if true include a human readable ambiguous narrative.  This enables the consumer to activate \&quot;did you mean\&quot; search capability. | [optional] 

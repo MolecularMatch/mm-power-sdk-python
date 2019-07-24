@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.object import Object  # noqa: F401,E501
 
 
 class DrugExternalIds(object):
@@ -32,36 +31,32 @@ class DrugExternalIds(object):
     swagger_types = {
         'resource': 'str',
         'identifier': 'str',
-        'url': 'str',
-        'custom': 'Object'
+        'url': 'str'
     }
 
     attribute_map = {
         'resource': 'resource',
         'identifier': 'identifier',
-        'url': 'url',
-        'custom': 'custom'
+        'url': 'url'
     }
 
-    def __init__(self, resource=None, identifier=None, url=None, custom=None):  # noqa: E501
+    def __init__(self, resource=None, identifier=None, url=None):  # noqa: E501
         """DrugExternalIds - a model defined in Swagger"""  # noqa: E501
         self._resource = None
         self._identifier = None
         self._url = None
-        self._custom = None
         self.discriminator = None
         self.resource = resource
         if identifier is not None:
             self.identifier = identifier
         if url is not None:
             self.url = url
-        if custom is not None:
-            self.custom = custom
 
     @property
     def resource(self):
         """Gets the resource of this DrugExternalIds.  # noqa: E501
 
+        Name of the source database.  # noqa: E501
 
         :return: The resource of this DrugExternalIds.  # noqa: E501
         :rtype: str
@@ -72,6 +67,7 @@ class DrugExternalIds(object):
     def resource(self, resource):
         """Sets the resource of this DrugExternalIds.
 
+        Name of the source database.  # noqa: E501
 
         :param resource: The resource of this DrugExternalIds.  # noqa: E501
         :type: str
@@ -85,6 +81,7 @@ class DrugExternalIds(object):
     def identifier(self):
         """Gets the identifier of this DrugExternalIds.  # noqa: E501
 
+        Identifier for this drug in the given resource.  # noqa: E501
 
         :return: The identifier of this DrugExternalIds.  # noqa: E501
         :rtype: str
@@ -95,6 +92,7 @@ class DrugExternalIds(object):
     def identifier(self, identifier):
         """Sets the identifier of this DrugExternalIds.
 
+        Identifier for this drug in the given resource.  # noqa: E501
 
         :param identifier: The identifier of this DrugExternalIds.  # noqa: E501
         :type: str
@@ -106,6 +104,7 @@ class DrugExternalIds(object):
     def url(self):
         """Gets the url of this DrugExternalIds.  # noqa: E501
 
+        The URL for this drug in the given resource.  # noqa: E501
 
         :return: The url of this DrugExternalIds.  # noqa: E501
         :rtype: str
@@ -116,33 +115,13 @@ class DrugExternalIds(object):
     def url(self, url):
         """Sets the url of this DrugExternalIds.
 
+        The URL for this drug in the given resource.  # noqa: E501
 
         :param url: The url of this DrugExternalIds.  # noqa: E501
         :type: str
         """
 
         self._url = url
-
-    @property
-    def custom(self):
-        """Gets the custom of this DrugExternalIds.  # noqa: E501
-
-
-        :return: The custom of this DrugExternalIds.  # noqa: E501
-        :rtype: Object
-        """
-        return self._custom
-
-    @custom.setter
-    def custom(self, custom):
-        """Sets the custom of this DrugExternalIds.
-
-
-        :param custom: The custom of this DrugExternalIds.  # noqa: E501
-        :type: Object
-        """
-
-        self._custom = custom
 
     def to_dict(self):
         """Returns the model properties as a dict"""

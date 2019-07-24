@@ -29,8 +29,6 @@ class DrugBrands(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'suppress': 'bool',
-        'custom': 'bool',
         'primary': 'bool',
         'composite_key': 'str',
         'indications': 'str',
@@ -40,8 +38,6 @@ class DrugBrands(object):
     }
 
     attribute_map = {
-        'suppress': 'suppress',
-        'custom': 'custom',
         'primary': 'primary',
         'composite_key': 'compositeKey',
         'indications': 'indications',
@@ -50,10 +46,8 @@ class DrugBrands(object):
         'manufacturer': 'manufacturer'
     }
 
-    def __init__(self, suppress=None, custom=None, primary=None, composite_key=None, indications=None, mechanism=None, name=None, manufacturer=None):  # noqa: E501
+    def __init__(self, primary=None, composite_key=None, indications=None, mechanism=None, name=None, manufacturer=None):  # noqa: E501
         """DrugBrands - a model defined in Swagger"""  # noqa: E501
-        self._suppress = None
-        self._custom = None
         self._primary = None
         self._composite_key = None
         self._indications = None
@@ -61,10 +55,6 @@ class DrugBrands(object):
         self._name = None
         self._manufacturer = None
         self.discriminator = None
-        if suppress is not None:
-            self.suppress = suppress
-        if custom is not None:
-            self.custom = custom
         if primary is not None:
             self.primary = primary
         self.composite_key = composite_key
@@ -74,48 +64,6 @@ class DrugBrands(object):
             self.mechanism = mechanism
         self.name = name
         self.manufacturer = manufacturer
-
-    @property
-    def suppress(self):
-        """Gets the suppress of this DrugBrands.  # noqa: E501
-
-
-        :return: The suppress of this DrugBrands.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress
-
-    @suppress.setter
-    def suppress(self, suppress):
-        """Sets the suppress of this DrugBrands.
-
-
-        :param suppress: The suppress of this DrugBrands.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress = suppress
-
-    @property
-    def custom(self):
-        """Gets the custom of this DrugBrands.  # noqa: E501
-
-
-        :return: The custom of this DrugBrands.  # noqa: E501
-        :rtype: bool
-        """
-        return self._custom
-
-    @custom.setter
-    def custom(self, custom):
-        """Sets the custom of this DrugBrands.
-
-
-        :param custom: The custom of this DrugBrands.  # noqa: E501
-        :type: bool
-        """
-
-        self._custom = custom
 
     @property
     def primary(self):

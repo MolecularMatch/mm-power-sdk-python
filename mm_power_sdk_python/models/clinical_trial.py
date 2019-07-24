@@ -18,6 +18,7 @@ from mm_power_sdk_python.models.clinical_trial_arm_groups import ClinicalTrialAr
 from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCountries  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_eligibility import ClinicalTrialEligibility  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_interventions import ClinicalTrialInterventions  # noqa: F401,E501
+from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_locations import ClinicalTrialLocations  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_molecular_alterations import ClinicalTrialMolecularAlterations  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_overall_contact import ClinicalTrialOverallContact  # noqa: F401,E501
@@ -79,6 +80,7 @@ class ClinicalTrial(object):
         'overall_official': 'list[ClinicalTrialOverallOfficial]',
         'overall_contact': 'ClinicalTrialOverallContact',
         'overall_contact_backup': 'ClinicalTrialOverallContactBackup',
+        'location_summary': 'ClinicalTrialLocationSummary',
         'locations': 'list[ClinicalTrialLocations]',
         'countries': 'list[ClinicalTrialCountries]',
         'inclusion_criteria': 'str',
@@ -129,6 +131,7 @@ class ClinicalTrial(object):
         'overall_official': 'overallOfficial',
         'overall_contact': 'overallContact',
         'overall_contact_backup': 'overallContactBackup',
+        'location_summary': 'locationSummary',
         'locations': 'locations',
         'countries': 'countries',
         'inclusion_criteria': 'inclusionCriteria',
@@ -142,7 +145,7 @@ class ClinicalTrial(object):
         'molecular_alterations': 'molecularAlterations'
     }
 
-    def __init__(self, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase=None, study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None):  # noqa: E501
+    def __init__(self, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase=None, study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None):  # noqa: E501
         """ClinicalTrial - a model defined in Swagger"""  # noqa: E501
         self._mboost = None
         self._import_date = None
@@ -180,6 +183,7 @@ class ClinicalTrial(object):
         self._overall_official = None
         self._overall_contact = None
         self._overall_contact_backup = None
+        self._location_summary = None
         self._locations = None
         self._countries = None
         self._inclusion_criteria = None
@@ -260,6 +264,8 @@ class ClinicalTrial(object):
             self.overall_contact = overall_contact
         if overall_contact_backup is not None:
             self.overall_contact_backup = overall_contact_backup
+        if location_summary is not None:
+            self.location_summary = location_summary
         if locations is not None:
             self.locations = locations
         if countries is not None:
@@ -544,6 +550,7 @@ class ClinicalTrial(object):
     def status(self):
         """Gets the status of this ClinicalTrial.  # noqa: E501
 
+        Trial recruiting status.  # noqa: E501
 
         :return: The status of this ClinicalTrial.  # noqa: E501
         :rtype: str
@@ -554,6 +561,7 @@ class ClinicalTrial(object):
     def status(self, status):
         """Sets the status of this ClinicalTrial.
 
+        Trial recruiting status.  # noqa: E501
 
         :param status: The status of this ClinicalTrial.  # noqa: E501
         :type: str
@@ -678,6 +686,7 @@ class ClinicalTrial(object):
     def first_received_date(self):
         """Gets the first_received_date of this ClinicalTrial.  # noqa: E501
 
+        The date on which the study sponsor or investigator first submitted a study record to the trial registry (see source field).  # noqa: E501
 
         :return: The first_received_date of this ClinicalTrial.  # noqa: E501
         :rtype: datetime
@@ -688,6 +697,7 @@ class ClinicalTrial(object):
     def first_received_date(self, first_received_date):
         """Sets the first_received_date of this ClinicalTrial.
 
+        The date on which the study sponsor or investigator first submitted a study record to the trial registry (see source field).  # noqa: E501
 
         :param first_received_date: The first_received_date of this ClinicalTrial.  # noqa: E501
         :type: datetime
@@ -699,6 +709,7 @@ class ClinicalTrial(object):
     def last_changed_date(self):
         """Gets the last_changed_date of this ClinicalTrial.  # noqa: E501
 
+        The most recent date that any information was updated for this trial.  # noqa: E501
 
         :return: The last_changed_date of this ClinicalTrial.  # noqa: E501
         :rtype: datetime
@@ -709,6 +720,7 @@ class ClinicalTrial(object):
     def last_changed_date(self, last_changed_date):
         """Sets the last_changed_date of this ClinicalTrial.
 
+        The most recent date that any information was updated for this trial.  # noqa: E501
 
         :param last_changed_date: The last_changed_date of this ClinicalTrial.  # noqa: E501
         :type: datetime
@@ -743,6 +755,7 @@ class ClinicalTrial(object):
     def sponsors(self):
         """Gets the sponsors of this ClinicalTrial.  # noqa: E501
 
+        The list of organizations or persons who initiated the study and who have authority and control over the study.  # noqa: E501
 
         :return: The sponsors of this ClinicalTrial.  # noqa: E501
         :rtype: list[ClinicalTrialSponsors]
@@ -753,6 +766,7 @@ class ClinicalTrial(object):
     def sponsors(self, sponsors):
         """Sets the sponsors of this ClinicalTrial.
 
+        The list of organizations or persons who initiated the study and who have authority and control over the study.  # noqa: E501
 
         :param sponsors: The sponsors of this ClinicalTrial.  # noqa: E501
         :type: list[ClinicalTrialSponsors]
@@ -764,6 +778,7 @@ class ClinicalTrial(object):
     def conditions(self):
         """Gets the conditions of this ClinicalTrial.  # noqa: E501
 
+        Diseases/Conditions related to this trial.  # noqa: E501
 
         :return: The conditions of this ClinicalTrial.  # noqa: E501
         :rtype: list[str]
@@ -774,6 +789,7 @@ class ClinicalTrial(object):
     def conditions(self, conditions):
         """Sets the conditions of this ClinicalTrial.
 
+        Diseases/Conditions related to this trial.  # noqa: E501
 
         :param conditions: The conditions of this ClinicalTrial.  # noqa: E501
         :type: list[str]
@@ -1096,9 +1112,31 @@ class ClinicalTrial(object):
         self._overall_contact_backup = overall_contact_backup
 
     @property
+    def location_summary(self):
+        """Gets the location_summary of this ClinicalTrial.  # noqa: E501
+
+
+        :return: The location_summary of this ClinicalTrial.  # noqa: E501
+        :rtype: ClinicalTrialLocationSummary
+        """
+        return self._location_summary
+
+    @location_summary.setter
+    def location_summary(self, location_summary):
+        """Sets the location_summary of this ClinicalTrial.
+
+
+        :param location_summary: The location_summary of this ClinicalTrial.  # noqa: E501
+        :type: ClinicalTrialLocationSummary
+        """
+
+        self._location_summary = location_summary
+
+    @property
     def locations(self):
         """Gets the locations of this ClinicalTrial.  # noqa: E501
 
+        Information about the sites offering this trial.  # noqa: E501
 
         :return: The locations of this ClinicalTrial.  # noqa: E501
         :rtype: list[ClinicalTrialLocations]
@@ -1109,6 +1147,7 @@ class ClinicalTrial(object):
     def locations(self, locations):
         """Sets the locations of this ClinicalTrial.
 
+        Information about the sites offering this trial.  # noqa: E501
 
         :param locations: The locations of this ClinicalTrial.  # noqa: E501
         :type: list[ClinicalTrialLocations]
@@ -1120,7 +1159,7 @@ class ClinicalTrial(object):
     def countries(self):
         """Gets the countries of this ClinicalTrial.  # noqa: E501
 
-        Countries with locations offering this trial.  # noqa: E501
+        Countries with sites offering this trial.  # noqa: E501
 
         :return: The countries of this ClinicalTrial.  # noqa: E501
         :rtype: list[ClinicalTrialCountries]
@@ -1131,7 +1170,7 @@ class ClinicalTrial(object):
     def countries(self, countries):
         """Sets the countries of this ClinicalTrial.
 
-        Countries with locations offering this trial.  # noqa: E501
+        Countries with sites offering this trial.  # noqa: E501
 
         :param countries: The countries of this ClinicalTrial.  # noqa: E501
         :type: list[ClinicalTrialCountries]

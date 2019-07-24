@@ -235,7 +235,7 @@ class SearchResponsePublication(object):
     def rows(self):
         """Gets the rows of this SearchResponsePublication.  # noqa: E501
 
-        The array of results records.  Rows must be cast accordingly to ct, drug, publication, etc.  # noqa: E501
+        The array of publications that match the search criteria.  # noqa: E501
 
         :return: The rows of this SearchResponsePublication.  # noqa: E501
         :rtype: list[Publication]
@@ -246,7 +246,7 @@ class SearchResponsePublication(object):
     def rows(self, rows):
         """Sets the rows of this SearchResponsePublication.
 
-        The array of results records.  Rows must be cast accordingly to ct, drug, publication, etc.  # noqa: E501
+        The array of publications that match the search criteria.  # noqa: E501
 
         :param rows: The rows of this SearchResponsePublication.  # noqa: E501
         :type: list[Publication]

@@ -107,6 +107,7 @@ class DrugSynonyms(object):
     def name(self):
         """Gets the name of this DrugSynonyms.  # noqa: E501
 
+        Alternative name.  # noqa: E501
 
         :return: The name of this DrugSynonyms.  # noqa: E501
         :rtype: str
@@ -117,6 +118,7 @@ class DrugSynonyms(object):
     def name(self, name):
         """Sets the name of this DrugSynonyms.
 
+        Alternative name.  # noqa: E501
 
         :param name: The name of this DrugSynonyms.  # noqa: E501
         :type: str

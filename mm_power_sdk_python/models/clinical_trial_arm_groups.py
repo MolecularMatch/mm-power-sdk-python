@@ -56,6 +56,7 @@ class ClinicalTrialArmGroups(object):
     def arm_group_label(self):
         """Gets the arm_group_label of this ClinicalTrialArmGroups.  # noqa: E501
 
+        A label describing a group or subgroup of participants in a clinical trial that receives a specific intervention/treatment, or no intervention, according to the trial's protocol.  # noqa: E501
 
         :return: The arm_group_label of this ClinicalTrialArmGroups.  # noqa: E501
         :rtype: str
@@ -66,6 +67,7 @@ class ClinicalTrialArmGroups(object):
     def arm_group_label(self, arm_group_label):
         """Sets the arm_group_label of this ClinicalTrialArmGroups.
 
+        A label describing a group or subgroup of participants in a clinical trial that receives a specific intervention/treatment, or no intervention, according to the trial's protocol.  # noqa: E501
 
         :param arm_group_label: The arm_group_label of this ClinicalTrialArmGroups.  # noqa: E501
         :type: str
@@ -79,6 +81,7 @@ class ClinicalTrialArmGroups(object):
     def arm_group_type(self):
         """Gets the arm_group_type of this ClinicalTrialArmGroups.  # noqa: E501
 
+        A general description of the clinical trial arm. It identifies the role of the intervention that participants receive. Types of arms include experimental arm, active comparator arm, placebo comparator arm, sham comparator arm, and no intervention arm.  # noqa: E501
 
         :return: The arm_group_type of this ClinicalTrialArmGroups.  # noqa: E501
         :rtype: str
@@ -89,6 +92,7 @@ class ClinicalTrialArmGroups(object):
     def arm_group_type(self, arm_group_type):
         """Sets the arm_group_type of this ClinicalTrialArmGroups.
 
+        A general description of the clinical trial arm. It identifies the role of the intervention that participants receive. Types of arms include experimental arm, active comparator arm, placebo comparator arm, sham comparator arm, and no intervention arm.  # noqa: E501
 
         :param arm_group_type: The arm_group_type of this ClinicalTrialArmGroups.  # noqa: E501
         :type: str
@@ -100,6 +104,7 @@ class ClinicalTrialArmGroups(object):
     def description(self):
         """Gets the description of this ClinicalTrialArmGroups.  # noqa: E501
 
+        A description of a group or subgroup of participants in a clinical trial that receives a specific intervention/treatment, or no intervention, according to the trial's protocol.  # noqa: E501
 
         :return: The description of this ClinicalTrialArmGroups.  # noqa: E501
         :rtype: str
@@ -110,6 +115,7 @@ class ClinicalTrialArmGroups(object):
     def description(self, description):
         """Sets the description of this ClinicalTrialArmGroups.
 
+        A description of a group or subgroup of participants in a clinical trial that receives a specific intervention/treatment, or no intervention, according to the trial's protocol.  # noqa: E501
 
         :param description: The description of this ClinicalTrialArmGroups.  # noqa: E501
         :type: str

@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**suppress** | **bool** |  | [optional] 
-**custom** | **bool** |  | [optional] 
 **primary** | **bool** |  | [optional] 
 **composite_key** | **str** |  | 
 **indications** | **str** |  | [optional] 

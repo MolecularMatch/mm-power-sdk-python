@@ -57,6 +57,7 @@ class DrugDosages(object):
     def form(self):
         """Gets the form of this DrugDosages.  # noqa: E501
 
+        The pharmaceutical formulation by which the drug is introduced into the body.  # noqa: E501
 
         :return: The form of this DrugDosages.  # noqa: E501
         :rtype: str
@@ -67,6 +68,7 @@ class DrugDosages(object):
     def form(self, form):
         """Sets the form of this DrugDosages.
 
+        The pharmaceutical formulation by which the drug is introduced into the body.  # noqa: E501
 
         :param form: The form of this DrugDosages.  # noqa: E501
         :type: str
@@ -78,6 +80,7 @@ class DrugDosages(object):
     def route(self):
         """Gets the route of this DrugDosages.  # noqa: E501
 
+        The path by which the drug or product is taken into the body.  # noqa: E501
 
         :return: The route of this DrugDosages.  # noqa: E501
         :rtype: str
@@ -88,6 +91,7 @@ class DrugDosages(object):
     def route(self, route):
         """Sets the route of this DrugDosages.
 
+        The path by which the drug or product is taken into the body.  # noqa: E501
 
         :param route: The route of this DrugDosages.  # noqa: E501
         :type: str
@@ -99,6 +103,7 @@ class DrugDosages(object):
     def strength(self):
         """Gets the strength of this DrugDosages.  # noqa: E501
 
+        The amount of active drug ingredient provided in the dosage.  # noqa: E501
 
         :return: The strength of this DrugDosages.  # noqa: E501
         :rtype: str
@@ -109,6 +114,7 @@ class DrugDosages(object):
     def strength(self, strength):
         """Sets the strength of this DrugDosages.
 
+        The amount of active drug ingredient provided in the dosage.  # noqa: E501
 
         :param strength: The strength of this DrugDosages.  # noqa: E501
         :type: str

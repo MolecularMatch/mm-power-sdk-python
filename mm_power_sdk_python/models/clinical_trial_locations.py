@@ -53,7 +53,8 @@ class ClinicalTrialLocations(object):
         'degrees_backup': 'str',
         'phone_backup': 'str',
         'phone_ext_backup': 'str',
-        'email_backup': 'str'
+        'email_backup': 'str',
+        'is_in_institution': 'bool'
     }
 
     attribute_map = {
@@ -80,10 +81,11 @@ class ClinicalTrialLocations(object):
         'degrees_backup': 'degrees_backup',
         'phone_backup': 'phone_backup',
         'phone_ext_backup': 'phone_ext_backup',
-        'email_backup': 'email_backup'
+        'email_backup': 'email_backup',
+        'is_in_institution': 'isInInstitution'
     }
 
-    def __init__(self, id=None, street=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, geo=None, status=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None):  # noqa: E501
+    def __init__(self, id=None, street=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, geo=None, status=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, is_in_institution=None):  # noqa: E501
         """ClinicalTrialLocations - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._street = None
@@ -109,6 +111,7 @@ class ClinicalTrialLocations(object):
         self._phone_backup = None
         self._phone_ext_backup = None
         self._email_backup = None
+        self._is_in_institution = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -158,6 +161,8 @@ class ClinicalTrialLocations(object):
             self.phone_ext_backup = phone_ext_backup
         if email_backup is not None:
             self.email_backup = email_backup
+        if is_in_institution is not None:
+            self.is_in_institution = is_in_institution
 
     @property
     def id(self):
@@ -184,6 +189,7 @@ class ClinicalTrialLocations(object):
     def street(self):
         """Gets the street of this ClinicalTrialLocations.  # noqa: E501
 
+        Site street address.  # noqa: E501
 
         :return: The street of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -194,6 +200,7 @@ class ClinicalTrialLocations(object):
     def street(self, street):
         """Sets the street of this ClinicalTrialLocations.
 
+        Site street address.  # noqa: E501
 
         :param street: The street of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -205,6 +212,7 @@ class ClinicalTrialLocations(object):
     def country(self):
         """Gets the country of this ClinicalTrialLocations.  # noqa: E501
 
+        Site country.  # noqa: E501
 
         :return: The country of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -215,6 +223,7 @@ class ClinicalTrialLocations(object):
     def country(self, country):
         """Sets the country of this ClinicalTrialLocations.
 
+        Site country.  # noqa: E501
 
         :param country: The country of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -226,6 +235,7 @@ class ClinicalTrialLocations(object):
     def name(self):
         """Gets the name of this ClinicalTrialLocations.  # noqa: E501
 
+        Site name.  # noqa: E501
 
         :return: The name of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -236,6 +246,7 @@ class ClinicalTrialLocations(object):
     def name(self, name):
         """Sets the name of this ClinicalTrialLocations.
 
+        Site name.  # noqa: E501
 
         :param name: The name of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -247,6 +258,7 @@ class ClinicalTrialLocations(object):
     def po_box(self):
         """Gets the po_box of this ClinicalTrialLocations.  # noqa: E501
 
+        Site P.O. Box.  # noqa: E501
 
         :return: The po_box of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -257,6 +269,7 @@ class ClinicalTrialLocations(object):
     def po_box(self, po_box):
         """Sets the po_box of this ClinicalTrialLocations.
 
+        Site P.O. Box.  # noqa: E501
 
         :param po_box: The po_box of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -268,6 +281,7 @@ class ClinicalTrialLocations(object):
     def city(self):
         """Gets the city of this ClinicalTrialLocations.  # noqa: E501
 
+        Site city.  # noqa: E501
 
         :return: The city of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -278,6 +292,7 @@ class ClinicalTrialLocations(object):
     def city(self, city):
         """Sets the city of this ClinicalTrialLocations.
 
+        Site city.  # noqa: E501
 
         :param city: The city of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -289,6 +304,7 @@ class ClinicalTrialLocations(object):
     def state(self):
         """Gets the state of this ClinicalTrialLocations.  # noqa: E501
 
+        Site state or sub division.  # noqa: E501
 
         :return: The state of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -299,6 +315,7 @@ class ClinicalTrialLocations(object):
     def state(self, state):
         """Sets the state of this ClinicalTrialLocations.
 
+        Site state or sub division.  # noqa: E501
 
         :param state: The state of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -310,6 +327,7 @@ class ClinicalTrialLocations(object):
     def zip(self):
         """Gets the zip of this ClinicalTrialLocations.  # noqa: E501
 
+        Site postal code.  # noqa: E501
 
         :return: The zip of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -320,6 +338,7 @@ class ClinicalTrialLocations(object):
     def zip(self, zip):
         """Sets the zip of this ClinicalTrialLocations.
 
+        Site postal code.  # noqa: E501
 
         :param zip: The zip of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -352,6 +371,7 @@ class ClinicalTrialLocations(object):
     def status(self):
         """Gets the status of this ClinicalTrialLocations.  # noqa: E501
 
+        Site specific recruiting status.  # noqa: E501
 
         :return: The status of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -362,6 +382,7 @@ class ClinicalTrialLocations(object):
     def status(self, status):
         """Sets the status of this ClinicalTrialLocations.
 
+        Site specific recruiting status.  # noqa: E501
 
         :param status: The status of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -373,6 +394,7 @@ class ClinicalTrialLocations(object):
     def first_name(self):
         """Gets the first_name of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact first name.  # noqa: E501
 
         :return: The first_name of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -383,6 +405,7 @@ class ClinicalTrialLocations(object):
     def first_name(self, first_name):
         """Sets the first_name of this ClinicalTrialLocations.
 
+        Site primary contact first name.  # noqa: E501
 
         :param first_name: The first_name of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -394,6 +417,7 @@ class ClinicalTrialLocations(object):
     def middle_name(self):
         """Gets the middle_name of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact middle name.  # noqa: E501
 
         :return: The middle_name of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -404,6 +428,7 @@ class ClinicalTrialLocations(object):
     def middle_name(self, middle_name):
         """Sets the middle_name of this ClinicalTrialLocations.
 
+        Site primary contact middle name.  # noqa: E501
 
         :param middle_name: The middle_name of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -415,6 +440,7 @@ class ClinicalTrialLocations(object):
     def last_name(self):
         """Gets the last_name of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact last name.  # noqa: E501
 
         :return: The last_name of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -425,6 +451,7 @@ class ClinicalTrialLocations(object):
     def last_name(self, last_name):
         """Sets the last_name of this ClinicalTrialLocations.
 
+        Site primary contact last name.  # noqa: E501
 
         :param last_name: The last_name of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -436,6 +463,7 @@ class ClinicalTrialLocations(object):
     def degrees(self):
         """Gets the degrees of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact degrees.  # noqa: E501
 
         :return: The degrees of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -446,6 +474,7 @@ class ClinicalTrialLocations(object):
     def degrees(self, degrees):
         """Sets the degrees of this ClinicalTrialLocations.
 
+        Site primary contact degrees.  # noqa: E501
 
         :param degrees: The degrees of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -457,6 +486,7 @@ class ClinicalTrialLocations(object):
     def phone(self):
         """Gets the phone of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact phone number.  # noqa: E501
 
         :return: The phone of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -467,6 +497,7 @@ class ClinicalTrialLocations(object):
     def phone(self, phone):
         """Sets the phone of this ClinicalTrialLocations.
 
+        Site primary contact phone number.  # noqa: E501
 
         :param phone: The phone of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -478,6 +509,7 @@ class ClinicalTrialLocations(object):
     def phone_ext(self):
         """Gets the phone_ext of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact phone number extension.  # noqa: E501
 
         :return: The phone_ext of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -488,6 +520,7 @@ class ClinicalTrialLocations(object):
     def phone_ext(self, phone_ext):
         """Sets the phone_ext of this ClinicalTrialLocations.
 
+        Site primary contact phone number extension.  # noqa: E501
 
         :param phone_ext: The phone_ext of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -499,6 +532,7 @@ class ClinicalTrialLocations(object):
     def email(self):
         """Gets the email of this ClinicalTrialLocations.  # noqa: E501
 
+        Site primary contact email address.  # noqa: E501
 
         :return: The email of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -509,6 +543,7 @@ class ClinicalTrialLocations(object):
     def email(self, email):
         """Sets the email of this ClinicalTrialLocations.
 
+        Site primary contact email address.  # noqa: E501
 
         :param email: The email of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -520,6 +555,7 @@ class ClinicalTrialLocations(object):
     def first_name_backup(self):
         """Gets the first_name_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact first name.  # noqa: E501
 
         :return: The first_name_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -530,6 +566,7 @@ class ClinicalTrialLocations(object):
     def first_name_backup(self, first_name_backup):
         """Sets the first_name_backup of this ClinicalTrialLocations.
 
+        Site backup contact first name.  # noqa: E501
 
         :param first_name_backup: The first_name_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -541,6 +578,7 @@ class ClinicalTrialLocations(object):
     def middle_name_backup(self):
         """Gets the middle_name_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact middle name.  # noqa: E501
 
         :return: The middle_name_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -551,6 +589,7 @@ class ClinicalTrialLocations(object):
     def middle_name_backup(self, middle_name_backup):
         """Sets the middle_name_backup of this ClinicalTrialLocations.
 
+        Site backup contact middle name.  # noqa: E501
 
         :param middle_name_backup: The middle_name_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -562,6 +601,7 @@ class ClinicalTrialLocations(object):
     def last_name_backup(self):
         """Gets the last_name_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact last name.  # noqa: E501
 
         :return: The last_name_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -572,6 +612,7 @@ class ClinicalTrialLocations(object):
     def last_name_backup(self, last_name_backup):
         """Sets the last_name_backup of this ClinicalTrialLocations.
 
+        Site backup contact last name.  # noqa: E501
 
         :param last_name_backup: The last_name_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -583,6 +624,7 @@ class ClinicalTrialLocations(object):
     def degrees_backup(self):
         """Gets the degrees_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact degrees.  # noqa: E501
 
         :return: The degrees_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -593,6 +635,7 @@ class ClinicalTrialLocations(object):
     def degrees_backup(self, degrees_backup):
         """Sets the degrees_backup of this ClinicalTrialLocations.
 
+        Site backup contact degrees.  # noqa: E501
 
         :param degrees_backup: The degrees_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -604,6 +647,7 @@ class ClinicalTrialLocations(object):
     def phone_backup(self):
         """Gets the phone_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact phone number.  # noqa: E501
 
         :return: The phone_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -614,6 +658,7 @@ class ClinicalTrialLocations(object):
     def phone_backup(self, phone_backup):
         """Sets the phone_backup of this ClinicalTrialLocations.
 
+        Site backup contact phone number.  # noqa: E501
 
         :param phone_backup: The phone_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -625,6 +670,7 @@ class ClinicalTrialLocations(object):
     def phone_ext_backup(self):
         """Gets the phone_ext_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact phone number extension.  # noqa: E501
 
         :return: The phone_ext_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -635,6 +681,7 @@ class ClinicalTrialLocations(object):
     def phone_ext_backup(self, phone_ext_backup):
         """Sets the phone_ext_backup of this ClinicalTrialLocations.
 
+        Site backup contact phone number extension.  # noqa: E501
 
         :param phone_ext_backup: The phone_ext_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
@@ -646,6 +693,7 @@ class ClinicalTrialLocations(object):
     def email_backup(self):
         """Gets the email_backup of this ClinicalTrialLocations.  # noqa: E501
 
+        Site backup contact email address.  # noqa: E501
 
         :return: The email_backup of this ClinicalTrialLocations.  # noqa: E501
         :rtype: str
@@ -656,12 +704,36 @@ class ClinicalTrialLocations(object):
     def email_backup(self, email_backup):
         """Sets the email_backup of this ClinicalTrialLocations.
 
+        Site backup contact email address.  # noqa: E501
 
         :param email_backup: The email_backup of this ClinicalTrialLocations.  # noqa: E501
         :type: str
         """
 
         self._email_backup = email_backup
+
+    @property
+    def is_in_institution(self):
+        """Gets the is_in_institution of this ClinicalTrialLocations.  # noqa: E501
+
+        If an institutionId was provided for search, indicates if this site is associated with the institution.  # noqa: E501
+
+        :return: The is_in_institution of this ClinicalTrialLocations.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_institution
+
+    @is_in_institution.setter
+    def is_in_institution(self, is_in_institution):
+        """Sets the is_in_institution of this ClinicalTrialLocations.
+
+        If an institutionId was provided for search, indicates if this site is associated with the institution.  # noqa: E501
+
+        :param is_in_institution: The is_in_institution of this ClinicalTrialLocations.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_institution = is_in_institution
 
     def to_dict(self):
         """Returns the model properties as a dict"""

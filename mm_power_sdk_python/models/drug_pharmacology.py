@@ -97,6 +97,7 @@ class DrugPharmacology(object):
     def indication(self):
         """Gets the indication of this DrugPharmacology.  # noqa: E501
 
+        The approved conditions, diseases, or states for which a drug can safely and effectively be used. An indication is considered to be FDA-approved when it has any of the following designations: NDA, ANDA, BLA, or OTC. May also include indications in other countries, such as Canada (through Health Canada) or in Europe (through the European Medicines Agency).  # noqa: E501
 
         :return: The indication of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -107,6 +108,7 @@ class DrugPharmacology(object):
     def indication(self, indication):
         """Sets the indication of this DrugPharmacology.
 
+        The approved conditions, diseases, or states for which a drug can safely and effectively be used. An indication is considered to be FDA-approved when it has any of the following designations: NDA, ANDA, BLA, or OTC. May also include indications in other countries, such as Canada (through Health Canada) or in Europe (through the European Medicines Agency).  # noqa: E501
 
         :param indication: The indication of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -118,6 +120,7 @@ class DrugPharmacology(object):
     def pharmacodynamics(self):
         """Gets the pharmacodynamics of this DrugPharmacology.  # noqa: E501
 
+        A description of how the drug modifies or affects the organism it is being used in. May include effects in the body that are desired (enzyme or protein targets for example) and undesired (also known as “side effects”). This is in contrast to pharmacokinetics, which describes how the body modifies the drug being used.  # noqa: E501
 
         :return: The pharmacodynamics of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -128,6 +131,7 @@ class DrugPharmacology(object):
     def pharmacodynamics(self, pharmacodynamics):
         """Sets the pharmacodynamics of this DrugPharmacology.
 
+        A description of how the drug modifies or affects the organism it is being used in. May include effects in the body that are desired (enzyme or protein targets for example) and undesired (also known as “side effects”). This is in contrast to pharmacokinetics, which describes how the body modifies the drug being used.  # noqa: E501
 
         :param pharmacodynamics: The pharmacodynamics of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -139,6 +143,7 @@ class DrugPharmacology(object):
     def mechanism_of_action(self):
         """Gets the mechanism_of_action of this DrugPharmacology.  # noqa: E501
 
+        A component of pharmacodynamics that describes the biochemical interaction through which a drug produces its intended effect. May include the exact molecular protein or enzyme targets and/or a description of the physiological effects produced.  # noqa: E501
 
         :return: The mechanism_of_action of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -149,6 +154,7 @@ class DrugPharmacology(object):
     def mechanism_of_action(self, mechanism_of_action):
         """Sets the mechanism_of_action of this DrugPharmacology.
 
+        A component of pharmacodynamics that describes the biochemical interaction through which a drug produces its intended effect. May include the exact molecular protein or enzyme targets and/or a description of the physiological effects produced.  # noqa: E501
 
         :param mechanism_of_action: The mechanism_of_action of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -160,6 +166,7 @@ class DrugPharmacology(object):
     def absorption(self):
         """Gets the absorption of this DrugPharmacology.  # noqa: E501
 
+        A description of the movement of the drug from the site of administration into the bloodstream or target tissue. Common pharmacokinetic metrics used to evaluate absorption include Area Under the Curve (AUC), bioavailability (F), maximum concentration (Cmax), and time to maximum concentration (Tmax).  # noqa: E501
 
         :return: The absorption of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -170,6 +177,7 @@ class DrugPharmacology(object):
     def absorption(self, absorption):
         """Sets the absorption of this DrugPharmacology.
 
+        A description of the movement of the drug from the site of administration into the bloodstream or target tissue. Common pharmacokinetic metrics used to evaluate absorption include Area Under the Curve (AUC), bioavailability (F), maximum concentration (Cmax), and time to maximum concentration (Tmax).  # noqa: E501
 
         :param absorption: The absorption of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -181,6 +189,7 @@ class DrugPharmacology(object):
     def toxicity(self):
         """Gets the toxicity of this DrugPharmacology.  # noqa: E501
 
+        Any adverse reaction, or side effect, that may or may not occur with use of the drug. May be attributed to a number of effects including: an enhanced therapeutic effect, rare anaphylactic reactions, interactions with other medications, or unanticipated binding of the molecule at different sites within the body.  # noqa: E501
 
         :return: The toxicity of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -191,6 +200,7 @@ class DrugPharmacology(object):
     def toxicity(self, toxicity):
         """Sets the toxicity of this DrugPharmacology.
 
+        Any adverse reaction, or side effect, that may or may not occur with use of the drug. May be attributed to a number of effects including: an enhanced therapeutic effect, rare anaphylactic reactions, interactions with other medications, or unanticipated binding of the molecule at different sites within the body.  # noqa: E501
 
         :param toxicity: The toxicity of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -202,6 +212,7 @@ class DrugPharmacology(object):
     def protein_binding(self):
         """Gets the protein_binding of this DrugPharmacology.  # noqa: E501
 
+        A description of the drug’s affinity for plama proteins and the proportion of the drug that is bound to them when in circulation within the body.  # noqa: E501
 
         :return: The protein_binding of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -212,6 +223,7 @@ class DrugPharmacology(object):
     def protein_binding(self, protein_binding):
         """Sets the protein_binding of this DrugPharmacology.
 
+        A description of the drug’s affinity for plama proteins and the proportion of the drug that is bound to them when in circulation within the body.  # noqa: E501
 
         :param protein_binding: The protein_binding of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -223,6 +235,7 @@ class DrugPharmacology(object):
     def metabolism(self):
         """Gets the metabolism of this DrugPharmacology.  # noqa: E501
 
+        A description of the chemical degradation of the drug molecule within the body; most commonly by enzymes from the Cytochrome P450 (CYP) system in the liver.  # noqa: E501
 
         :return: The metabolism of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -233,6 +246,7 @@ class DrugPharmacology(object):
     def metabolism(self, metabolism):
         """Sets the metabolism of this DrugPharmacology.
 
+        A description of the chemical degradation of the drug molecule within the body; most commonly by enzymes from the Cytochrome P450 (CYP) system in the liver.  # noqa: E501
 
         :param metabolism: The metabolism of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -244,6 +258,7 @@ class DrugPharmacology(object):
     def half_life(self):
         """Gets the half_life of this DrugPharmacology.  # noqa: E501
 
+        The period of time it takes for the amount of drug in the body to be reduced by one half. Provides a description of how quickly the drug is being eliminated and how much is available in the bloodstream.  # noqa: E501
 
         :return: The half_life of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -254,6 +269,7 @@ class DrugPharmacology(object):
     def half_life(self, half_life):
         """Sets the half_life of this DrugPharmacology.
 
+        The period of time it takes for the amount of drug in the body to be reduced by one half. Provides a description of how quickly the drug is being eliminated and how much is available in the bloodstream.  # noqa: E501
 
         :param half_life: The half_life of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -265,6 +281,7 @@ class DrugPharmacology(object):
     def route_of_elimination(self):
         """Gets the route_of_elimination of this DrugPharmacology.  # noqa: E501
 
+        A description of the pathway that is used to excrete the drug from the body. Common pharmacokinetic parameters used to evaluate excretion include elemination half life, renal clearance, and tracking of radiolabelled compounds through the renal and GI system.  # noqa: E501
 
         :return: The route_of_elimination of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -275,6 +292,7 @@ class DrugPharmacology(object):
     def route_of_elimination(self, route_of_elimination):
         """Sets the route_of_elimination of this DrugPharmacology.
 
+        A description of the pathway that is used to excrete the drug from the body. Common pharmacokinetic parameters used to evaluate excretion include elemination half life, renal clearance, and tracking of radiolabelled compounds through the renal and GI system.  # noqa: E501
 
         :param route_of_elimination: The route_of_elimination of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -286,6 +304,7 @@ class DrugPharmacology(object):
     def volume_of_distribution(self):
         """Gets the volume_of_distribution of this DrugPharmacology.  # noqa: E501
 
+        The Vd of a drug represents the degree to which it is distributed into body tissue compared to the plasma.  # noqa: E501
 
         :return: The volume_of_distribution of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -296,6 +315,7 @@ class DrugPharmacology(object):
     def volume_of_distribution(self, volume_of_distribution):
         """Sets the volume_of_distribution of this DrugPharmacology.
 
+        The Vd of a drug represents the degree to which it is distributed into body tissue compared to the plasma.  # noqa: E501
 
         :param volume_of_distribution: The volume_of_distribution of this DrugPharmacology.  # noqa: E501
         :type: str
@@ -307,6 +327,7 @@ class DrugPharmacology(object):
     def clearance(self):
         """Gets the clearance of this DrugPharmacology.  # noqa: E501
 
+        A pharmacokinetic measurement of the rate of removal of the drug from plasma, expressed as mL/min; reflects the rate of elimination of the drug.  # noqa: E501
 
         :return: The clearance of this DrugPharmacology.  # noqa: E501
         :rtype: str
@@ -317,6 +338,7 @@ class DrugPharmacology(object):
     def clearance(self, clearance):
         """Sets the clearance of this DrugPharmacology.
 
+        A pharmacokinetic measurement of the rate of removal of the drug from plasma, expressed as mL/min; reflects the rate of elimination of the drug.  # noqa: E501
 
         :param clearance: The clearance of this DrugPharmacology.  # noqa: E501
         :type: str

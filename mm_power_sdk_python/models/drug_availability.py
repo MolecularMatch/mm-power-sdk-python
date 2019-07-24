@@ -66,6 +66,7 @@ class DrugAvailability(object):
     def region(self):
         """Gets the region of this DrugAvailability.  # noqa: E501
 
+        A country or other jurisdiction.  # noqa: E501
 
         :return: The region of this DrugAvailability.  # noqa: E501
         :rtype: str
@@ -76,6 +77,7 @@ class DrugAvailability(object):
     def region(self, region):
         """Sets the region of this DrugAvailability.
 
+        A country or other jurisdiction.  # noqa: E501
 
         :param region: The region of this DrugAvailability.  # noqa: E501
         :type: str
@@ -89,6 +91,7 @@ class DrugAvailability(object):
     def max_phase(self):
         """Gets the max_phase of this DrugAvailability.  # noqa: E501
 
+        Maximum phase achieved during development.  # noqa: E501
 
         :return: The max_phase of this DrugAvailability.  # noqa: E501
         :rtype: int
@@ -99,6 +102,7 @@ class DrugAvailability(object):
     def max_phase(self, max_phase):
         """Sets the max_phase of this DrugAvailability.
 
+        Maximum phase achieved during development.  # noqa: E501
 
         :param max_phase: The max_phase of this DrugAvailability.  # noqa: E501
         :type: int
@@ -112,6 +116,7 @@ class DrugAvailability(object):
     def marketed_prescription(self):
         """Gets the marketed_prescription of this DrugAvailability.  # noqa: E501
 
+        Whether the drug has been marketed for prescription use.  # noqa: E501
 
         :return: The marketed_prescription of this DrugAvailability.  # noqa: E501
         :rtype: bool
@@ -122,6 +127,7 @@ class DrugAvailability(object):
     def marketed_prescription(self, marketed_prescription):
         """Sets the marketed_prescription of this DrugAvailability.
 
+        Whether the drug has been marketed for prescription use.  # noqa: E501
 
         :param marketed_prescription: The marketed_prescription of this DrugAvailability.  # noqa: E501
         :type: bool
@@ -135,6 +141,7 @@ class DrugAvailability(object):
     def generic_available(self):
         """Gets the generic_available of this DrugAvailability.  # noqa: E501
 
+        Whether the drug has been available as a generic  # noqa: E501
 
         :return: The generic_available of this DrugAvailability.  # noqa: E501
         :rtype: bool
@@ -145,6 +152,7 @@ class DrugAvailability(object):
     def generic_available(self, generic_available):
         """Sets the generic_available of this DrugAvailability.
 
+        Whether the drug has been available as a generic  # noqa: E501
 
         :param generic_available: The generic_available of this DrugAvailability.  # noqa: E501
         :type: bool
@@ -158,6 +166,7 @@ class DrugAvailability(object):
     def pre_market_cancelled(self):
         """Gets the pre_market_cancelled of this DrugAvailability.  # noqa: E501
 
+        Whether the drug was cancelled before market-availability.  # noqa: E501
 
         :return: The pre_market_cancelled of this DrugAvailability.  # noqa: E501
         :rtype: bool
@@ -168,6 +177,7 @@ class DrugAvailability(object):
     def pre_market_cancelled(self, pre_market_cancelled):
         """Sets the pre_market_cancelled of this DrugAvailability.
 
+        Whether the drug was cancelled before market-availability.  # noqa: E501
 
         :param pre_market_cancelled: The pre_market_cancelled of this DrugAvailability.  # noqa: E501
         :type: bool
@@ -181,6 +191,7 @@ class DrugAvailability(object):
     def post_market_cancelled(self):
         """Gets the post_market_cancelled of this DrugAvailability.  # noqa: E501
 
+        Whether the drug was cancelled after market-availability.  # noqa: E501
 
         :return: The post_market_cancelled of this DrugAvailability.  # noqa: E501
         :rtype: bool
@@ -191,6 +202,7 @@ class DrugAvailability(object):
     def post_market_cancelled(self, post_market_cancelled):
         """Sets the post_market_cancelled of this DrugAvailability.
 
+        Whether the drug was cancelled after market-availability.  # noqa: E501
 
         :param post_market_cancelled: The post_market_cancelled of this DrugAvailability.  # noqa: E501
         :type: bool

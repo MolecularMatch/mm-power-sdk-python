@@ -24,7 +24,6 @@ from mm_power_sdk_python.models.drug_parents import DrugParents  # noqa: F401,E5
 from mm_power_sdk_python.models.drug_pharmacology import DrugPharmacology  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_prices import DrugPrices  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_synonyms import DrugSynonyms  # noqa: F401,E501
-from mm_power_sdk_python.models.object import Object  # noqa: F401,E501
 
 
 class Drug(object):
@@ -41,17 +40,11 @@ class Drug(object):
     """
     swagger_types = {
         'mboost': 'float',
-        'analyzer': 'str',
         'id': 'str',
-        'source': 'str',
         'name': 'str',
-        'name_lower': 'str',
         'alias': 'str',
-        'exclude': 'bool',
-        'custom': 'bool',
         'description': 'str',
         'composite': 'bool',
-        'suppress_resistance': 'bool',
         'approved': 'bool',
         'availability': 'list[DrugAvailability]',
         'synonyms': 'list[DrugSynonyms]',
@@ -68,24 +61,16 @@ class Drug(object):
         'prices': 'list[DrugPrices]',
         'dosages': 'list[DrugDosages]',
         'pharmacology': 'DrugPharmacology',
-        'phase_and_trials_score': 'float',
-        'valid': 'Object',
-        'valid_message': 'str'
+        'phase_and_trials_score': 'float'
     }
 
     attribute_map = {
         'mboost': 'mboost',
-        'analyzer': 'analyzer',
         'id': 'id',
-        'source': 'source',
         'name': 'name',
-        'name_lower': 'name_lower',
         'alias': 'alias',
-        'exclude': 'exclude',
-        'custom': 'custom',
         'description': 'description',
         'composite': 'composite',
-        'suppress_resistance': 'suppressResistance',
         'approved': 'approved',
         'availability': 'availability',
         'synonyms': 'synonyms',
@@ -102,25 +87,17 @@ class Drug(object):
         'prices': 'prices',
         'dosages': 'dosages',
         'pharmacology': 'pharmacology',
-        'phase_and_trials_score': 'phaseAndTrialsScore',
-        'valid': '_valid',
-        'valid_message': '_validMessage'
+        'phase_and_trials_score': 'phaseAndTrialsScore'
     }
 
-    def __init__(self, mboost=None, analyzer='DEFAULT', id=None, source=None, name=None, name_lower=None, alias=None, exclude=None, custom=None, description=None, composite=None, suppress_resistance=None, approved=None, availability=None, synonyms=None, parents=None, drugclass=None, composite_tags=None, brands=None, indication_text=None, contraindication_text=None, mechanism_text=None, rxcui=None, external_ids=None, link=None, prices=None, dosages=None, pharmacology=None, phase_and_trials_score=None, valid=None, valid_message=None):  # noqa: E501
+    def __init__(self, mboost=None, id=None, name=None, alias=None, description=None, composite=None, approved=None, availability=None, synonyms=None, parents=None, drugclass=None, composite_tags=None, brands=None, indication_text=None, contraindication_text=None, mechanism_text=None, rxcui=None, external_ids=None, link=None, prices=None, dosages=None, pharmacology=None, phase_and_trials_score=None):  # noqa: E501
         """Drug - a model defined in Swagger"""  # noqa: E501
         self._mboost = None
-        self._analyzer = None
         self._id = None
-        self._source = None
         self._name = None
-        self._name_lower = None
         self._alias = None
-        self._exclude = None
-        self._custom = None
         self._description = None
         self._composite = None
-        self._suppress_resistance = None
         self._approved = None
         self._availability = None
         self._synonyms = None
@@ -138,29 +115,17 @@ class Drug(object):
         self._dosages = None
         self._pharmacology = None
         self._phase_and_trials_score = None
-        self._valid = None
-        self._valid_message = None
         self.discriminator = None
         if mboost is not None:
             self.mboost = mboost
-        if analyzer is not None:
-            self.analyzer = analyzer
         self.id = id
-        self.source = source
         self.name = name
-        self.name_lower = name_lower
         if alias is not None:
             self.alias = alias
-        if exclude is not None:
-            self.exclude = exclude
-        if custom is not None:
-            self.custom = custom
         if description is not None:
             self.description = description
         if composite is not None:
             self.composite = composite
-        if suppress_resistance is not None:
-            self.suppress_resistance = suppress_resistance
         self.approved = approved
         if availability is not None:
             self.availability = availability
@@ -194,15 +159,12 @@ class Drug(object):
             self.pharmacology = pharmacology
         if phase_and_trials_score is not None:
             self.phase_and_trials_score = phase_and_trials_score
-        if valid is not None:
-            self.valid = valid
-        if valid_message is not None:
-            self.valid_message = valid_message
 
     @property
     def mboost(self):
         """Gets the mboost of this Drug.  # noqa: E501
 
+        intrinsic boost to the record.  # noqa: E501
 
         :return: The mboost of this Drug.  # noqa: E501
         :rtype: float
@@ -213,6 +175,7 @@ class Drug(object):
     def mboost(self, mboost):
         """Sets the mboost of this Drug.
 
+        intrinsic boost to the record.  # noqa: E501
 
         :param mboost: The mboost of this Drug.  # noqa: E501
         :type: float
@@ -221,36 +184,10 @@ class Drug(object):
         self._mboost = mboost
 
     @property
-    def analyzer(self):
-        """Gets the analyzer of this Drug.  # noqa: E501
-
-
-        :return: The analyzer of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._analyzer
-
-    @analyzer.setter
-    def analyzer(self, analyzer):
-        """Sets the analyzer of this Drug.
-
-
-        :param analyzer: The analyzer of this Drug.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["DEFAULT", "CASE_SENSITIVE"]  # noqa: E501
-        if analyzer not in allowed_values:
-            raise ValueError(
-                "Invalid value for `analyzer` ({0}), must be one of {1}"  # noqa: E501
-                .format(analyzer, allowed_values)
-            )
-
-        self._analyzer = analyzer
-
-    @property
     def id(self):
         """Gets the id of this Drug.  # noqa: E501
 
+        unique identifier.  # noqa: E501
 
         :return: The id of this Drug.  # noqa: E501
         :rtype: str
@@ -261,6 +198,7 @@ class Drug(object):
     def id(self, id):
         """Sets the id of this Drug.
 
+        unique identifier.  # noqa: E501
 
         :param id: The id of this Drug.  # noqa: E501
         :type: str
@@ -271,32 +209,10 @@ class Drug(object):
         self._id = id
 
     @property
-    def source(self):
-        """Gets the source of this Drug.  # noqa: E501
-
-
-        :return: The source of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._source
-
-    @source.setter
-    def source(self, source):
-        """Sets the source of this Drug.
-
-
-        :param source: The source of this Drug.  # noqa: E501
-        :type: str
-        """
-        if source is None:
-            raise ValueError("Invalid value for `source`, must not be `None`")  # noqa: E501
-
-        self._source = source
-
-    @property
     def name(self):
         """Gets the name of this Drug.  # noqa: E501
 
+        The name of the drug.  # noqa: E501
 
         :return: The name of this Drug.  # noqa: E501
         :rtype: str
@@ -307,6 +223,7 @@ class Drug(object):
     def name(self, name):
         """Sets the name of this Drug.
 
+        The name of the drug.  # noqa: E501
 
         :param name: The name of this Drug.  # noqa: E501
         :type: str
@@ -317,32 +234,10 @@ class Drug(object):
         self._name = name
 
     @property
-    def name_lower(self):
-        """Gets the name_lower of this Drug.  # noqa: E501
-
-
-        :return: The name_lower of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._name_lower
-
-    @name_lower.setter
-    def name_lower(self, name_lower):
-        """Sets the name_lower of this Drug.
-
-
-        :param name_lower: The name_lower of this Drug.  # noqa: E501
-        :type: str
-        """
-        if name_lower is None:
-            raise ValueError("Invalid value for `name_lower`, must not be `None`")  # noqa: E501
-
-        self._name_lower = name_lower
-
-    @property
     def alias(self):
         """Gets the alias of this Drug.  # noqa: E501
 
+        The most common name for the drug.  # noqa: E501
 
         :return: The alias of this Drug.  # noqa: E501
         :rtype: str
@@ -353,6 +248,7 @@ class Drug(object):
     def alias(self, alias):
         """Sets the alias of this Drug.
 
+        The most common name for the drug.  # noqa: E501
 
         :param alias: The alias of this Drug.  # noqa: E501
         :type: str
@@ -361,51 +257,10 @@ class Drug(object):
         self._alias = alias
 
     @property
-    def exclude(self):
-        """Gets the exclude of this Drug.  # noqa: E501
-
-
-        :return: The exclude of this Drug.  # noqa: E501
-        :rtype: bool
-        """
-        return self._exclude
-
-    @exclude.setter
-    def exclude(self, exclude):
-        """Sets the exclude of this Drug.
-
-
-        :param exclude: The exclude of this Drug.  # noqa: E501
-        :type: bool
-        """
-
-        self._exclude = exclude
-
-    @property
-    def custom(self):
-        """Gets the custom of this Drug.  # noqa: E501
-
-
-        :return: The custom of this Drug.  # noqa: E501
-        :rtype: bool
-        """
-        return self._custom
-
-    @custom.setter
-    def custom(self, custom):
-        """Sets the custom of this Drug.
-
-
-        :param custom: The custom of this Drug.  # noqa: E501
-        :type: bool
-        """
-
-        self._custom = custom
-
-    @property
     def description(self):
         """Gets the description of this Drug.  # noqa: E501
 
+        Descriptions of drug chemical properties, history and regulatory status.  # noqa: E501
 
         :return: The description of this Drug.  # noqa: E501
         :rtype: str
@@ -416,6 +271,7 @@ class Drug(object):
     def description(self, description):
         """Sets the description of this Drug.
 
+        Descriptions of drug chemical properties, history and regulatory status.  # noqa: E501
 
         :param description: The description of this Drug.  # noqa: E501
         :type: str
@@ -445,30 +301,10 @@ class Drug(object):
         self._composite = composite
 
     @property
-    def suppress_resistance(self):
-        """Gets the suppress_resistance of this Drug.  # noqa: E501
-
-
-        :return: The suppress_resistance of this Drug.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress_resistance
-
-    @suppress_resistance.setter
-    def suppress_resistance(self, suppress_resistance):
-        """Sets the suppress_resistance of this Drug.
-
-
-        :param suppress_resistance: The suppress_resistance of this Drug.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress_resistance = suppress_resistance
-
-    @property
     def approved(self):
         """Gets the approved of this Drug.  # noqa: E501
 
+        Indicates whether this drug has been approved by any regulating government.  # noqa: E501
 
         :return: The approved of this Drug.  # noqa: E501
         :rtype: bool
@@ -479,6 +315,7 @@ class Drug(object):
     def approved(self, approved):
         """Sets the approved of this Drug.
 
+        Indicates whether this drug has been approved by any regulating government.  # noqa: E501
 
         :param approved: The approved of this Drug.  # noqa: E501
         :type: bool
@@ -492,6 +329,7 @@ class Drug(object):
     def availability(self):
         """Gets the availability of this Drug.  # noqa: E501
 
+        Countries or jurisdictions where this drug is available.  # noqa: E501
 
         :return: The availability of this Drug.  # noqa: E501
         :rtype: list[DrugAvailability]
@@ -502,6 +340,7 @@ class Drug(object):
     def availability(self, availability):
         """Sets the availability of this Drug.
 
+        Countries or jurisdictions where this drug is available.  # noqa: E501
 
         :param availability: The availability of this Drug.  # noqa: E501
         :type: list[DrugAvailability]
@@ -513,6 +352,7 @@ class Drug(object):
     def synonyms(self):
         """Gets the synonyms of this Drug.  # noqa: E501
 
+        Other names or identifiers that are associated with this drug.  # noqa: E501
 
         :return: The synonyms of this Drug.  # noqa: E501
         :rtype: list[DrugSynonyms]
@@ -523,6 +363,7 @@ class Drug(object):
     def synonyms(self, synonyms):
         """Sets the synonyms of this Drug.
 
+        Other names or identifiers that are associated with this drug.  # noqa: E501
 
         :param synonyms: The synonyms of this Drug.  # noqa: E501
         :type: list[DrugSynonyms]
@@ -702,6 +543,7 @@ class Drug(object):
     def external_ids(self):
         """Gets the external_ids of this Drug.  # noqa: E501
 
+        Identifiers used in other websites or databases providing information about this drug.  # noqa: E501
 
         :return: The external_ids of this Drug.  # noqa: E501
         :rtype: list[DrugExternalIds]
@@ -712,6 +554,7 @@ class Drug(object):
     def external_ids(self, external_ids):
         """Sets the external_ids of this Drug.
 
+        Identifiers used in other websites or databases providing information about this drug.  # noqa: E501
 
         :param external_ids: The external_ids of this Drug.  # noqa: E501
         :type: list[DrugExternalIds]
@@ -744,6 +587,7 @@ class Drug(object):
     def prices(self):
         """Gets the prices of this Drug.  # noqa: E501
 
+        Unit drug prices.  # noqa: E501
 
         :return: The prices of this Drug.  # noqa: E501
         :rtype: list[DrugPrices]
@@ -754,6 +598,7 @@ class Drug(object):
     def prices(self, prices):
         """Sets the prices of this Drug.
 
+        Unit drug prices.  # noqa: E501
 
         :param prices: The prices of this Drug.  # noqa: E501
         :type: list[DrugPrices]
@@ -765,6 +610,7 @@ class Drug(object):
     def dosages(self):
         """Gets the dosages of this Drug.  # noqa: E501
 
+        A list of the commercially available dosages of the drug.  # noqa: E501
 
         :return: The dosages of this Drug.  # noqa: E501
         :rtype: list[DrugDosages]
@@ -775,6 +621,7 @@ class Drug(object):
     def dosages(self, dosages):
         """Sets the dosages of this Drug.
 
+        A list of the commercially available dosages of the drug.  # noqa: E501
 
         :param dosages: The dosages of this Drug.  # noqa: E501
         :type: list[DrugDosages]
@@ -823,48 +670,6 @@ class Drug(object):
         """
 
         self._phase_and_trials_score = phase_and_trials_score
-
-    @property
-    def valid(self):
-        """Gets the valid of this Drug.  # noqa: E501
-
-
-        :return: The valid of this Drug.  # noqa: E501
-        :rtype: Object
-        """
-        return self._valid
-
-    @valid.setter
-    def valid(self, valid):
-        """Sets the valid of this Drug.
-
-
-        :param valid: The valid of this Drug.  # noqa: E501
-        :type: Object
-        """
-
-        self._valid = valid
-
-    @property
-    def valid_message(self):
-        """Gets the valid_message of this Drug.  # noqa: E501
-
-
-        :return: The valid_message of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._valid_message
-
-    @valid_message.setter
-    def valid_message(self, valid_message):
-        """Sets the valid_message of this Drug.
-
-
-        :param valid_message: The valid_message of this Drug.  # noqa: E501
-        :type: str
-        """
-
-        self._valid_message = valid_message
 
     def to_dict(self):
         """Returns the model properties as a dict"""

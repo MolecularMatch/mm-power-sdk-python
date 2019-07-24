@@ -14,8 +14,9 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.mongo_publication_authors import MongoPublicationAuthors  # noqa: F401,E501
-from mm_power_sdk_python.models.object import Object  # noqa: F401,E501
+from mm_power_sdk_python.models.clinical_trial_molecular_alterations import ClinicalTrialMolecularAlterations  # noqa: F401,E501
+from mm_power_sdk_python.models.clinical_trial_tags import ClinicalTrialTags  # noqa: F401,E501
+from mm_power_sdk_python.models.publication_authors import PublicationAuthors  # noqa: F401,E501
 
 
 class Publication(object):
@@ -35,8 +36,6 @@ class Publication(object):
         'id': 'str',
         'pmid': 'str',
         'doi': 'str',
-        'exclude': 'bool',
-        'custom': 'bool',
         'source': 'str',
         'journal_name': 'str',
         'journal_iso_abbreviation': 'str',
@@ -55,9 +54,9 @@ class Publication(object):
         'keywords': 'list[str]',
         'extended_keywords': 'list[str]',
         'publication_type': 'list[str]',
-        'authors': 'list[MongoPublicationAuthors]',
-        'valid': 'Object',
-        'valid_message': 'str'
+        'authors': 'list[PublicationAuthors]',
+        'tags': 'list[ClinicalTrialTags]',
+        'molecular_alterations': 'list[ClinicalTrialMolecularAlterations]'
     }
 
     attribute_map = {
@@ -65,8 +64,6 @@ class Publication(object):
         'id': 'id',
         'pmid': 'pmid',
         'doi': 'doi',
-        'exclude': 'exclude',
-        'custom': 'custom',
         'source': 'source',
         'journal_name': 'journalName',
         'journal_iso_abbreviation': 'journalISOAbbreviation',
@@ -86,18 +83,16 @@ class Publication(object):
         'extended_keywords': 'extendedKeywords',
         'publication_type': 'publicationType',
         'authors': 'authors',
-        'valid': '_valid',
-        'valid_message': '_validMessage'
+        'tags': 'tags',
+        'molecular_alterations': 'molecularAlterations'
     }
 
-    def __init__(self, mboost=None, id=None, pmid=None, doi=None, exclude=None, custom=None, source=None, journal_name=None, journal_iso_abbreviation=None, title=None, purpose=None, background=None, methods=None, results=None, conclusion=None, conflicts=None, fulltext=None, citation=None, citation_date=None, link=None, chemicals=None, keywords=None, extended_keywords=None, publication_type=None, authors=None, valid=None, valid_message=None):  # noqa: E501
+    def __init__(self, mboost=None, id=None, pmid=None, doi=None, source=None, journal_name=None, journal_iso_abbreviation=None, title=None, purpose=None, background=None, methods=None, results=None, conclusion=None, conflicts=None, fulltext=None, citation=None, citation_date=None, link=None, chemicals=None, keywords=None, extended_keywords=None, publication_type=None, authors=None, tags=None, molecular_alterations=None):  # noqa: E501
         """Publication - a model defined in Swagger"""  # noqa: E501
         self._mboost = None
         self._id = None
         self._pmid = None
         self._doi = None
-        self._exclude = None
-        self._custom = None
         self._source = None
         self._journal_name = None
         self._journal_iso_abbreviation = None
@@ -117,8 +112,8 @@ class Publication(object):
         self._extended_keywords = None
         self._publication_type = None
         self._authors = None
-        self._valid = None
-        self._valid_message = None
+        self._tags = None
+        self._molecular_alterations = None
         self.discriminator = None
         if mboost is not None:
             self.mboost = mboost
@@ -127,10 +122,6 @@ class Publication(object):
             self.pmid = pmid
         if doi is not None:
             self.doi = doi
-        if exclude is not None:
-            self.exclude = exclude
-        if custom is not None:
-            self.custom = custom
         self.source = source
         self.journal_name = journal_name
         if journal_iso_abbreviation is not None:
@@ -164,15 +155,16 @@ class Publication(object):
             self.publication_type = publication_type
         if authors is not None:
             self.authors = authors
-        if valid is not None:
-            self.valid = valid
-        if valid_message is not None:
-            self.valid_message = valid_message
+        if tags is not None:
+            self.tags = tags
+        if molecular_alterations is not None:
+            self.molecular_alterations = molecular_alterations
 
     @property
     def mboost(self):
         """Gets the mboost of this Publication.  # noqa: E501
 
+        intrinsic boost to the record.  # noqa: E501
 
         :return: The mboost of this Publication.  # noqa: E501
         :rtype: float
@@ -183,6 +175,7 @@ class Publication(object):
     def mboost(self, mboost):
         """Sets the mboost of this Publication.
 
+        intrinsic boost to the record.  # noqa: E501
 
         :param mboost: The mboost of this Publication.  # noqa: E501
         :type: float
@@ -194,6 +187,7 @@ class Publication(object):
     def id(self):
         """Gets the id of this Publication.  # noqa: E501
 
+        unique identifier.  # noqa: E501
 
         :return: The id of this Publication.  # noqa: E501
         :rtype: str
@@ -204,6 +198,7 @@ class Publication(object):
     def id(self, id):
         """Sets the id of this Publication.
 
+        unique identifier.  # noqa: E501
 
         :param id: The id of this Publication.  # noqa: E501
         :type: str
@@ -217,6 +212,7 @@ class Publication(object):
     def pmid(self):
         """Gets the pmid of this Publication.  # noqa: E501
 
+        PubMed identifier.  # noqa: E501
 
         :return: The pmid of this Publication.  # noqa: E501
         :rtype: str
@@ -227,6 +223,7 @@ class Publication(object):
     def pmid(self, pmid):
         """Sets the pmid of this Publication.
 
+        PubMed identifier.  # noqa: E501
 
         :param pmid: The pmid of this Publication.  # noqa: E501
         :type: str
@@ -238,6 +235,7 @@ class Publication(object):
     def doi(self):
         """Gets the doi of this Publication.  # noqa: E501
 
+        digital object identifier.  # noqa: E501
 
         :return: The doi of this Publication.  # noqa: E501
         :rtype: str
@@ -248,6 +246,7 @@ class Publication(object):
     def doi(self, doi):
         """Sets the doi of this Publication.
 
+        digital object identifier.  # noqa: E501
 
         :param doi: The doi of this Publication.  # noqa: E501
         :type: str
@@ -256,51 +255,10 @@ class Publication(object):
         self._doi = doi
 
     @property
-    def exclude(self):
-        """Gets the exclude of this Publication.  # noqa: E501
-
-
-        :return: The exclude of this Publication.  # noqa: E501
-        :rtype: bool
-        """
-        return self._exclude
-
-    @exclude.setter
-    def exclude(self, exclude):
-        """Sets the exclude of this Publication.
-
-
-        :param exclude: The exclude of this Publication.  # noqa: E501
-        :type: bool
-        """
-
-        self._exclude = exclude
-
-    @property
-    def custom(self):
-        """Gets the custom of this Publication.  # noqa: E501
-
-
-        :return: The custom of this Publication.  # noqa: E501
-        :rtype: bool
-        """
-        return self._custom
-
-    @custom.setter
-    def custom(self, custom):
-        """Sets the custom of this Publication.
-
-
-        :param custom: The custom of this Publication.  # noqa: E501
-        :type: bool
-        """
-
-        self._custom = custom
-
-    @property
     def source(self):
         """Gets the source of this Publication.  # noqa: E501
 
+        native data source of this record  # noqa: E501
 
         :return: The source of this Publication.  # noqa: E501
         :rtype: str
@@ -311,6 +269,7 @@ class Publication(object):
     def source(self, source):
         """Sets the source of this Publication.
 
+        native data source of this record  # noqa: E501
 
         :param source: The source of this Publication.  # noqa: E501
         :type: str
@@ -368,6 +327,7 @@ class Publication(object):
     def title(self):
         """Gets the title of this Publication.  # noqa: E501
 
+        Official title for the publication.  # noqa: E501
 
         :return: The title of this Publication.  # noqa: E501
         :rtype: str
@@ -378,6 +338,7 @@ class Publication(object):
     def title(self, title):
         """Sets the title of this Publication.
 
+        Official title for the publication.  # noqa: E501
 
         :param title: The title of this Publication.  # noqa: E501
         :type: str
@@ -691,7 +652,7 @@ class Publication(object):
 
 
         :return: The authors of this Publication.  # noqa: E501
-        :rtype: list[MongoPublicationAuthors]
+        :rtype: list[PublicationAuthors]
         """
         return self._authors
 
@@ -701,52 +662,56 @@ class Publication(object):
 
 
         :param authors: The authors of this Publication.  # noqa: E501
-        :type: list[MongoPublicationAuthors]
+        :type: list[PublicationAuthors]
         """
 
         self._authors = authors
 
     @property
-    def valid(self):
-        """Gets the valid of this Publication.  # noqa: E501
+    def tags(self):
+        """Gets the tags of this Publication.  # noqa: E501
 
+        Concept associations established for this publication.  # noqa: E501
 
-        :return: The valid of this Publication.  # noqa: E501
-        :rtype: Object
+        :return: The tags of this Publication.  # noqa: E501
+        :rtype: list[ClinicalTrialTags]
         """
-        return self._valid
+        return self._tags
 
-    @valid.setter
-    def valid(self, valid):
-        """Sets the valid of this Publication.
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this Publication.
 
+        Concept associations established for this publication.  # noqa: E501
 
-        :param valid: The valid of this Publication.  # noqa: E501
-        :type: Object
+        :param tags: The tags of this Publication.  # noqa: E501
+        :type: list[ClinicalTrialTags]
         """
 
-        self._valid = valid
+        self._tags = tags
 
     @property
-    def valid_message(self):
-        """Gets the valid_message of this Publication.  # noqa: E501
+    def molecular_alterations(self):
+        """Gets the molecular_alterations of this Publication.  # noqa: E501
 
+        Molecular concept associations established for this publication.  # noqa: E501
 
-        :return: The valid_message of this Publication.  # noqa: E501
-        :rtype: str
+        :return: The molecular_alterations of this Publication.  # noqa: E501
+        :rtype: list[ClinicalTrialMolecularAlterations]
         """
-        return self._valid_message
+        return self._molecular_alterations
 
-    @valid_message.setter
-    def valid_message(self, valid_message):
-        """Sets the valid_message of this Publication.
+    @molecular_alterations.setter
+    def molecular_alterations(self, molecular_alterations):
+        """Sets the molecular_alterations of this Publication.
 
+        Molecular concept associations established for this publication.  # noqa: E501
 
-        :param valid_message: The valid_message of this Publication.  # noqa: E501
-        :type: str
+        :param molecular_alterations: The molecular_alterations of this Publication.  # noqa: E501
+        :type: list[ClinicalTrialMolecularAlterations]
         """
 
-        self._valid_message = valid_message
+        self._molecular_alterations = molecular_alterations
 
     def to_dict(self):
         """Returns the model properties as a dict"""

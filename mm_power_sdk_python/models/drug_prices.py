@@ -83,6 +83,7 @@ class DrugPrices(object):
     def cost(self):
         """Gets the cost of this DrugPrices.  # noqa: E501
 
+        Drug price per unit.  # noqa: E501
 
         :return: The cost of this DrugPrices.  # noqa: E501
         :rtype: str
@@ -93,6 +94,7 @@ class DrugPrices(object):
     def cost(self, cost):
         """Sets the cost of this DrugPrices.
 
+        Drug price per unit.  # noqa: E501
 
         :param cost: The cost of this DrugPrices.  # noqa: E501
         :type: str
@@ -104,6 +106,7 @@ class DrugPrices(object):
     def currency(self):
         """Gets the currency of this DrugPrices.  # noqa: E501
 
+        Currency of price, example: USD.  # noqa: E501
 
         :return: The currency of this DrugPrices.  # noqa: E501
         :rtype: str
@@ -114,6 +117,7 @@ class DrugPrices(object):
     def currency(self, currency):
         """Sets the currency of this DrugPrices.
 
+        Currency of price, example: USD.  # noqa: E501
 
         :param currency: The currency of this DrugPrices.  # noqa: E501
         :type: str
@@ -125,6 +129,7 @@ class DrugPrices(object):
     def unit(self):
         """Gets the unit of this DrugPrices.  # noqa: E501
 
+        The dosage form, example: tablet.  # noqa: E501
 
         :return: The unit of this DrugPrices.  # noqa: E501
         :rtype: str
@@ -135,6 +140,7 @@ class DrugPrices(object):
     def unit(self, unit):
         """Sets the unit of this DrugPrices.
 
+        The dosage form, example: tablet.  # noqa: E501
 
         :param unit: The unit of this DrugPrices.  # noqa: E501
         :type: str
