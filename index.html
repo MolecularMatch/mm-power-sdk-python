@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Welcome to the MMPower Python SDK - MMPower Python SDK</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Welcome to the MMPower Python SDK";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> MMPower Python SDK</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Welcome to the MMPower Python SDK</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#welcome-to-the-mmpower-python-sdk">Welcome to the MMPower Python SDK</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#requirements">Requirements.</a></li>
+        
+            <li><a class="toctree-l3" href="#installation-usage">Installation &amp; Usage</a></li>
+        
+            <li><a class="toctree-l3" href="#getting-started">Getting Started</a></li>
+        
+            <li><a class="toctree-l3" href="#documentation-for-api-endpoints">Documentation for API Endpoints</a></li>
+        
+            <li><a class="toctree-l3" href="#documentation-for-models">Documentation For Models</a></li>
+        
+            <li><a class="toctree-l3" href="#documentation-for-authorization">Documentation For Authorization</a></li>
+        
+            <li><a class="toctree-l3" href="#bearerauth">bearerAuth</a></li>
+        
+            <li><a class="toctree-l3" href="#author">Author</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ArmGroup/">ArmGroup</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="AssertionsApi/">mm_power_sdk_python.AssertionsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrial/">ClinicalTrial</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialArmGroups/">ClinicalTrialArmGroups</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialCountries/">ClinicalTrialCountries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialEligibility/">ClinicalTrialEligibility</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialGeo/">ClinicalTrialGeo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialInterventions/">ClinicalTrialInterventions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialLeadSponsor/">ClinicalTrialLeadSponsor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialLocations/">ClinicalTrialLocations</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialMolecularAlterations/">ClinicalTrialMolecularAlterations</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialOverallContact/">ClinicalTrialOverallContact</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialOverallContactBackup/">ClinicalTrialOverallContactBackup</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialOverallOfficial/">ClinicalTrialOverallOfficial</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialPrimaryOutcomes/">ClinicalTrialPrimaryOutcomes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialSponsors/">ClinicalTrialSponsors</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialStudyDesign/">ClinicalTrialStudyDesign</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialSynonyms/">ClinicalTrialSynonyms</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ClinicalTrialTags/">ClinicalTrialTags</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Contact/">Contact</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Drug/">Drug</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugAvailability/">DrugAvailability</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugBrands/">DrugBrands</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugCompositeTags/">DrugCompositeTags</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugDosages/">DrugDosages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugDrugclass/">DrugDrugclass</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugExternalIds/">DrugExternalIds</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugParents/">DrugParents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugPharmacology/">DrugPharmacology</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugPrices/">DrugPrices</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="DrugSynonyms/">DrugSynonyms</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Eligibility/">Eligibility</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Filter/">Filter</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Intervention/">Intervention</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MolecularAlteration/">MolecularAlteration</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MongoPublication/">MongoPublication</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MongoPublicationAuthors/">MongoPublicationAuthors</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MongoTrial/">MongoTrial</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MongoTrialLocations/">MongoTrialLocations</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MongoTrialStudyDesign/">MongoTrialStudyDesign</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="MongoTrialSynonyms/">MongoTrialSynonyms</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Outcome/">Outcome</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Publication/">Publication</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchRequest/">SearchRequest</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchRequestGeopoint/">SearchRequestGeopoint</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchRequestLocation/">SearchRequestLocation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchRequestMinShouldMatch/">SearchRequestMinShouldMatch</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchResponseCT/">SearchResponseCT</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchResponseDrug/">SearchResponseDrug</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchResponseDrugRows/">SearchResponseDrugRows</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="SearchResponsePublication/">SearchResponsePublication</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Sponsor/">Sponsor</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="StudyDesign/">StudyDesign</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="Tag/">Tag</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">MMPower Python SDK</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Welcome to the MMPower Python SDK</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="welcome-to-the-mmpower-python-sdk">Welcome to the MMPower Python SDK</h1>
+<h2 id="requirements">Requirements.</h2>
+<p>Python 2.7 and 3.4+</p>
+<h2 id="installation-usage">Installation &amp; Usage</h2>
+<h3 id="pip-install">pip install</h3>
+<p>If the python package is hosted on Github, you can install directly from Github</p>
+<pre><code class="sh">pip install git+https://github.com/MolecularMatch/mm-power-sdk-generator.git
+</code></pre>
+
+<p>(you may need to run <code>pip</code> with root permission: <code>sudo pip install git+https://github.com/MolecularMatch/mm-power-sdk-generator.git</code>)</p>
+<p>Then import the package:</p>
+<pre><code class="python">import mm_power_sdk_python 
+</code></pre>
+
+<h3 id="setuptools">Setuptools</h3>
+<p>Install via <a href="http://pypi.python.org/pypi/setuptools">Setuptools</a>.</p>
+<pre><code class="sh">python setup.py install --user
+</code></pre>
+
+<p>(or <code>sudo python setup.py install</code> to install the package for all users)</p>
+<p>Then import the package:</p>
+<pre><code class="python">import mm_power_sdk_python
+</code></pre>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>Please follow the <a href="#installation--usage">installation procedure</a> and then run the following:</p>
+<pre><code class="python">from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
+body = mm_power_sdk_python.SearchRequest() # SearchRequest | SearchRequest object to send to MolecularMatch for processing
+
+try:
+    # Search for assertions
+    api_response = api_instance.search_assertions(body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling AssertionsApi-&gt;search_assertions: %s\n&quot; % e)
+</code></pre>
+
+<h2 id="documentation-for-api-endpoints">Documentation for API Endpoints</h2>
+<p>All URIs are relative to <em>https://api.molecularmatch.com/v4</em></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>AssertionsApi</em></td>
+<td><a href="docs/AssertionsApi.md#search_assertions"><strong>search_assertions</strong></a></td>
+<td><strong>POST</strong> /assertion/search</td>
+<td>Search for assertions</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation-for-models">Documentation For Models</h2>
+<ul>
+<li><a href="docs/ArmGroup.md">ArmGroup</a></li>
+<li><a href="docs/ClinicalTrial.md">ClinicalTrial</a></li>
+<li><a href="docs/ClinicalTrialArmGroups.md">ClinicalTrialArmGroups</a></li>
+<li><a href="docs/ClinicalTrialCountries.md">ClinicalTrialCountries</a></li>
+<li><a href="docs/ClinicalTrialEligibility.md">ClinicalTrialEligibility</a></li>
+<li><a href="docs/ClinicalTrialGeo.md">ClinicalTrialGeo</a></li>
+<li><a href="docs/ClinicalTrialInterventions.md">ClinicalTrialInterventions</a></li>
+<li><a href="docs/ClinicalTrialLeadSponsor.md">ClinicalTrialLeadSponsor</a></li>
+<li><a href="docs/ClinicalTrialLocations.md">ClinicalTrialLocations</a></li>
+<li><a href="docs/ClinicalTrialMolecularAlterations.md">ClinicalTrialMolecularAlterations</a></li>
+<li><a href="docs/ClinicalTrialOverallContact.md">ClinicalTrialOverallContact</a></li>
+<li><a href="docs/ClinicalTrialOverallContactBackup.md">ClinicalTrialOverallContactBackup</a></li>
+<li><a href="docs/ClinicalTrialOverallOfficial.md">ClinicalTrialOverallOfficial</a></li>
+<li><a href="docs/ClinicalTrialPrimaryOutcomes.md">ClinicalTrialPrimaryOutcomes</a></li>
+<li><a href="docs/ClinicalTrialSponsors.md">ClinicalTrialSponsors</a></li>
+<li><a href="docs/ClinicalTrialStudyDesign.md">ClinicalTrialStudyDesign</a></li>
+<li><a href="docs/ClinicalTrialSynonyms.md">ClinicalTrialSynonyms</a></li>
+<li><a href="docs/ClinicalTrialTags.md">ClinicalTrialTags</a></li>
+<li><a href="docs/Contact.md">Contact</a></li>
+<li><a href="docs/Drug.md">Drug</a></li>
+<li><a href="docs/DrugAvailability.md">DrugAvailability</a></li>
+<li><a href="docs/DrugBrands.md">DrugBrands</a></li>
+<li><a href="docs/DrugCompositeTags.md">DrugCompositeTags</a></li>
+<li><a href="docs/DrugDosages.md">DrugDosages</a></li>
+<li><a href="docs/DrugDrugclass.md">DrugDrugclass</a></li>
+<li><a href="docs/DrugExternalIds.md">DrugExternalIds</a></li>
+<li><a href="docs/DrugParents.md">DrugParents</a></li>
+<li><a href="docs/DrugPharmacology.md">DrugPharmacology</a></li>
+<li><a href="docs/DrugPrices.md">DrugPrices</a></li>
+<li><a href="docs/DrugSynonyms.md">DrugSynonyms</a></li>
+<li><a href="docs/Eligibility.md">Eligibility</a></li>
+<li><a href="docs/Filter.md">Filter</a></li>
+<li><a href="docs/Intervention.md">Intervention</a></li>
+<li><a href="docs/MolecularAlteration.md">MolecularAlteration</a></li>
+<li><a href="docs/MongoPublication.md">MongoPublication</a></li>
+<li><a href="docs/MongoPublicationAuthors.md">MongoPublicationAuthors</a></li>
+<li><a href="docs/MongoTrial.md">MongoTrial</a></li>
+<li><a href="docs/MongoTrialLocations.md">MongoTrialLocations</a></li>
+<li><a href="docs/MongoTrialStudyDesign.md">MongoTrialStudyDesign</a></li>
+<li><a href="docs/MongoTrialSynonyms.md">MongoTrialSynonyms</a></li>
+<li><a href="docs/Outcome.md">Outcome</a></li>
+<li><a href="docs/Publication.md">Publication</a></li>
+<li><a href="docs/SearchRequest.md">SearchRequest</a></li>
+<li><a href="docs/SearchRequestGeopoint.md">SearchRequestGeopoint</a></li>
+<li><a href="docs/SearchRequestLocation.md">SearchRequestLocation</a></li>
+<li><a href="docs/SearchRequestMinShouldMatch.md">SearchRequestMinShouldMatch</a></li>
+<li><a href="docs/SearchResponseCT.md">SearchResponseCT</a></li>
+<li><a href="docs/SearchResponseDrug.md">SearchResponseDrug</a></li>
+<li><a href="docs/SearchResponseDrugRows.md">SearchResponseDrugRows</a></li>
+<li><a href="docs/SearchResponsePublication.md">SearchResponsePublication</a></li>
+<li><a href="docs/Sponsor.md">Sponsor</a></li>
+<li><a href="docs/StudyDesign.md">StudyDesign</a></li>
+<li><a href="docs/Tag.md">Tag</a></li>
+</ul>
+<h2 id="documentation-for-authorization">Documentation For Authorization</h2>
+<h2 id="bearerauth">bearerAuth</h2>
+<h2 id="author">Author</h2>
+<p>support@molecularmatch.com</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ArmGroup/" class="btn btn-neutral float-right" title="ArmGroup">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="ArmGroup/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2019-07-24 20:42:49
+-->
