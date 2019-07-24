@@ -1,0 +1,133 @@
+# Welcome to the MMPower Python SDK
+
+## Requirements.
+
+Python 2.7 and 3.4+
+
+## Installation & Usage
+### pip install
+
+If the python package is hosted on Github, you can install directly from Github
+
+```sh
+pip install git+https://github.com/MolecularMatch/mm-power-sdk-generator.git
+```
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/MolecularMatch/mm-power-sdk-generator.git`)
+
+Then import the package:
+```python
+import mm_power_sdk_python 
+```
+
+### Setuptools
+
+Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
+
+```sh
+python setup.py install --user
+```
+(or `sudo python setup.py install` to install the package for all users)
+
+Then import the package:
+```python
+import mm_power_sdk_python
+```
+
+## Getting Started
+
+Please follow the [installation procedure](#installation--usage) and then run the following:
+
+```python
+from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
+body = mm_power_sdk_python.SearchRequest() # SearchRequest | SearchRequest object to send to MolecularMatch for processing
+
+try:
+    # Search for assertions
+    api_response = api_instance.search_assertions(body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AssertionsApi->search_assertions: %s\n" % e)
+```
+
+## Documentation for API Endpoints
+
+All URIs are relative to *https://api.molecularmatch.com/v4*
+
+Class | Method | HTTP request | Description
+------------ | ------------- | ------------- | -------------
+*AssertionsApi* | [**search_assertions**](docs/AssertionsApi.md#search_assertions) | **POST** /assertion/search | Search for assertions
+
+## Documentation For Models
+
+ - [ArmGroup](docs/ArmGroup.md)
+ - [ClinicalTrial](docs/ClinicalTrial.md)
+ - [ClinicalTrialArmGroups](docs/ClinicalTrialArmGroups.md)
+ - [ClinicalTrialCountries](docs/ClinicalTrialCountries.md)
+ - [ClinicalTrialEligibility](docs/ClinicalTrialEligibility.md)
+ - [ClinicalTrialGeo](docs/ClinicalTrialGeo.md)
+ - [ClinicalTrialInterventions](docs/ClinicalTrialInterventions.md)
+ - [ClinicalTrialLeadSponsor](docs/ClinicalTrialLeadSponsor.md)
+ - [ClinicalTrialLocations](docs/ClinicalTrialLocations.md)
+ - [ClinicalTrialMolecularAlterations](docs/ClinicalTrialMolecularAlterations.md)
+ - [ClinicalTrialOverallContact](docs/ClinicalTrialOverallContact.md)
+ - [ClinicalTrialOverallContactBackup](docs/ClinicalTrialOverallContactBackup.md)
+ - [ClinicalTrialOverallOfficial](docs/ClinicalTrialOverallOfficial.md)
+ - [ClinicalTrialPrimaryOutcomes](docs/ClinicalTrialPrimaryOutcomes.md)
+ - [ClinicalTrialSponsors](docs/ClinicalTrialSponsors.md)
+ - [ClinicalTrialStudyDesign](docs/ClinicalTrialStudyDesign.md)
+ - [ClinicalTrialSynonyms](docs/ClinicalTrialSynonyms.md)
+ - [ClinicalTrialTags](docs/ClinicalTrialTags.md)
+ - [Contact](docs/Contact.md)
+ - [Drug](docs/Drug.md)
+ - [DrugAvailability](docs/DrugAvailability.md)
+ - [DrugBrands](docs/DrugBrands.md)
+ - [DrugCompositeTags](docs/DrugCompositeTags.md)
+ - [DrugDosages](docs/DrugDosages.md)
+ - [DrugDrugclass](docs/DrugDrugclass.md)
+ - [DrugExternalIds](docs/DrugExternalIds.md)
+ - [DrugParents](docs/DrugParents.md)
+ - [DrugPharmacology](docs/DrugPharmacology.md)
+ - [DrugPrices](docs/DrugPrices.md)
+ - [DrugSynonyms](docs/DrugSynonyms.md)
+ - [Eligibility](docs/Eligibility.md)
+ - [Filter](docs/Filter.md)
+ - [Intervention](docs/Intervention.md)
+ - [MolecularAlteration](docs/MolecularAlteration.md)
+ - [MongoPublication](docs/MongoPublication.md)
+ - [MongoPublicationAuthors](docs/MongoPublicationAuthors.md)
+ - [MongoTrial](docs/MongoTrial.md)
+ - [MongoTrialLocations](docs/MongoTrialLocations.md)
+ - [MongoTrialStudyDesign](docs/MongoTrialStudyDesign.md)
+ - [MongoTrialSynonyms](docs/MongoTrialSynonyms.md)
+ - [Outcome](docs/Outcome.md)
+ - [Publication](docs/Publication.md)
+ - [SearchRequest](docs/SearchRequest.md)
+ - [SearchRequestGeopoint](docs/SearchRequestGeopoint.md)
+ - [SearchRequestLocation](docs/SearchRequestLocation.md)
+ - [SearchRequestMinShouldMatch](docs/SearchRequestMinShouldMatch.md)
+ - [SearchResponseCT](docs/SearchResponseCT.md)
+ - [SearchResponseDrug](docs/SearchResponseDrug.md)
+ - [SearchResponseDrugRows](docs/SearchResponseDrugRows.md)
+ - [SearchResponsePublication](docs/SearchResponsePublication.md)
+ - [Sponsor](docs/Sponsor.md)
+ - [StudyDesign](docs/StudyDesign.md)
+ - [Tag](docs/Tag.md)
+
+## Documentation For Authorization
+
+
+## bearerAuth
+
+
+
+## Author
+
+support@molecularmatch.com

@@ -1,0 +1,16 @@
+# StudyDesign
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**allocation** | **str** |  | [optional] 
+**intervention_model** | **str** |  | [optional] 
+**intervention_model_description** | **str** |  | [optional] 
+**primary_purpose** | **str** |  | [optional] 
+**observational_model** | **str** |  | [optional] 
+**time_perspective** | **str** |  | [optional] 
+**masking** | **str** |  | [optional] 
+**masking_description** | **str** |  | [optional] 
+
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
