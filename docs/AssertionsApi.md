@@ -44,9 +44,9 @@ Name | Type | Description  | Notes
 
 [**SearchResponseDrug**](SearchResponseDrug.md)
 
-### Authorization
 
-[bearerAuth](../README.md#bearerAuth)
+
+
 
 ### HTTP request headers
 
