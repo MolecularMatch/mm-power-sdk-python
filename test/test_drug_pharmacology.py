@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.drug_pharmacology import DrugPharmacology  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestDrugPharmacology(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestDrugPharmacology(unittest.TestCase):
     def testDrugPharmacology(self):
         """Test DrugPharmacology"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.drug_pharmacology.DrugPharmacology()  # noqa: E501
+        # model = mm_power_sdk_python.models.drug_pharmacology.DrugPharmacology()  # noqa: E501
         pass
 
 

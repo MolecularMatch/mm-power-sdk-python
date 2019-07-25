@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.search_request_min_should_match import SearchRequestMinShouldMatch  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestSearchRequestMinShouldMatch(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSearchRequestMinShouldMatch(unittest.TestCase):
     def testSearchRequestMinShouldMatch(self):
         """Test SearchRequestMinShouldMatch"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.search_request_min_should_match.SearchRequestMinShouldMatch()  # noqa: E501
+        # model = mm_power_sdk_python.models.search_request_min_should_match.SearchRequestMinShouldMatch()  # noqa: E501
         pass
 
 

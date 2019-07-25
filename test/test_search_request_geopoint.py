@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.search_request_geopoint import SearchRequestGeopoint  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestSearchRequestGeopoint(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSearchRequestGeopoint(unittest.TestCase):
     def testSearchRequestGeopoint(self):
         """Test SearchRequestGeopoint"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.search_request_geopoint.SearchRequestGeopoint()  # noqa: E501
+        # model = mm_power_sdk_python.models.search_request_geopoint.SearchRequestGeopoint()  # noqa: E501
         pass
 
 

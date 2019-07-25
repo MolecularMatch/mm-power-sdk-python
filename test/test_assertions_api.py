@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from api.assertions_api import AssertionsApi  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestAssertionsApi(unittest.TestCase):

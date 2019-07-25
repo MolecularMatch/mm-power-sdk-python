@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.drug_synonyms import DrugSynonyms  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestDrugSynonyms(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestDrugSynonyms(unittest.TestCase):
     def testDrugSynonyms(self):
         """Test DrugSynonyms"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.drug_synonyms.DrugSynonyms()  # noqa: E501
+        # model = mm_power_sdk_python.models.drug_synonyms.DrugSynonyms()  # noqa: E501
         pass
 
 

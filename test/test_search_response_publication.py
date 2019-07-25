@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.search_response_publication import SearchResponsePublication  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestSearchResponsePublication(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestSearchResponsePublication(unittest.TestCase):
     def testSearchResponsePublication(self):
         """Test SearchResponsePublication"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.search_response_publication.SearchResponsePublication()  # noqa: E501
+        # model = mm_power_sdk_python.models.search_response_publication.SearchResponsePublication()  # noqa: E501
         pass
 
 

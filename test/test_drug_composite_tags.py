@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.drug_composite_tags import DrugCompositeTags  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestDrugCompositeTags(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestDrugCompositeTags(unittest.TestCase):
     def testDrugCompositeTags(self):
         """Test DrugCompositeTags"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.drug_composite_tags.DrugCompositeTags()  # noqa: E501
+        # model = mm_power_sdk_python.models.drug_composite_tags.DrugCompositeTags()  # noqa: E501
         pass
 
 

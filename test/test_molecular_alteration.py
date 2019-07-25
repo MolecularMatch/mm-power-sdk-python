@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.molecular_alteration import MolecularAlteration  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestMolecularAlteration(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestMolecularAlteration(unittest.TestCase):
     def testMolecularAlteration(self):
         """Test MolecularAlteration"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.molecular_alteration.MolecularAlteration()  # noqa: E501
+        # model = mm_power_sdk_python.models.molecular_alteration.MolecularAlteration()  # noqa: E501
         pass
 
 

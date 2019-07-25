@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.publication import Publication  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestPublication(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestPublication(unittest.TestCase):
     def testPublication(self):
         """Test Publication"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.publication.Publication()  # noqa: E501
+        # model = mm_power_sdk_python.models.publication.Publication()  # noqa: E501
         pass
 
 

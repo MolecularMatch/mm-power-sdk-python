@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
+import mm_power_sdk_python
 from models.contact import Contact  # noqa: E501
-from swagger_client.rest import ApiException
+from mm_power_sdk_python.rest import ApiException
 
 
 class TestContact(unittest.TestCase):
@@ -31,7 +31,7 @@ class TestContact(unittest.TestCase):
     def testContact(self):
         """Test Contact"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = swagger_client.models.contact.Contact()  # noqa: E501
+        # model = mm_power_sdk_python.models.contact.Contact()  # noqa: E501
         pass
 
 
