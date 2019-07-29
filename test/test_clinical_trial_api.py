@@ -15,30 +15,23 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from api.assertions_api import AssertionsApi  # noqa: E501
+from api.clinical_trial_api import ClinicalTrialApi  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestAssertionsApi(unittest.TestCase):
-    """AssertionsApi unit test stubs"""
+class TestClinicalTrialApi(unittest.TestCase):
+    """ClinicalTrialApi unit test stubs"""
 
     def setUp(self):
-        self.api = api.assertions_api.AssertionsApi()  # noqa: E501
+        self.api = api.clinical_trial_api.ClinicalTrialApi()  # noqa: E501
 
     def tearDown(self):
         pass
 
-    def test_get_assertion(self):
-        """Test case for get_assertion
+    def test_get_trial(self):
+        """Test case for get_trial
 
-        Get an Assertion  # noqa: E501
-        """
-        pass
-
-    def test_search_assertions(self):
-        """Test case for search_assertions
-
-        Search for assertions  # noqa: E501
+        Get a Clinical Trial  # noqa: E501
         """
         pass
 

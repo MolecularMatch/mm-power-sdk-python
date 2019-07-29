@@ -55,6 +55,18 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Assertion to return
+
+try:
+    # Get an Assertion
+    api_response = api_instance.get_assertion(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling AssertionsApi->get_assertion: %s\n" % e)
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
 body = mm_power_sdk_python.SearchRequest() # SearchRequest | SearchRequest object to send to MolecularMatch for processing
 
 try:
@@ -71,7 +83,14 @@ All URIs are relative to *https://api.molecularmatch.com/v4*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AssertionsApi* | [**get_assertion**](docs/AssertionsApi.md#get_assertion) | **GET** /assertion/:id | Get an Assertion
 *AssertionsApi* | [**search_assertions**](docs/AssertionsApi.md#search_assertions) | **POST** /assertion/search | Search for assertions
+*ClinicalTrialApi* | [**get_trial**](docs/ClinicalTrialApi.md#get_trial) | **GET** /trial/:id | Get a Clinical Trial
+*ClinicalTrialsApi* | [**count_trials**](docs/ClinicalTrialsApi.md#count_trials) | **POST** /trial/count | Get the count of Clinical Trials matching a searchRequest
+*ClinicalTrialsApi* | [**search_trials**](docs/ClinicalTrialsApi.md#search_trials) | **POST** /trial/search | Search for clinical trials
+*PublicationApi* | [**count_publications**](docs/PublicationApi.md#count_publications) | **POST** /publication/count | Get the count of Publications matching a searchRequest
+*PublicationApi* | [**get_publication**](docs/PublicationApi.md#get_publication) | **GET** /publication/:id* | Get a Publication
+*PublicationApi* | [**search_publications**](docs/PublicationApi.md#search_publications) | **POST** /publication/search | Search for Publications
 
 ## Documentation For Models
 
