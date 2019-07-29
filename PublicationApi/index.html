@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>ClinicalTrialEligibility - MMPower Python SDK</title>
+  <title>mm_power_sdk_python.PublicationApi - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "ClinicalTrialEligibility";
-    var mkdocs_page_input_path = "ClinicalTrialEligibility.md";
+    var mkdocs_page_name = "mm_power_sdk_python.PublicationApi";
+    var mkdocs_page_input_path = "PublicationApi.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -128,21 +128,9 @@
     <a class="" href="../ClinicalTrialCountries/">ClinicalTrialCountries</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">ClinicalTrialEligibility</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#clinicaltrialeligibility">ClinicalTrialEligibility</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../ClinicalTrialEligibility/">ClinicalTrialEligibility</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -315,9 +303,60 @@
     <a class="" href="../Publication/">Publication</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../PublicationApi/">mm_power_sdk_python.PublicationApi</a>
+    <a class="current" href="./">mm_power_sdk_python.PublicationApi</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mm_power_sdk_pythonpublicationapi">mm_power_sdk_python.PublicationApi</a></li>
+    
+
+    <li class="toctree-l2"><a href="#count_publications">count_publications</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#example">Example</a></li>
+        
+            <li><a class="toctree-l3" href="#parameters">Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#return-type">Return type</a></li>
+        
+            <li><a class="toctree-l3" href="#http-request-headers">HTTP request headers</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#get_publication">get_publication</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#example_1">Example</a></li>
+        
+            <li><a class="toctree-l3" href="#parameters_1">Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#return-type_1">Return type</a></li>
+        
+            <li><a class="toctree-l3" href="#http-request-headers_1">HTTP request headers</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#search_publications">search_publications</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#example_2">Example</a></li>
+        
+            <li><a class="toctree-l3" href="#parameters_2">Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#return-type_2">Return type</a></li>
+        
+            <li><a class="toctree-l3" href="#http-request-headers_2">HTTP request headers</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -407,7 +446,7 @@
     
       
     
-    <li>ClinicalTrialEligibility</li>
+    <li>mm_power_sdk_python.PublicationApi</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -417,8 +456,61 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="clinicaltrialeligibility">ClinicalTrialEligibility</h1>
-<h2 id="properties">Properties</h2>
+                <h1 id="mm_power_sdk_pythonpublicationapi">mm_power_sdk_python.PublicationApi</h1>
+<p>All URIs are relative to <em>https://api.molecularmatch.com/v4</em></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>HTTP request</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#count_publications"><strong>count_publications</strong></a></td>
+<td><strong>POST</strong> /publication/count</td>
+<td>Get the count of Publications matching a searchRequest</td>
+</tr>
+<tr>
+<td><a href="./#get_publication"><strong>get_publication</strong></a></td>
+<td><strong>GET</strong> /publication/:id*</td>
+<td>Get a Publication</td>
+</tr>
+<tr>
+<td><a href="./#search_publications"><strong>search_publications</strong></a></td>
+<td><strong>POST</strong> /publication/search</td>
+<td>Search for Publications</td>
+</tr>
+</tbody>
+</table>
+<h1 id="count_publications"><strong>count_publications</strong></h1>
+<blockquote>
+<p>SearchResponse count_publications(body)</p>
+</blockquote>
+<p>Get the count of Publications matching a searchRequest</p>
+<p>Get the count of Publications matching a searchRequest</p>
+<h3 id="example">Example</h3>
+<pre><code class="python">from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.PublicationApi(mm_power_sdk_python.ApiClient(configuration))
+body = mm_power_sdk_python.SearchRequest() # SearchRequest | SearchRequest object to send to MolecularMatch for processing
+
+try:
+    # Get the count of Publications matching a searchRequest
+    api_response = api_instance.count_publications(body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling PublicationApi-&gt;count_publications: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -430,55 +522,124 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>gender</strong></td>
-<td><strong>str</strong></td>
+<td><strong>body</strong></td>
+<td><a href="../SearchRequest/"><strong>SearchRequest</strong></a></td>
+<td>SearchRequest object to send to MolecularMatch for processing</td>
 <td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>gender_based</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>gender_description</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>minimum_age</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>maximum_age</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>healthy_volunteers</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>criteria</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>study_pop</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
 </tr>
 </tbody>
 </table>
+<h3 id="return-type">Return type</h3>
+<p><a href="SearchResponse.md"><strong>SearchResponse</strong></a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h1 id="get_publication"><strong>get_publication</strong></h1>
+<blockquote>
+<p>Publication get_publication(id)</p>
+</blockquote>
+<p>Get a Publication</p>
+<p>Get a Publication</p>
+<h3 id="example_1">Example</h3>
+<pre><code class="python">from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.PublicationApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Publication to return
+
+try:
+    # Get a Publication
+    api_response = api_instance.get_publication(id)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling PublicationApi-&gt;get_publication: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_1">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>ID of the Publication to return</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_1">Return type</h3>
+<p><a href="../Publication/"><strong>Publication</strong></a></p>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
+<h1 id="search_publications"><strong>search_publications</strong></h1>
+<blockquote>
+<p>SearchResponse search_publications(body)</p>
+</blockquote>
+<p>Search for Publications</p>
+<p>Search for Publications</p>
+<h3 id="example_2">Example</h3>
+<pre><code class="python">from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.PublicationApi(mm_power_sdk_python.ApiClient(configuration))
+body = mm_power_sdk_python.SearchRequest() # SearchRequest | SearchRequest object to send to MolecularMatch for processing
+
+try:
+    # Search for Publications
+    api_response = api_instance.search_publications(body)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling PublicationApi-&gt;search_publications: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_2">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="../SearchRequest/"><strong>SearchRequest</strong></a></td>
+<td>SearchRequest object to send to MolecularMatch for processing</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_2">Return type</h3>
+<p><a href="SearchResponse.md"><strong>SearchResponse</strong></a></p>
+<h3 id="http-request-headers_2">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: application/json</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
               
             </div>
           </div>
@@ -486,10 +647,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ClinicalTrialGeo/" class="btn btn-neutral float-right" title="ClinicalTrialGeo">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../PublicationAuthors/" class="btn btn-neutral float-right" title="PublicationAuthors">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ClinicalTrialCountries/" class="btn btn-neutral" title="ClinicalTrialCountries"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Publication/" class="btn btn-neutral" title="Publication"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -515,10 +676,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ClinicalTrialCountries/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Publication/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ClinicalTrialGeo/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../PublicationAuthors/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

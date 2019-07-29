@@ -111,7 +111,7 @@
     <li class="toctree-l2"><a href="#mm_power_sdk_pythonassertionsapi">mm_power_sdk_python.AssertionsApi</a></li>
     
 
-    <li class="toctree-l2"><a href="#search_assertions">search_assertions</a></li>
+    <li class="toctree-l2"><a href="#get_assertion">get_assertion</a></li>
     
         <ul>
         
@@ -126,12 +126,32 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#search_assertions">search_assertions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#example_1">Example</a></li>
+        
+            <li><a class="toctree-l3" href="#parameters_1">Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#return-type_1">Return type</a></li>
+        
+            <li><a class="toctree-l3" href="#http-request-headers_1">HTTP request headers</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../ClinicalTrial/">ClinicalTrial</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ClinicalTrialApi/">mm_power_sdk_python.ClinicalTrialApi</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -226,6 +246,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../ClinicalTrialsApi/">mm_power_sdk_python.ClinicalTrialsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../Contact/">Contact</a>
 	    </li>
           
@@ -312,6 +337,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../Publication/">Publication</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../PublicationApi/">mm_power_sdk_python.PublicationApi</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -423,19 +453,76 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="./#get_assertion"><strong>get_assertion</strong></a></td>
+<td><strong>GET</strong> /assertion/:id</td>
+<td>Get an Assertion</td>
+</tr>
+<tr>
 <td><a href="./#search_assertions"><strong>search_assertions</strong></a></td>
 <td><strong>POST</strong> /assertion/search</td>
 <td>Search for assertions</td>
 </tr>
 </tbody>
 </table>
+<h1 id="get_assertion"><strong>get_assertion</strong></h1>
+<blockquote>
+<p>Assertion get_assertion(id)</p>
+</blockquote>
+<p>Get an Assertion</p>
+<p>Get an evidence backed assertion</p>
+<h3 id="example">Example</h3>
+<pre><code class="python">from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Assertion to return
+
+try:
+    # Get an Assertion
+    api_response = api_instance.get_assertion(id)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling AssertionsApi-&gt;get_assertion: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>ID of the Assertion to return</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type">Return type</h3>
+<p><a href="../Assertion/"><strong>Assertion</strong></a></p>
+<h3 id="http-request-headers">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
 <h1 id="search_assertions"><strong>search_assertions</strong></h1>
 <blockquote>
 <p>SearchResponseDrug search_assertions(body)</p>
 </blockquote>
 <p>Search for assertions</p>
 <p>Search for evidence backed assertions</p>
-<h3 id="example">Example</h3>
+<h3 id="example_1">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
 import mm_power_sdk_python
@@ -455,7 +542,7 @@ except ApiException as e:
     print(&quot;Exception when calling AssertionsApi-&gt;search_assertions: %s\n&quot; % e)
 </code></pre>
 
-<h3 id="parameters">Parameters</h3>
+<h3 id="parameters_1">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -474,9 +561,9 @@ except ApiException as e:
 </tr>
 </tbody>
 </table>
-<h3 id="return-type">Return type</h3>
+<h3 id="return-type_1">Return type</h3>
 <p><a href="../SearchResponseDrug/"><strong>SearchResponseDrug</strong></a></p>
-<h3 id="http-request-headers">HTTP request headers</h3>
+<h3 id="http-request-headers_1">HTTP request headers</h3>
 <ul>
 <li><strong>Content-Type</strong>: application/json</li>
 <li><strong>Accept</strong>: application/json</li>
