@@ -5,10 +5,11 @@ All URIs are relative to *https://api.molecularmatch.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**count_trials**](ClinicalTrialsApi.md#count_trials) | **POST** /trial/count | Get the count of Clinical Trials matching a searchRequest
+[**get_trial**](ClinicalTrialsApi.md#get_trial) | **GET** /trial/:id | Get a Clinical Trial
 [**search_trials**](ClinicalTrialsApi.md#search_trials) | **POST** /trial/search | Search for clinical trials
 
 # **count_trials**
-> SearchResponse count_trials(body)
+> SearchResponseClinicalTrial count_trials(body)
 
 Get the count of Clinical Trials matching a searchRequest
 
@@ -43,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchResponse**](SearchResponse.md)
+[**SearchResponseClinicalTrial**](SearchResponseClinicalTrial.md)
 
 
 
@@ -56,8 +57,57 @@ Name | Type | Description  | Notes
 
  
 
+# **get_trial**
+> ClinicalTrial get_trial(id)
+
+Get a Clinical Trial
+
+Get a Clinical Trial
+
+### Example
+```python
+from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.ClinicalTrialsApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Clinical Trial to return
+
+try:
+    # Get a Clinical Trial
+    api_response = api_instance.get_trial(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ClinicalTrialsApi->get_trial: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| ID of the Clinical Trial to return | 
+
+### Return type
+
+[**ClinicalTrial**](ClinicalTrial.md)
+
+
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+ 
+
 # **search_trials**
-> SearchResponse search_trials(body)
+> SearchResponseClinicalTrial search_trials(body)
 
 Search for clinical trials
 
@@ -92,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchResponse**](SearchResponse.md)
+[**SearchResponseClinicalTrial**](SearchResponseClinicalTrial.md)
 
 
 

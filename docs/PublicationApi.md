@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**search_publications**](PublicationApi.md#search_publications) | **POST** /publication/search | Search for Publications
 
 # **count_publications**
-> SearchResponse count_publications(body)
+> SearchResponsePublication count_publications(body)
 
 Get the count of Publications matching a searchRequest
 
@@ -44,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchResponse**](SearchResponse.md)
+[**SearchResponsePublication**](SearchResponsePublication.md)
 
 
 
@@ -107,7 +107,7 @@ Name | Type | Description  | Notes
  
 
 # **search_publications**
-> SearchResponse search_publications(body)
+> SearchResponsePublication search_publications(body)
 
 Search for Publications
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchResponse**](SearchResponse.md)
+[**SearchResponsePublication**](SearchResponsePublication.md)
 
 
 

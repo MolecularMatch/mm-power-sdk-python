@@ -35,6 +35,13 @@ class TestClinicalTrialsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_trial(self):
+        """Test case for get_trial
+
+        Get a Clinical Trial  # noqa: E501
+        """
+        pass
+
     def test_search_trials(self):
         """Test case for search_trials
 
