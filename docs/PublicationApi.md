@@ -5,7 +5,7 @@ All URIs are relative to *https://api.molecularmatch.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**count_publications**](PublicationApi.md#count_publications) | **POST** /publication/count | Get the count of Publications matching a searchRequest
-[**get_publication**](PublicationApi.md#get_publication) | **GET** /publication/:id* | Get a Publication
+[**get_publication**](PublicationApi.md#get_publication) | **GET** /publication/{id} | Get a Publication
 [**search_publications**](PublicationApi.md#search_publications) | **POST** /publication/search | Search for Publications
 
 # **count_publications**

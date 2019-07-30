@@ -193,7 +193,7 @@ class PublicationApi(object):
 
         path_params = {}
         if 'id' in params:
-            path_params[':id'] = params['id']  # noqa: E501
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -211,7 +211,7 @@ class PublicationApi(object):
         auth_settings = ['bearerAuth']  # noqa: E501
 
         return self.api_client.call_api(
-            '/publication/:id*', 'GET',
+            '/publication/{id}', 'GET',
             path_params,
             query_params,
             header_params,

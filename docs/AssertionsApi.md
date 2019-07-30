@@ -4,7 +4,7 @@ All URIs are relative to *https://api.molecularmatch.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_assertion**](AssertionsApi.md#get_assertion) | **GET** /assertion/:id | Get an Assertion
+[**get_assertion**](AssertionsApi.md#get_assertion) | **GET** /assertion/{id} | Get an Assertion
 [**search_assertions**](AssertionsApi.md#search_assertions) | **POST** /assertion/search | Search for assertions
 
 # **get_assertion**

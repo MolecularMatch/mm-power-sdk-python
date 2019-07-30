@@ -5,7 +5,7 @@ All URIs are relative to *https://api.molecularmatch.com/v4*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**count_trials**](ClinicalTrialsApi.md#count_trials) | **POST** /trial/count | Get the count of Clinical Trials matching a searchRequest
-[**get_trial**](ClinicalTrialsApi.md#get_trial) | **GET** /trial/:id | Get a Clinical Trial
+[**get_trial**](ClinicalTrialsApi.md#get_trial) | **GET** /trial/{id} | Get a Clinical Trial
 [**search_trials**](ClinicalTrialsApi.md#search_trials) | **POST** /trial/search | Search for clinical trials
 
 # **count_trials**
