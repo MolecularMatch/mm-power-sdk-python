@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>DrugSynonyms - MMPower Python SDK</title>
+  <title>Agency - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,8 +17,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "DrugSynonyms";
-    var mkdocs_page_input_path = "DrugSynonyms.md";
+    var mkdocs_page_name = "Agency";
+    var mkdocs_page_input_path = "Agency.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -51,6 +51,23 @@
             <li class="toctree-l1">
 		
     <a class="" href="..">Welcome to the MMPower Python SDK</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Agency</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#agency">Agency</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -145,11 +162,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../ClinicalTrialSynonyms/">ClinicalTrialSynonyms</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../ClinicalTrialsApi/">mm_power_sdk_python.ClinicalTrialsApi</a>
 	    </li>
           
@@ -190,11 +202,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../DrugExternalIds/">DrugExternalIds</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../DrugParents/">DrugParents</a>
 	    </li>
           
@@ -208,26 +215,14 @@
     <a class="" href="../DrugPrices/">DrugPrices</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">DrugSynonyms</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#drugsynonyms">DrugSynonyms</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../Eligibility/">Eligibility</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../Eligibility/">Eligibility</a>
+    <a class="" href="../ExternalId/">ExternalId</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -302,11 +297,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../Sponsor/">Sponsor</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../StandardizedTier/">StandardizedTier</a>
 	    </li>
           
@@ -323,6 +313,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../StudyDesign/">StudyDesign</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Synonym/">Synonym</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -352,7 +347,7 @@
     
       
     
-    <li>DrugSynonyms</li>
+    <li>Agency</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -362,7 +357,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="drugsynonyms">DrugSynonyms</h1>
+                <h1 id="agency">Agency</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -375,34 +370,16 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>suppress</strong></td>
-<td><strong>bool</strong></td>
+<td><strong>agency</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>agency_class</strong></td>
+<td><strong>list[str]</strong></td>
 <td></td>
 <td>[optional]</td>
-</tr>
-<tr>
-<td><strong>custom</strong></td>
-<td><strong>bool</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>name</strong></td>
-<td><strong>str</strong></td>
-<td>Alternative name.</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>name_lower</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>analyzer</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional] [default to 'DEFAULT']</td>
 </tr>
 </tbody>
 </table>
@@ -413,10 +390,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../Eligibility/" class="btn btn-neutral float-right" title="Eligibility">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ArmGroup/" class="btn btn-neutral float-right" title="ArmGroup">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../DrugPrices/" class="btn btn-neutral" title="DrugPrices"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral" title="Welcome to the MMPower Python SDK"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -442,10 +419,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../DrugPrices/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../Eligibility/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ArmGroup/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
