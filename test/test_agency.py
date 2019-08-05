@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.sponsor import Sponsor  # noqa: E501
+from models.agency import Agency  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestSponsor(unittest.TestCase):
-    """Sponsor unit test stubs"""
+class TestAgency(unittest.TestCase):
+    """Agency unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestSponsor(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testSponsor(self):
-        """Test Sponsor"""
+    def testAgency(self):
+        """Test Agency"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.sponsor.Sponsor()  # noqa: E501
+        # model = mm_power_sdk_python.models.agency.Agency()  # noqa: E501
         pass
 
 

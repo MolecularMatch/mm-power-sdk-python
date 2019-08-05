@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **link** | **str** |  | [optional] 
 **year** | **int** |  | [optional] 
 **trust_rating** | **float** |  | [optional] 
-**suppress** | **bool** |  | [optional] 
 **valid** | **bool** |  | [optional] 
 
 

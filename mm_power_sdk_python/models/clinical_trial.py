@@ -19,13 +19,13 @@ from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCou
 from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_locations import ClinicalTrialLocations  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_synonyms import ClinicalTrialSynonyms  # noqa: F401,E501
 from mm_power_sdk_python.models.contact import Contact  # noqa: F401,E501
 from mm_power_sdk_python.models.eligibility import Eligibility  # noqa: F401,E501
 from mm_power_sdk_python.models.intervention import Intervention  # noqa: F401,E501
 from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration  # noqa: F401,E501
 from mm_power_sdk_python.models.outcome import Outcome  # noqa: F401,E501
 from mm_power_sdk_python.models.study_design import StudyDesign  # noqa: F401,E501
+from mm_power_sdk_python.models.synonym import Synonym  # noqa: F401,E501
 from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
@@ -85,7 +85,7 @@ class ClinicalTrial(object):
         'inclusion_criteria_preserved': 'str',
         'exclusion_criteria': 'str',
         'exclusion_criteria_preserved': 'str',
-        'synonyms': 'list[ClinicalTrialSynonyms]',
+        'synonyms': 'list[Synonym]',
         'acronym': 'str',
         'link': 'str',
         'tags': 'list[Tag]',
@@ -1275,7 +1275,7 @@ class ClinicalTrial(object):
         Any identifier other than the organization's Unique Protocol Identification Number or the NCT number that is assigned to the clinical study.  # noqa: E501
 
         :return: The synonyms of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialSynonyms]
+        :rtype: list[Synonym]
         """
         return self._synonyms
 
@@ -1286,7 +1286,7 @@ class ClinicalTrial(object):
         Any identifier other than the organization's Unique Protocol Identification Number or the NCT number that is assigned to the clinical study.  # noqa: E501
 
         :param synonyms: The synonyms of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialSynonyms]
+        :type: list[Synonym]
         """
 
         self._synonyms = synonyms

@@ -29,74 +29,22 @@ class DrugDrugclass(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'suppress': 'bool',
-        'custom': 'bool',
         'name': 'str',
         'source': 'str'
     }
 
     attribute_map = {
-        'suppress': 'suppress',
-        'custom': 'custom',
         'name': 'name',
         'source': 'source'
     }
 
-    def __init__(self, suppress=None, custom=None, name=None, source=None):  # noqa: E501
+    def __init__(self, name=None, source=None):  # noqa: E501
         """DrugDrugclass - a model defined in Swagger"""  # noqa: E501
-        self._suppress = None
-        self._custom = None
         self._name = None
         self._source = None
         self.discriminator = None
-        if suppress is not None:
-            self.suppress = suppress
-        if custom is not None:
-            self.custom = custom
         self.name = name
         self.source = source
-
-    @property
-    def suppress(self):
-        """Gets the suppress of this DrugDrugclass.  # noqa: E501
-
-
-        :return: The suppress of this DrugDrugclass.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress
-
-    @suppress.setter
-    def suppress(self, suppress):
-        """Sets the suppress of this DrugDrugclass.
-
-
-        :param suppress: The suppress of this DrugDrugclass.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress = suppress
-
-    @property
-    def custom(self):
-        """Gets the custom of this DrugDrugclass.  # noqa: E501
-
-
-        :return: The custom of this DrugDrugclass.  # noqa: E501
-        :rtype: bool
-        """
-        return self._custom
-
-    @custom.setter
-    def custom(self, custom):
-        """Sets the custom of this DrugDrugclass.
-
-
-        :param custom: The custom of this DrugDrugclass.  # noqa: E501
-        :type: bool
-        """
-
-        self._custom = custom
 
     @property
     def name(self):

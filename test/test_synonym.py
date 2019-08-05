@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.drug_synonyms import DrugSynonyms  # noqa: E501
+from models.synonym import Synonym  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestDrugSynonyms(unittest.TestCase):
-    """DrugSynonyms unit test stubs"""
+class TestSynonym(unittest.TestCase):
+    """Synonym unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestDrugSynonyms(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDrugSynonyms(self):
-        """Test DrugSynonyms"""
+    def testSynonym(self):
+        """Test Synonym"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.drug_synonyms.DrugSynonyms()  # noqa: E501
+        # model = mm_power_sdk_python.models.synonym.Synonym()  # noqa: E501
         pass
 
 

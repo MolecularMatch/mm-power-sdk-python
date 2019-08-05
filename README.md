@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Agency](docs/Agency.md)
  - [ArmGroup](docs/ArmGroup.md)
  - [Assertion](docs/Assertion.md)
  - [AssertionClassifications](docs/AssertionClassifications.md)
@@ -111,7 +112,6 @@ Class | Method | HTTP request | Description
  - [ClinicalTrialLocationSummaryCountries](docs/ClinicalTrialLocationSummaryCountries.md)
  - [ClinicalTrialLocations](docs/ClinicalTrialLocations.md)
  - [ClinicalTrialSponsors](docs/ClinicalTrialSponsors.md)
- - [ClinicalTrialSynonyms](docs/ClinicalTrialSynonyms.md)
  - [Contact](docs/Contact.md)
  - [Drug](docs/Drug.md)
  - [DrugAvailability](docs/DrugAvailability.md)
@@ -119,12 +119,11 @@ Class | Method | HTTP request | Description
  - [DrugCompositeTags](docs/DrugCompositeTags.md)
  - [DrugDosages](docs/DrugDosages.md)
  - [DrugDrugclass](docs/DrugDrugclass.md)
- - [DrugExternalIds](docs/DrugExternalIds.md)
  - [DrugParents](docs/DrugParents.md)
  - [DrugPharmacology](docs/DrugPharmacology.md)
  - [DrugPrices](docs/DrugPrices.md)
- - [DrugSynonyms](docs/DrugSynonyms.md)
  - [Eligibility](docs/Eligibility.md)
+ - [ExternalId](docs/ExternalId.md)
  - [Filter](docs/Filter.md)
  - [Intervention](docs/Intervention.md)
  - [MolecularAlteration](docs/MolecularAlteration.md)
@@ -138,11 +137,11 @@ Class | Method | HTTP request | Description
  - [SearchResponseClinicalTrial](docs/SearchResponseClinicalTrial.md)
  - [SearchResponseDrug](docs/SearchResponseDrug.md)
  - [SearchResponsePublication](docs/SearchResponsePublication.md)
- - [Sponsor](docs/Sponsor.md)
  - [StandardizedTier](docs/StandardizedTier.md)
  - [StandardizedTierTier](docs/StandardizedTierTier.md)
  - [StandardizedTierTierExplanation](docs/StandardizedTierTierExplanation.md)
  - [StudyDesign](docs/StudyDesign.md)
+ - [Synonym](docs/Synonym.md)
  - [Tag](docs/Tag.md)
 
 ## Documentation For Authorization

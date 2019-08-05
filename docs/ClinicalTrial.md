@@ -46,7 +46,7 @@ Name | Type | Description | Notes
 **inclusion_criteria_preserved** | **str** | Formatted rendition of the inclusionCriteria. | [optional] 
 **exclusion_criteria** | **str** | A limited list of criteria for selection of participants in the clinical study, provided in terms of exclusion criteria and suitable for assisting potential participants in identifying clinical studies of interest. | [optional] 
 **exclusion_criteria_preserved** | **str** | Formatted rendition of the exclusionCriteria. | [optional] 
-**synonyms** | [**list[ClinicalTrialSynonyms]**](ClinicalTrialSynonyms.md) | Any identifier other than the organization&#x27;s Unique Protocol Identification Number or the NCT number that is assigned to the clinical study. | [optional] 
+**synonyms** | [**list[Synonym]**](Synonym.md) | Any identifier other than the organization&#x27;s Unique Protocol Identification Number or the NCT number that is assigned to the clinical study. | [optional] 
 **acronym** | **str** | An acronym or abbreviation used publicly to identify the clinical study. | [optional] 
 **link** | **str** | URL to registry listing of this trial. | [optional] 
 **tags** | [**list[Tag]**](Tag.md) | Concept associations established for this trial. | [optional] 

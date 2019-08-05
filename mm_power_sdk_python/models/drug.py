@@ -19,11 +19,11 @@ from mm_power_sdk_python.models.drug_brands import DrugBrands  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_composite_tags import DrugCompositeTags  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_dosages import DrugDosages  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_drugclass import DrugDrugclass  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_external_ids import DrugExternalIds  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_parents import DrugParents  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_pharmacology import DrugPharmacology  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_prices import DrugPrices  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_synonyms import DrugSynonyms  # noqa: F401,E501
+from mm_power_sdk_python.models.external_id import ExternalId  # noqa: F401,E501
+from mm_power_sdk_python.models.synonym import Synonym  # noqa: F401,E501
 
 
 class Drug(object):
@@ -49,7 +49,7 @@ class Drug(object):
         'suppress_resistance': 'bool',
         'suppress_synonym_resistance': 'bool',
         'availability': 'list[DrugAvailability]',
-        'synonyms': 'list[DrugSynonyms]',
+        'synonyms': 'list[Synonym]',
         'parents': 'list[DrugParents]',
         'drugclass': 'list[DrugDrugclass]',
         'composite_tags': 'list[DrugCompositeTags]',
@@ -59,7 +59,7 @@ class Drug(object):
         'mechanism_text': 'str',
         'rxcui': 'list[str]',
         'drugclass_caused_suppress': 'list[str]',
-        'external_ids': 'list[DrugExternalIds]',
+        'external_ids': 'list[ExternalId]',
         'link': 'str',
         'prices': 'list[DrugPrices]',
         'dosages': 'list[DrugDosages]',
@@ -412,7 +412,7 @@ class Drug(object):
         Other names or identifiers that are associated with this drug.  # noqa: E501
 
         :return: The synonyms of this Drug.  # noqa: E501
-        :rtype: list[DrugSynonyms]
+        :rtype: list[Synonym]
         """
         return self._synonyms
 
@@ -423,7 +423,7 @@ class Drug(object):
         Other names or identifiers that are associated with this drug.  # noqa: E501
 
         :param synonyms: The synonyms of this Drug.  # noqa: E501
-        :type: list[DrugSynonyms]
+        :type: list[Synonym]
         """
 
         self._synonyms = synonyms
@@ -624,7 +624,7 @@ class Drug(object):
         Identifiers used in other websites or databases providing information about this drug.  # noqa: E501
 
         :return: The external_ids of this Drug.  # noqa: E501
-        :rtype: list[DrugExternalIds]
+        :rtype: list[ExternalId]
         """
         return self._external_ids
 
@@ -635,7 +635,7 @@ class Drug(object):
         Identifiers used in other websites or databases providing information about this drug.  # noqa: E501
 
         :param external_ids: The external_ids of this Drug.  # noqa: E501
-        :type: list[DrugExternalIds]
+        :type: list[ExternalId]
         """
 
         self._external_ids = external_ids

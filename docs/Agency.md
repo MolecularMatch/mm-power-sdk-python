@@ -1,4 +1,4 @@
-# Sponsor
+# Agency
 
 ## Properties
 Name | Type | Description | Notes

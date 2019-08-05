@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.drug_external_ids import DrugExternalIds  # noqa: E501
+from models.external_id import ExternalId  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestDrugExternalIds(unittest.TestCase):
-    """DrugExternalIds unit test stubs"""
+class TestExternalId(unittest.TestCase):
+    """ExternalId unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestDrugExternalIds(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDrugExternalIds(self):
-        """Test DrugExternalIds"""
+    def testExternalId(self):
+        """Test ExternalId"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.drug_external_ids.DrugExternalIds()  # noqa: E501
+        # model = mm_power_sdk_python.models.external_id.ExternalId()  # noqa: E501
         pass
 
 

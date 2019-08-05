@@ -29,28 +29,18 @@ class DrugParents(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'name': 'str',
-        'suppress': 'bool',
-        'custom': 'bool'
+        'name': 'str'
     }
 
     attribute_map = {
-        'name': 'name',
-        'suppress': 'suppress',
-        'custom': 'custom'
+        'name': 'name'
     }
 
-    def __init__(self, name=None, suppress=None, custom=None):  # noqa: E501
+    def __init__(self, name=None):  # noqa: E501
         """DrugParents - a model defined in Swagger"""  # noqa: E501
         self._name = None
-        self._suppress = None
-        self._custom = None
         self.discriminator = None
         self.name = name
-        if suppress is not None:
-            self.suppress = suppress
-        if custom is not None:
-            self.custom = custom
 
     @property
     def name(self):
@@ -74,48 +64,6 @@ class DrugParents(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def suppress(self):
-        """Gets the suppress of this DrugParents.  # noqa: E501
-
-
-        :return: The suppress of this DrugParents.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress
-
-    @suppress.setter
-    def suppress(self, suppress):
-        """Sets the suppress of this DrugParents.
-
-
-        :param suppress: The suppress of this DrugParents.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress = suppress
-
-    @property
-    def custom(self):
-        """Gets the custom of this DrugParents.  # noqa: E501
-
-
-        :return: The custom of this DrugParents.  # noqa: E501
-        :rtype: bool
-        """
-        return self._custom
-
-    @custom.setter
-    def custom(self, custom):
-        """Sets the custom of this DrugParents.
-
-
-        :param custom: The custom of this DrugParents.  # noqa: E501
-        :type: bool
-        """
-
-        self._custom = custom
 
     def to_dict(self):
         """Returns the model properties as a dict"""

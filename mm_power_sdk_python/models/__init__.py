@@ -14,6 +14,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from mm_power_sdk_python.models.agency import Agency
 from mm_power_sdk_python.models.arm_group import ArmGroup
 from mm_power_sdk_python.models.assertion import Assertion
 from mm_power_sdk_python.models.assertion_classifications import AssertionClassifications
@@ -31,7 +32,6 @@ from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalT
 from mm_power_sdk_python.models.clinical_trial_location_summary_countries import ClinicalTrialLocationSummaryCountries
 from mm_power_sdk_python.models.clinical_trial_locations import ClinicalTrialLocations
 from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors
-from mm_power_sdk_python.models.clinical_trial_synonyms import ClinicalTrialSynonyms
 from mm_power_sdk_python.models.contact import Contact
 from mm_power_sdk_python.models.drug import Drug
 from mm_power_sdk_python.models.drug_availability import DrugAvailability
@@ -39,12 +39,11 @@ from mm_power_sdk_python.models.drug_brands import DrugBrands
 from mm_power_sdk_python.models.drug_composite_tags import DrugCompositeTags
 from mm_power_sdk_python.models.drug_dosages import DrugDosages
 from mm_power_sdk_python.models.drug_drugclass import DrugDrugclass
-from mm_power_sdk_python.models.drug_external_ids import DrugExternalIds
 from mm_power_sdk_python.models.drug_parents import DrugParents
 from mm_power_sdk_python.models.drug_pharmacology import DrugPharmacology
 from mm_power_sdk_python.models.drug_prices import DrugPrices
-from mm_power_sdk_python.models.drug_synonyms import DrugSynonyms
 from mm_power_sdk_python.models.eligibility import Eligibility
+from mm_power_sdk_python.models.external_id import ExternalId
 from mm_power_sdk_python.models.filter import Filter
 from mm_power_sdk_python.models.intervention import Intervention
 from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration
@@ -58,9 +57,9 @@ from mm_power_sdk_python.models.search_request_min_should_match import SearchReq
 from mm_power_sdk_python.models.search_response_clinical_trial import SearchResponseClinicalTrial
 from mm_power_sdk_python.models.search_response_drug import SearchResponseDrug
 from mm_power_sdk_python.models.search_response_publication import SearchResponsePublication
-from mm_power_sdk_python.models.sponsor import Sponsor
 from mm_power_sdk_python.models.standardized_tier import StandardizedTier
 from mm_power_sdk_python.models.standardized_tier_tier import StandardizedTierTier
 from mm_power_sdk_python.models.standardized_tier_tier_explanation import StandardizedTierTierExplanation
 from mm_power_sdk_python.models.study_design import StudyDesign
+from mm_power_sdk_python.models.synonym import Synonym
 from mm_power_sdk_python.models.tag import Tag
