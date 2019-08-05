@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.search_response_drug_rows import SearchResponseDrugRows  # noqa: E501
+from models.assertion_locations import AssertionLocations  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestSearchResponseDrugRows(unittest.TestCase):
-    """SearchResponseDrugRows unit test stubs"""
+class TestAssertionLocations(unittest.TestCase):
+    """AssertionLocations unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestSearchResponseDrugRows(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testSearchResponseDrugRows(self):
-        """Test SearchResponseDrugRows"""
+    def testAssertionLocations(self):
+        """Test AssertionLocations"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.search_response_drug_rows.SearchResponseDrugRows()  # noqa: E501
+        # model = mm_power_sdk_python.models.assertion_locations.AssertionLocations()  # noqa: E501
         pass
 
 

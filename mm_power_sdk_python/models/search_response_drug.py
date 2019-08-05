@@ -14,8 +14,8 @@ import pprint
 import re  # noqa: F401
 
 import six
+from mm_power_sdk_python.models.drug import Drug  # noqa: F401,E501
 from mm_power_sdk_python.models.filter import Filter  # noqa: F401,E501
-from mm_power_sdk_python.models.search_response_drug_rows import SearchResponseDrugRows  # noqa: F401,E501
 
 
 class SearchResponseDrug(object):
@@ -37,7 +37,7 @@ class SearchResponseDrug(object):
         'total': 'int',
         'total_pages': 'int',
         'page': 'int',
-        'rows': 'list[SearchResponseDrugRows]',
+        'rows': 'list[Drug]',
         'rationalized': 'list[Filter]',
         'unrecognized': 'list[Filter]',
         'ambiguous_narrative': 'list[str]'
@@ -238,7 +238,7 @@ class SearchResponseDrug(object):
         The array of drugs that match the search criteria.  # noqa: E501
 
         :return: The rows of this SearchResponseDrug.  # noqa: E501
-        :rtype: list[SearchResponseDrugRows]
+        :rtype: list[Drug]
         """
         return self._rows
 
@@ -249,7 +249,7 @@ class SearchResponseDrug(object):
         The array of drugs that match the search criteria.  # noqa: E501
 
         :param rows: The rows of this SearchResponseDrug.  # noqa: E501
-        :type: list[SearchResponseDrugRows]
+        :type: list[Drug]
         """
 
         self._rows = rows

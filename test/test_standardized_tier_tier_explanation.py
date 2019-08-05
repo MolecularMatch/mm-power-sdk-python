@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.clinical_trial_overall_contact_backup import ClinicalTrialOverallContactBackup  # noqa: E501
+from models.standardized_tier_tier_explanation import StandardizedTierTierExplanation  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestClinicalTrialOverallContactBackup(unittest.TestCase):
-    """ClinicalTrialOverallContactBackup unit test stubs"""
+class TestStandardizedTierTierExplanation(unittest.TestCase):
+    """StandardizedTierTierExplanation unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestClinicalTrialOverallContactBackup(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testClinicalTrialOverallContactBackup(self):
-        """Test ClinicalTrialOverallContactBackup"""
+    def testStandardizedTierTierExplanation(self):
+        """Test StandardizedTierTierExplanation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.clinical_trial_overall_contact_backup.ClinicalTrialOverallContactBackup()  # noqa: E501
+        # model = mm_power_sdk_python.models.standardized_tier_tier_explanation.StandardizedTierTierExplanation()  # noqa: E501
         pass
 
 

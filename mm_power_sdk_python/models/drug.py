@@ -46,6 +46,8 @@ class Drug(object):
         'description': 'str',
         'composite': 'bool',
         'approved': 'bool',
+        'suppress_resistance': 'bool',
+        'suppress_synonym_resistance': 'bool',
         'availability': 'list[DrugAvailability]',
         'synonyms': 'list[DrugSynonyms]',
         'parents': 'list[DrugParents]',
@@ -56,6 +58,7 @@ class Drug(object):
         'contraindication_text': 'str',
         'mechanism_text': 'str',
         'rxcui': 'list[str]',
+        'drugclass_caused_suppress': 'list[str]',
         'external_ids': 'list[DrugExternalIds]',
         'link': 'str',
         'prices': 'list[DrugPrices]',
@@ -72,6 +75,8 @@ class Drug(object):
         'description': 'description',
         'composite': 'composite',
         'approved': 'approved',
+        'suppress_resistance': 'suppressResistance',
+        'suppress_synonym_resistance': 'suppressSynonymResistance',
         'availability': 'availability',
         'synonyms': 'synonyms',
         'parents': 'parents',
@@ -82,6 +87,7 @@ class Drug(object):
         'contraindication_text': 'contraindicationText',
         'mechanism_text': 'mechanismText',
         'rxcui': 'rxcui',
+        'drugclass_caused_suppress': 'drugclassCausedSuppress',
         'external_ids': 'externalIds',
         'link': 'link',
         'prices': 'prices',
@@ -90,7 +96,7 @@ class Drug(object):
         'phase_and_trials_score': 'phaseAndTrialsScore'
     }
 
-    def __init__(self, mboost=None, id=None, name=None, alias=None, description=None, composite=None, approved=None, availability=None, synonyms=None, parents=None, drugclass=None, composite_tags=None, brands=None, indication_text=None, contraindication_text=None, mechanism_text=None, rxcui=None, external_ids=None, link=None, prices=None, dosages=None, pharmacology=None, phase_and_trials_score=None):  # noqa: E501
+    def __init__(self, mboost=None, id=None, name=None, alias=None, description=None, composite=None, approved=None, suppress_resistance=None, suppress_synonym_resistance=None, availability=None, synonyms=None, parents=None, drugclass=None, composite_tags=None, brands=None, indication_text=None, contraindication_text=None, mechanism_text=None, rxcui=None, drugclass_caused_suppress=None, external_ids=None, link=None, prices=None, dosages=None, pharmacology=None, phase_and_trials_score=None):  # noqa: E501
         """Drug - a model defined in Swagger"""  # noqa: E501
         self._mboost = None
         self._id = None
@@ -99,6 +105,8 @@ class Drug(object):
         self._description = None
         self._composite = None
         self._approved = None
+        self._suppress_resistance = None
+        self._suppress_synonym_resistance = None
         self._availability = None
         self._synonyms = None
         self._parents = None
@@ -109,6 +117,7 @@ class Drug(object):
         self._contraindication_text = None
         self._mechanism_text = None
         self._rxcui = None
+        self._drugclass_caused_suppress = None
         self._external_ids = None
         self._link = None
         self._prices = None
@@ -127,6 +136,10 @@ class Drug(object):
         if composite is not None:
             self.composite = composite
         self.approved = approved
+        if suppress_resistance is not None:
+            self.suppress_resistance = suppress_resistance
+        if suppress_synonym_resistance is not None:
+            self.suppress_synonym_resistance = suppress_synonym_resistance
         if availability is not None:
             self.availability = availability
         if synonyms is not None:
@@ -147,6 +160,8 @@ class Drug(object):
             self.mechanism_text = mechanism_text
         if rxcui is not None:
             self.rxcui = rxcui
+        if drugclass_caused_suppress is not None:
+            self.drugclass_caused_suppress = drugclass_caused_suppress
         if external_ids is not None:
             self.external_ids = external_ids
         if link is not None:
@@ -324,6 +339,48 @@ class Drug(object):
             raise ValueError("Invalid value for `approved`, must not be `None`")  # noqa: E501
 
         self._approved = approved
+
+    @property
+    def suppress_resistance(self):
+        """Gets the suppress_resistance of this Drug.  # noqa: E501
+
+
+        :return: The suppress_resistance of this Drug.  # noqa: E501
+        :rtype: bool
+        """
+        return self._suppress_resistance
+
+    @suppress_resistance.setter
+    def suppress_resistance(self, suppress_resistance):
+        """Sets the suppress_resistance of this Drug.
+
+
+        :param suppress_resistance: The suppress_resistance of this Drug.  # noqa: E501
+        :type: bool
+        """
+
+        self._suppress_resistance = suppress_resistance
+
+    @property
+    def suppress_synonym_resistance(self):
+        """Gets the suppress_synonym_resistance of this Drug.  # noqa: E501
+
+
+        :return: The suppress_synonym_resistance of this Drug.  # noqa: E501
+        :rtype: bool
+        """
+        return self._suppress_synonym_resistance
+
+    @suppress_synonym_resistance.setter
+    def suppress_synonym_resistance(self, suppress_synonym_resistance):
+        """Sets the suppress_synonym_resistance of this Drug.
+
+
+        :param suppress_synonym_resistance: The suppress_synonym_resistance of this Drug.  # noqa: E501
+        :type: bool
+        """
+
+        self._suppress_synonym_resistance = suppress_synonym_resistance
 
     @property
     def availability(self):
@@ -538,6 +595,27 @@ class Drug(object):
         """
 
         self._rxcui = rxcui
+
+    @property
+    def drugclass_caused_suppress(self):
+        """Gets the drugclass_caused_suppress of this Drug.  # noqa: E501
+
+
+        :return: The drugclass_caused_suppress of this Drug.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._drugclass_caused_suppress
+
+    @drugclass_caused_suppress.setter
+    def drugclass_caused_suppress(self, drugclass_caused_suppress):
+        """Sets the drugclass_caused_suppress of this Drug.
+
+
+        :param drugclass_caused_suppress: The drugclass_caused_suppress of this Drug.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._drugclass_caused_suppress = drugclass_caused_suppress
 
     @property
     def external_ids(self):

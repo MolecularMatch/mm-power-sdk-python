@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** |  | 
 **external_id** | **list[str]** |  | [optional] 
 **unique_key** | **str** |  | 
-**hash_key** | **str** |  | 
+**hash_key** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **narrative** | **str** | A human readeable narrative describing the assertion. | [optional] 
 **regulatory_body** | **str** | The regulatory body that has governance over this assertion. | 
@@ -24,10 +24,11 @@ Name | Type | Description | Notes
 **sources** | [**list[AssertionSources]**](AssertionSources.md) | The supporting evidence for this assertion. | [optional] 
 **no_therapy_available** | **bool** | If true, there is no therapy related to this assertion. | [optional] 
 **therapeutic_context** | [**list[AssertionTherapeuticContext]**](AssertionTherapeuticContext.md) | The therapies associated with this assertion. | [optional] 
-**tiers** | [**list[AssertionTiers]**](AssertionTiers.md) |  | [optional] 
-**released_tiers** | [**list[AssertionTiers]**](AssertionTiers.md) |  | [optional] 
+**tiers** | [**list[StandardizedTier]**](StandardizedTier.md) |  | [optional] 
+**released_tiers** | [**list[StandardizedTier]**](StandardizedTier.md) |  | [optional] 
 **classifications** | [**list[AssertionClassifications]**](AssertionClassifications.md) |  | [optional] 
 **prevalence** | [**list[AssertionPrevalence]**](AssertionPrevalence.md) |  | [optional] 
+**variant_info** | [**list[AssertionVariantInfo]**](AssertionVariantInfo.md) |  | [optional] 
 
 
 

@@ -18,9 +18,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/MolecularMatch/mm-power-sdk-generator.git
+pip install git+https://github.com/MolecularMatch/mm-power-sdk-python.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/MolecularMatch/mm-power-sdk-generator.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/MolecularMatch/mm-power-sdk-python.git`)
 
 Then import the package:
 ```python
@@ -97,32 +97,21 @@ Class | Method | HTTP request | Description
  - [ArmGroup](docs/ArmGroup.md)
  - [Assertion](docs/Assertion.md)
  - [AssertionClassifications](docs/AssertionClassifications.md)
+ - [AssertionFusions](docs/AssertionFusions.md)
+ - [AssertionLocations](docs/AssertionLocations.md)
  - [AssertionPrevalence](docs/AssertionPrevalence.md)
  - [AssertionSources](docs/AssertionSources.md)
  - [AssertionTags](docs/AssertionTags.md)
  - [AssertionTherapeuticContext](docs/AssertionTherapeuticContext.md)
- - [AssertionTier](docs/AssertionTier.md)
- - [AssertionTierExplanation](docs/AssertionTierExplanation.md)
- - [AssertionTiers](docs/AssertionTiers.md)
+ - [AssertionVariantInfo](docs/AssertionVariantInfo.md)
  - [ClinicalTrial](docs/ClinicalTrial.md)
- - [ClinicalTrialArmGroups](docs/ClinicalTrialArmGroups.md)
  - [ClinicalTrialCountries](docs/ClinicalTrialCountries.md)
- - [ClinicalTrialEligibility](docs/ClinicalTrialEligibility.md)
  - [ClinicalTrialGeo](docs/ClinicalTrialGeo.md)
- - [ClinicalTrialInterventions](docs/ClinicalTrialInterventions.md)
- - [ClinicalTrialLeadSponsor](docs/ClinicalTrialLeadSponsor.md)
  - [ClinicalTrialLocationSummary](docs/ClinicalTrialLocationSummary.md)
  - [ClinicalTrialLocationSummaryCountries](docs/ClinicalTrialLocationSummaryCountries.md)
  - [ClinicalTrialLocations](docs/ClinicalTrialLocations.md)
- - [ClinicalTrialMolecularAlterations](docs/ClinicalTrialMolecularAlterations.md)
- - [ClinicalTrialOverallContact](docs/ClinicalTrialOverallContact.md)
- - [ClinicalTrialOverallContactBackup](docs/ClinicalTrialOverallContactBackup.md)
- - [ClinicalTrialOverallOfficial](docs/ClinicalTrialOverallOfficial.md)
- - [ClinicalTrialPrimaryOutcomes](docs/ClinicalTrialPrimaryOutcomes.md)
  - [ClinicalTrialSponsors](docs/ClinicalTrialSponsors.md)
- - [ClinicalTrialStudyDesign](docs/ClinicalTrialStudyDesign.md)
  - [ClinicalTrialSynonyms](docs/ClinicalTrialSynonyms.md)
- - [ClinicalTrialTags](docs/ClinicalTrialTags.md)
  - [Contact](docs/Contact.md)
  - [Drug](docs/Drug.md)
  - [DrugAvailability](docs/DrugAvailability.md)
@@ -148,10 +137,11 @@ Class | Method | HTTP request | Description
  - [SearchRequestMinShouldMatch](docs/SearchRequestMinShouldMatch.md)
  - [SearchResponseClinicalTrial](docs/SearchResponseClinicalTrial.md)
  - [SearchResponseDrug](docs/SearchResponseDrug.md)
- - [SearchResponseDrugRows](docs/SearchResponseDrugRows.md)
  - [SearchResponsePublication](docs/SearchResponsePublication.md)
  - [Sponsor](docs/Sponsor.md)
  - [StandardizedTier](docs/StandardizedTier.md)
+ - [StandardizedTierTier](docs/StandardizedTierTier.md)
+ - [StandardizedTierTierExplanation](docs/StandardizedTierTierExplanation.md)
  - [StudyDesign](docs/StudyDesign.md)
  - [Tag](docs/Tag.md)
 

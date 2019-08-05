@@ -14,21 +14,19 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.clinical_trial_arm_groups import ClinicalTrialArmGroups  # noqa: F401,E501
+from mm_power_sdk_python.models.arm_group import ArmGroup  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCountries  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_eligibility import ClinicalTrialEligibility  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_interventions import ClinicalTrialInterventions  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_locations import ClinicalTrialLocations  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_molecular_alterations import ClinicalTrialMolecularAlterations  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_overall_contact import ClinicalTrialOverallContact  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_overall_contact_backup import ClinicalTrialOverallContactBackup  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_overall_official import ClinicalTrialOverallOfficial  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_primary_outcomes import ClinicalTrialPrimaryOutcomes  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_study_design import ClinicalTrialStudyDesign  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_synonyms import ClinicalTrialSynonyms  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_tags import ClinicalTrialTags  # noqa: F401,E501
+from mm_power_sdk_python.models.contact import Contact  # noqa: F401,E501
+from mm_power_sdk_python.models.eligibility import Eligibility  # noqa: F401,E501
+from mm_power_sdk_python.models.intervention import Intervention  # noqa: F401,E501
+from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration  # noqa: F401,E501
+from mm_power_sdk_python.models.outcome import Outcome  # noqa: F401,E501
+from mm_power_sdk_python.models.study_design import StudyDesign  # noqa: F401,E501
+from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
 class ClinicalTrial(object):
@@ -58,7 +56,7 @@ class ClinicalTrial(object):
         'status': 'str',
         'phase': 'str',
         'study_type': 'str',
-        'study_design': 'ClinicalTrialStudyDesign',
+        'study_design': 'StudyDesign',
         'start_date': 'datetime',
         'completion_date': 'datetime',
         'first_received_date': 'datetime',
@@ -66,20 +64,20 @@ class ClinicalTrial(object):
         'verification_date': 'datetime',
         'sponsors': 'list[ClinicalTrialSponsors]',
         'conditions': 'list[str]',
-        'interventions': 'list[ClinicalTrialInterventions]',
+        'interventions': 'list[Intervention]',
         'keywords': 'list[str]',
-        'arm_groups': 'list[ClinicalTrialArmGroups]',
-        'primary_outcomes': 'list[ClinicalTrialPrimaryOutcomes]',
-        'secondary_outcomes': 'list[ClinicalTrialPrimaryOutcomes]',
-        'other_outcomes': 'list[ClinicalTrialPrimaryOutcomes]',
-        'eligibility': 'ClinicalTrialEligibility',
+        'arm_groups': 'list[ArmGroup]',
+        'primary_outcomes': 'list[Outcome]',
+        'secondary_outcomes': 'list[Outcome]',
+        'other_outcomes': 'list[Outcome]',
+        'eligibility': 'Eligibility',
         'enrollment': 'int',
         'min_age': 'float',
         'max_age': 'float',
         'gender': 'list[str]',
-        'overall_official': 'list[ClinicalTrialOverallOfficial]',
-        'overall_contact': 'ClinicalTrialOverallContact',
-        'overall_contact_backup': 'ClinicalTrialOverallContactBackup',
+        'overall_official': 'list[Contact]',
+        'overall_contact': 'Contact',
+        'overall_contact_backup': 'Contact',
         'location_summary': 'ClinicalTrialLocationSummary',
         'locations': 'list[ClinicalTrialLocations]',
         'countries': 'list[ClinicalTrialCountries]',
@@ -90,8 +88,8 @@ class ClinicalTrial(object):
         'synonyms': 'list[ClinicalTrialSynonyms]',
         'acronym': 'str',
         'link': 'str',
-        'tags': 'list[ClinicalTrialTags]',
-        'molecular_alterations': 'list[ClinicalTrialMolecularAlterations]'
+        'tags': 'list[Tag]',
+        'molecular_alterations': 'list[MolecularAlteration]'
     }
 
     attribute_map = {
@@ -621,7 +619,7 @@ class ClinicalTrial(object):
 
 
         :return: The study_design of this ClinicalTrial.  # noqa: E501
-        :rtype: ClinicalTrialStudyDesign
+        :rtype: StudyDesign
         """
         return self._study_design
 
@@ -631,7 +629,7 @@ class ClinicalTrial(object):
 
 
         :param study_design: The study_design of this ClinicalTrial.  # noqa: E501
-        :type: ClinicalTrialStudyDesign
+        :type: StudyDesign
         """
 
         self._study_design = study_design
@@ -804,7 +802,7 @@ class ClinicalTrial(object):
         Specifies the intervention(s) associated with each arm or group.  # noqa: E501
 
         :return: The interventions of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialInterventions]
+        :rtype: list[Intervention]
         """
         return self._interventions
 
@@ -815,7 +813,7 @@ class ClinicalTrial(object):
         Specifies the intervention(s) associated with each arm or group.  # noqa: E501
 
         :param interventions: The interventions of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialInterventions]
+        :type: list[Intervention]
         """
 
         self._interventions = interventions
@@ -850,7 +848,7 @@ class ClinicalTrial(object):
         Pre-specified groups of participants in a clinical trial assigned to receive specific interventions (or no intervention) according to a protocol.  # noqa: E501
 
         :return: The arm_groups of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialArmGroups]
+        :rtype: list[ArmGroup]
         """
         return self._arm_groups
 
@@ -861,7 +859,7 @@ class ClinicalTrial(object):
         Pre-specified groups of participants in a clinical trial assigned to receive specific interventions (or no intervention) according to a protocol.  # noqa: E501
 
         :param arm_groups: The arm_groups of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialArmGroups]
+        :type: list[ArmGroup]
         """
 
         self._arm_groups = arm_groups
@@ -872,7 +870,7 @@ class ClinicalTrial(object):
 
 
         :return: The primary_outcomes of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialPrimaryOutcomes]
+        :rtype: list[Outcome]
         """
         return self._primary_outcomes
 
@@ -882,7 +880,7 @@ class ClinicalTrial(object):
 
 
         :param primary_outcomes: The primary_outcomes of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialPrimaryOutcomes]
+        :type: list[Outcome]
         """
 
         self._primary_outcomes = primary_outcomes
@@ -893,7 +891,7 @@ class ClinicalTrial(object):
 
 
         :return: The secondary_outcomes of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialPrimaryOutcomes]
+        :rtype: list[Outcome]
         """
         return self._secondary_outcomes
 
@@ -903,7 +901,7 @@ class ClinicalTrial(object):
 
 
         :param secondary_outcomes: The secondary_outcomes of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialPrimaryOutcomes]
+        :type: list[Outcome]
         """
 
         self._secondary_outcomes = secondary_outcomes
@@ -914,7 +912,7 @@ class ClinicalTrial(object):
 
 
         :return: The other_outcomes of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialPrimaryOutcomes]
+        :rtype: list[Outcome]
         """
         return self._other_outcomes
 
@@ -924,7 +922,7 @@ class ClinicalTrial(object):
 
 
         :param other_outcomes: The other_outcomes of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialPrimaryOutcomes]
+        :type: list[Outcome]
         """
 
         self._other_outcomes = other_outcomes
@@ -935,7 +933,7 @@ class ClinicalTrial(object):
 
 
         :return: The eligibility of this ClinicalTrial.  # noqa: E501
-        :rtype: ClinicalTrialEligibility
+        :rtype: Eligibility
         """
         return self._eligibility
 
@@ -945,7 +943,7 @@ class ClinicalTrial(object):
 
 
         :param eligibility: The eligibility of this ClinicalTrial.  # noqa: E501
-        :type: ClinicalTrialEligibility
+        :type: Eligibility
         """
 
         self._eligibility = eligibility
@@ -1053,7 +1051,7 @@ class ClinicalTrial(object):
         Person responsible for the overall scientific leadership of the protocol, including study principal investigator.  # noqa: E501
 
         :return: The overall_official of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialOverallOfficial]
+        :rtype: list[Contact]
         """
         return self._overall_official
 
@@ -1064,7 +1062,7 @@ class ClinicalTrial(object):
         Person responsible for the overall scientific leadership of the protocol, including study principal investigator.  # noqa: E501
 
         :param overall_official: The overall_official of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialOverallOfficial]
+        :type: list[Contact]
         """
 
         self._overall_official = overall_official
@@ -1075,7 +1073,7 @@ class ClinicalTrial(object):
 
 
         :return: The overall_contact of this ClinicalTrial.  # noqa: E501
-        :rtype: ClinicalTrialOverallContact
+        :rtype: Contact
         """
         return self._overall_contact
 
@@ -1085,7 +1083,7 @@ class ClinicalTrial(object):
 
 
         :param overall_contact: The overall_contact of this ClinicalTrial.  # noqa: E501
-        :type: ClinicalTrialOverallContact
+        :type: Contact
         """
 
         self._overall_contact = overall_contact
@@ -1096,7 +1094,7 @@ class ClinicalTrial(object):
 
 
         :return: The overall_contact_backup of this ClinicalTrial.  # noqa: E501
-        :rtype: ClinicalTrialOverallContactBackup
+        :rtype: Contact
         """
         return self._overall_contact_backup
 
@@ -1106,7 +1104,7 @@ class ClinicalTrial(object):
 
 
         :param overall_contact_backup: The overall_contact_backup of this ClinicalTrial.  # noqa: E501
-        :type: ClinicalTrialOverallContactBackup
+        :type: Contact
         """
 
         self._overall_contact_backup = overall_contact_backup
@@ -1346,7 +1344,7 @@ class ClinicalTrial(object):
         Concept associations established for this trial.  # noqa: E501
 
         :return: The tags of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialTags]
+        :rtype: list[Tag]
         """
         return self._tags
 
@@ -1357,7 +1355,7 @@ class ClinicalTrial(object):
         Concept associations established for this trial.  # noqa: E501
 
         :param tags: The tags of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialTags]
+        :type: list[Tag]
         """
 
         self._tags = tags
@@ -1369,7 +1367,7 @@ class ClinicalTrial(object):
         Molecular concept associations established for this trial.  # noqa: E501
 
         :return: The molecular_alterations of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialMolecularAlterations]
+        :rtype: list[MolecularAlteration]
         """
         return self._molecular_alterations
 
@@ -1380,7 +1378,7 @@ class ClinicalTrial(object):
         Molecular concept associations established for this trial.  # noqa: E501
 
         :param molecular_alterations: The molecular_alterations of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialMolecularAlterations]
+        :type: list[MolecularAlteration]
         """
 
         self._molecular_alterations = molecular_alterations

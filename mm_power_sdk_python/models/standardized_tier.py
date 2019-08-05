@@ -14,7 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.assertion_tier import AssertionTier  # noqa: F401,E501
+from mm_power_sdk_python.models.standardized_tier_tier import StandardizedTierTier  # noqa: F401,E501
 
 
 class StandardizedTier(object):
@@ -31,7 +31,7 @@ class StandardizedTier(object):
     """
     swagger_types = {
         'name': 'str',
-        'tier': 'AssertionTier'
+        'tier': 'StandardizedTierTier'
     }
 
     attribute_map = {
@@ -77,7 +77,7 @@ class StandardizedTier(object):
 
 
         :return: The tier of this StandardizedTier.  # noqa: E501
-        :rtype: AssertionTier
+        :rtype: StandardizedTierTier
         """
         return self._tier
 
@@ -87,7 +87,7 @@ class StandardizedTier(object):
 
 
         :param tier: The tier of this StandardizedTier.  # noqa: E501
-        :type: AssertionTier
+        :type: StandardizedTierTier
         """
 
         self._tier = tier

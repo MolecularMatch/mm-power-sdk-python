@@ -19,7 +19,8 @@ from mm_power_sdk_python.models.assertion_prevalence import AssertionPrevalence 
 from mm_power_sdk_python.models.assertion_sources import AssertionSources  # noqa: F401,E501
 from mm_power_sdk_python.models.assertion_tags import AssertionTags  # noqa: F401,E501
 from mm_power_sdk_python.models.assertion_therapeutic_context import AssertionTherapeuticContext  # noqa: F401,E501
-from mm_power_sdk_python.models.assertion_tiers import AssertionTiers  # noqa: F401,E501
+from mm_power_sdk_python.models.assertion_variant_info import AssertionVariantInfo  # noqa: F401,E501
+from mm_power_sdk_python.models.standardized_tier import StandardizedTier  # noqa: F401,E501
 
 
 class Assertion(object):
@@ -56,10 +57,11 @@ class Assertion(object):
         'sources': 'list[AssertionSources]',
         'no_therapy_available': 'bool',
         'therapeutic_context': 'list[AssertionTherapeuticContext]',
-        'tiers': 'list[AssertionTiers]',
-        'released_tiers': 'list[AssertionTiers]',
+        'tiers': 'list[StandardizedTier]',
+        'released_tiers': 'list[StandardizedTier]',
         'classifications': 'list[AssertionClassifications]',
-        'prevalence': 'list[AssertionPrevalence]'
+        'prevalence': 'list[AssertionPrevalence]',
+        'variant_info': 'list[AssertionVariantInfo]'
     }
 
     attribute_map = {
@@ -87,10 +89,11 @@ class Assertion(object):
         'tiers': 'tiers',
         'released_tiers': 'releasedTiers',
         'classifications': 'classifications',
-        'prevalence': 'prevalence'
+        'prevalence': 'prevalence',
+        'variant_info': 'variantInfo'
     }
 
-    def __init__(self, id=None, external_id=None, unique_key=None, hash_key=None, description=None, narrative=None, regulatory_body=None, customer=None, version=None, regulatory_body_approved=None, regulatory_body_approved_by=None, direction=None, guideline_body=None, guideline_version=None, clinical_significance=None, biomarker_class=None, expression=None, tags=None, sources=None, no_therapy_available=None, therapeutic_context=None, tiers=None, released_tiers=None, classifications=None, prevalence=None):  # noqa: E501
+    def __init__(self, id=None, external_id=None, unique_key=None, hash_key=None, description=None, narrative=None, regulatory_body=None, customer=None, version=None, regulatory_body_approved=None, regulatory_body_approved_by=None, direction=None, guideline_body=None, guideline_version=None, clinical_significance=None, biomarker_class=None, expression=None, tags=None, sources=None, no_therapy_available=None, therapeutic_context=None, tiers=None, released_tiers=None, classifications=None, prevalence=None, variant_info=None):  # noqa: E501
         """Assertion - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._external_id = None
@@ -117,12 +120,14 @@ class Assertion(object):
         self._released_tiers = None
         self._classifications = None
         self._prevalence = None
+        self._variant_info = None
         self.discriminator = None
         self.id = id
         if external_id is not None:
             self.external_id = external_id
         self.unique_key = unique_key
-        self.hash_key = hash_key
+        if hash_key is not None:
+            self.hash_key = hash_key
         if description is not None:
             self.description = description
         if narrative is not None:
@@ -162,6 +167,8 @@ class Assertion(object):
             self.classifications = classifications
         if prevalence is not None:
             self.prevalence = prevalence
+        if variant_info is not None:
+            self.variant_info = variant_info
 
     @property
     def id(self):
@@ -248,8 +255,6 @@ class Assertion(object):
         :param hash_key: The hash_key of this Assertion.  # noqa: E501
         :type: str
         """
-        if hash_key is None:
-            raise ValueError("Invalid value for `hash_key`, must not be `None`")  # noqa: E501
 
         self._hash_key = hash_key
 
@@ -638,7 +643,7 @@ class Assertion(object):
 
 
         :return: The tiers of this Assertion.  # noqa: E501
-        :rtype: list[AssertionTiers]
+        :rtype: list[StandardizedTier]
         """
         return self._tiers
 
@@ -648,7 +653,7 @@ class Assertion(object):
 
 
         :param tiers: The tiers of this Assertion.  # noqa: E501
-        :type: list[AssertionTiers]
+        :type: list[StandardizedTier]
         """
 
         self._tiers = tiers
@@ -659,7 +664,7 @@ class Assertion(object):
 
 
         :return: The released_tiers of this Assertion.  # noqa: E501
-        :rtype: list[AssertionTiers]
+        :rtype: list[StandardizedTier]
         """
         return self._released_tiers
 
@@ -669,7 +674,7 @@ class Assertion(object):
 
 
         :param released_tiers: The released_tiers of this Assertion.  # noqa: E501
-        :type: list[AssertionTiers]
+        :type: list[StandardizedTier]
         """
 
         self._released_tiers = released_tiers
@@ -715,6 +720,27 @@ class Assertion(object):
         """
 
         self._prevalence = prevalence
+
+    @property
+    def variant_info(self):
+        """Gets the variant_info of this Assertion.  # noqa: E501
+
+
+        :return: The variant_info of this Assertion.  # noqa: E501
+        :rtype: list[AssertionVariantInfo]
+        """
+        return self._variant_info
+
+    @variant_info.setter
+    def variant_info(self, variant_info):
+        """Sets the variant_info of this Assertion.
+
+
+        :param variant_info: The variant_info of this Assertion.  # noqa: E501
+        :type: list[AssertionVariantInfo]
+        """
+
+        self._variant_info = variant_info
 
     def to_dict(self):
         """Returns the model properties as a dict"""

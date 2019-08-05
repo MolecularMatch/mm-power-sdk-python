@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.clinical_trial_molecular_alterations import ClinicalTrialMolecularAlterations  # noqa: E501
+from models.assertion_fusions import AssertionFusions  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestClinicalTrialMolecularAlterations(unittest.TestCase):
-    """ClinicalTrialMolecularAlterations unit test stubs"""
+class TestAssertionFusions(unittest.TestCase):
+    """AssertionFusions unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestClinicalTrialMolecularAlterations(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testClinicalTrialMolecularAlterations(self):
-        """Test ClinicalTrialMolecularAlterations"""
+    def testAssertionFusions(self):
+        """Test AssertionFusions"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.clinical_trial_molecular_alterations.ClinicalTrialMolecularAlterations()  # noqa: E501
+        # model = mm_power_sdk_python.models.assertion_fusions.AssertionFusions()  # noqa: E501
         pass
 
 

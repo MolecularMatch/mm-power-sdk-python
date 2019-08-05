@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **description** | **str** | Descriptions of drug chemical properties, history and regulatory status. | [optional] 
 **composite** | **bool** |  | [optional] 
 **approved** | **bool** | Indicates whether this drug has been approved by any regulating government. | 
+**suppress_resistance** | **bool** |  | [optional] 
+**suppress_synonym_resistance** | **bool** |  | [optional] 
 **availability** | [**list[DrugAvailability]**](DrugAvailability.md) | Countries or jurisdictions where this drug is available. | [optional] 
 **synonyms** | [**list[DrugSynonyms]**](DrugSynonyms.md) | Other names or identifiers that are associated with this drug. | [optional] 
 **parents** | [**list[DrugParents]**](DrugParents.md) |  | [optional] 
@@ -20,6 +22,7 @@ Name | Type | Description | Notes
 **contraindication_text** | **str** |  | [optional] 
 **mechanism_text** | **str** |  | [optional] 
 **rxcui** | **list[str]** |  | [optional] 
+**drugclass_caused_suppress** | **list[str]** |  | [optional] 
 **external_ids** | [**list[DrugExternalIds]**](DrugExternalIds.md) | Identifiers used in other websites or databases providing information about this drug. | [optional] 
 **link** | **str** |  | [optional] 
 **prices** | [**list[DrugPrices]**](DrugPrices.md) | Unit drug prices. | [optional] 

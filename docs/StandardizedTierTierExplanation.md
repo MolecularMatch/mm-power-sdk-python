@@ -1,4 +1,4 @@
-# AssertionTierExplanation
+# StandardizedTierTierExplanation
 
 ## Properties
 Name | Type | Description | Notes

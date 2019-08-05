@@ -14,7 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.clinical_trial_lead_sponsor import ClinicalTrialLeadSponsor  # noqa: F401,E501
+from mm_power_sdk_python.models.sponsor import Sponsor  # noqa: F401,E501
 
 
 class ClinicalTrialSponsors(object):
@@ -30,8 +30,8 @@ class ClinicalTrialSponsors(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'lead_sponsor': 'ClinicalTrialLeadSponsor',
-        'collaborator': 'list[ClinicalTrialLeadSponsor]'
+        'lead_sponsor': 'Sponsor',
+        'collaborator': 'list[Sponsor]'
     }
 
     attribute_map = {
@@ -55,7 +55,7 @@ class ClinicalTrialSponsors(object):
 
 
         :return: The lead_sponsor of this ClinicalTrialSponsors.  # noqa: E501
-        :rtype: ClinicalTrialLeadSponsor
+        :rtype: Sponsor
         """
         return self._lead_sponsor
 
@@ -65,7 +65,7 @@ class ClinicalTrialSponsors(object):
 
 
         :param lead_sponsor: The lead_sponsor of this ClinicalTrialSponsors.  # noqa: E501
-        :type: ClinicalTrialLeadSponsor
+        :type: Sponsor
         """
 
         self._lead_sponsor = lead_sponsor
@@ -76,7 +76,7 @@ class ClinicalTrialSponsors(object):
 
 
         :return: The collaborator of this ClinicalTrialSponsors.  # noqa: E501
-        :rtype: list[ClinicalTrialLeadSponsor]
+        :rtype: list[Sponsor]
         """
         return self._collaborator
 
@@ -86,7 +86,7 @@ class ClinicalTrialSponsors(object):
 
 
         :param collaborator: The collaborator of this ClinicalTrialSponsors.  # noqa: E501
-        :type: list[ClinicalTrialLeadSponsor]
+        :type: list[Sponsor]
         """
 
         self._collaborator = collaborator

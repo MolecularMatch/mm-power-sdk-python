@@ -26,8 +26,8 @@ Name | Type | Description | Notes
 **extended_keywords** | **list[str]** |  | [optional] 
 **publication_type** | **list[str]** |  | [optional] 
 **authors** | [**list[PublicationAuthors]**](PublicationAuthors.md) |  | [optional] 
-**tags** | [**list[ClinicalTrialTags]**](ClinicalTrialTags.md) | Concept associations established for this publication. | [optional] 
-**molecular_alterations** | [**list[ClinicalTrialMolecularAlterations]**](ClinicalTrialMolecularAlterations.md) | Molecular concept associations established for this publication. | [optional] 
+**tags** | [**list[Tag]**](Tag.md) | Concept associations established for this publication. | [optional] 
+**molecular_alterations** | [**list[MolecularAlteration]**](MolecularAlteration.md) | Molecular concept associations established for this publication. | [optional] 
 
 
 

@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lead_sponsor** | [**ClinicalTrialLeadSponsor**](ClinicalTrialLeadSponsor.md) |  | [optional] 
-**collaborator** | [**list[ClinicalTrialLeadSponsor]**](ClinicalTrialLeadSponsor.md) |  | [optional] 
+**lead_sponsor** | [**Sponsor**](Sponsor.md) |  | [optional] 
+**collaborator** | [**list[Sponsor]**](Sponsor.md) |  | [optional] 
 
 
 

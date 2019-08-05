@@ -7,6 +7,8 @@ Name | Type | Description | Notes
 **percent** | **float** |  | 
 **samples** | **int** |  | 
 **count** | **int** |  | 
+**condition** | **str** |  | [optional] 
+**molecular** | **str** |  | [optional] 
 
 
 

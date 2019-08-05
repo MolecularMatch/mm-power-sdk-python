@@ -14,9 +14,9 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.clinical_trial_molecular_alterations import ClinicalTrialMolecularAlterations  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_tags import ClinicalTrialTags  # noqa: F401,E501
+from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration  # noqa: F401,E501
 from mm_power_sdk_python.models.publication_authors import PublicationAuthors  # noqa: F401,E501
+from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
 class Publication(object):
@@ -55,8 +55,8 @@ class Publication(object):
         'extended_keywords': 'list[str]',
         'publication_type': 'list[str]',
         'authors': 'list[PublicationAuthors]',
-        'tags': 'list[ClinicalTrialTags]',
-        'molecular_alterations': 'list[ClinicalTrialMolecularAlterations]'
+        'tags': 'list[Tag]',
+        'molecular_alterations': 'list[MolecularAlteration]'
     }
 
     attribute_map = {
@@ -674,7 +674,7 @@ class Publication(object):
         Concept associations established for this publication.  # noqa: E501
 
         :return: The tags of this Publication.  # noqa: E501
-        :rtype: list[ClinicalTrialTags]
+        :rtype: list[Tag]
         """
         return self._tags
 
@@ -685,7 +685,7 @@ class Publication(object):
         Concept associations established for this publication.  # noqa: E501
 
         :param tags: The tags of this Publication.  # noqa: E501
-        :type: list[ClinicalTrialTags]
+        :type: list[Tag]
         """
 
         self._tags = tags
@@ -697,7 +697,7 @@ class Publication(object):
         Molecular concept associations established for this publication.  # noqa: E501
 
         :return: The molecular_alterations of this Publication.  # noqa: E501
-        :rtype: list[ClinicalTrialMolecularAlterations]
+        :rtype: list[MolecularAlteration]
         """
         return self._molecular_alterations
 
@@ -708,7 +708,7 @@ class Publication(object):
         Molecular concept associations established for this publication.  # noqa: E501
 
         :param molecular_alterations: The molecular_alterations of this Publication.  # noqa: E501
-        :type: list[ClinicalTrialMolecularAlterations]
+        :type: list[MolecularAlteration]
         """
 
         self._molecular_alterations = molecular_alterations

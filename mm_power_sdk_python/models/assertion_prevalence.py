@@ -32,27 +32,37 @@ class AssertionPrevalence(object):
         'study_id': 'str',
         'percent': 'float',
         'samples': 'int',
-        'count': 'int'
+        'count': 'int',
+        'condition': 'str',
+        'molecular': 'str'
     }
 
     attribute_map = {
         'study_id': 'studyId',
         'percent': 'percent',
         'samples': 'samples',
-        'count': 'count'
+        'count': 'count',
+        'condition': 'condition',
+        'molecular': 'molecular'
     }
 
-    def __init__(self, study_id=None, percent=None, samples=None, count=None):  # noqa: E501
+    def __init__(self, study_id=None, percent=None, samples=None, count=None, condition=None, molecular=None):  # noqa: E501
         """AssertionPrevalence - a model defined in Swagger"""  # noqa: E501
         self._study_id = None
         self._percent = None
         self._samples = None
         self._count = None
+        self._condition = None
+        self._molecular = None
         self.discriminator = None
         self.study_id = study_id
         self.percent = percent
         self.samples = samples
         self.count = count
+        if condition is not None:
+            self.condition = condition
+        if molecular is not None:
+            self.molecular = molecular
 
     @property
     def study_id(self):
@@ -145,6 +155,48 @@ class AssertionPrevalence(object):
             raise ValueError("Invalid value for `count`, must not be `None`")  # noqa: E501
 
         self._count = count
+
+    @property
+    def condition(self):
+        """Gets the condition of this AssertionPrevalence.  # noqa: E501
+
+
+        :return: The condition of this AssertionPrevalence.  # noqa: E501
+        :rtype: str
+        """
+        return self._condition
+
+    @condition.setter
+    def condition(self, condition):
+        """Sets the condition of this AssertionPrevalence.
+
+
+        :param condition: The condition of this AssertionPrevalence.  # noqa: E501
+        :type: str
+        """
+
+        self._condition = condition
+
+    @property
+    def molecular(self):
+        """Gets the molecular of this AssertionPrevalence.  # noqa: E501
+
+
+        :return: The molecular of this AssertionPrevalence.  # noqa: E501
+        :rtype: str
+        """
+        return self._molecular
+
+    @molecular.setter
+    def molecular(self, molecular):
+        """Sets the molecular of this AssertionPrevalence.
+
+
+        :param molecular: The molecular of this AssertionPrevalence.  # noqa: E501
+        :type: str
+        """
+
+        self._molecular = molecular
 
     def to_dict(self):
         """Returns the model properties as a dict"""

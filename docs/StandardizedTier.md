@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | 
-**tier** | [**AssertionTier**](AssertionTier.md) |  | [optional] 
+**tier** | [**StandardizedTierTier**](StandardizedTierTier.md) |  | [optional] 
 
 
 
