@@ -138,6 +138,12 @@ class AssertionSources(object):
         :param type: The type of this AssertionSources.  # noqa: E501
         :type: str
         """
+        allowed_values = ["trial", "case_study", "preclinical", "expert", "pathway_inferred", "institutional_study", "regulatory", "sequencing", ""]  # noqa: E501
+        if type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
         self._type = type
 
@@ -159,6 +165,12 @@ class AssertionSources(object):
         :param sub_type: The sub_type of this AssertionSources.  # noqa: E501
         :type: str
         """
+        allowed_values = ["prospective", "retrospective", "meta_analysis", "clinical", "researcher", "cell_line", "pdx", "biochemical_assay", "mouse_model"]  # noqa: E501
+        if sub_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `sub_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(sub_type, allowed_values)
+            )
 
         self._sub_type = sub_type
 
@@ -243,6 +255,12 @@ class AssertionSources(object):
         :param functional_consequence: The functional_consequence of this AssertionSources.  # noqa: E501
         :type: str
         """
+        allowed_values = ["loss_of_function", "gain_of_function", "uncharacterized", "inconclusive"]  # noqa: E501
+        if functional_consequence not in allowed_values:
+            raise ValueError(
+                "Invalid value for `functional_consequence` ({0}), must be one of {1}"  # noqa: E501
+                .format(functional_consequence, allowed_values)
+            )
 
         self._functional_consequence = functional_consequence
 
@@ -264,6 +282,12 @@ class AssertionSources(object):
         :param name: The name of this AssertionSources.  # noqa: E501
         :type: str
         """
+        allowed_values = ["PUBMED", "AACR", "ASCO", "ESMO"]  # noqa: E501
+        if name not in allowed_values:
+            raise ValueError(
+                "Invalid value for `name` ({0}), must be one of {1}"  # noqa: E501
+                .format(name, allowed_values)
+            )
 
         self._name = name
 

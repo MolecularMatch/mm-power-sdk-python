@@ -324,6 +324,12 @@ class Assertion(object):
         """
         if regulatory_body is None:
             raise ValueError("Invalid value for `regulatory_body`, must not be `None`")  # noqa: E501
+        allowed_values = ["FDA", "EMA", "HCA", "TGA"]  # noqa: E501
+        if regulatory_body not in allowed_values:
+            raise ValueError(
+                "Invalid value for `regulatory_body` ({0}), must be one of {1}"  # noqa: E501
+                .format(regulatory_body, allowed_values)
+            )
 
         self._regulatory_body = regulatory_body
 
@@ -439,6 +445,12 @@ class Assertion(object):
         :param direction: The direction of this Assertion.  # noqa: E501
         :type: str
         """
+        allowed_values = ["supports", "does_not_support"]  # noqa: E501
+        if direction not in allowed_values:
+            raise ValueError(
+                "Invalid value for `direction` ({0}), must be one of {1}"  # noqa: E501
+                .format(direction, allowed_values)
+            )
 
         self._direction = direction
 
@@ -460,6 +472,12 @@ class Assertion(object):
         :param guideline_body: The guideline_body of this Assertion.  # noqa: E501
         :type: str
         """
+        allowed_values = ["NCCN", "ASCO", "ESMO", "AJCC", "AMP", "CAP"]  # noqa: E501
+        if guideline_body not in allowed_values:
+            raise ValueError(
+                "Invalid value for `guideline_body` ({0}), must be one of {1}"  # noqa: E501
+                .format(guideline_body, allowed_values)
+            )
 
         self._guideline_body = guideline_body
 
@@ -502,6 +520,12 @@ class Assertion(object):
         :param clinical_significance: The clinical_significance of this Assertion.  # noqa: E501
         :type: str
         """
+        allowed_values = ["no_response", "sensitive", "favorable", "unfavorable", "unknown", "resistant", "intermediate", "adverse_response"]  # noqa: E501
+        if clinical_significance not in allowed_values:
+            raise ValueError(
+                "Invalid value for `clinical_significance` ({0}), must be one of {1}"  # noqa: E501
+                .format(clinical_significance, allowed_values)
+            )
 
         self._clinical_significance = clinical_significance
 
@@ -523,6 +547,12 @@ class Assertion(object):
         :param biomarker_class: The biomarker_class of this Assertion.  # noqa: E501
         :type: str
         """
+        allowed_values = ["predictive", "diagnostic", "prognostic", "unknown", "predisposing"]  # noqa: E501
+        if biomarker_class not in allowed_values:
+            raise ValueError(
+                "Invalid value for `biomarker_class` ({0}), must be one of {1}"  # noqa: E501
+                .format(biomarker_class, allowed_values)
+            )
 
         self._biomarker_class = biomarker_class
 

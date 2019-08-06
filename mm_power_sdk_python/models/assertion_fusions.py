@@ -243,6 +243,12 @@ class AssertionFusions(object):
         :param reference_genome: The reference_genome of this AssertionFusions.  # noqa: E501
         :type: str
         """
+        allowed_values = ["grch37_hg19", "grch38_hg38"]  # noqa: E501
+        if reference_genome not in allowed_values:
+            raise ValueError(
+                "Invalid value for `reference_genome` ({0}), must be one of {1}"  # noqa: E501
+                .format(reference_genome, allowed_values)
+            )
 
         self._reference_genome = reference_genome
 

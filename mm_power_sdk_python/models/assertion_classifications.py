@@ -94,6 +94,12 @@ class AssertionClassifications(object):
         """
         if classification is None:
             raise ValueError("Invalid value for `classification`, must not be `None`")  # noqa: E501
+        allowed_values = ["actionable", "unknown", "common", "informative", "germline"]  # noqa: E501
+        if classification not in allowed_values:
+            raise ValueError(
+                "Invalid value for `classification` ({0}), must be one of {1}"  # noqa: E501
+                .format(classification, allowed_values)
+            )
 
         self._classification = classification
 
@@ -115,6 +121,12 @@ class AssertionClassifications(object):
         :param classification_override: The classification_override of this AssertionClassifications.  # noqa: E501
         :type: str
         """
+        allowed_values = ["actionable", "unknown", "common", "informative", "germline"]  # noqa: E501
+        if classification_override not in allowed_values:
+            raise ValueError(
+                "Invalid value for `classification_override` ({0}), must be one of {1}"  # noqa: E501
+                .format(classification_override, allowed_values)
+            )
 
         self._classification_override = classification_override
 
