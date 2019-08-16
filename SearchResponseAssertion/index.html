@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>ClinicalTrialSponsors - MMPower Python SDK</title>
+  <title>SearchResponseAssertion - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "ClinicalTrialSponsors";
-    var mkdocs_page_input_path = "ClinicalTrialSponsors.md";
+    var mkdocs_page_name = "SearchResponseAssertion";
+    var mkdocs_page_input_path = "SearchResponseAssertion.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -134,21 +134,9 @@
     <a class="" href="../ClinicalTrialLocationSummaryCountries/">ClinicalTrialLocationSummaryCountries</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">ClinicalTrialSponsors</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#clinicaltrialsponsors">ClinicalTrialSponsors</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../ClinicalTrialSponsors/">ClinicalTrialSponsors</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -286,9 +274,21 @@
     <a class="" href="../SearchRequestMinShouldMatch/">SearchRequestMinShouldMatch</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../SearchResponseAssertion/">SearchResponseAssertion</a>
+    <a class="current" href="./">SearchResponseAssertion</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#searchresponseassertion">SearchResponseAssertion</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -358,7 +358,7 @@
     
       
     
-    <li>ClinicalTrialSponsors</li>
+    <li>SearchResponseAssertion</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -368,7 +368,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="clinicaltrialsponsors">ClinicalTrialSponsors</h1>
+                <h1 id="searchresponseassertion">SearchResponseAssertion</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -381,15 +381,81 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>lead_sponsor</strong></td>
-<td><a href="../Agency/"><strong>Agency</strong></a></td>
-<td></td>
+<td><strong>search_key</strong></td>
+<td><strong>str</strong></td>
+<td>Search key from a previous response to reconsititute a prior request.</td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>collaborator</strong></td>
-<td><a href="../Agency/"><strong>list[Agency]</strong></a></td>
+<td><strong>institution_id</strong></td>
+<td><strong>str</strong></td>
+<td>An institution identifier recognized by MolecularMatch to enable institution specific results and location awareness.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>case_id</strong></td>
+<td><strong>str</strong></td>
+<td>For lab specific case tracking.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>tiering_template</strong></td>
+<td><strong>str</strong></td>
+<td>The tiering template used to assess the quality of evidence.</td>
 <td></td>
+</tr>
+<tr>
+<td><strong>tiering_template_legend</strong></td>
+<td><strong>object</strong></td>
+<td>The tiering template legend explains the tiers pertaining to the template.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>total</strong></td>
+<td><strong>int</strong></td>
+<td>The total number of records that match this search.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>total_pages</strong></td>
+<td><strong>int</strong></td>
+<td>The number of results pages for this search based on the limit provided in the request.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>page</strong></td>
+<td><strong>int</strong></td>
+<td>The results page number this response corresponds to.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>rows</strong></td>
+<td><a href="../Assertion/"><strong>list[Assertion]</strong></a></td>
+<td>The array of assertions that match the search criteria.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>rationalized</strong></td>
+<td><a href="../Filter/"><strong>list[Filter]</strong></a></td>
+<td>The array of filters and how they were interpreted by the MolecularMatch search engine.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>unrecognized</strong></td>
+<td><a href="../Filter/"><strong>list[Filter]</strong></a></td>
+<td>The array of filters that were not recognized by the MolecularMatch search engine.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>filter_narrative</strong></td>
+<td><strong>str</strong></td>
+<td>A human readable narrative describing the search conducted. Can be used to provide \&quot;Showing results for\&quot; functionality.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ambiguous_narrative</strong></td>
+<td><strong>list[str]</strong></td>
+<td>if true include a human readable ambiguous narrative.  This enables the consumer to activate \&quot;did you mean\&quot; search capability.</td>
 <td>[optional]</td>
 </tr>
 </tbody>
@@ -401,10 +467,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ClinicalTrialsApi/" class="btn btn-neutral float-right" title="mm_power_sdk_python.ClinicalTrialsApi">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../SearchResponseClinicalTrial/" class="btn btn-neutral float-right" title="SearchResponseClinicalTrial">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ClinicalTrialLocationSummaryCountries/" class="btn btn-neutral" title="ClinicalTrialLocationSummaryCountries"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../SearchRequestMinShouldMatch/" class="btn btn-neutral" title="SearchRequestMinShouldMatch"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -430,10 +496,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ClinicalTrialLocationSummaryCountries/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../SearchRequestMinShouldMatch/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ClinicalTrialsApi/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../SearchResponseClinicalTrial/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

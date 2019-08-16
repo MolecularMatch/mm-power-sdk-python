@@ -138,22 +138,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../ClinicalTrialGeo/">ClinicalTrialGeo</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../ClinicalTrialLocationSummary/">ClinicalTrialLocationSummary</a>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../ClinicalTrialLocationSummaryCountries/">ClinicalTrialLocationSummaryCountries</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../ClinicalTrialLocations/">ClinicalTrialLocations</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -218,12 +208,27 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../DrugsApi/">mm_power_sdk_python.DrugsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../Eligibility/">Eligibility</a>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../ExternalId/">ExternalId</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Facility/">Facility</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../FacilityGeo/">FacilityGeo</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -279,6 +284,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../SearchRequestMinShouldMatch/">SearchRequestMinShouldMatch</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../SearchResponseAssertion/">SearchResponseAssertion</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -446,7 +456,7 @@
 <td><strong>phase</strong></td>
 <td><strong>str</strong></td>
 <td>For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies.</td>
-<td>[optional]</td>
+<td>[optional] [default to 'N/A']</td>
 </tr>
 <tr>
 <td><strong>study_type</strong></td>
@@ -594,7 +604,7 @@
 </tr>
 <tr>
 <td><strong>locations</strong></td>
-<td><a href="../ClinicalTrialLocations/"><strong>list[ClinicalTrialLocations]</strong></a></td>
+<td><a href="../Facility/"><strong>list[Facility]</strong></a></td>
 <td>Information about the sites offering this trial.</td>
 <td>[optional]</td>
 </tr>
@@ -656,6 +666,12 @@
 <td><strong>molecular_alterations</strong></td>
 <td><a href="../MolecularAlteration/"><strong>list[MolecularAlteration]</strong></a></td>
 <td>Molecular concept associations established for this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>stats</strong></td>
+<td><strong>object</strong></td>
+<td></td>
 <td>[optional]</td>
 </tr>
 </tbody>
