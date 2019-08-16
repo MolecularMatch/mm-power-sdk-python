@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **gene_expand** | **bool** | Used by MUTATION filters only.  If true, expand the search to include results maching the mutation gene. | [optional] 
 **exclude_filter_only** | **bool** | To create a soft include filter, add excludeFilterOnly&#x3D;true (and specify filterType of include. | [optional] 
 **error** | **str** |  | [optional] 
+**ambiguous** | [**Filter**](Filter.md) |  | [optional] 
 
 
 

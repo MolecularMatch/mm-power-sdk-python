@@ -14,6 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
+from mm_power_sdk_python.models.filter import Filter  # noqa: F401,E501
 
 
 class Filter(object):
@@ -38,7 +39,8 @@ class Filter(object):
         'country_code': 'str',
         'gene_expand': 'bool',
         'exclude_filter_only': 'bool',
-        'error': 'str'
+        'error': 'str',
+        'ambiguous': 'Filter'
     }
 
     attribute_map = {
@@ -51,10 +53,11 @@ class Filter(object):
         'country_code': 'countryCode',
         'gene_expand': 'geneExpand',
         'exclude_filter_only': 'excludeFilterOnly',
-        'error': 'error'
+        'error': 'error',
+        'ambiguous': 'ambiguous'
     }
 
-    def __init__(self, term=None, root_term=None, facet=None, filter_type='include', distance_uom='mi', postal_code=None, country_code=None, gene_expand=None, exclude_filter_only=None, error=None):  # noqa: E501
+    def __init__(self, term=None, root_term=None, facet=None, filter_type='include', distance_uom='mi', postal_code=None, country_code=None, gene_expand=None, exclude_filter_only=None, error=None, ambiguous=None):  # noqa: E501
         """Filter - a model defined in Swagger"""  # noqa: E501
         self._term = None
         self._root_term = None
@@ -66,6 +69,7 @@ class Filter(object):
         self._gene_expand = None
         self._exclude_filter_only = None
         self._error = None
+        self._ambiguous = None
         self.discriminator = None
         self.term = term
         if root_term is not None:
@@ -85,6 +89,8 @@ class Filter(object):
             self.exclude_filter_only = exclude_filter_only
         if error is not None:
             self.error = error
+        if ambiguous is not None:
+            self.ambiguous = ambiguous
 
     @property
     def term(self):
@@ -329,6 +335,27 @@ class Filter(object):
         """
 
         self._error = error
+
+    @property
+    def ambiguous(self):
+        """Gets the ambiguous of this Filter.  # noqa: E501
+
+
+        :return: The ambiguous of this Filter.  # noqa: E501
+        :rtype: Filter
+        """
+        return self._ambiguous
+
+    @ambiguous.setter
+    def ambiguous(self, ambiguous):
+        """Sets the ambiguous of this Filter.
+
+
+        :param ambiguous: The ambiguous of this Filter.  # noqa: E501
+        :type: Filter
+        """
+
+        self._ambiguous = ambiguous
 
     def to_dict(self):
         """Returns the model properties as a dict"""

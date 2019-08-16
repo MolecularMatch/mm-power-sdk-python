@@ -36,10 +36,9 @@ class SearchRequest(object):
         'search_key': 'str',
         'institution_id': 'str',
         'case_id': 'str',
+        'mode': 'str',
         'start': 'int',
         'limit': 'int',
-        'location_summary': 'bool',
-        'filter_narrative': 'bool',
         'fields': 'list[str]',
         'filters': 'list[Filter]',
         'geopoint': 'SearchRequestGeopoint',
@@ -51,10 +50,9 @@ class SearchRequest(object):
         'search_key': 'searchKey',
         'institution_id': 'institutionId',
         'case_id': 'caseId',
+        'mode': 'mode',
         'start': 'start',
         'limit': 'limit',
-        'location_summary': 'locationSummary',
-        'filter_narrative': 'filterNarrative',
         'fields': 'fields',
         'filters': 'filters',
         'geopoint': 'geopoint',
@@ -62,15 +60,14 @@ class SearchRequest(object):
         'min_should_match': 'minShouldMatch'
     }
 
-    def __init__(self, search_key=None, institution_id=None, case_id=None, start=None, limit=20, location_summary=None, filter_narrative=None, fields=None, filters=None, geopoint=None, location=None, min_should_match=None):  # noqa: E501
+    def __init__(self, search_key=None, institution_id=None, case_id=None, mode='discovery', start=None, limit=20, fields=None, filters=None, geopoint=None, location=None, min_should_match=None):  # noqa: E501
         """SearchRequest - a model defined in Swagger"""  # noqa: E501
         self._search_key = None
         self._institution_id = None
         self._case_id = None
+        self._mode = None
         self._start = None
         self._limit = None
-        self._location_summary = None
-        self._filter_narrative = None
         self._fields = None
         self._filters = None
         self._geopoint = None
@@ -83,14 +80,12 @@ class SearchRequest(object):
             self.institution_id = institution_id
         if case_id is not None:
             self.case_id = case_id
+        if mode is not None:
+            self.mode = mode
         if start is not None:
             self.start = start
         if limit is not None:
             self.limit = limit
-        if location_summary is not None:
-            self.location_summary = location_summary
-        if filter_narrative is not None:
-            self.filter_narrative = filter_narrative
         if fields is not None:
             self.fields = fields
         if filters is not None:
@@ -172,6 +167,35 @@ class SearchRequest(object):
         self._case_id = case_id
 
     @property
+    def mode(self):
+        """Gets the mode of this SearchRequest.  # noqa: E501
+
+        Currently applies to drug search.  Supplying the mode of discovery will perform an associative search. These are not treatment recommendations and have no tiering associated with them. Supplying criteriaunmet performs an assertion guided search and returns drugs based on assertion evidence.  # noqa: E501
+
+        :return: The mode of this SearchRequest.  # noqa: E501
+        :rtype: str
+        """
+        return self._mode
+
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this SearchRequest.
+
+        Currently applies to drug search.  Supplying the mode of discovery will perform an associative search. These are not treatment recommendations and have no tiering associated with them. Supplying criteriaunmet performs an assertion guided search and returns drugs based on assertion evidence.  # noqa: E501
+
+        :param mode: The mode of this SearchRequest.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["criteriaunmet", "discovery"]  # noqa: E501
+        if mode not in allowed_values:
+            raise ValueError(
+                "Invalid value for `mode` ({0}), must be one of {1}"  # noqa: E501
+                .format(mode, allowed_values)
+            )
+
+        self._mode = mode
+
+    @property
     def start(self):
         """Gets the start of this SearchRequest.  # noqa: E501
 
@@ -216,52 +240,6 @@ class SearchRequest(object):
         """
 
         self._limit = limit
-
-    @property
-    def location_summary(self):
-        """Gets the location_summary of this SearchRequest.  # noqa: E501
-
-        If true, returns a summary location structure instead of the full array of trial locations.  # noqa: E501
-
-        :return: The location_summary of this SearchRequest.  # noqa: E501
-        :rtype: bool
-        """
-        return self._location_summary
-
-    @location_summary.setter
-    def location_summary(self, location_summary):
-        """Sets the location_summary of this SearchRequest.
-
-        If true, returns a summary location structure instead of the full array of trial locations.  # noqa: E501
-
-        :param location_summary: The location_summary of this SearchRequest.  # noqa: E501
-        :type: bool
-        """
-
-        self._location_summary = location_summary
-
-    @property
-    def filter_narrative(self):
-        """Gets the filter_narrative of this SearchRequest.  # noqa: E501
-
-        If true, include a human readable filter narrative.  # noqa: E501
-
-        :return: The filter_narrative of this SearchRequest.  # noqa: E501
-        :rtype: bool
-        """
-        return self._filter_narrative
-
-    @filter_narrative.setter
-    def filter_narrative(self, filter_narrative):
-        """Sets the filter_narrative of this SearchRequest.
-
-        If true, include a human readable filter narrative.  # noqa: E501
-
-        :param filter_narrative: The filter_narrative of this SearchRequest.  # noqa: E501
-        :type: bool
-        """
-
-        self._filter_narrative = filter_narrative
 
     @property
     def fields(self):

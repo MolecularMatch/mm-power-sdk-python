@@ -39,8 +39,7 @@ class AssertionSources(object):
         'name': 'str',
         'link': 'str',
         'year': 'int',
-        'trust_rating': 'float',
-        'valid': 'bool'
+        'trust_rating': 'float'
     }
 
     attribute_map = {
@@ -54,11 +53,10 @@ class AssertionSources(object):
         'name': 'name',
         'link': 'link',
         'year': 'year',
-        'trust_rating': 'trustRating',
-        'valid': 'valid'
+        'trust_rating': 'trustRating'
     }
 
-    def __init__(self, id=None, type=None, sub_type=None, pub_id=None, trial_id=None, trial_phase=None, functional_consequence=None, name=None, link=None, year=None, trust_rating=None, valid=None):  # noqa: E501
+    def __init__(self, id=None, type=None, sub_type=None, pub_id=None, trial_id=None, trial_phase=None, functional_consequence=None, name=None, link=None, year=None, trust_rating=None):  # noqa: E501
         """AssertionSources - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._type = None
@@ -71,7 +69,6 @@ class AssertionSources(object):
         self._link = None
         self._year = None
         self._trust_rating = None
-        self._valid = None
         self.discriminator = None
         self.id = id
         if type is not None:
@@ -94,8 +91,6 @@ class AssertionSources(object):
             self.year = year
         if trust_rating is not None:
             self.trust_rating = trust_rating
-        if valid is not None:
-            self.valid = valid
 
     @property
     def id(self):
@@ -353,27 +348,6 @@ class AssertionSources(object):
         """
 
         self._trust_rating = trust_rating
-
-    @property
-    def valid(self):
-        """Gets the valid of this AssertionSources.  # noqa: E501
-
-
-        :return: The valid of this AssertionSources.  # noqa: E501
-        :rtype: bool
-        """
-        return self._valid
-
-    @valid.setter
-    def valid(self, valid):
-        """Sets the valid of this AssertionSources.
-
-
-        :param valid: The valid of this AssertionSources.  # noqa: E501
-        :type: bool
-        """
-
-        self._valid = valid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

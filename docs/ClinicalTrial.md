@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **summary** | **str** | Extended description of the protocol, including more technical information (as compared to the Brief Summary), if desired. Do not include the entire protocol; do not duplicate information recorded in other data elements, such as Eligibility Criteria or outcome measures. | [optional] 
 **summary_preserved** | **str** | Formatted rendition of the summary. | [optional] 
 **status** | **str** | Trial recruiting status. | [optional] 
-**phase** | **str** | For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies. | [optional] 
+**phase** | **str** | For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies. | [optional] [default to 'N/A']
 **study_type** | **str** | The nature of the investigation or investigational use for which clinical study information is being submitted. | [optional] 
 **study_design** | [**StudyDesign**](StudyDesign.md) |  | [optional] 
 **start_date** | **datetime** | The estimated date on which the clinical study will be open for recruitment of participants, or the actual date on which the first participant was enrolled. | [optional] 
@@ -40,7 +40,7 @@ Name | Type | Description | Notes
 **overall_contact** | [**Contact**](Contact.md) |  | [optional] 
 **overall_contact_backup** | [**Contact**](Contact.md) |  | [optional] 
 **location_summary** | [**ClinicalTrialLocationSummary**](ClinicalTrialLocationSummary.md) |  | [optional] 
-**locations** | [**list[ClinicalTrialLocations]**](ClinicalTrialLocations.md) | Information about the sites offering this trial. | [optional] 
+**locations** | [**list[Facility]**](Facility.md) | Information about the sites offering this trial. | [optional] 
 **countries** | [**list[ClinicalTrialCountries]**](ClinicalTrialCountries.md) | Countries with sites offering this trial. | [optional] 
 **inclusion_criteria** | **str** | A limited list of criteria for selection of participants in the clinical study, provided in terms of inclusion criteria and suitable for assisting potential participants in identifying clinical studies of interest. | [optional] 
 **inclusion_criteria_preserved** | **str** | Formatted rendition of the inclusionCriteria. | [optional] 
@@ -51,6 +51,7 @@ Name | Type | Description | Notes
 **link** | **str** | URL to registry listing of this trial. | [optional] 
 **tags** | [**list[Tag]**](Tag.md) | Concept associations established for this trial. | [optional] 
 **molecular_alterations** | [**list[MolecularAlteration]**](MolecularAlteration.md) | Molecular concept associations established for this trial. | [optional] 
+**stats** | **object** |  | [optional] 
 
 
 

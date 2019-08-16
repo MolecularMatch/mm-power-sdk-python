@@ -33,14 +33,11 @@ class AssertionTags(object):
         'facet': 'str',
         'filter_type': 'str',
         'priority': 'int',
-        'suppress': 'bool',
         'composite_key': 'str',
         'generated_by': 'str',
         'generated_by_term': 'str',
-        'manual_suppress': 'int',
         'transcript': 'str',
-        'primary': 'bool',
-        'valid': 'bool'
+        'primary': 'bool'
     }
 
     attribute_map = {
@@ -48,30 +45,24 @@ class AssertionTags(object):
         'facet': 'facet',
         'filter_type': 'filterType',
         'priority': 'priority',
-        'suppress': 'suppress',
         'composite_key': 'compositeKey',
         'generated_by': 'generatedBy',
         'generated_by_term': 'generatedByTerm',
-        'manual_suppress': 'manualSuppress',
         'transcript': 'transcript',
-        'primary': 'primary',
-        'valid': 'valid'
+        'primary': 'primary'
     }
 
-    def __init__(self, term=None, facet=None, filter_type='include', priority=None, suppress=None, composite_key=None, generated_by=None, generated_by_term=None, manual_suppress=None, transcript=None, primary=None, valid=None):  # noqa: E501
+    def __init__(self, term=None, facet=None, filter_type='include', priority=None, composite_key=None, generated_by=None, generated_by_term=None, transcript=None, primary=None):  # noqa: E501
         """AssertionTags - a model defined in Swagger"""  # noqa: E501
         self._term = None
         self._facet = None
         self._filter_type = None
         self._priority = None
-        self._suppress = None
         self._composite_key = None
         self._generated_by = None
         self._generated_by_term = None
-        self._manual_suppress = None
         self._transcript = None
         self._primary = None
-        self._valid = None
         self.discriminator = None
         self.term = term
         self.facet = facet
@@ -79,22 +70,16 @@ class AssertionTags(object):
             self.filter_type = filter_type
         if priority is not None:
             self.priority = priority
-        if suppress is not None:
-            self.suppress = suppress
         if composite_key is not None:
             self.composite_key = composite_key
         if generated_by is not None:
             self.generated_by = generated_by
         if generated_by_term is not None:
             self.generated_by_term = generated_by_term
-        if manual_suppress is not None:
-            self.manual_suppress = manual_suppress
         if transcript is not None:
             self.transcript = transcript
         if primary is not None:
             self.primary = primary
-        if valid is not None:
-            self.valid = valid
 
     @property
     def term(self):
@@ -199,29 +184,6 @@ class AssertionTags(object):
         self._priority = priority
 
     @property
-    def suppress(self):
-        """Gets the suppress of this AssertionTags.  # noqa: E501
-
-        If true the association is removed.  # noqa: E501
-
-        :return: The suppress of this AssertionTags.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress
-
-    @suppress.setter
-    def suppress(self, suppress):
-        """Sets the suppress of this AssertionTags.
-
-        If true the association is removed.  # noqa: E501
-
-        :param suppress: The suppress of this AssertionTags.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress = suppress
-
-    @property
     def composite_key(self):
         """Gets the composite_key of this AssertionTags.  # noqa: E501
 
@@ -291,29 +253,6 @@ class AssertionTags(object):
         self._generated_by_term = generated_by_term
 
     @property
-    def manual_suppress(self):
-        """Gets the manual_suppress of this AssertionTags.  # noqa: E501
-
-        Indication of whether the tag was suppressed or unsuppressed from the UI.  # noqa: E501
-
-        :return: The manual_suppress of this AssertionTags.  # noqa: E501
-        :rtype: int
-        """
-        return self._manual_suppress
-
-    @manual_suppress.setter
-    def manual_suppress(self, manual_suppress):
-        """Sets the manual_suppress of this AssertionTags.
-
-        Indication of whether the tag was suppressed or unsuppressed from the UI.  # noqa: E501
-
-        :param manual_suppress: The manual_suppress of this AssertionTags.  # noqa: E501
-        :type: int
-        """
-
-        self._manual_suppress = manual_suppress
-
-    @property
     def transcript(self):
         """Gets the transcript of this AssertionTags.  # noqa: E501
 
@@ -358,27 +297,6 @@ class AssertionTags(object):
         """
 
         self._primary = primary
-
-    @property
-    def valid(self):
-        """Gets the valid of this AssertionTags.  # noqa: E501
-
-
-        :return: The valid of this AssertionTags.  # noqa: E501
-        :rtype: bool
-        """
-        return self._valid
-
-    @valid.setter
-    def valid(self, valid):
-        """Sets the valid of this AssertionTags.
-
-
-        :param valid: The valid of this AssertionTags.  # noqa: E501
-        :type: bool
-        """
-
-        self._valid = valid
 
     def to_dict(self):
         """Returns the model properties as a dict"""

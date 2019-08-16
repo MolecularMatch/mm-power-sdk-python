@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 from mm_power_sdk_python.models.clinical_trial_location_summary_countries import ClinicalTrialLocationSummaryCountries  # noqa: F401,E501
+from mm_power_sdk_python.models.facility import Facility  # noqa: F401,E501
 
 
 class ClinicalTrialLocationSummary(object):
@@ -34,7 +35,9 @@ class ClinicalTrialLocationSummary(object):
         'intl': 'bool',
         'count': 'float',
         'recruiting_count': 'float',
-        'countries': 'list[ClinicalTrialLocationSummaryCountries]'
+        'countries': 'list[ClinicalTrialLocationSummaryCountries]',
+        'nearest_distance': 'float',
+        'nearest_location': 'Facility'
     }
 
     attribute_map = {
@@ -42,16 +45,20 @@ class ClinicalTrialLocationSummary(object):
         'intl': 'intl',
         'count': 'count',
         'recruiting_count': 'recruitingCount',
-        'countries': 'countries'
+        'countries': 'countries',
+        'nearest_distance': 'nearestDistance',
+        'nearest_location': 'nearestLocation'
     }
 
-    def __init__(self, us=None, intl=None, count=None, recruiting_count=None, countries=None):  # noqa: E501
+    def __init__(self, us=None, intl=None, count=None, recruiting_count=None, countries=None, nearest_distance=None, nearest_location=None):  # noqa: E501
         """ClinicalTrialLocationSummary - a model defined in Swagger"""  # noqa: E501
         self._us = None
         self._intl = None
         self._count = None
         self._recruiting_count = None
         self._countries = None
+        self._nearest_distance = None
+        self._nearest_location = None
         self.discriminator = None
         if us is not None:
             self.us = us
@@ -63,6 +70,10 @@ class ClinicalTrialLocationSummary(object):
             self.recruiting_count = recruiting_count
         if countries is not None:
             self.countries = countries
+        if nearest_distance is not None:
+            self.nearest_distance = nearest_distance
+        if nearest_location is not None:
+            self.nearest_location = nearest_location
 
     @property
     def us(self):
@@ -178,6 +189,50 @@ class ClinicalTrialLocationSummary(object):
         """
 
         self._countries = countries
+
+    @property
+    def nearest_distance(self):
+        """Gets the nearest_distance of this ClinicalTrialLocationSummary.  # noqa: E501
+
+        The distance to the nearest trial location based on the distance unit of measure specified (miles if unspecified) from the search location (either geopoint, location object, or inferred search point bsaed on filters provided.  # noqa: E501
+
+        :return: The nearest_distance of this ClinicalTrialLocationSummary.  # noqa: E501
+        :rtype: float
+        """
+        return self._nearest_distance
+
+    @nearest_distance.setter
+    def nearest_distance(self, nearest_distance):
+        """Sets the nearest_distance of this ClinicalTrialLocationSummary.
+
+        The distance to the nearest trial location based on the distance unit of measure specified (miles if unspecified) from the search location (either geopoint, location object, or inferred search point bsaed on filters provided.  # noqa: E501
+
+        :param nearest_distance: The nearest_distance of this ClinicalTrialLocationSummary.  # noqa: E501
+        :type: float
+        """
+
+        self._nearest_distance = nearest_distance
+
+    @property
+    def nearest_location(self):
+        """Gets the nearest_location of this ClinicalTrialLocationSummary.  # noqa: E501
+
+
+        :return: The nearest_location of this ClinicalTrialLocationSummary.  # noqa: E501
+        :rtype: Facility
+        """
+        return self._nearest_location
+
+    @nearest_location.setter
+    def nearest_location(self, nearest_location):
+        """Sets the nearest_location of this ClinicalTrialLocationSummary.
+
+
+        :param nearest_location: The nearest_location of this ClinicalTrialLocationSummary.  # noqa: E501
+        :type: Facility
+        """
+
+        self._nearest_location = nearest_location
 
     def to_dict(self):
         """Returns the model properties as a dict"""

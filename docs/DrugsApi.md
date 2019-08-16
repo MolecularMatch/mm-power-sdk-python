@@ -1,18 +1,18 @@
-# mm_power_sdk_python.AssertionsApi
+# mm_power_sdk_python.DrugsApi
 
 All URIs are relative to *https://api.molecularmatch.com/v4*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_assertion**](AssertionsApi.md#get_assertion) | **GET** /assertion/{id} | Get an Assertion
-[**search_assertions**](AssertionsApi.md#search_assertions) | **POST** /assertion/search | Search for assertions
+[**get_drug**](DrugsApi.md#get_drug) | **GET** /drug/{id} | Get a Drug
+[**search_drugs**](DrugsApi.md#search_drugs) | **POST** /drug/search | Search for drugs
 
-# **get_assertion**
-> Assertion get_assertion(id)
+# **get_drug**
+> Drug get_drug(id)
 
-Get an Assertion
+Get a Drug
 
-Get an evidence backed assertion
+Get a drug
 
 ### Example
 ```python
@@ -24,26 +24,26 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
-id = 'id_example' # str | ID of the Assertion to return
+api_instance = mm_power_sdk_python.DrugsApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Drug to return
 
 try:
-    # Get an Assertion
-    api_response = api_instance.get_assertion(id)
+    # Get a Drug
+    api_response = api_instance.get_drug(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssertionsApi->get_assertion: %s\n" % e)
+    print("Exception when calling DrugsApi->get_drug: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**| ID of the Assertion to return | 
+ **id** | **str**| ID of the Drug to return | 
 
 ### Return type
 
-[**Assertion**](Assertion.md)
+[**Drug**](Drug.md)
 
 
 
@@ -56,12 +56,12 @@ Name | Type | Description  | Notes
 
  
 
-# **search_assertions**
-> SearchResponseAssertion search_assertions(body)
+# **search_drugs**
+> SearchResponseDrug search_drugs(body)
 
-Search for assertions
+Search for drugs
 
-Search for evidence backed assertions
+Search for drugs
 
 ### Example
 ```python
@@ -73,15 +73,15 @@ from pprint import pprint
 
 
 # create an instance of the API class
-api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
+api_instance = mm_power_sdk_python.DrugsApi(mm_power_sdk_python.ApiClient(configuration))
 body = mm_power_sdk_python.SearchRequest() # SearchRequest | SearchRequest object to send to MolecularMatch for processing
 
 try:
-    # Search for assertions
-    api_response = api_instance.search_assertions(body)
+    # Search for drugs
+    api_response = api_instance.search_drugs(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssertionsApi->search_assertions: %s\n" % e)
+    print("Exception when calling DrugsApi->search_drugs: %s\n" % e)
 ```
 
 ### Parameters
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchResponseAssertion**](SearchResponseAssertion.md)
+[**SearchResponseDrug**](SearchResponseDrug.md)
 
 
 

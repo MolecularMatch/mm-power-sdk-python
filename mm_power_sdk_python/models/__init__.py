@@ -27,10 +27,8 @@ from mm_power_sdk_python.models.assertion_therapeutic_context import AssertionTh
 from mm_power_sdk_python.models.assertion_variant_info import AssertionVariantInfo
 from mm_power_sdk_python.models.clinical_trial import ClinicalTrial
 from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCountries
-from mm_power_sdk_python.models.clinical_trial_geo import ClinicalTrialGeo
 from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary
 from mm_power_sdk_python.models.clinical_trial_location_summary_countries import ClinicalTrialLocationSummaryCountries
-from mm_power_sdk_python.models.clinical_trial_locations import ClinicalTrialLocations
 from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors
 from mm_power_sdk_python.models.contact import Contact
 from mm_power_sdk_python.models.drug import Drug
@@ -44,6 +42,8 @@ from mm_power_sdk_python.models.drug_pharmacology import DrugPharmacology
 from mm_power_sdk_python.models.drug_prices import DrugPrices
 from mm_power_sdk_python.models.eligibility import Eligibility
 from mm_power_sdk_python.models.external_id import ExternalId
+from mm_power_sdk_python.models.facility import Facility
+from mm_power_sdk_python.models.facility_geo import FacilityGeo
 from mm_power_sdk_python.models.filter import Filter
 from mm_power_sdk_python.models.intervention import Intervention
 from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration
@@ -54,6 +54,7 @@ from mm_power_sdk_python.models.search_request import SearchRequest
 from mm_power_sdk_python.models.search_request_geopoint import SearchRequestGeopoint
 from mm_power_sdk_python.models.search_request_location import SearchRequestLocation
 from mm_power_sdk_python.models.search_request_min_should_match import SearchRequestMinShouldMatch
+from mm_power_sdk_python.models.search_response_assertion import SearchResponseAssertion
 from mm_power_sdk_python.models.search_response_clinical_trial import SearchResponseClinicalTrial
 from mm_power_sdk_python.models.search_response_drug import SearchResponseDrug
 from mm_power_sdk_python.models.search_response_publication import SearchResponsePublication

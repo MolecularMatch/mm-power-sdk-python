@@ -17,10 +17,10 @@ import six
 from mm_power_sdk_python.models.arm_group import ArmGroup  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCountries  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_locations import ClinicalTrialLocations  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors  # noqa: F401,E501
 from mm_power_sdk_python.models.contact import Contact  # noqa: F401,E501
 from mm_power_sdk_python.models.eligibility import Eligibility  # noqa: F401,E501
+from mm_power_sdk_python.models.facility import Facility  # noqa: F401,E501
 from mm_power_sdk_python.models.intervention import Intervention  # noqa: F401,E501
 from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration  # noqa: F401,E501
 from mm_power_sdk_python.models.outcome import Outcome  # noqa: F401,E501
@@ -79,7 +79,7 @@ class ClinicalTrial(object):
         'overall_contact': 'Contact',
         'overall_contact_backup': 'Contact',
         'location_summary': 'ClinicalTrialLocationSummary',
-        'locations': 'list[ClinicalTrialLocations]',
+        'locations': 'list[Facility]',
         'countries': 'list[ClinicalTrialCountries]',
         'inclusion_criteria': 'str',
         'inclusion_criteria_preserved': 'str',
@@ -89,7 +89,8 @@ class ClinicalTrial(object):
         'acronym': 'str',
         'link': 'str',
         'tags': 'list[Tag]',
-        'molecular_alterations': 'list[MolecularAlteration]'
+        'molecular_alterations': 'list[MolecularAlteration]',
+        'stats': 'object'
     }
 
     attribute_map = {
@@ -140,10 +141,11 @@ class ClinicalTrial(object):
         'acronym': 'acronym',
         'link': 'link',
         'tags': 'tags',
-        'molecular_alterations': 'molecularAlterations'
+        'molecular_alterations': 'molecularAlterations',
+        'stats': '_stats'
     }
 
-    def __init__(self, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase=None, study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None):  # noqa: E501
+    def __init__(self, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase='N/A', study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None, stats=None):  # noqa: E501
         """ClinicalTrial - a model defined in Swagger"""  # noqa: E501
         self._mboost = None
         self._import_date = None
@@ -193,6 +195,7 @@ class ClinicalTrial(object):
         self._link = None
         self._tags = None
         self._molecular_alterations = None
+        self._stats = None
         self.discriminator = None
         if mboost is not None:
             self.mboost = mboost
@@ -286,6 +289,8 @@ class ClinicalTrial(object):
             self.tags = tags
         if molecular_alterations is not None:
             self.molecular_alterations = molecular_alterations
+        if stats is not None:
+            self.stats = stats
 
     @property
     def mboost(self):
@@ -1137,7 +1142,7 @@ class ClinicalTrial(object):
         Information about the sites offering this trial.  # noqa: E501
 
         :return: The locations of this ClinicalTrial.  # noqa: E501
-        :rtype: list[ClinicalTrialLocations]
+        :rtype: list[Facility]
         """
         return self._locations
 
@@ -1148,7 +1153,7 @@ class ClinicalTrial(object):
         Information about the sites offering this trial.  # noqa: E501
 
         :param locations: The locations of this ClinicalTrial.  # noqa: E501
-        :type: list[ClinicalTrialLocations]
+        :type: list[Facility]
         """
 
         self._locations = locations
@@ -1382,6 +1387,27 @@ class ClinicalTrial(object):
         """
 
         self._molecular_alterations = molecular_alterations
+
+    @property
+    def stats(self):
+        """Gets the stats of this ClinicalTrial.  # noqa: E501
+
+
+        :return: The stats of this ClinicalTrial.  # noqa: E501
+        :rtype: object
+        """
+        return self._stats
+
+    @stats.setter
+    def stats(self, stats):
+        """Sets the stats of this ClinicalTrial.
+
+
+        :param stats: The stats of this ClinicalTrial.  # noqa: E501
+        :type: object
+        """
+
+        self._stats = stats
 
     def to_dict(self):
         """Returns the model properties as a dict"""

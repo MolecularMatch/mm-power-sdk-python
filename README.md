@@ -88,6 +88,8 @@ Class | Method | HTTP request | Description
 *ClinicalTrialsApi* | [**count_trials**](docs/ClinicalTrialsApi.md#count_trials) | **POST** /trial/count | Get the count of Clinical Trials matching a searchRequest
 *ClinicalTrialsApi* | [**get_trial**](docs/ClinicalTrialsApi.md#get_trial) | **GET** /trial/{id} | Get a Clinical Trial
 *ClinicalTrialsApi* | [**search_trials**](docs/ClinicalTrialsApi.md#search_trials) | **POST** /trial/search | Search for clinical trials
+*DrugsApi* | [**get_drug**](docs/DrugsApi.md#get_drug) | **GET** /drug/{id} | Get a Drug
+*DrugsApi* | [**search_drugs**](docs/DrugsApi.md#search_drugs) | **POST** /drug/search | Search for drugs
 *PublicationApi* | [**count_publications**](docs/PublicationApi.md#count_publications) | **POST** /publication/count | Get the count of Publications matching a searchRequest
 *PublicationApi* | [**get_publication**](docs/PublicationApi.md#get_publication) | **GET** /publication/{id} | Get a Publication
 *PublicationApi* | [**search_publications**](docs/PublicationApi.md#search_publications) | **POST** /publication/search | Search for Publications
@@ -107,10 +109,8 @@ Class | Method | HTTP request | Description
  - [AssertionVariantInfo](docs/AssertionVariantInfo.md)
  - [ClinicalTrial](docs/ClinicalTrial.md)
  - [ClinicalTrialCountries](docs/ClinicalTrialCountries.md)
- - [ClinicalTrialGeo](docs/ClinicalTrialGeo.md)
  - [ClinicalTrialLocationSummary](docs/ClinicalTrialLocationSummary.md)
  - [ClinicalTrialLocationSummaryCountries](docs/ClinicalTrialLocationSummaryCountries.md)
- - [ClinicalTrialLocations](docs/ClinicalTrialLocations.md)
  - [ClinicalTrialSponsors](docs/ClinicalTrialSponsors.md)
  - [Contact](docs/Contact.md)
  - [Drug](docs/Drug.md)
@@ -124,6 +124,8 @@ Class | Method | HTTP request | Description
  - [DrugPrices](docs/DrugPrices.md)
  - [Eligibility](docs/Eligibility.md)
  - [ExternalId](docs/ExternalId.md)
+ - [Facility](docs/Facility.md)
+ - [FacilityGeo](docs/FacilityGeo.md)
  - [Filter](docs/Filter.md)
  - [Intervention](docs/Intervention.md)
  - [MolecularAlteration](docs/MolecularAlteration.md)
@@ -134,6 +136,7 @@ Class | Method | HTTP request | Description
  - [SearchRequestGeopoint](docs/SearchRequestGeopoint.md)
  - [SearchRequestLocation](docs/SearchRequestLocation.md)
  - [SearchRequestMinShouldMatch](docs/SearchRequestMinShouldMatch.md)
+ - [SearchResponseAssertion](docs/SearchResponseAssertion.md)
  - [SearchResponseClinicalTrial](docs/SearchResponseClinicalTrial.md)
  - [SearchResponseDrug](docs/SearchResponseDrug.md)
  - [SearchResponsePublication](docs/SearchResponsePublication.md)

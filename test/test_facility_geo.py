@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.clinical_trial_locations import ClinicalTrialLocations  # noqa: E501
+from models.facility_geo import FacilityGeo  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestClinicalTrialLocations(unittest.TestCase):
-    """ClinicalTrialLocations unit test stubs"""
+class TestFacilityGeo(unittest.TestCase):
+    """FacilityGeo unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestClinicalTrialLocations(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testClinicalTrialLocations(self):
-        """Test ClinicalTrialLocations"""
+    def testFacilityGeo(self):
+        """Test FacilityGeo"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.clinical_trial_locations.ClinicalTrialLocations()  # noqa: E501
+        # model = mm_power_sdk_python.models.facility_geo.FacilityGeo()  # noqa: E501
         pass
 
 

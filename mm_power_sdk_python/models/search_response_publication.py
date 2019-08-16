@@ -40,6 +40,7 @@ class SearchResponsePublication(object):
         'rows': 'list[Publication]',
         'rationalized': 'list[Filter]',
         'unrecognized': 'list[Filter]',
+        'filter_narrative': 'str',
         'ambiguous_narrative': 'list[str]'
     }
 
@@ -53,10 +54,11 @@ class SearchResponsePublication(object):
         'rows': 'rows',
         'rationalized': 'rationalized',
         'unrecognized': 'unrecognized',
+        'filter_narrative': 'filterNarrative',
         'ambiguous_narrative': 'ambiguousNarrative'
     }
 
-    def __init__(self, search_key=None, institution_id=None, case_id=None, total=None, total_pages=None, page=None, rows=None, rationalized=None, unrecognized=None, ambiguous_narrative=None):  # noqa: E501
+    def __init__(self, search_key=None, institution_id=None, case_id=None, total=None, total_pages=None, page=None, rows=None, rationalized=None, unrecognized=None, filter_narrative=None, ambiguous_narrative=None):  # noqa: E501
         """SearchResponsePublication - a model defined in Swagger"""  # noqa: E501
         self._search_key = None
         self._institution_id = None
@@ -67,6 +69,7 @@ class SearchResponsePublication(object):
         self._rows = None
         self._rationalized = None
         self._unrecognized = None
+        self._filter_narrative = None
         self._ambiguous_narrative = None
         self.discriminator = None
         if search_key is not None:
@@ -84,6 +87,8 @@ class SearchResponsePublication(object):
             self.rationalized = rationalized
         if unrecognized is not None:
             self.unrecognized = unrecognized
+        if filter_narrative is not None:
+            self.filter_narrative = filter_narrative
         if ambiguous_narrative is not None:
             self.ambiguous_narrative = ambiguous_narrative
 
@@ -299,6 +304,29 @@ class SearchResponsePublication(object):
         """
 
         self._unrecognized = unrecognized
+
+    @property
+    def filter_narrative(self):
+        """Gets the filter_narrative of this SearchResponsePublication.  # noqa: E501
+
+        A human readable narrative describing the search conducted. Can be used to provide \"Showing results for\" functionality.  # noqa: E501
+
+        :return: The filter_narrative of this SearchResponsePublication.  # noqa: E501
+        :rtype: str
+        """
+        return self._filter_narrative
+
+    @filter_narrative.setter
+    def filter_narrative(self, filter_narrative):
+        """Sets the filter_narrative of this SearchResponsePublication.
+
+        A human readable narrative describing the search conducted. Can be used to provide \"Showing results for\" functionality.  # noqa: E501
+
+        :param filter_narrative: The filter_narrative of this SearchResponsePublication.  # noqa: E501
+        :type: str
+        """
+
+        self._filter_narrative = filter_narrative
 
     @property
     def ambiguous_narrative(self):

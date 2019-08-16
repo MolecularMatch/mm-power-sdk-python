@@ -1,4 +1,4 @@
-# ClinicalTrialGeo
+# FacilityGeo
 
 ## Properties
 Name | Type | Description | Notes

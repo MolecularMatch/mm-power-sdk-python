@@ -34,12 +34,16 @@ class SearchResponseDrug(object):
         'search_key': 'str',
         'institution_id': 'str',
         'case_id': 'str',
+        'mode': 'str',
+        'tiering_template': 'str',
+        'tiering_template_legend': 'object',
         'total': 'int',
         'total_pages': 'int',
         'page': 'int',
         'rows': 'list[Drug]',
         'rationalized': 'list[Filter]',
         'unrecognized': 'list[Filter]',
+        'filter_narrative': 'str',
         'ambiguous_narrative': 'list[str]'
     }
 
@@ -47,26 +51,34 @@ class SearchResponseDrug(object):
         'search_key': 'searchKey',
         'institution_id': 'institutionId',
         'case_id': 'caseId',
+        'mode': 'mode',
+        'tiering_template': 'tieringTemplate',
+        'tiering_template_legend': 'tieringTemplateLegend',
         'total': 'total',
         'total_pages': 'totalPages',
         'page': 'page',
         'rows': 'rows',
         'rationalized': 'rationalized',
         'unrecognized': 'unrecognized',
+        'filter_narrative': 'filterNarrative',
         'ambiguous_narrative': 'ambiguousNarrative'
     }
 
-    def __init__(self, search_key=None, institution_id=None, case_id=None, total=None, total_pages=None, page=None, rows=None, rationalized=None, unrecognized=None, ambiguous_narrative=None):  # noqa: E501
+    def __init__(self, search_key=None, institution_id=None, case_id=None, mode=None, tiering_template=None, tiering_template_legend=None, total=None, total_pages=None, page=None, rows=None, rationalized=None, unrecognized=None, filter_narrative=None, ambiguous_narrative=None):  # noqa: E501
         """SearchResponseDrug - a model defined in Swagger"""  # noqa: E501
         self._search_key = None
         self._institution_id = None
         self._case_id = None
+        self._mode = None
+        self._tiering_template = None
+        self._tiering_template_legend = None
         self._total = None
         self._total_pages = None
         self._page = None
         self._rows = None
         self._rationalized = None
         self._unrecognized = None
+        self._filter_narrative = None
         self._ambiguous_narrative = None
         self.discriminator = None
         if search_key is not None:
@@ -75,6 +87,11 @@ class SearchResponseDrug(object):
             self.institution_id = institution_id
         if case_id is not None:
             self.case_id = case_id
+        if mode is not None:
+            self.mode = mode
+        self.tiering_template = tiering_template
+        if tiering_template_legend is not None:
+            self.tiering_template_legend = tiering_template_legend
         self.total = total
         self.total_pages = total_pages
         self.page = page
@@ -84,6 +101,8 @@ class SearchResponseDrug(object):
             self.rationalized = rationalized
         if unrecognized is not None:
             self.unrecognized = unrecognized
+        if filter_narrative is not None:
+            self.filter_narrative = filter_narrative
         if ambiguous_narrative is not None:
             self.ambiguous_narrative = ambiguous_narrative
 
@@ -155,6 +174,83 @@ class SearchResponseDrug(object):
         """
 
         self._case_id = case_id
+
+    @property
+    def mode(self):
+        """Gets the mode of this SearchResponseDrug.  # noqa: E501
+
+        Currently applies to drug search.  Supplying the mode of discovery will perform an associative search. These are not treatment recommendations and have no tiering associated with them. Supplying criteriaunmet performs an assertion guided search and returns drugs based on assertion evidence.  # noqa: E501
+
+        :return: The mode of this SearchResponseDrug.  # noqa: E501
+        :rtype: str
+        """
+        return self._mode
+
+    @mode.setter
+    def mode(self, mode):
+        """Sets the mode of this SearchResponseDrug.
+
+        Currently applies to drug search.  Supplying the mode of discovery will perform an associative search. These are not treatment recommendations and have no tiering associated with them. Supplying criteriaunmet performs an assertion guided search and returns drugs based on assertion evidence.  # noqa: E501
+
+        :param mode: The mode of this SearchResponseDrug.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["criteriaunmet", "discovery"]  # noqa: E501
+        if mode not in allowed_values:
+            raise ValueError(
+                "Invalid value for `mode` ({0}), must be one of {1}"  # noqa: E501
+                .format(mode, allowed_values)
+            )
+
+        self._mode = mode
+
+    @property
+    def tiering_template(self):
+        """Gets the tiering_template of this SearchResponseDrug.  # noqa: E501
+
+        The tiering template used to assess the quality of evidence.  # noqa: E501
+
+        :return: The tiering_template of this SearchResponseDrug.  # noqa: E501
+        :rtype: str
+        """
+        return self._tiering_template
+
+    @tiering_template.setter
+    def tiering_template(self, tiering_template):
+        """Sets the tiering_template of this SearchResponseDrug.
+
+        The tiering template used to assess the quality of evidence.  # noqa: E501
+
+        :param tiering_template: The tiering_template of this SearchResponseDrug.  # noqa: E501
+        :type: str
+        """
+        if tiering_template is None:
+            raise ValueError("Invalid value for `tiering_template`, must not be `None`")  # noqa: E501
+
+        self._tiering_template = tiering_template
+
+    @property
+    def tiering_template_legend(self):
+        """Gets the tiering_template_legend of this SearchResponseDrug.  # noqa: E501
+
+        The tiering template legend explains the tiers pertaining to the template.  # noqa: E501
+
+        :return: The tiering_template_legend of this SearchResponseDrug.  # noqa: E501
+        :rtype: object
+        """
+        return self._tiering_template_legend
+
+    @tiering_template_legend.setter
+    def tiering_template_legend(self, tiering_template_legend):
+        """Sets the tiering_template_legend of this SearchResponseDrug.
+
+        The tiering template legend explains the tiers pertaining to the template.  # noqa: E501
+
+        :param tiering_template_legend: The tiering_template_legend of this SearchResponseDrug.  # noqa: E501
+        :type: object
+        """
+
+        self._tiering_template_legend = tiering_template_legend
 
     @property
     def total(self):
@@ -299,6 +395,29 @@ class SearchResponseDrug(object):
         """
 
         self._unrecognized = unrecognized
+
+    @property
+    def filter_narrative(self):
+        """Gets the filter_narrative of this SearchResponseDrug.  # noqa: E501
+
+        A human readable narrative describing the search conducted. Can be used to provide \"Showing results for\" functionality.  # noqa: E501
+
+        :return: The filter_narrative of this SearchResponseDrug.  # noqa: E501
+        :rtype: str
+        """
+        return self._filter_narrative
+
+    @filter_narrative.setter
+    def filter_narrative(self, filter_narrative):
+        """Sets the filter_narrative of this SearchResponseDrug.
+
+        A human readable narrative describing the search conducted. Can be used to provide \"Showing results for\" functionality.  # noqa: E501
+
+        :param filter_narrative: The filter_narrative of this SearchResponseDrug.  # noqa: E501
+        :type: str
+        """
+
+        self._filter_narrative = filter_narrative
 
     @property
     def ambiguous_narrative(self):

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **rows** | [**list[ClinicalTrial]**](ClinicalTrial.md) | The array of clinical trials that match the search criteria. | [optional] 
 **rationalized** | [**list[Filter]**](Filter.md) | The array of filters and how they were interpreted by the MolecularMatch search engine. | [optional] 
 **unrecognized** | [**list[Filter]**](Filter.md) | The array of filters that were not recognized by the MolecularMatch search engine. | [optional] 
+**filter_narrative** | **str** | A human readable narrative describing the search conducted. Can be used to provide \&quot;Showing results for\&quot; functionality. | [optional] 
 **ambiguous_narrative** | **list[str]** | if true include a human readable ambiguous narrative.  This enables the consumer to activate \&quot;did you mean\&quot; search capability. | [optional] 
 
 
