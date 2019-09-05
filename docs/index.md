@@ -44,6 +44,9 @@ import mm_power_sdk_python
 from mm_power_sdk_python.rest import ApiException
 from pprint import pprint
 
+# setup configuration with your api key
+configuration = Configuration()
+configuration.api_key = "<insert your api key here>"
 
 # create an instance of the API class
 api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
