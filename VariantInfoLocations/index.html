@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>AssertionTags - MMPower Python SDK</title>
+  <title>VariantInfoLocations - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "AssertionTags";
-    var mkdocs_page_input_path = "AssertionTags.md";
+    var mkdocs_page_name = "VariantInfoLocations";
+    var mkdocs_page_input_path = "VariantInfoLocations.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -76,16 +76,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../AssertionFusions/">AssertionFusions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../AssertionLocations/">AssertionLocations</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../AssertionPrevalence/">AssertionPrevalence</a>
 	    </li>
           
@@ -94,31 +84,9 @@
     <a class="" href="../AssertionSources/">AssertionSources</a>
 	    </li>
           
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">AssertionTags</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#assertiontags">AssertionTags</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
-	    </li>
-          
             <li class="toctree-l1">
 		
     <a class="" href="../AssertionTherapeuticContext/">AssertionTherapeuticContext</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../AssertionVariantInfo/">AssertionVariantInfo</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -154,6 +122,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../ClinicalTrialsApi/">mm_power_sdk_python.ClinicalTrialsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ConceptAssociation/">ConceptAssociation</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -243,11 +216,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../MolecularAlteration/">MolecularAlteration</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../Outcome/">Outcome</a>
 	    </li>
           
@@ -318,11 +286,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../StandardizedTierTierExplanation/">StandardizedTierTierExplanation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../StudyDesign/">StudyDesign</a>
 	    </li>
           
@@ -334,6 +297,38 @@
             <li class="toctree-l1">
 		
     <a class="" href="../Tag/">Tag</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../TierExplanation/">TierExplanation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfo/">VariantInfo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfoFusions/">VariantInfoFusions</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">VariantInfoLocations</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#variantinfolocations">VariantInfoLocations</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
         </ul>
@@ -358,7 +353,7 @@
     
       
     
-    <li>AssertionTags</li>
+    <li>VariantInfoLocations</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -368,7 +363,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="assertiontags">AssertionTags</h1>
+                <h1 id="variantinfolocations">VariantInfoLocations</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -381,57 +376,69 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>term</strong></td>
+<td><strong>cdna</strong></td>
 <td><strong>str</strong></td>
-<td>The associated term.</td>
 <td></td>
+<td>[optional]</td>
 </tr>
 <tr>
-<td><strong>facet</strong></td>
+<td><strong>amino_acid_change</strong></td>
 <td><strong>str</strong></td>
-<td>The facet of the associated term.</td>
 <td></td>
+<td>[optional]</td>
 </tr>
 <tr>
-<td><strong>filter_type</strong></td>
+<td><strong>exon_number</strong></td>
+<td><strong>list[int]</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>intron_number</strong></td>
+<td><strong>list[int]</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>chr</strong></td>
 <td><strong>str</strong></td>
-<td>Inclusion or exclusion association.</td>
-<td>[optional] [default to 'include']</td>
+<td></td>
+<td>[optional]</td>
 </tr>
 <tr>
-<td><strong>priority</strong></td>
+<td><strong>start</strong></td>
 <td><strong>int</strong></td>
-<td>The quality of the association.</td>
+<td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>composite_key</strong></td>
+<td><strong>stop</strong></td>
+<td><strong>int</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>ref</strong></td>
 <td><strong>str</strong></td>
-<td>The tag identifier.</td>
+<td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>generated_by</strong></td>
+<td><strong>alt</strong></td>
 <td><strong>str</strong></td>
-<td>The inferring facet.</td>
+<td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>generated_by_term</strong></td>
+<td><strong>strand</strong></td>
 <td><strong>str</strong></td>
-<td>The inferring term.</td>
+<td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>transcript</strong></td>
+<td><strong>reference_genome</strong></td>
 <td><strong>str</strong></td>
-<td>The particular transcript for a mutation tag.</td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>primary</strong></td>
-<td><strong>bool</strong></td>
-<td>Indicates a primary condition.</td>
+<td></td>
 <td>[optional]</td>
 </tr>
 </tbody>
@@ -443,10 +450,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../AssertionTherapeuticContext/" class="btn btn-neutral float-right" title="AssertionTherapeuticContext">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../AssertionSources/" class="btn btn-neutral" title="AssertionSources"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../VariantInfoFusions/" class="btn btn-neutral" title="VariantInfoFusions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -472,10 +477,8 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../AssertionSources/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../VariantInfoFusions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../AssertionTherapeuticContext/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

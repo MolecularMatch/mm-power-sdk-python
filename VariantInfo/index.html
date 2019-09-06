@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>AssertionFusions - MMPower Python SDK</title>
+  <title>VariantInfo - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "AssertionFusions";
-    var mkdocs_page_input_path = "AssertionFusions.md";
+    var mkdocs_page_name = "VariantInfo";
+    var mkdocs_page_input_path = "VariantInfo.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -74,28 +74,6 @@
     <a class="" href="../AssertionClassifications/">AssertionClassifications</a>
 	    </li>
           
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">AssertionFusions</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#assertionfusions">AssertionFusions</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../AssertionLocations/">AssertionLocations</a>
-	    </li>
-          
             <li class="toctree-l1">
 		
     <a class="" href="../AssertionPrevalence/">AssertionPrevalence</a>
@@ -108,17 +86,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../AssertionTags/">AssertionTags</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../AssertionTherapeuticContext/">AssertionTherapeuticContext</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../AssertionVariantInfo/">AssertionVariantInfo</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -154,6 +122,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../ClinicalTrialsApi/">mm_power_sdk_python.ClinicalTrialsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ConceptAssociation/">ConceptAssociation</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -243,11 +216,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../MolecularAlteration/">MolecularAlteration</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../Outcome/">Outcome</a>
 	    </li>
           
@@ -318,11 +286,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../StandardizedTierTierExplanation/">StandardizedTierTierExplanation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../StudyDesign/">StudyDesign</a>
 	    </li>
           
@@ -334,6 +297,38 @@
             <li class="toctree-l1">
 		
     <a class="" href="../Tag/">Tag</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../TierExplanation/">TierExplanation</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">VariantInfo</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#variantinfo">VariantInfo</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfoFusions/">VariantInfoFusions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfoLocations/">VariantInfoLocations</a>
 	    </li>
           
         </ul>
@@ -358,7 +353,7 @@
     
       
     
-    <li>AssertionFusions</li>
+    <li>VariantInfo</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -368,7 +363,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="assertionfusions">AssertionFusions</h1>
+                <h1 id="variantinfo">VariantInfo</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -381,50 +376,62 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>chr</strong></td>
+<td><strong>name</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>transcript</strong></td>
 <td><strong>str</strong></td>
 <td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>exon_number</strong></td>
+<td><strong>classification</strong></td>
 <td><strong>str</strong></td>
 <td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>intron_number</strong></td>
+<td><strong>consequences</strong></td>
+<td><strong>list[str]</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>pop_freq_max</strong></td>
+<td><strong>float</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>cosmic_id</strong></td>
 <td><strong>str</strong></td>
 <td></td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>lbpwlep</strong></td>
-<td><strong>int</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>lbpwrep</strong></td>
-<td><strong>int</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>rbpwlep</strong></td>
-<td><strong>int</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>rbpwrep</strong></td>
-<td><strong>int</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>reference_genome</strong></td>
+<td><strong>gene</strong></td>
 <td><strong>str</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>gene_fusion_partner</strong></td>
+<td><strong>str</strong></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>locations</strong></td>
+<td><a href="../VariantInfoLocations/"><strong>list[VariantInfoLocations]</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>fusions</strong></td>
+<td><a href="../VariantInfoFusions/"><strong>list[VariantInfoFusions]</strong></a></td>
 <td></td>
 <td>[optional]</td>
 </tr>
@@ -437,10 +444,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../AssertionLocations/" class="btn btn-neutral float-right" title="AssertionLocations">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../VariantInfoFusions/" class="btn btn-neutral float-right" title="VariantInfoFusions">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../AssertionClassifications/" class="btn btn-neutral" title="AssertionClassifications"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../TierExplanation/" class="btn btn-neutral" title="TierExplanation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -466,10 +473,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../AssertionClassifications/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../TierExplanation/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../AssertionLocations/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../VariantInfoFusions/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

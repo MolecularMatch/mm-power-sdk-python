@@ -92,16 +92,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="AssertionFusions/">AssertionFusions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="AssertionLocations/">AssertionLocations</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="AssertionPrevalence/">AssertionPrevalence</a>
 	    </li>
           
@@ -112,17 +102,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="AssertionTags/">AssertionTags</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="AssertionTherapeuticContext/">AssertionTherapeuticContext</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="AssertionVariantInfo/">AssertionVariantInfo</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -158,6 +138,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="ClinicalTrialsApi/">mm_power_sdk_python.ClinicalTrialsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="ConceptAssociation/">ConceptAssociation</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -247,11 +232,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="MolecularAlteration/">MolecularAlteration</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="Outcome/">Outcome</a>
 	    </li>
           
@@ -322,11 +302,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="StandardizedTierTierExplanation/">StandardizedTierTierExplanation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="StudyDesign/">StudyDesign</a>
 	    </li>
           
@@ -338,6 +313,26 @@
             <li class="toctree-l1">
 		
     <a class="" href="Tag/">Tag</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="TierExplanation/">TierExplanation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="VariantInfo/">VariantInfo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="VariantInfoFusions/">VariantInfoFusions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="VariantInfoLocations/">VariantInfoLocations</a>
 	    </li>
           
         </ul>
@@ -404,6 +399,9 @@ import mm_power_sdk_python
 from mm_power_sdk_python.rest import ApiException
 from pprint import pprint
 
+# setup configuration with your api key
+configuration = Configuration()
+configuration.api_key = &quot;&lt;insert your api key here&gt;&quot;
 
 # create an instance of the API class
 api_instance = mm_power_sdk_python.AssertionsApi(mm_power_sdk_python.ApiClient(configuration))
@@ -464,5 +462,5 @@ except ApiException as e:
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-09-04 19:49:09
+Build Date UTC : 2019-09-06 22:24:57
 -->

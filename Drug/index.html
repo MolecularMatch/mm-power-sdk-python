@@ -76,16 +76,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../AssertionFusions/">AssertionFusions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../AssertionLocations/">AssertionLocations</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../AssertionPrevalence/">AssertionPrevalence</a>
 	    </li>
           
@@ -96,17 +86,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../AssertionTags/">AssertionTags</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../AssertionTherapeuticContext/">AssertionTherapeuticContext</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../AssertionVariantInfo/">AssertionVariantInfo</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -142,6 +122,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../ClinicalTrialsApi/">mm_power_sdk_python.ClinicalTrialsApi</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../ConceptAssociation/">ConceptAssociation</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -243,11 +228,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../MolecularAlteration/">MolecularAlteration</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../Outcome/">Outcome</a>
 	    </li>
           
@@ -318,11 +298,6 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../StandardizedTierTierExplanation/">StandardizedTierTierExplanation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
     <a class="" href="../StudyDesign/">StudyDesign</a>
 	    </li>
           
@@ -334,6 +309,26 @@
             <li class="toctree-l1">
 		
     <a class="" href="../Tag/">Tag</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../TierExplanation/">TierExplanation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfo/">VariantInfo</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfoFusions/">VariantInfoFusions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../VariantInfoLocations/">VariantInfoLocations</a>
 	    </li>
           
         </ul>
@@ -381,6 +376,12 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>score</strong></td>
+<td><strong>float</strong></td>
+<td>indicator of the quality of the match.  Assertion based therapies will not contain a _score.</td>
+<td>[optional]</td>
+</tr>
+<tr>
 <td><strong>mboost</strong></td>
 <td><strong>float</strong></td>
 <td>intrinsic boost to the record.</td>
@@ -407,13 +408,13 @@
 <tr>
 <td><strong>description</strong></td>
 <td><strong>str</strong></td>
-<td>Descriptions of drug chemical properties, history and regulatory status.</td>
+<td>Descriptions of drug properties, treatments, history and regulatory status.</td>
 <td>[optional]</td>
 </tr>
 <tr>
 <td><strong>composite</strong></td>
 <td><strong>bool</strong></td>
-<td></td>
+<td>Indicates whether this drug is a composite of multiple drugs (combination therapy).</td>
 <td>[optional]</td>
 </tr>
 <tr>
@@ -421,18 +422,6 @@
 <td><strong>bool</strong></td>
 <td>Indicates whether this drug has been approved by any regulating government.</td>
 <td></td>
-</tr>
-<tr>
-<td><strong>suppress_resistance</strong></td>
-<td><strong>bool</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>suppress_synonym_resistance</strong></td>
-<td><strong>bool</strong></td>
-<td></td>
-<td>[optional]</td>
 </tr>
 <tr>
 <td><strong>availability</strong></td>
@@ -461,42 +450,12 @@
 <tr>
 <td><strong>composite_tags</strong></td>
 <td><a href="../DrugCompositeTags/"><strong>list[DrugCompositeTags]</strong></a></td>
-<td></td>
+<td>The individual drugs making up this composite drug</td>
 <td>[optional]</td>
 </tr>
 <tr>
 <td><strong>brands</strong></td>
 <td><a href="../DrugBrands/"><strong>list[DrugBrands]</strong></a></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>indication_text</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>contraindication_text</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>mechanism_text</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>rxcui</strong></td>
-<td><strong>list[str]</strong></td>
-<td></td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>drugclass_caused_suppress</strong></td>
-<td><strong>list[str]</strong></td>
 <td></td>
 <td>[optional]</td>
 </tr>
@@ -509,7 +468,7 @@
 <tr>
 <td><strong>link</strong></td>
 <td><strong>str</strong></td>
-<td></td>
+<td>DailyMed link for prescription label details.</td>
 <td>[optional]</td>
 </tr>
 <tr>
@@ -531,9 +490,33 @@
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>phase_and_trials_score</strong></td>
-<td><strong>float</strong></td>
-<td></td>
+<td><strong>molecular_alterations</strong></td>
+<td><a href="../ConceptAssociation/"><strong>list[ConceptAssociation]</strong></a></td>
+<td>Molecular concept associations established for this drug.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>contraindicated_alterations</strong></td>
+<td><a href="../ConceptAssociation/"><strong>list[ConceptAssociation]</strong></a></td>
+<td>Contraindicated Molecular concept associations established for this drug.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>assertions</strong></td>
+<td><a href="../Assertion/"><strong>list[Assertion]</strong></a></td>
+<td>Evidence in support of this drug.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>best_tier</strong></td>
+<td><strong>str</strong></td>
+<td>The highest tier evidence associated with this drug.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>met_tier</strong></td>
+<td><strong>str</strong></td>
+<td>The highest tier evidence associated with this drug where the criteria is fully met based on the search inputs.</td>
 <td>[optional]</td>
 </tr>
 </tbody>
