@@ -42,6 +42,7 @@ from __future__ import print_function
 import time
 import mm_power_sdk_python
 from mm_power_sdk_python.rest import ApiException
+from mm_power_sdk_python.configuration import Configuration
 from pprint import pprint
 
 # setup configuration with your api key
