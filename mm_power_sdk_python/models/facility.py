@@ -15,6 +15,7 @@ import re  # noqa: F401
 
 import six
 from mm_power_sdk_python.models.facility_geo import FacilityGeo  # noqa: F401,E501
+from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
 class Facility(object):
@@ -32,6 +33,7 @@ class Facility(object):
     swagger_types = {
         'id': 'str',
         'street': 'str',
+        'number': 'str',
         'country': 'str',
         'name': 'str',
         'po_box': 'str',
@@ -57,12 +59,14 @@ class Facility(object):
         'phone_ext_backup': 'str',
         'email_backup': 'str',
         'distance': 'float',
-        'is_in_institution': 'bool'
+        'is_in_institution': 'bool',
+        'tags': 'list[Tag]'
     }
 
     attribute_map = {
         'id': 'id',
         'street': 'street',
+        'number': 'number',
         'country': 'country',
         'name': 'name',
         'po_box': 'po_box',
@@ -88,13 +92,15 @@ class Facility(object):
         'phone_ext_backup': 'phone_ext_backup',
         'email_backup': 'email_backup',
         'distance': 'distance',
-        'is_in_institution': 'isInInstitution'
+        'is_in_institution': 'isInInstitution',
+        'tags': 'tags'
     }
 
-    def __init__(self, id=None, street=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, lat=None, lon=None, geo=None, status=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, distance=None, is_in_institution=None):  # noqa: E501
+    def __init__(self, id=None, street=None, number=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, lat=None, lon=None, geo=None, status=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, distance=None, is_in_institution=None, tags=None):  # noqa: E501
         """Facility - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._street = None
+        self._number = None
         self._country = None
         self._name = None
         self._po_box = None
@@ -121,11 +127,14 @@ class Facility(object):
         self._email_backup = None
         self._distance = None
         self._is_in_institution = None
+        self._tags = None
         self.discriminator = None
         if id is not None:
             self.id = id
         if street is not None:
             self.street = street
+        if number is not None:
+            self.number = number
         if country is not None:
             self.country = country
         if name is not None:
@@ -178,6 +187,8 @@ class Facility(object):
             self.distance = distance
         if is_in_institution is not None:
             self.is_in_institution = is_in_institution
+        if tags is not None:
+            self.tags = tags
 
     @property
     def id(self):
@@ -204,7 +215,7 @@ class Facility(object):
     def street(self):
         """Gets the street of this Facility.  # noqa: E501
 
-        Site street address.  # noqa: E501
+        Site street name.  # noqa: E501
 
         :return: The street of this Facility.  # noqa: E501
         :rtype: str
@@ -215,13 +226,36 @@ class Facility(object):
     def street(self, street):
         """Sets the street of this Facility.
 
-        Site street address.  # noqa: E501
+        Site street name.  # noqa: E501
 
         :param street: The street of this Facility.  # noqa: E501
         :type: str
         """
 
         self._street = street
+
+    @property
+    def number(self):
+        """Gets the number of this Facility.  # noqa: E501
+
+        Site street number.  # noqa: E501
+
+        :return: The number of this Facility.  # noqa: E501
+        :rtype: str
+        """
+        return self._number
+
+    @number.setter
+    def number(self, number):
+        """Sets the number of this Facility.
+
+        Site street number.  # noqa: E501
+
+        :param number: The number of this Facility.  # noqa: E501
+        :type: str
+        """
+
+        self._number = number
 
     @property
     def country(self):
@@ -365,6 +399,7 @@ class Facility(object):
     def lat(self):
         """Gets the lat of this Facility.  # noqa: E501
 
+        Latitude  # noqa: E501
 
         :return: The lat of this Facility.  # noqa: E501
         :rtype: float
@@ -375,6 +410,7 @@ class Facility(object):
     def lat(self, lat):
         """Sets the lat of this Facility.
 
+        Latitude  # noqa: E501
 
         :param lat: The lat of this Facility.  # noqa: E501
         :type: float
@@ -386,6 +422,7 @@ class Facility(object):
     def lon(self):
         """Gets the lon of this Facility.  # noqa: E501
 
+        Longitude  # noqa: E501
 
         :return: The lon of this Facility.  # noqa: E501
         :rtype: float
@@ -396,6 +433,7 @@ class Facility(object):
     def lon(self, lon):
         """Sets the lon of this Facility.
 
+        Longitude  # noqa: E501
 
         :param lon: The lon of this Facility.  # noqa: E501
         :type: float
@@ -814,6 +852,29 @@ class Facility(object):
         """
 
         self._is_in_institution = is_in_institution
+
+    @property
+    def tags(self):
+        """Gets the tags of this Facility.  # noqa: E501
+
+        Concept associations established for this site.  # noqa: E501
+
+        :return: The tags of this Facility.  # noqa: E501
+        :rtype: list[Tag]
+        """
+        return self._tags
+
+    @tags.setter
+    def tags(self, tags):
+        """Sets the tags of this Facility.
+
+        Concept associations established for this site.  # noqa: E501
+
+        :param tags: The tags of this Facility.  # noqa: E501
+        :type: list[Tag]
+        """
+
+        self._tags = tags
 
     def to_dict(self):
         """Returns the model properties as a dict"""

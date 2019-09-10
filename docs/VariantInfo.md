@@ -1,4 +1,4 @@
-# AssertionVariantInfo
+# VariantInfo
 
 ## Properties
 Name | Type | Description | Notes
@@ -11,8 +11,8 @@ Name | Type | Description | Notes
 **cosmic_id** | **str** |  | [optional] 
 **gene** | **str** |  | [optional] 
 **gene_fusion_partner** | **str** |  | [optional] 
-**locations** | [**list[AssertionLocations]**](AssertionLocations.md) |  | [optional] 
-**fusions** | [**list[AssertionFusions]**](AssertionFusions.md) |  | [optional] 
+**locations** | [**list[VariantInfoLocations]**](VariantInfoLocations.md) |  | [optional] 
+**fusions** | [**list[VariantInfoFusions]**](VariantInfoFusions.md) |  | [optional] 
 
 
 

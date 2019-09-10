@@ -1,4 +1,4 @@
-# StandardizedTierTierExplanation
+# TierExplanation
 
 ## Properties
 Name | Type | Description | Notes

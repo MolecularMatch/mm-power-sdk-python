@@ -82,6 +82,7 @@ class StudyDesign(object):
     def allocation(self):
         """Gets the allocation of this StudyDesign.  # noqa: E501
 
+        The method by which participants are assigned to arms in a clinical trial.  # noqa: E501
 
         :return: The allocation of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -92,6 +93,7 @@ class StudyDesign(object):
     def allocation(self, allocation):
         """Sets the allocation of this StudyDesign.
 
+        The method by which participants are assigned to arms in a clinical trial.  # noqa: E501
 
         :param allocation: The allocation of this StudyDesign.  # noqa: E501
         :type: str
@@ -103,6 +105,7 @@ class StudyDesign(object):
     def intervention_model(self):
         """Gets the intervention_model of this StudyDesign.  # noqa: E501
 
+        The strategy for assigning interventions to participants.  # noqa: E501
 
         :return: The intervention_model of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -113,6 +116,7 @@ class StudyDesign(object):
     def intervention_model(self, intervention_model):
         """Sets the intervention_model of this StudyDesign.
 
+        The strategy for assigning interventions to participants.  # noqa: E501
 
         :param intervention_model: The intervention_model of this StudyDesign.  # noqa: E501
         :type: str
@@ -124,6 +128,7 @@ class StudyDesign(object):
     def intervention_model_description(self):
         """Gets the intervention_model_description of this StudyDesign.  # noqa: E501
 
+        Details about the Interventional Study Model.  # noqa: E501
 
         :return: The intervention_model_description of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -134,6 +139,7 @@ class StudyDesign(object):
     def intervention_model_description(self, intervention_model_description):
         """Sets the intervention_model_description of this StudyDesign.
 
+        Details about the Interventional Study Model.  # noqa: E501
 
         :param intervention_model_description: The intervention_model_description of this StudyDesign.  # noqa: E501
         :type: str
@@ -145,6 +151,7 @@ class StudyDesign(object):
     def primary_purpose(self):
         """Gets the primary_purpose of this StudyDesign.  # noqa: E501
 
+        The main objective of the intervention(s) being evaluated by the clinical trial.  # noqa: E501
 
         :return: The primary_purpose of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -155,6 +162,7 @@ class StudyDesign(object):
     def primary_purpose(self, primary_purpose):
         """Sets the primary_purpose of this StudyDesign.
 
+        The main objective of the intervention(s) being evaluated by the clinical trial.  # noqa: E501
 
         :param primary_purpose: The primary_purpose of this StudyDesign.  # noqa: E501
         :type: str
@@ -166,6 +174,7 @@ class StudyDesign(object):
     def observational_model(self):
         """Gets the observational_model of this StudyDesign.  # noqa: E501
 
+        Primary strategy for participant identification and follow-up.  # noqa: E501
 
         :return: The observational_model of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -176,6 +185,7 @@ class StudyDesign(object):
     def observational_model(self, observational_model):
         """Sets the observational_model of this StudyDesign.
 
+        Primary strategy for participant identification and follow-up.  # noqa: E501
 
         :param observational_model: The observational_model of this StudyDesign.  # noqa: E501
         :type: str
@@ -187,6 +197,7 @@ class StudyDesign(object):
     def time_perspective(self):
         """Gets the time_perspective of this StudyDesign.  # noqa: E501
 
+        Temporal relationship of observation period to time of participant enrollment.  # noqa: E501
 
         :return: The time_perspective of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -197,6 +208,7 @@ class StudyDesign(object):
     def time_perspective(self, time_perspective):
         """Sets the time_perspective of this StudyDesign.
 
+        Temporal relationship of observation period to time of participant enrollment.  # noqa: E501
 
         :param time_perspective: The time_perspective of this StudyDesign.  # noqa: E501
         :type: str
@@ -208,6 +220,7 @@ class StudyDesign(object):
     def masking(self):
         """Gets the masking of this StudyDesign.  # noqa: E501
 
+        The party or parties involved in the clinical trial who are prevented from having knowledge of the interventions assigned to individual participants.  # noqa: E501
 
         :return: The masking of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -218,6 +231,7 @@ class StudyDesign(object):
     def masking(self, masking):
         """Sets the masking of this StudyDesign.
 
+        The party or parties involved in the clinical trial who are prevented from having knowledge of the interventions assigned to individual participants.  # noqa: E501
 
         :param masking: The masking of this StudyDesign.  # noqa: E501
         :type: str
@@ -229,6 +243,7 @@ class StudyDesign(object):
     def masking_description(self):
         """Gets the masking_description of this StudyDesign.  # noqa: E501
 
+        Information about other parties who may be masked in the clinical trial, if any.  # noqa: E501
 
         :return: The masking_description of this StudyDesign.  # noqa: E501
         :rtype: str
@@ -239,6 +254,7 @@ class StudyDesign(object):
     def masking_description(self, masking_description):
         """Sets the masking_description of this StudyDesign.
 
+        Information about other parties who may be masked in the clinical trial, if any.  # noqa: E501
 
         :param masking_description: The masking_description of this StudyDesign.  # noqa: E501
         :type: str

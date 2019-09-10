@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.standardized_tier_tier_explanation import StandardizedTierTierExplanation  # noqa: E501
+from models.concept_association import ConceptAssociation  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestStandardizedTierTierExplanation(unittest.TestCase):
-    """StandardizedTierTierExplanation unit test stubs"""
+class TestConceptAssociation(unittest.TestCase):
+    """ConceptAssociation unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestStandardizedTierTierExplanation(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testStandardizedTierTierExplanation(self):
-        """Test StandardizedTierTierExplanation"""
+    def testConceptAssociation(self):
+        """Test ConceptAssociation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.standardized_tier_tier_explanation.StandardizedTierTierExplanation()  # noqa: E501
+        # model = mm_power_sdk_python.models.concept_association.ConceptAssociation()  # noqa: E501
         pass
 
 

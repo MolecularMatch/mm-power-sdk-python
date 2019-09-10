@@ -18,11 +18,11 @@ from mm_power_sdk_python.models.arm_group import ArmGroup  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCountries  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary  # noqa: F401,E501
 from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors  # noqa: F401,E501
+from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
 from mm_power_sdk_python.models.contact import Contact  # noqa: F401,E501
 from mm_power_sdk_python.models.eligibility import Eligibility  # noqa: F401,E501
 from mm_power_sdk_python.models.facility import Facility  # noqa: F401,E501
 from mm_power_sdk_python.models.intervention import Intervention  # noqa: F401,E501
-from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration  # noqa: F401,E501
 from mm_power_sdk_python.models.outcome import Outcome  # noqa: F401,E501
 from mm_power_sdk_python.models.study_design import StudyDesign  # noqa: F401,E501
 from mm_power_sdk_python.models.synonym import Synonym  # noqa: F401,E501
@@ -42,6 +42,7 @@ class ClinicalTrial(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'score': 'float',
         'mboost': 'float',
         'import_date': 'datetime',
         'id': 'str',
@@ -89,11 +90,12 @@ class ClinicalTrial(object):
         'acronym': 'str',
         'link': 'str',
         'tags': 'list[Tag]',
-        'molecular_alterations': 'list[MolecularAlteration]',
+        'molecular_alterations': 'list[ConceptAssociation]',
         'stats': 'object'
     }
 
     attribute_map = {
+        'score': '_score',
         'mboost': 'mboost',
         'import_date': 'importDate',
         'id': 'id',
@@ -145,8 +147,9 @@ class ClinicalTrial(object):
         'stats': '_stats'
     }
 
-    def __init__(self, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase='N/A', study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None, stats=None):  # noqa: E501
+    def __init__(self, score=None, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase='N/A', study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None, stats=None):  # noqa: E501
         """ClinicalTrial - a model defined in Swagger"""  # noqa: E501
+        self._score = None
         self._mboost = None
         self._import_date = None
         self._id = None
@@ -197,6 +200,8 @@ class ClinicalTrial(object):
         self._molecular_alterations = None
         self._stats = None
         self.discriminator = None
+        if score is not None:
+            self.score = score
         if mboost is not None:
             self.mboost = mboost
         if import_date is not None:
@@ -291,6 +296,29 @@ class ClinicalTrial(object):
             self.molecular_alterations = molecular_alterations
         if stats is not None:
             self.stats = stats
+
+    @property
+    def score(self):
+        """Gets the score of this ClinicalTrial.  # noqa: E501
+
+        indicator of the quality of the match.  # noqa: E501
+
+        :return: The score of this ClinicalTrial.  # noqa: E501
+        :rtype: float
+        """
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        """Sets the score of this ClinicalTrial.
+
+        indicator of the quality of the match.  # noqa: E501
+
+        :param score: The score of this ClinicalTrial.  # noqa: E501
+        :type: float
+        """
+
+        self._score = score
 
     @property
     def mboost(self):
@@ -873,6 +901,7 @@ class ClinicalTrial(object):
     def primary_outcomes(self):
         """Gets the primary_outcomes of this ClinicalTrial.  # noqa: E501
 
+        The outcome that an investigator considers to be the most important among the many outcomes that are to be examined in the study.  # noqa: E501
 
         :return: The primary_outcomes of this ClinicalTrial.  # noqa: E501
         :rtype: list[Outcome]
@@ -883,6 +912,7 @@ class ClinicalTrial(object):
     def primary_outcomes(self, primary_outcomes):
         """Sets the primary_outcomes of this ClinicalTrial.
 
+        The outcome that an investigator considers to be the most important among the many outcomes that are to be examined in the study.  # noqa: E501
 
         :param primary_outcomes: The primary_outcomes of this ClinicalTrial.  # noqa: E501
         :type: list[Outcome]
@@ -1372,7 +1402,7 @@ class ClinicalTrial(object):
         Molecular concept associations established for this trial.  # noqa: E501
 
         :return: The molecular_alterations of this ClinicalTrial.  # noqa: E501
-        :rtype: list[MolecularAlteration]
+        :rtype: list[ConceptAssociation]
         """
         return self._molecular_alterations
 
@@ -1383,7 +1413,7 @@ class ClinicalTrial(object):
         Molecular concept associations established for this trial.  # noqa: E501
 
         :param molecular_alterations: The molecular_alterations of this ClinicalTrial.  # noqa: E501
-        :type: list[MolecularAlteration]
+        :type: list[ConceptAssociation]
         """
 
         self._molecular_alterations = molecular_alterations

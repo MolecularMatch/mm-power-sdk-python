@@ -1,4 +1,4 @@
-# AssertionLocations
+# VariantInfoLocations
 
 ## Properties
 Name | Type | Description | Notes

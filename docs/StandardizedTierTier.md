@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **value** | **str** |  | 
 **calculated_at** | **datetime** |  | [optional] 
-**explanation** | [**list[StandardizedTierTierExplanation]**](StandardizedTierTierExplanation.md) |  | [optional] 
+**explanation** | [**list[TierExplanation]**](TierExplanation.md) |  | [optional] 
 
 
 

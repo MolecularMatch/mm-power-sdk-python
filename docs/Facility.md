@@ -4,15 +4,16 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** |  | [optional] 
-**street** | **str** | Site street address. | [optional] 
+**street** | **str** | Site street name. | [optional] 
+**number** | **str** | Site street number. | [optional] 
 **country** | **str** | Site country. | [optional] 
 **name** | **str** | Site name. | [optional] 
 **po_box** | **str** | Site P.O. Box. | [optional] 
 **city** | **str** | Site city. | [optional] 
 **state** | **str** | Site state or sub division. | [optional] 
 **zip** | **str** | Site postal code. | [optional] 
-**lat** | **float** |  | [optional] 
-**lon** | **float** |  | [optional] 
+**lat** | **float** | Latitude | [optional] 
+**lon** | **float** | Longitude | [optional] 
 **geo** | [**FacilityGeo**](FacilityGeo.md) |  | [optional] 
 **status** | **str** | Site specific recruiting status. | [optional] 
 **first_name** | **str** | Site primary contact first name. | [optional] 
@@ -31,6 +32,7 @@ Name | Type | Description | Notes
 **email_backup** | **str** | Site backup contact email address. | [optional] 
 **distance** | **float** | Distance based on the distance unit of measure specified (miles if unspecified) from the search location (either geopoint, location object, or inferred search point bsaed on filters provided. | [optional] 
 **is_in_institution** | **bool** | If an institutionId was provided for search, indicates if this site is associated with the institution. | [optional] 
+**tags** | [**list[Tag]**](Tag.md) | Concept associations established for this site. | [optional] 
 
 
 

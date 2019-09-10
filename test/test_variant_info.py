@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.assertion_locations import AssertionLocations  # noqa: E501
+from models.variant_info import VariantInfo  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestAssertionLocations(unittest.TestCase):
-    """AssertionLocations unit test stubs"""
+class TestVariantInfo(unittest.TestCase):
+    """VariantInfo unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestAssertionLocations(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testAssertionLocations(self):
-        """Test AssertionLocations"""
+    def testVariantInfo(self):
+        """Test VariantInfo"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.assertion_locations.AssertionLocations()  # noqa: E501
+        # model = mm_power_sdk_python.models.variant_info.VariantInfo()  # noqa: E501
         pass
 
 

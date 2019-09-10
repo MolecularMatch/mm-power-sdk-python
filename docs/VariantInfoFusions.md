@@ -1,4 +1,4 @@
-# AssertionFusions
+# VariantInfoFusions
 
 ## Properties
 Name | Type | Description | Notes

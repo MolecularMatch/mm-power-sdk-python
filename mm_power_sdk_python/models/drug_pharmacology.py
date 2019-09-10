@@ -30,6 +30,7 @@ class DrugPharmacology(object):
     """
     swagger_types = {
         'indication': 'str',
+        'contraindication': 'str',
         'pharmacodynamics': 'str',
         'mechanism_of_action': 'str',
         'absorption': 'str',
@@ -44,6 +45,7 @@ class DrugPharmacology(object):
 
     attribute_map = {
         'indication': 'indication',
+        'contraindication': 'contraindication',
         'pharmacodynamics': 'pharmacodynamics',
         'mechanism_of_action': 'mechanism_of_action',
         'absorption': 'absorption',
@@ -56,9 +58,10 @@ class DrugPharmacology(object):
         'clearance': 'clearance'
     }
 
-    def __init__(self, indication=None, pharmacodynamics=None, mechanism_of_action=None, absorption=None, toxicity=None, protein_binding=None, metabolism=None, half_life=None, route_of_elimination=None, volume_of_distribution=None, clearance=None):  # noqa: E501
+    def __init__(self, indication=None, contraindication=None, pharmacodynamics=None, mechanism_of_action=None, absorption=None, toxicity=None, protein_binding=None, metabolism=None, half_life=None, route_of_elimination=None, volume_of_distribution=None, clearance=None):  # noqa: E501
         """DrugPharmacology - a model defined in Swagger"""  # noqa: E501
         self._indication = None
+        self._contraindication = None
         self._pharmacodynamics = None
         self._mechanism_of_action = None
         self._absorption = None
@@ -72,6 +75,8 @@ class DrugPharmacology(object):
         self.discriminator = None
         if indication is not None:
             self.indication = indication
+        if contraindication is not None:
+            self.contraindication = contraindication
         if pharmacodynamics is not None:
             self.pharmacodynamics = pharmacodynamics
         if mechanism_of_action is not None:
@@ -115,6 +120,29 @@ class DrugPharmacology(object):
         """
 
         self._indication = indication
+
+    @property
+    def contraindication(self):
+        """Gets the contraindication of this DrugPharmacology.  # noqa: E501
+
+        The contraindications section from the FDA label.  # noqa: E501
+
+        :return: The contraindication of this DrugPharmacology.  # noqa: E501
+        :rtype: str
+        """
+        return self._contraindication
+
+    @contraindication.setter
+    def contraindication(self, contraindication):
+        """Sets the contraindication of this DrugPharmacology.
+
+        The contraindications section from the FDA label.  # noqa: E501
+
+        :param contraindication: The contraindication of this DrugPharmacology.  # noqa: E501
+        :type: str
+        """
+
+        self._contraindication = contraindication
 
     @property
     def pharmacodynamics(self):

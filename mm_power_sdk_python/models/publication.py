@@ -14,7 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.molecular_alteration import MolecularAlteration  # noqa: F401,E501
+from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
 from mm_power_sdk_python.models.publication_authors import PublicationAuthors  # noqa: F401,E501
 from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
@@ -32,6 +32,7 @@ class Publication(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'score': 'float',
         'mboost': 'float',
         'id': 'str',
         'pmid': 'str',
@@ -56,10 +57,11 @@ class Publication(object):
         'publication_type': 'list[str]',
         'authors': 'list[PublicationAuthors]',
         'tags': 'list[Tag]',
-        'molecular_alterations': 'list[MolecularAlteration]'
+        'molecular_alterations': 'list[ConceptAssociation]'
     }
 
     attribute_map = {
+        'score': '_score',
         'mboost': 'mboost',
         'id': 'id',
         'pmid': 'pmid',
@@ -87,8 +89,9 @@ class Publication(object):
         'molecular_alterations': 'molecularAlterations'
     }
 
-    def __init__(self, mboost=None, id=None, pmid=None, doi=None, source=None, journal_name=None, journal_iso_abbreviation=None, title=None, purpose=None, background=None, methods=None, results=None, conclusion=None, conflicts=None, fulltext=None, citation=None, citation_date=None, link=None, chemicals=None, keywords=None, extended_keywords=None, publication_type=None, authors=None, tags=None, molecular_alterations=None):  # noqa: E501
+    def __init__(self, score=None, mboost=None, id=None, pmid=None, doi=None, source=None, journal_name=None, journal_iso_abbreviation=None, title=None, purpose=None, background=None, methods=None, results=None, conclusion=None, conflicts=None, fulltext=None, citation=None, citation_date=None, link=None, chemicals=None, keywords=None, extended_keywords=None, publication_type=None, authors=None, tags=None, molecular_alterations=None):  # noqa: E501
         """Publication - a model defined in Swagger"""  # noqa: E501
+        self._score = None
         self._mboost = None
         self._id = None
         self._pmid = None
@@ -115,6 +118,8 @@ class Publication(object):
         self._tags = None
         self._molecular_alterations = None
         self.discriminator = None
+        if score is not None:
+            self.score = score
         if mboost is not None:
             self.mboost = mboost
         self.id = id
@@ -159,6 +164,29 @@ class Publication(object):
             self.tags = tags
         if molecular_alterations is not None:
             self.molecular_alterations = molecular_alterations
+
+    @property
+    def score(self):
+        """Gets the score of this Publication.  # noqa: E501
+
+        indicator of the quality of the match.  # noqa: E501
+
+        :return: The score of this Publication.  # noqa: E501
+        :rtype: float
+        """
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        """Sets the score of this Publication.
+
+        indicator of the quality of the match.  # noqa: E501
+
+        :param score: The score of this Publication.  # noqa: E501
+        :type: float
+        """
+
+        self._score = score
 
     @property
     def mboost(self):
@@ -212,7 +240,7 @@ class Publication(object):
     def pmid(self):
         """Gets the pmid of this Publication.  # noqa: E501
 
-        PubMed identifier.  # noqa: E501
+        PubMed ID.  # noqa: E501
 
         :return: The pmid of this Publication.  # noqa: E501
         :rtype: str
@@ -223,7 +251,7 @@ class Publication(object):
     def pmid(self, pmid):
         """Sets the pmid of this Publication.
 
-        PubMed identifier.  # noqa: E501
+        PubMed ID.  # noqa: E501
 
         :param pmid: The pmid of this Publication.  # noqa: E501
         :type: str
@@ -235,7 +263,7 @@ class Publication(object):
     def doi(self):
         """Gets the doi of this Publication.  # noqa: E501
 
-        digital object identifier.  # noqa: E501
+        Digital Object Identifier (permanent link at doi.org/[doi]).  # noqa: E501
 
         :return: The doi of this Publication.  # noqa: E501
         :rtype: str
@@ -246,7 +274,7 @@ class Publication(object):
     def doi(self, doi):
         """Sets the doi of this Publication.
 
-        digital object identifier.  # noqa: E501
+        Digital Object Identifier (permanent link at doi.org/[doi]).  # noqa: E501
 
         :param doi: The doi of this Publication.  # noqa: E501
         :type: str
@@ -258,7 +286,7 @@ class Publication(object):
     def source(self):
         """Gets the source of this Publication.  # noqa: E501
 
-        native data source of this record  # noqa: E501
+        data source of this record  # noqa: E501
 
         :return: The source of this Publication.  # noqa: E501
         :rtype: str
@@ -269,7 +297,7 @@ class Publication(object):
     def source(self, source):
         """Sets the source of this Publication.
 
-        native data source of this record  # noqa: E501
+        data source of this record  # noqa: E501
 
         :param source: The source of this Publication.  # noqa: E501
         :type: str
@@ -283,6 +311,7 @@ class Publication(object):
     def journal_name(self):
         """Gets the journal_name of this Publication.  # noqa: E501
 
+        Journal name.  # noqa: E501
 
         :return: The journal_name of this Publication.  # noqa: E501
         :rtype: str
@@ -293,6 +322,7 @@ class Publication(object):
     def journal_name(self, journal_name):
         """Sets the journal_name of this Publication.
 
+        Journal name.  # noqa: E501
 
         :param journal_name: The journal_name of this Publication.  # noqa: E501
         :type: str
@@ -352,6 +382,7 @@ class Publication(object):
     def purpose(self):
         """Gets the purpose of this Publication.  # noqa: E501
 
+        Abstract's purpose section.  # noqa: E501
 
         :return: The purpose of this Publication.  # noqa: E501
         :rtype: str
@@ -362,6 +393,7 @@ class Publication(object):
     def purpose(self, purpose):
         """Sets the purpose of this Publication.
 
+        Abstract's purpose section.  # noqa: E501
 
         :param purpose: The purpose of this Publication.  # noqa: E501
         :type: str
@@ -373,6 +405,7 @@ class Publication(object):
     def background(self):
         """Gets the background of this Publication.  # noqa: E501
 
+        Abstract's background section.  # noqa: E501
 
         :return: The background of this Publication.  # noqa: E501
         :rtype: str
@@ -383,6 +416,7 @@ class Publication(object):
     def background(self, background):
         """Sets the background of this Publication.
 
+        Abstract's background section.  # noqa: E501
 
         :param background: The background of this Publication.  # noqa: E501
         :type: str
@@ -394,6 +428,7 @@ class Publication(object):
     def methods(self):
         """Gets the methods of this Publication.  # noqa: E501
 
+        Abstract's methods section.  # noqa: E501
 
         :return: The methods of this Publication.  # noqa: E501
         :rtype: str
@@ -404,6 +439,7 @@ class Publication(object):
     def methods(self, methods):
         """Sets the methods of this Publication.
 
+        Abstract's methods section.  # noqa: E501
 
         :param methods: The methods of this Publication.  # noqa: E501
         :type: str
@@ -415,6 +451,7 @@ class Publication(object):
     def results(self):
         """Gets the results of this Publication.  # noqa: E501
 
+        Abstract's results section.  # noqa: E501
 
         :return: The results of this Publication.  # noqa: E501
         :rtype: str
@@ -425,6 +462,7 @@ class Publication(object):
     def results(self, results):
         """Sets the results of this Publication.
 
+        Abstract's results section.  # noqa: E501
 
         :param results: The results of this Publication.  # noqa: E501
         :type: str
@@ -436,6 +474,7 @@ class Publication(object):
     def conclusion(self):
         """Gets the conclusion of this Publication.  # noqa: E501
 
+        Abstract's conclusion section.  # noqa: E501
 
         :return: The conclusion of this Publication.  # noqa: E501
         :rtype: str
@@ -446,6 +485,7 @@ class Publication(object):
     def conclusion(self, conclusion):
         """Sets the conclusion of this Publication.
 
+        Abstract's conclusion section.  # noqa: E501
 
         :param conclusion: The conclusion of this Publication.  # noqa: E501
         :type: str
@@ -457,6 +497,7 @@ class Publication(object):
     def conflicts(self):
         """Gets the conflicts of this Publication.  # noqa: E501
 
+        Author's conflicts of interest section.  # noqa: E501
 
         :return: The conflicts of this Publication.  # noqa: E501
         :rtype: str
@@ -467,6 +508,7 @@ class Publication(object):
     def conflicts(self, conflicts):
         """Sets the conflicts of this Publication.
 
+        Author's conflicts of interest section.  # noqa: E501
 
         :param conflicts: The conflicts of this Publication.  # noqa: E501
         :type: str
@@ -478,6 +520,7 @@ class Publication(object):
     def fulltext(self):
         """Gets the fulltext of this Publication.  # noqa: E501
 
+        Full text (if available).  # noqa: E501
 
         :return: The fulltext of this Publication.  # noqa: E501
         :rtype: str
@@ -488,6 +531,7 @@ class Publication(object):
     def fulltext(self, fulltext):
         """Sets the fulltext of this Publication.
 
+        Full text (if available).  # noqa: E501
 
         :param fulltext: The fulltext of this Publication.  # noqa: E501
         :type: str
@@ -499,6 +543,7 @@ class Publication(object):
     def citation(self):
         """Gets the citation of this Publication.  # noqa: E501
 
+        MLA formatted citation.  # noqa: E501
 
         :return: The citation of this Publication.  # noqa: E501
         :rtype: str
@@ -509,6 +554,7 @@ class Publication(object):
     def citation(self, citation):
         """Sets the citation of this Publication.
 
+        MLA formatted citation.  # noqa: E501
 
         :param citation: The citation of this Publication.  # noqa: E501
         :type: str
@@ -522,6 +568,7 @@ class Publication(object):
     def citation_date(self):
         """Gets the citation_date of this Publication.  # noqa: E501
 
+        Article date used for citation  # noqa: E501
 
         :return: The citation_date of this Publication.  # noqa: E501
         :rtype: datetime
@@ -532,6 +579,7 @@ class Publication(object):
     def citation_date(self, citation_date):
         """Sets the citation_date of this Publication.
 
+        Article date used for citation  # noqa: E501
 
         :param citation_date: The citation_date of this Publication.  # noqa: E501
         :type: datetime
@@ -545,6 +593,7 @@ class Publication(object):
     def link(self):
         """Gets the link of this Publication.  # noqa: E501
 
+        Link to original source.  # noqa: E501
 
         :return: The link of this Publication.  # noqa: E501
         :rtype: str
@@ -555,6 +604,7 @@ class Publication(object):
     def link(self, link):
         """Sets the link of this Publication.
 
+        Link to original source.  # noqa: E501
 
         :param link: The link of this Publication.  # noqa: E501
         :type: str
@@ -566,6 +616,7 @@ class Publication(object):
     def chemicals(self):
         """Gets the chemicals of this Publication.  # noqa: E501
 
+        Chemicals or drugs referenced in this publication.  # noqa: E501
 
         :return: The chemicals of this Publication.  # noqa: E501
         :rtype: list[str]
@@ -576,6 +627,7 @@ class Publication(object):
     def chemicals(self, chemicals):
         """Sets the chemicals of this Publication.
 
+        Chemicals or drugs referenced in this publication.  # noqa: E501
 
         :param chemicals: The chemicals of this Publication.  # noqa: E501
         :type: list[str]
@@ -629,6 +681,7 @@ class Publication(object):
     def publication_type(self):
         """Gets the publication_type of this Publication.  # noqa: E501
 
+        Publication types infered by MM.  # noqa: E501
 
         :return: The publication_type of this Publication.  # noqa: E501
         :rtype: list[str]
@@ -639,6 +692,7 @@ class Publication(object):
     def publication_type(self, publication_type):
         """Sets the publication_type of this Publication.
 
+        Publication types infered by MM.  # noqa: E501
 
         :param publication_type: The publication_type of this Publication.  # noqa: E501
         :type: list[str]
@@ -697,7 +751,7 @@ class Publication(object):
         Molecular concept associations established for this publication.  # noqa: E501
 
         :return: The molecular_alterations of this Publication.  # noqa: E501
-        :rtype: list[MolecularAlteration]
+        :rtype: list[ConceptAssociation]
         """
         return self._molecular_alterations
 
@@ -708,7 +762,7 @@ class Publication(object):
         Molecular concept associations established for this publication.  # noqa: E501
 
         :param molecular_alterations: The molecular_alterations of this Publication.  # noqa: E501
-        :type: list[MolecularAlteration]
+        :type: list[ConceptAssociation]
         """
 
         self._molecular_alterations = molecular_alterations

@@ -14,7 +14,7 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.standardized_tier_tier_explanation import StandardizedTierTierExplanation  # noqa: F401,E501
+from mm_power_sdk_python.models.tier_explanation import TierExplanation  # noqa: F401,E501
 
 
 class StandardizedTierTier(object):
@@ -32,7 +32,7 @@ class StandardizedTierTier(object):
     swagger_types = {
         'value': 'str',
         'calculated_at': 'datetime',
-        'explanation': 'list[StandardizedTierTierExplanation]'
+        'explanation': 'list[TierExplanation]'
     }
 
     attribute_map = {
@@ -103,7 +103,7 @@ class StandardizedTierTier(object):
 
 
         :return: The explanation of this StandardizedTierTier.  # noqa: E501
-        :rtype: list[StandardizedTierTierExplanation]
+        :rtype: list[TierExplanation]
         """
         return self._explanation
 
@@ -113,7 +113,7 @@ class StandardizedTierTier(object):
 
 
         :param explanation: The explanation of this StandardizedTierTier.  # noqa: E501
-        :type: list[StandardizedTierTierExplanation]
+        :type: list[TierExplanation]
         """
 
         self._explanation = explanation

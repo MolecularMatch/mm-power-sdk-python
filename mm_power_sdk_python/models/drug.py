@@ -14,6 +14,8 @@ import pprint
 import re  # noqa: F401
 
 import six
+from mm_power_sdk_python.models.assertion import Assertion  # noqa: F401,E501
+from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_availability import DrugAvailability  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_brands import DrugBrands  # noqa: F401,E501
 from mm_power_sdk_python.models.drug_composite_tags import DrugCompositeTags  # noqa: F401,E501
@@ -39,6 +41,7 @@ class Drug(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'score': 'float',
         'mboost': 'float',
         'id': 'str',
         'name': 'str',
@@ -46,28 +49,26 @@ class Drug(object):
         'description': 'str',
         'composite': 'bool',
         'approved': 'bool',
-        'suppress_resistance': 'bool',
-        'suppress_synonym_resistance': 'bool',
         'availability': 'list[DrugAvailability]',
         'synonyms': 'list[Synonym]',
         'parents': 'list[DrugParents]',
         'drugclass': 'list[DrugDrugclass]',
         'composite_tags': 'list[DrugCompositeTags]',
         'brands': 'list[DrugBrands]',
-        'indication_text': 'str',
-        'contraindication_text': 'str',
-        'mechanism_text': 'str',
-        'rxcui': 'list[str]',
-        'drugclass_caused_suppress': 'list[str]',
         'external_ids': 'list[ExternalId]',
         'link': 'str',
         'prices': 'list[DrugPrices]',
         'dosages': 'list[DrugDosages]',
         'pharmacology': 'DrugPharmacology',
-        'phase_and_trials_score': 'float'
+        'molecular_alterations': 'list[ConceptAssociation]',
+        'contraindicated_alterations': 'list[ConceptAssociation]',
+        'assertions': 'list[Assertion]',
+        'best_tier': 'str',
+        'met_tier': 'str'
     }
 
     attribute_map = {
+        'score': '_score',
         'mboost': 'mboost',
         'id': 'id',
         'name': 'name',
@@ -75,29 +76,27 @@ class Drug(object):
         'description': 'description',
         'composite': 'composite',
         'approved': 'approved',
-        'suppress_resistance': 'suppressResistance',
-        'suppress_synonym_resistance': 'suppressSynonymResistance',
         'availability': 'availability',
         'synonyms': 'synonyms',
         'parents': 'parents',
         'drugclass': 'drugclass',
         'composite_tags': 'compositeTags',
         'brands': 'brands',
-        'indication_text': 'indicationText',
-        'contraindication_text': 'contraindicationText',
-        'mechanism_text': 'mechanismText',
-        'rxcui': 'rxcui',
-        'drugclass_caused_suppress': 'drugclassCausedSuppress',
         'external_ids': 'externalIds',
         'link': 'link',
         'prices': 'prices',
         'dosages': 'dosages',
         'pharmacology': 'pharmacology',
-        'phase_and_trials_score': 'phaseAndTrialsScore'
+        'molecular_alterations': 'molecularAlterations',
+        'contraindicated_alterations': 'contraindicatedAlterations',
+        'assertions': 'assertions',
+        'best_tier': 'bestTier',
+        'met_tier': 'metTier'
     }
 
-    def __init__(self, mboost=None, id=None, name=None, alias=None, description=None, composite=None, approved=None, suppress_resistance=None, suppress_synonym_resistance=None, availability=None, synonyms=None, parents=None, drugclass=None, composite_tags=None, brands=None, indication_text=None, contraindication_text=None, mechanism_text=None, rxcui=None, drugclass_caused_suppress=None, external_ids=None, link=None, prices=None, dosages=None, pharmacology=None, phase_and_trials_score=None):  # noqa: E501
+    def __init__(self, score=None, mboost=None, id=None, name=None, alias=None, description=None, composite=None, approved=None, availability=None, synonyms=None, parents=None, drugclass=None, composite_tags=None, brands=None, external_ids=None, link=None, prices=None, dosages=None, pharmacology=None, molecular_alterations=None, contraindicated_alterations=None, assertions=None, best_tier=None, met_tier=None):  # noqa: E501
         """Drug - a model defined in Swagger"""  # noqa: E501
+        self._score = None
         self._mboost = None
         self._id = None
         self._name = None
@@ -105,26 +104,25 @@ class Drug(object):
         self._description = None
         self._composite = None
         self._approved = None
-        self._suppress_resistance = None
-        self._suppress_synonym_resistance = None
         self._availability = None
         self._synonyms = None
         self._parents = None
         self._drugclass = None
         self._composite_tags = None
         self._brands = None
-        self._indication_text = None
-        self._contraindication_text = None
-        self._mechanism_text = None
-        self._rxcui = None
-        self._drugclass_caused_suppress = None
         self._external_ids = None
         self._link = None
         self._prices = None
         self._dosages = None
         self._pharmacology = None
-        self._phase_and_trials_score = None
+        self._molecular_alterations = None
+        self._contraindicated_alterations = None
+        self._assertions = None
+        self._best_tier = None
+        self._met_tier = None
         self.discriminator = None
+        if score is not None:
+            self.score = score
         if mboost is not None:
             self.mboost = mboost
         self.id = id
@@ -136,10 +134,6 @@ class Drug(object):
         if composite is not None:
             self.composite = composite
         self.approved = approved
-        if suppress_resistance is not None:
-            self.suppress_resistance = suppress_resistance
-        if suppress_synonym_resistance is not None:
-            self.suppress_synonym_resistance = suppress_synonym_resistance
         if availability is not None:
             self.availability = availability
         if synonyms is not None:
@@ -152,16 +146,6 @@ class Drug(object):
             self.composite_tags = composite_tags
         if brands is not None:
             self.brands = brands
-        if indication_text is not None:
-            self.indication_text = indication_text
-        if contraindication_text is not None:
-            self.contraindication_text = contraindication_text
-        if mechanism_text is not None:
-            self.mechanism_text = mechanism_text
-        if rxcui is not None:
-            self.rxcui = rxcui
-        if drugclass_caused_suppress is not None:
-            self.drugclass_caused_suppress = drugclass_caused_suppress
         if external_ids is not None:
             self.external_ids = external_ids
         if link is not None:
@@ -172,8 +156,39 @@ class Drug(object):
             self.dosages = dosages
         if pharmacology is not None:
             self.pharmacology = pharmacology
-        if phase_and_trials_score is not None:
-            self.phase_and_trials_score = phase_and_trials_score
+        if molecular_alterations is not None:
+            self.molecular_alterations = molecular_alterations
+        if contraindicated_alterations is not None:
+            self.contraindicated_alterations = contraindicated_alterations
+        if assertions is not None:
+            self.assertions = assertions
+        if best_tier is not None:
+            self.best_tier = best_tier
+        if met_tier is not None:
+            self.met_tier = met_tier
+
+    @property
+    def score(self):
+        """Gets the score of this Drug.  # noqa: E501
+
+        indicator of the quality of the match.  Assertion based therapies will not contain a _score.  # noqa: E501
+
+        :return: The score of this Drug.  # noqa: E501
+        :rtype: float
+        """
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        """Sets the score of this Drug.
+
+        indicator of the quality of the match.  Assertion based therapies will not contain a _score.  # noqa: E501
+
+        :param score: The score of this Drug.  # noqa: E501
+        :type: float
+        """
+
+        self._score = score
 
     @property
     def mboost(self):
@@ -275,7 +290,7 @@ class Drug(object):
     def description(self):
         """Gets the description of this Drug.  # noqa: E501
 
-        Descriptions of drug chemical properties, history and regulatory status.  # noqa: E501
+        Descriptions of drug properties, treatments, history and regulatory status.  # noqa: E501
 
         :return: The description of this Drug.  # noqa: E501
         :rtype: str
@@ -286,7 +301,7 @@ class Drug(object):
     def description(self, description):
         """Sets the description of this Drug.
 
-        Descriptions of drug chemical properties, history and regulatory status.  # noqa: E501
+        Descriptions of drug properties, treatments, history and regulatory status.  # noqa: E501
 
         :param description: The description of this Drug.  # noqa: E501
         :type: str
@@ -298,6 +313,7 @@ class Drug(object):
     def composite(self):
         """Gets the composite of this Drug.  # noqa: E501
 
+        Indicates whether this drug is a composite of multiple drugs (combination therapy).  # noqa: E501
 
         :return: The composite of this Drug.  # noqa: E501
         :rtype: bool
@@ -308,6 +324,7 @@ class Drug(object):
     def composite(self, composite):
         """Sets the composite of this Drug.
 
+        Indicates whether this drug is a composite of multiple drugs (combination therapy).  # noqa: E501
 
         :param composite: The composite of this Drug.  # noqa: E501
         :type: bool
@@ -339,48 +356,6 @@ class Drug(object):
             raise ValueError("Invalid value for `approved`, must not be `None`")  # noqa: E501
 
         self._approved = approved
-
-    @property
-    def suppress_resistance(self):
-        """Gets the suppress_resistance of this Drug.  # noqa: E501
-
-
-        :return: The suppress_resistance of this Drug.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress_resistance
-
-    @suppress_resistance.setter
-    def suppress_resistance(self, suppress_resistance):
-        """Sets the suppress_resistance of this Drug.
-
-
-        :param suppress_resistance: The suppress_resistance of this Drug.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress_resistance = suppress_resistance
-
-    @property
-    def suppress_synonym_resistance(self):
-        """Gets the suppress_synonym_resistance of this Drug.  # noqa: E501
-
-
-        :return: The suppress_synonym_resistance of this Drug.  # noqa: E501
-        :rtype: bool
-        """
-        return self._suppress_synonym_resistance
-
-    @suppress_synonym_resistance.setter
-    def suppress_synonym_resistance(self, suppress_synonym_resistance):
-        """Sets the suppress_synonym_resistance of this Drug.
-
-
-        :param suppress_synonym_resistance: The suppress_synonym_resistance of this Drug.  # noqa: E501
-        :type: bool
-        """
-
-        self._suppress_synonym_resistance = suppress_synonym_resistance
 
     @property
     def availability(self):
@@ -474,6 +449,7 @@ class Drug(object):
     def composite_tags(self):
         """Gets the composite_tags of this Drug.  # noqa: E501
 
+        The individual drugs making up this composite drug  # noqa: E501
 
         :return: The composite_tags of this Drug.  # noqa: E501
         :rtype: list[DrugCompositeTags]
@@ -484,6 +460,7 @@ class Drug(object):
     def composite_tags(self, composite_tags):
         """Sets the composite_tags of this Drug.
 
+        The individual drugs making up this composite drug  # noqa: E501
 
         :param composite_tags: The composite_tags of this Drug.  # noqa: E501
         :type: list[DrugCompositeTags]
@@ -513,111 +490,6 @@ class Drug(object):
         self._brands = brands
 
     @property
-    def indication_text(self):
-        """Gets the indication_text of this Drug.  # noqa: E501
-
-
-        :return: The indication_text of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._indication_text
-
-    @indication_text.setter
-    def indication_text(self, indication_text):
-        """Sets the indication_text of this Drug.
-
-
-        :param indication_text: The indication_text of this Drug.  # noqa: E501
-        :type: str
-        """
-
-        self._indication_text = indication_text
-
-    @property
-    def contraindication_text(self):
-        """Gets the contraindication_text of this Drug.  # noqa: E501
-
-
-        :return: The contraindication_text of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._contraindication_text
-
-    @contraindication_text.setter
-    def contraindication_text(self, contraindication_text):
-        """Sets the contraindication_text of this Drug.
-
-
-        :param contraindication_text: The contraindication_text of this Drug.  # noqa: E501
-        :type: str
-        """
-
-        self._contraindication_text = contraindication_text
-
-    @property
-    def mechanism_text(self):
-        """Gets the mechanism_text of this Drug.  # noqa: E501
-
-
-        :return: The mechanism_text of this Drug.  # noqa: E501
-        :rtype: str
-        """
-        return self._mechanism_text
-
-    @mechanism_text.setter
-    def mechanism_text(self, mechanism_text):
-        """Sets the mechanism_text of this Drug.
-
-
-        :param mechanism_text: The mechanism_text of this Drug.  # noqa: E501
-        :type: str
-        """
-
-        self._mechanism_text = mechanism_text
-
-    @property
-    def rxcui(self):
-        """Gets the rxcui of this Drug.  # noqa: E501
-
-
-        :return: The rxcui of this Drug.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._rxcui
-
-    @rxcui.setter
-    def rxcui(self, rxcui):
-        """Sets the rxcui of this Drug.
-
-
-        :param rxcui: The rxcui of this Drug.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._rxcui = rxcui
-
-    @property
-    def drugclass_caused_suppress(self):
-        """Gets the drugclass_caused_suppress of this Drug.  # noqa: E501
-
-
-        :return: The drugclass_caused_suppress of this Drug.  # noqa: E501
-        :rtype: list[str]
-        """
-        return self._drugclass_caused_suppress
-
-    @drugclass_caused_suppress.setter
-    def drugclass_caused_suppress(self, drugclass_caused_suppress):
-        """Sets the drugclass_caused_suppress of this Drug.
-
-
-        :param drugclass_caused_suppress: The drugclass_caused_suppress of this Drug.  # noqa: E501
-        :type: list[str]
-        """
-
-        self._drugclass_caused_suppress = drugclass_caused_suppress
-
-    @property
     def external_ids(self):
         """Gets the external_ids of this Drug.  # noqa: E501
 
@@ -644,6 +516,7 @@ class Drug(object):
     def link(self):
         """Gets the link of this Drug.  # noqa: E501
 
+        DailyMed link for prescription label details.  # noqa: E501
 
         :return: The link of this Drug.  # noqa: E501
         :rtype: str
@@ -654,6 +527,7 @@ class Drug(object):
     def link(self, link):
         """Sets the link of this Drug.
 
+        DailyMed link for prescription label details.  # noqa: E501
 
         :param link: The link of this Drug.  # noqa: E501
         :type: str
@@ -729,25 +603,119 @@ class Drug(object):
         self._pharmacology = pharmacology
 
     @property
-    def phase_and_trials_score(self):
-        """Gets the phase_and_trials_score of this Drug.  # noqa: E501
+    def molecular_alterations(self):
+        """Gets the molecular_alterations of this Drug.  # noqa: E501
 
+        Molecular concept associations established for this drug.  # noqa: E501
 
-        :return: The phase_and_trials_score of this Drug.  # noqa: E501
-        :rtype: float
+        :return: The molecular_alterations of this Drug.  # noqa: E501
+        :rtype: list[ConceptAssociation]
         """
-        return self._phase_and_trials_score
+        return self._molecular_alterations
 
-    @phase_and_trials_score.setter
-    def phase_and_trials_score(self, phase_and_trials_score):
-        """Sets the phase_and_trials_score of this Drug.
+    @molecular_alterations.setter
+    def molecular_alterations(self, molecular_alterations):
+        """Sets the molecular_alterations of this Drug.
 
+        Molecular concept associations established for this drug.  # noqa: E501
 
-        :param phase_and_trials_score: The phase_and_trials_score of this Drug.  # noqa: E501
-        :type: float
+        :param molecular_alterations: The molecular_alterations of this Drug.  # noqa: E501
+        :type: list[ConceptAssociation]
         """
 
-        self._phase_and_trials_score = phase_and_trials_score
+        self._molecular_alterations = molecular_alterations
+
+    @property
+    def contraindicated_alterations(self):
+        """Gets the contraindicated_alterations of this Drug.  # noqa: E501
+
+        Contraindicated Molecular concept associations established for this drug.  # noqa: E501
+
+        :return: The contraindicated_alterations of this Drug.  # noqa: E501
+        :rtype: list[ConceptAssociation]
+        """
+        return self._contraindicated_alterations
+
+    @contraindicated_alterations.setter
+    def contraindicated_alterations(self, contraindicated_alterations):
+        """Sets the contraindicated_alterations of this Drug.
+
+        Contraindicated Molecular concept associations established for this drug.  # noqa: E501
+
+        :param contraindicated_alterations: The contraindicated_alterations of this Drug.  # noqa: E501
+        :type: list[ConceptAssociation]
+        """
+
+        self._contraindicated_alterations = contraindicated_alterations
+
+    @property
+    def assertions(self):
+        """Gets the assertions of this Drug.  # noqa: E501
+
+        Evidence in support of this drug.  # noqa: E501
+
+        :return: The assertions of this Drug.  # noqa: E501
+        :rtype: list[Assertion]
+        """
+        return self._assertions
+
+    @assertions.setter
+    def assertions(self, assertions):
+        """Sets the assertions of this Drug.
+
+        Evidence in support of this drug.  # noqa: E501
+
+        :param assertions: The assertions of this Drug.  # noqa: E501
+        :type: list[Assertion]
+        """
+
+        self._assertions = assertions
+
+    @property
+    def best_tier(self):
+        """Gets the best_tier of this Drug.  # noqa: E501
+
+        The highest tier evidence associated with this drug.  # noqa: E501
+
+        :return: The best_tier of this Drug.  # noqa: E501
+        :rtype: str
+        """
+        return self._best_tier
+
+    @best_tier.setter
+    def best_tier(self, best_tier):
+        """Sets the best_tier of this Drug.
+
+        The highest tier evidence associated with this drug.  # noqa: E501
+
+        :param best_tier: The best_tier of this Drug.  # noqa: E501
+        :type: str
+        """
+
+        self._best_tier = best_tier
+
+    @property
+    def met_tier(self):
+        """Gets the met_tier of this Drug.  # noqa: E501
+
+        The highest tier evidence associated with this drug where the criteria is fully met based on the search inputs.  # noqa: E501
+
+        :return: The met_tier of this Drug.  # noqa: E501
+        :rtype: str
+        """
+        return self._met_tier
+
+    @met_tier.setter
+    def met_tier(self, met_tier):
+        """Sets the met_tier of this Drug.
+
+        The highest tier evidence associated with this drug where the criteria is fully met based on the search inputs.  # noqa: E501
+
+        :param met_tier: The met_tier of this Drug.  # noqa: E501
+        :type: str
+        """
+
+        self._met_tier = met_tier
 
     def to_dict(self):
         """Returns the model properties as a dict"""

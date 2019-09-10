@@ -86,6 +86,7 @@ class Contact(object):
     def first_name(self):
         """Gets the first_name of this Contact.  # noqa: E501
 
+        First name of the contact person.  # noqa: E501
 
         :return: The first_name of this Contact.  # noqa: E501
         :rtype: str
@@ -96,6 +97,7 @@ class Contact(object):
     def first_name(self, first_name):
         """Sets the first_name of this Contact.
 
+        First name of the contact person.  # noqa: E501
 
         :param first_name: The first_name of this Contact.  # noqa: E501
         :type: str
@@ -107,6 +109,7 @@ class Contact(object):
     def middle_name(self):
         """Gets the middle_name of this Contact.  # noqa: E501
 
+        Middle name of the contact person.  # noqa: E501
 
         :return: The middle_name of this Contact.  # noqa: E501
         :rtype: str
@@ -117,6 +120,7 @@ class Contact(object):
     def middle_name(self, middle_name):
         """Sets the middle_name of this Contact.
 
+        Middle name of the contact person.  # noqa: E501
 
         :param middle_name: The middle_name of this Contact.  # noqa: E501
         :type: str
@@ -128,6 +132,7 @@ class Contact(object):
     def last_name(self):
         """Gets the last_name of this Contact.  # noqa: E501
 
+        Last name of the contact person.  # noqa: E501
 
         :return: The last_name of this Contact.  # noqa: E501
         :rtype: str
@@ -138,6 +143,7 @@ class Contact(object):
     def last_name(self, last_name):
         """Sets the last_name of this Contact.
 
+        Last name of the contact person.  # noqa: E501
 
         :param last_name: The last_name of this Contact.  # noqa: E501
         :type: str
@@ -172,6 +178,7 @@ class Contact(object):
     def role(self):
         """Gets the role of this Contact.  # noqa: E501
 
+        Position or function of the official.  # noqa: E501
 
         :return: The role of this Contact.  # noqa: E501
         :rtype: str
@@ -182,6 +189,7 @@ class Contact(object):
     def role(self, role):
         """Sets the role of this Contact.
 
+        Position or function of the official.  # noqa: E501
 
         :param role: The role of this Contact.  # noqa: E501
         :type: str
@@ -193,6 +201,7 @@ class Contact(object):
     def affiliation(self):
         """Gets the affiliation of this Contact.  # noqa: E501
 
+        Full name of the official's organization.  # noqa: E501
 
         :return: The affiliation of this Contact.  # noqa: E501
         :rtype: str
@@ -203,6 +212,7 @@ class Contact(object):
     def affiliation(self, affiliation):
         """Sets the affiliation of this Contact.
 
+        Full name of the official's organization.  # noqa: E501
 
         :param affiliation: The affiliation of this Contact.  # noqa: E501
         :type: str
@@ -214,6 +224,7 @@ class Contact(object):
     def phone(self):
         """Gets the phone of this Contact.  # noqa: E501
 
+        Phone number of the contact person.  # noqa: E501
 
         :return: The phone of this Contact.  # noqa: E501
         :rtype: str
@@ -224,6 +235,7 @@ class Contact(object):
     def phone(self, phone):
         """Sets the phone of this Contact.
 
+        Phone number of the contact person.  # noqa: E501
 
         :param phone: The phone of this Contact.  # noqa: E501
         :type: str
@@ -235,6 +247,7 @@ class Contact(object):
     def phone_ext(self):
         """Gets the phone_ext of this Contact.  # noqa: E501
 
+        Phone number extension of the contact person.  # noqa: E501
 
         :return: The phone_ext of this Contact.  # noqa: E501
         :rtype: str
@@ -245,6 +258,7 @@ class Contact(object):
     def phone_ext(self, phone_ext):
         """Sets the phone_ext of this Contact.
 
+        Phone number extension of the contact person.  # noqa: E501
 
         :param phone_ext: The phone_ext of this Contact.  # noqa: E501
         :type: str
@@ -256,6 +270,7 @@ class Contact(object):
     def email(self):
         """Gets the email of this Contact.  # noqa: E501
 
+        Electronic mail address of the contact person.  # noqa: E501
 
         :return: The email of this Contact.  # noqa: E501
         :rtype: str
@@ -266,6 +281,7 @@ class Contact(object):
     def email(self, email):
         """Sets the email of this Contact.
 
+        Electronic mail address of the contact person.  # noqa: E501
 
         :param email: The email of this Contact.  # noqa: E501
         :type: str

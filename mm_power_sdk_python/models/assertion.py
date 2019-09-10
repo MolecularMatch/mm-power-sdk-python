@@ -17,10 +17,10 @@ import six
 from mm_power_sdk_python.models.assertion_classifications import AssertionClassifications  # noqa: F401,E501
 from mm_power_sdk_python.models.assertion_prevalence import AssertionPrevalence  # noqa: F401,E501
 from mm_power_sdk_python.models.assertion_sources import AssertionSources  # noqa: F401,E501
-from mm_power_sdk_python.models.assertion_tags import AssertionTags  # noqa: F401,E501
 from mm_power_sdk_python.models.assertion_therapeutic_context import AssertionTherapeuticContext  # noqa: F401,E501
-from mm_power_sdk_python.models.assertion_variant_info import AssertionVariantInfo  # noqa: F401,E501
-from mm_power_sdk_python.models.standardized_tier import StandardizedTier  # noqa: F401,E501
+from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
+from mm_power_sdk_python.models.tier_explanation import TierExplanation  # noqa: F401,E501
+from mm_power_sdk_python.models.variant_info import VariantInfo  # noqa: F401,E501
 
 
 class Assertion(object):
@@ -36,6 +36,7 @@ class Assertion(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'score': 'float',
         'id': 'str',
         'external_id': 'list[str]',
         'unique_key': 'str',
@@ -53,18 +54,20 @@ class Assertion(object):
         'clinical_significance': 'str',
         'biomarker_class': 'str',
         'expression': 'str',
-        'tags': 'list[AssertionTags]',
         'sources': 'list[AssertionSources]',
         'no_therapy_available': 'bool',
         'therapeutic_context': 'list[AssertionTherapeuticContext]',
-        'tiers': 'list[StandardizedTier]',
-        'released_tiers': 'list[StandardizedTier]',
+        'tier': 'str',
+        'tier_explanation': 'list[TierExplanation]',
+        'criteria_unmet': 'list[ConceptAssociation]',
+        'criteria_met': 'list[ConceptAssociation]',
         'classifications': 'list[AssertionClassifications]',
         'prevalence': 'list[AssertionPrevalence]',
-        'variant_info': 'list[AssertionVariantInfo]'
+        'variant_info': 'list[VariantInfo]'
     }
 
     attribute_map = {
+        'score': '_score',
         'id': 'id',
         'external_id': 'external_id',
         'unique_key': 'uniqueKey',
@@ -82,19 +85,21 @@ class Assertion(object):
         'clinical_significance': 'clinicalSignificance',
         'biomarker_class': 'biomarkerClass',
         'expression': 'expression',
-        'tags': 'tags',
         'sources': 'sources',
         'no_therapy_available': 'noTherapyAvailable',
         'therapeutic_context': 'therapeuticContext',
-        'tiers': 'tiers',
-        'released_tiers': 'releasedTiers',
+        'tier': 'tier',
+        'tier_explanation': 'tierExplanation',
+        'criteria_unmet': 'criteriaUnmet',
+        'criteria_met': 'criteriaMet',
         'classifications': 'classifications',
         'prevalence': 'prevalence',
         'variant_info': 'variantInfo'
     }
 
-    def __init__(self, id=None, external_id=None, unique_key=None, hash_key=None, description=None, narrative=None, regulatory_body=None, customer=None, version=None, regulatory_body_approved=None, regulatory_body_approved_by=None, direction=None, guideline_body=None, guideline_version=None, clinical_significance=None, biomarker_class=None, expression=None, tags=None, sources=None, no_therapy_available=None, therapeutic_context=None, tiers=None, released_tiers=None, classifications=None, prevalence=None, variant_info=None):  # noqa: E501
+    def __init__(self, score=None, id=None, external_id=None, unique_key=None, hash_key=None, description=None, narrative=None, regulatory_body=None, customer=None, version=None, regulatory_body_approved=None, regulatory_body_approved_by=None, direction=None, guideline_body=None, guideline_version=None, clinical_significance=None, biomarker_class=None, expression=None, sources=None, no_therapy_available=None, therapeutic_context=None, tier=None, tier_explanation=None, criteria_unmet=None, criteria_met=None, classifications=None, prevalence=None, variant_info=None):  # noqa: E501
         """Assertion - a model defined in Swagger"""  # noqa: E501
+        self._score = None
         self._id = None
         self._external_id = None
         self._unique_key = None
@@ -112,16 +117,19 @@ class Assertion(object):
         self._clinical_significance = None
         self._biomarker_class = None
         self._expression = None
-        self._tags = None
         self._sources = None
         self._no_therapy_available = None
         self._therapeutic_context = None
-        self._tiers = None
-        self._released_tiers = None
+        self._tier = None
+        self._tier_explanation = None
+        self._criteria_unmet = None
+        self._criteria_met = None
         self._classifications = None
         self._prevalence = None
         self._variant_info = None
         self.discriminator = None
+        if score is not None:
+            self.score = score
         self.id = id
         if external_id is not None:
             self.external_id = external_id
@@ -151,24 +159,49 @@ class Assertion(object):
             self.biomarker_class = biomarker_class
         if expression is not None:
             self.expression = expression
-        if tags is not None:
-            self.tags = tags
         if sources is not None:
             self.sources = sources
         if no_therapy_available is not None:
             self.no_therapy_available = no_therapy_available
         if therapeutic_context is not None:
             self.therapeutic_context = therapeutic_context
-        if tiers is not None:
-            self.tiers = tiers
-        if released_tiers is not None:
-            self.released_tiers = released_tiers
+        if tier is not None:
+            self.tier = tier
+        if tier_explanation is not None:
+            self.tier_explanation = tier_explanation
+        if criteria_unmet is not None:
+            self.criteria_unmet = criteria_unmet
+        if criteria_met is not None:
+            self.criteria_met = criteria_met
         if classifications is not None:
             self.classifications = classifications
         if prevalence is not None:
             self.prevalence = prevalence
         if variant_info is not None:
             self.variant_info = variant_info
+
+    @property
+    def score(self):
+        """Gets the score of this Assertion.  # noqa: E501
+
+        indicator of the quality of the match.  # noqa: E501
+
+        :return: The score of this Assertion.  # noqa: E501
+        :rtype: float
+        """
+        return self._score
+
+    @score.setter
+    def score(self, score):
+        """Sets the score of this Assertion.
+
+        indicator of the quality of the match.  # noqa: E501
+
+        :param score: The score of this Assertion.  # noqa: E501
+        :type: float
+        """
+
+        self._score = score
 
     @property
     def id(self):
@@ -520,7 +553,7 @@ class Assertion(object):
         :param clinical_significance: The clinical_significance of this Assertion.  # noqa: E501
         :type: str
         """
-        allowed_values = ["no_response", "sensitive", "favorable", "unfavorable", "unknown", "resistant", "intermediate", "adverse_response"]  # noqa: E501
+        allowed_values = ["no_response", "sensitive", "favorable", "unfavorable", "unknown", "resistant", "intermediate", "adverse_response", "pathogenic"]  # noqa: E501
         if clinical_significance not in allowed_values:
             raise ValueError(
                 "Invalid value for `clinical_significance` ({0}), must be one of {1}"  # noqa: E501
@@ -576,27 +609,6 @@ class Assertion(object):
         """
 
         self._expression = expression
-
-    @property
-    def tags(self):
-        """Gets the tags of this Assertion.  # noqa: E501
-
-
-        :return: The tags of this Assertion.  # noqa: E501
-        :rtype: list[AssertionTags]
-        """
-        return self._tags
-
-    @tags.setter
-    def tags(self, tags):
-        """Sets the tags of this Assertion.
-
-
-        :param tags: The tags of this Assertion.  # noqa: E501
-        :type: list[AssertionTags]
-        """
-
-        self._tags = tags
 
     @property
     def sources(self):
@@ -668,46 +680,92 @@ class Assertion(object):
         self._therapeutic_context = therapeutic_context
 
     @property
-    def tiers(self):
-        """Gets the tiers of this Assertion.  # noqa: E501
+    def tier(self):
+        """Gets the tier of this Assertion.  # noqa: E501
 
+        The tiering template specific tier associated with the therapy.  # noqa: E501
 
-        :return: The tiers of this Assertion.  # noqa: E501
-        :rtype: list[StandardizedTier]
+        :return: The tier of this Assertion.  # noqa: E501
+        :rtype: str
         """
-        return self._tiers
+        return self._tier
 
-    @tiers.setter
-    def tiers(self, tiers):
-        """Sets the tiers of this Assertion.
+    @tier.setter
+    def tier(self, tier):
+        """Sets the tier of this Assertion.
 
+        The tiering template specific tier associated with the therapy.  # noqa: E501
 
-        :param tiers: The tiers of this Assertion.  # noqa: E501
-        :type: list[StandardizedTier]
+        :param tier: The tier of this Assertion.  # noqa: E501
+        :type: str
         """
 
-        self._tiers = tiers
+        self._tier = tier
 
     @property
-    def released_tiers(self):
-        """Gets the released_tiers of this Assertion.  # noqa: E501
+    def tier_explanation(self):
+        """Gets the tier_explanation of this Assertion.  # noqa: E501
 
+        The explanation of how the tier was calculated.  # noqa: E501
 
-        :return: The released_tiers of this Assertion.  # noqa: E501
-        :rtype: list[StandardizedTier]
+        :return: The tier_explanation of this Assertion.  # noqa: E501
+        :rtype: list[TierExplanation]
         """
-        return self._released_tiers
+        return self._tier_explanation
 
-    @released_tiers.setter
-    def released_tiers(self, released_tiers):
-        """Sets the released_tiers of this Assertion.
+    @tier_explanation.setter
+    def tier_explanation(self, tier_explanation):
+        """Sets the tier_explanation of this Assertion.
 
+        The explanation of how the tier was calculated.  # noqa: E501
 
-        :param released_tiers: The released_tiers of this Assertion.  # noqa: E501
-        :type: list[StandardizedTier]
+        :param tier_explanation: The tier_explanation of this Assertion.  # noqa: E501
+        :type: list[TierExplanation]
         """
 
-        self._released_tiers = released_tiers
+        self._tier_explanation = tier_explanation
+
+    @property
+    def criteria_unmet(self):
+        """Gets the criteria_unmet of this Assertion.  # noqa: E501
+
+
+        :return: The criteria_unmet of this Assertion.  # noqa: E501
+        :rtype: list[ConceptAssociation]
+        """
+        return self._criteria_unmet
+
+    @criteria_unmet.setter
+    def criteria_unmet(self, criteria_unmet):
+        """Sets the criteria_unmet of this Assertion.
+
+
+        :param criteria_unmet: The criteria_unmet of this Assertion.  # noqa: E501
+        :type: list[ConceptAssociation]
+        """
+
+        self._criteria_unmet = criteria_unmet
+
+    @property
+    def criteria_met(self):
+        """Gets the criteria_met of this Assertion.  # noqa: E501
+
+
+        :return: The criteria_met of this Assertion.  # noqa: E501
+        :rtype: list[ConceptAssociation]
+        """
+        return self._criteria_met
+
+    @criteria_met.setter
+    def criteria_met(self, criteria_met):
+        """Sets the criteria_met of this Assertion.
+
+
+        :param criteria_met: The criteria_met of this Assertion.  # noqa: E501
+        :type: list[ConceptAssociation]
+        """
+
+        self._criteria_met = criteria_met
 
     @property
     def classifications(self):
@@ -757,7 +815,7 @@ class Assertion(object):
 
 
         :return: The variant_info of this Assertion.  # noqa: E501
-        :rtype: list[AssertionVariantInfo]
+        :rtype: list[VariantInfo]
         """
         return self._variant_info
 
@@ -767,7 +825,7 @@ class Assertion(object):
 
 
         :param variant_info: The variant_info of this Assertion.  # noqa: E501
-        :type: list[AssertionVariantInfo]
+        :type: list[VariantInfo]
         """
 
         self._variant_info = variant_info

@@ -56,6 +56,7 @@ class Outcome(object):
     def measure(self):
         """Gets the measure of this Outcome.  # noqa: E501
 
+        The physiological or reported measurement used for the outcome.  # noqa: E501
 
         :return: The measure of this Outcome.  # noqa: E501
         :rtype: str
@@ -66,6 +67,7 @@ class Outcome(object):
     def measure(self, measure):
         """Sets the measure of this Outcome.
 
+        The physiological or reported measurement used for the outcome.  # noqa: E501
 
         :param measure: The measure of this Outcome.  # noqa: E501
         :type: str
@@ -79,6 +81,7 @@ class Outcome(object):
     def time_frame(self):
         """Gets the time_frame of this Outcome.  # noqa: E501
 
+        Time point(s) at which the measurement is assessed for the specific metric used. The description of the time point(s) of assessment must be specific to the outcome measure and is generally the specific duration of time over which each participant is assessed (not the overall duration of the study).  # noqa: E501
 
         :return: The time_frame of this Outcome.  # noqa: E501
         :rtype: str
@@ -89,6 +92,7 @@ class Outcome(object):
     def time_frame(self, time_frame):
         """Sets the time_frame of this Outcome.
 
+        Time point(s) at which the measurement is assessed for the specific metric used. The description of the time point(s) of assessment must be specific to the outcome measure and is generally the specific duration of time over which each participant is assessed (not the overall duration of the study).  # noqa: E501
 
         :param time_frame: The time_frame of this Outcome.  # noqa: E501
         :type: str
@@ -100,6 +104,7 @@ class Outcome(object):
     def description(self):
         """Gets the description of this Outcome.  # noqa: E501
 
+        Description of the metric used to characterize the specific primary outcome measure.  # noqa: E501
 
         :return: The description of this Outcome.  # noqa: E501
         :rtype: str
@@ -110,6 +115,7 @@ class Outcome(object):
     def description(self, description):
         """Sets the description of this Outcome.
 
+        Description of the metric used to characterize the specific primary outcome measure.  # noqa: E501
 
         :param description: The description of this Outcome.  # noqa: E501
         :type: str

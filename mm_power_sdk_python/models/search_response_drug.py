@@ -34,7 +34,6 @@ class SearchResponseDrug(object):
         'search_key': 'str',
         'institution_id': 'str',
         'case_id': 'str',
-        'mode': 'str',
         'tiering_template': 'str',
         'tiering_template_legend': 'object',
         'total': 'int',
@@ -51,7 +50,6 @@ class SearchResponseDrug(object):
         'search_key': 'searchKey',
         'institution_id': 'institutionId',
         'case_id': 'caseId',
-        'mode': 'mode',
         'tiering_template': 'tieringTemplate',
         'tiering_template_legend': 'tieringTemplateLegend',
         'total': 'total',
@@ -64,12 +62,11 @@ class SearchResponseDrug(object):
         'ambiguous_narrative': 'ambiguousNarrative'
     }
 
-    def __init__(self, search_key=None, institution_id=None, case_id=None, mode=None, tiering_template=None, tiering_template_legend=None, total=None, total_pages=None, page=None, rows=None, rationalized=None, unrecognized=None, filter_narrative=None, ambiguous_narrative=None):  # noqa: E501
+    def __init__(self, search_key=None, institution_id=None, case_id=None, tiering_template=None, tiering_template_legend=None, total=None, total_pages=None, page=None, rows=None, rationalized=None, unrecognized=None, filter_narrative=None, ambiguous_narrative=None):  # noqa: E501
         """SearchResponseDrug - a model defined in Swagger"""  # noqa: E501
         self._search_key = None
         self._institution_id = None
         self._case_id = None
-        self._mode = None
         self._tiering_template = None
         self._tiering_template_legend = None
         self._total = None
@@ -87,8 +84,6 @@ class SearchResponseDrug(object):
             self.institution_id = institution_id
         if case_id is not None:
             self.case_id = case_id
-        if mode is not None:
-            self.mode = mode
         self.tiering_template = tiering_template
         if tiering_template_legend is not None:
             self.tiering_template_legend = tiering_template_legend
@@ -174,35 +169,6 @@ class SearchResponseDrug(object):
         """
 
         self._case_id = case_id
-
-    @property
-    def mode(self):
-        """Gets the mode of this SearchResponseDrug.  # noqa: E501
-
-        Currently applies to drug search.  Supplying the mode of discovery will perform an associative search. These are not treatment recommendations and have no tiering associated with them. Supplying criteriaunmet performs an assertion guided search and returns drugs based on assertion evidence.  # noqa: E501
-
-        :return: The mode of this SearchResponseDrug.  # noqa: E501
-        :rtype: str
-        """
-        return self._mode
-
-    @mode.setter
-    def mode(self, mode):
-        """Sets the mode of this SearchResponseDrug.
-
-        Currently applies to drug search.  Supplying the mode of discovery will perform an associative search. These are not treatment recommendations and have no tiering associated with them. Supplying criteriaunmet performs an assertion guided search and returns drugs based on assertion evidence.  # noqa: E501
-
-        :param mode: The mode of this SearchResponseDrug.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["criteriaunmet", "discovery"]  # noqa: E501
-        if mode not in allowed_values:
-            raise ValueError(
-                "Invalid value for `mode` ({0}), must be one of {1}"  # noqa: E501
-                .format(mode, allowed_values)
-            )
-
-        self._mode = mode
 
     @property
     def tiering_template(self):

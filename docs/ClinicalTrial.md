@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**score** | **float** | indicator of the quality of the match. | [optional] 
 **mboost** | **float** | intrinsic boost to the record. | [optional] 
 **import_date** | **datetime** | date this record was imported into the MolecularMatch database. | [optional] 
 **id** | **str** | unique identifier. | 
@@ -28,7 +29,7 @@ Name | Type | Description | Notes
 **interventions** | [**list[Intervention]**](Intervention.md) | Specifies the intervention(s) associated with each arm or group. | [optional] 
 **keywords** | **list[str]** | Words or phrases that best describe the protocol. Keywords help users find studies in the database. Use NLM&#x27;s Medical Subject Heading (MeSH)-controlled vocabulary terms where appropriate. Be as specific and precise as possible. | [optional] 
 **arm_groups** | [**list[ArmGroup]**](ArmGroup.md) | Pre-specified groups of participants in a clinical trial assigned to receive specific interventions (or no intervention) according to a protocol. | [optional] 
-**primary_outcomes** | [**list[Outcome]**](Outcome.md) |  | [optional] 
+**primary_outcomes** | [**list[Outcome]**](Outcome.md) | The outcome that an investigator considers to be the most important among the many outcomes that are to be examined in the study. | [optional] 
 **secondary_outcomes** | [**list[Outcome]**](Outcome.md) |  | [optional] 
 **other_outcomes** | [**list[Outcome]**](Outcome.md) |  | [optional] 
 **eligibility** | [**Eligibility**](Eligibility.md) |  | [optional] 
@@ -50,7 +51,7 @@ Name | Type | Description | Notes
 **acronym** | **str** | An acronym or abbreviation used publicly to identify the clinical study. | [optional] 
 **link** | **str** | URL to registry listing of this trial. | [optional] 
 **tags** | [**list[Tag]**](Tag.md) | Concept associations established for this trial. | [optional] 
-**molecular_alterations** | [**list[MolecularAlteration]**](MolecularAlteration.md) | Molecular concept associations established for this trial. | [optional] 
+**molecular_alterations** | [**list[ConceptAssociation]**](ConceptAssociation.md) | Molecular concept associations established for this trial. | [optional] 
 **stats** | **object** |  | [optional] 
 
 

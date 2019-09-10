@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**first_name** | **str** |  | [optional] 
-**middle_name** | **str** |  | [optional] 
-**last_name** | **str** |  | 
+**first_name** | **str** | First name of the contact person. | [optional] 
+**middle_name** | **str** | Middle name of the contact person. | [optional] 
+**last_name** | **str** | Last name of the contact person. | 
 **degrees** | **str** |  | [optional] 
-**role** | **str** |  | [optional] 
-**affiliation** | **str** |  | [optional] 
-**phone** | **str** |  | [optional] 
-**phone_ext** | **str** |  | [optional] 
-**email** | **str** |  | [optional] 
+**role** | **str** | Position or function of the official. | [optional] 
+**affiliation** | **str** | Full name of the official&#x27;s organization. | [optional] 
+**phone** | **str** | Phone number of the contact person. | [optional] 
+**phone_ext** | **str** | Phone number extension of the contact person. | [optional] 
+**email** | **str** | Electronic mail address of the contact person. | [optional] 
 
 
 

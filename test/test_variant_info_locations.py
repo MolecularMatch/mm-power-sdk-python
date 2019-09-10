@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import mm_power_sdk_python
-from models.molecular_alteration import MolecularAlteration  # noqa: E501
+from models.variant_info_locations import VariantInfoLocations  # noqa: E501
 from mm_power_sdk_python.rest import ApiException
 
 
-class TestMolecularAlteration(unittest.TestCase):
-    """MolecularAlteration unit test stubs"""
+class TestVariantInfoLocations(unittest.TestCase):
+    """VariantInfoLocations unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestMolecularAlteration(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testMolecularAlteration(self):
-        """Test MolecularAlteration"""
+    def testVariantInfoLocations(self):
+        """Test VariantInfoLocations"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = mm_power_sdk_python.models.molecular_alteration.MolecularAlteration()  # noqa: E501
+        # model = mm_power_sdk_python.models.variant_info_locations.VariantInfoLocations()  # noqa: E501
         pass
 
 

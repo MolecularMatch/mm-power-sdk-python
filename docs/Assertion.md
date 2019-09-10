@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**score** | **float** | indicator of the quality of the match. | [optional] 
 **id** | **str** |  | 
 **external_id** | **list[str]** |  | [optional] 
 **unique_key** | **str** |  | 
@@ -20,15 +21,16 @@ Name | Type | Description | Notes
 **clinical_significance** | **str** |  | [optional] 
 **biomarker_class** | **str** |  | [optional] 
 **expression** | **str** |  | [optional] 
-**tags** | [**list[AssertionTags]**](AssertionTags.md) |  | [optional] 
 **sources** | [**list[AssertionSources]**](AssertionSources.md) | The supporting evidence for this assertion. | [optional] 
 **no_therapy_available** | **bool** | If true, there is no therapy related to this assertion. | [optional] 
 **therapeutic_context** | [**list[AssertionTherapeuticContext]**](AssertionTherapeuticContext.md) | The therapies associated with this assertion. | [optional] 
-**tiers** | [**list[StandardizedTier]**](StandardizedTier.md) |  | [optional] 
-**released_tiers** | [**list[StandardizedTier]**](StandardizedTier.md) |  | [optional] 
+**tier** | **str** | The tiering template specific tier associated with the therapy. | [optional] 
+**tier_explanation** | [**list[TierExplanation]**](TierExplanation.md) | The explanation of how the tier was calculated. | [optional] 
+**criteria_unmet** | [**list[ConceptAssociation]**](ConceptAssociation.md) |  | [optional] 
+**criteria_met** | [**list[ConceptAssociation]**](ConceptAssociation.md) |  | [optional] 
 **classifications** | [**list[AssertionClassifications]**](AssertionClassifications.md) |  | [optional] 
 **prevalence** | [**list[AssertionPrevalence]**](AssertionPrevalence.md) |  | [optional] 
-**variant_info** | [**list[AssertionVariantInfo]**](AssertionVariantInfo.md) |  | [optional] 
+**variant_info** | [**list[VariantInfo]**](VariantInfo.md) |  | [optional] 
 
 
 
