@@ -122,16 +122,20 @@ class Publication(object):
             self.score = score
         if mboost is not None:
             self.mboost = mboost
-        self.id = id
+        if id is not None:
+            self.id = id
         if pmid is not None:
             self.pmid = pmid
         if doi is not None:
             self.doi = doi
-        self.source = source
-        self.journal_name = journal_name
+        if source is not None:
+            self.source = source
+        if journal_name is not None:
+            self.journal_name = journal_name
         if journal_iso_abbreviation is not None:
             self.journal_iso_abbreviation = journal_iso_abbreviation
-        self.title = title
+        if title is not None:
+            self.title = title
         if purpose is not None:
             self.purpose = purpose
         if background is not None:
@@ -146,8 +150,10 @@ class Publication(object):
             self.conflicts = conflicts
         if fulltext is not None:
             self.fulltext = fulltext
-        self.citation = citation
-        self.citation_date = citation_date
+        if citation is not None:
+            self.citation = citation
+        if citation_date is not None:
+            self.citation_date = citation_date
         if link is not None:
             self.link = link
         if chemicals is not None:
@@ -231,8 +237,6 @@ class Publication(object):
         :param id: The id of this Publication.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -302,8 +306,6 @@ class Publication(object):
         :param source: The source of this Publication.  # noqa: E501
         :type: str
         """
-        if source is None:
-            raise ValueError("Invalid value for `source`, must not be `None`")  # noqa: E501
 
         self._source = source
 
@@ -327,8 +329,6 @@ class Publication(object):
         :param journal_name: The journal_name of this Publication.  # noqa: E501
         :type: str
         """
-        if journal_name is None:
-            raise ValueError("Invalid value for `journal_name`, must not be `None`")  # noqa: E501
 
         self._journal_name = journal_name
 
@@ -373,8 +373,6 @@ class Publication(object):
         :param title: The title of this Publication.  # noqa: E501
         :type: str
         """
-        if title is None:
-            raise ValueError("Invalid value for `title`, must not be `None`")  # noqa: E501
 
         self._title = title
 
@@ -559,8 +557,6 @@ class Publication(object):
         :param citation: The citation of this Publication.  # noqa: E501
         :type: str
         """
-        if citation is None:
-            raise ValueError("Invalid value for `citation`, must not be `None`")  # noqa: E501
 
         self._citation = citation
 
@@ -584,8 +580,6 @@ class Publication(object):
         :param citation_date: The citation_date of this Publication.  # noqa: E501
         :type: datetime
         """
-        if citation_date is None:
-            raise ValueError("Invalid value for `citation_date`, must not be `None`")  # noqa: E501
 
         self._citation_date = citation_date
 

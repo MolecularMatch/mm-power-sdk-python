@@ -206,8 +206,10 @@ class ClinicalTrial(object):
             self.mboost = mboost
         if import_date is not None:
             self.import_date = import_date
-        self.id = id
-        self.source = source
+        if id is not None:
+            self.id = id
+        if source is not None:
+            self.source = source
         if brief_title is not None:
             self.brief_title = brief_title
         if patient_title is not None:
@@ -260,8 +262,10 @@ class ClinicalTrial(object):
             self.eligibility = eligibility
         if enrollment is not None:
             self.enrollment = enrollment
-        self.min_age = min_age
-        self.max_age = max_age
+        if min_age is not None:
+            self.min_age = min_age
+        if max_age is not None:
+            self.max_age = max_age
         if gender is not None:
             self.gender = gender
         if overall_official is not None:
@@ -386,8 +390,6 @@ class ClinicalTrial(object):
         :param id: The id of this ClinicalTrial.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -411,8 +413,6 @@ class ClinicalTrial(object):
         :param source: The source of this ClinicalTrial.  # noqa: E501
         :type: str
         """
-        if source is None:
-            raise ValueError("Invalid value for `source`, must not be `None`")  # noqa: E501
 
         self._source = source
 
@@ -1026,8 +1026,6 @@ class ClinicalTrial(object):
         :param min_age: The min_age of this ClinicalTrial.  # noqa: E501
         :type: float
         """
-        if min_age is None:
-            raise ValueError("Invalid value for `min_age`, must not be `None`")  # noqa: E501
 
         self._min_age = min_age
 
@@ -1051,8 +1049,6 @@ class ClinicalTrial(object):
         :param max_age: The max_age of this ClinicalTrial.  # noqa: E501
         :type: float
         """
-        if max_age is None:
-            raise ValueError("Invalid value for `max_age`, must not be `None`")  # noqa: E501
 
         self._max_age = max_age
 

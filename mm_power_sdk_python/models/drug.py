@@ -125,15 +125,18 @@ class Drug(object):
             self.score = score
         if mboost is not None:
             self.mboost = mboost
-        self.id = id
-        self.name = name
+        if id is not None:
+            self.id = id
+        if name is not None:
+            self.name = name
         if alias is not None:
             self.alias = alias
         if description is not None:
             self.description = description
         if composite is not None:
             self.composite = composite
-        self.approved = approved
+        if approved is not None:
+            self.approved = approved
         if availability is not None:
             self.availability = availability
         if synonyms is not None:
@@ -171,7 +174,7 @@ class Drug(object):
     def score(self):
         """Gets the score of this Drug.  # noqa: E501
 
-        indicator of the quality of the match.  Assertion based therapies will not contain a _score.  # noqa: E501
+        indicator of the quality of the match.  # noqa: E501
 
         :return: The score of this Drug.  # noqa: E501
         :rtype: float
@@ -182,7 +185,7 @@ class Drug(object):
     def score(self, score):
         """Sets the score of this Drug.
 
-        indicator of the quality of the match.  Assertion based therapies will not contain a _score.  # noqa: E501
+        indicator of the quality of the match.  # noqa: E501
 
         :param score: The score of this Drug.  # noqa: E501
         :type: float
@@ -233,8 +236,6 @@ class Drug(object):
         :param id: The id of this Drug.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -258,8 +259,6 @@ class Drug(object):
         :param name: The name of this Drug.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
 
         self._name = name
 
@@ -352,8 +351,6 @@ class Drug(object):
         :param approved: The approved of this Drug.  # noqa: E501
         :type: bool
         """
-        if approved is None:
-            raise ValueError("Invalid value for `approved`, must not be `None`")  # noqa: E501
 
         self._approved = approved
 
@@ -428,6 +425,7 @@ class Drug(object):
     def drugclass(self):
         """Gets the drugclass of this Drug.  # noqa: E501
 
+        The classes (pharmacological, treatment, chemical, etc.) of the drug inferred from the source or manually added.  # noqa: E501
 
         :return: The drugclass of this Drug.  # noqa: E501
         :rtype: list[DrugDrugclass]
@@ -438,6 +436,7 @@ class Drug(object):
     def drugclass(self, drugclass):
         """Sets the drugclass of this Drug.
 
+        The classes (pharmacological, treatment, chemical, etc.) of the drug inferred from the source or manually added.  # noqa: E501
 
         :param drugclass: The drugclass of this Drug.  # noqa: E501
         :type: list[DrugDrugclass]
@@ -472,6 +471,7 @@ class Drug(object):
     def brands(self):
         """Gets the brands of this Drug.  # noqa: E501
 
+        The manufacturer specific rendition of this drug.  # noqa: E501
 
         :return: The brands of this Drug.  # noqa: E501
         :rtype: list[DrugBrands]
@@ -482,6 +482,7 @@ class Drug(object):
     def brands(self, brands):
         """Sets the brands of this Drug.
 
+        The manufacturer specific rendition of this drug.  # noqa: E501
 
         :param brands: The brands of this Drug.  # noqa: E501
         :type: list[DrugBrands]

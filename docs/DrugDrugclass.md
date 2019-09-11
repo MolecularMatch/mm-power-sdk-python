@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **str** | The classes (pharmacological, treatment, chemical, etc.) of the drug inferred from the source or manually added | 
-**source** | **str** |  | 
+**name** | **str** | The target class of the drug. | 
+**source** | **str** | The data source where this information was obtained. | 
 
 
 

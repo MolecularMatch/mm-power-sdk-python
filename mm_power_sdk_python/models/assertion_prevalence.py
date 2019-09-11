@@ -68,6 +68,7 @@ class AssertionPrevalence(object):
     def study_id(self):
         """Gets the study_id of this AssertionPrevalence.  # noqa: E501
 
+        A study identifier.  # noqa: E501
 
         :return: The study_id of this AssertionPrevalence.  # noqa: E501
         :rtype: str
@@ -78,6 +79,7 @@ class AssertionPrevalence(object):
     def study_id(self, study_id):
         """Sets the study_id of this AssertionPrevalence.
 
+        A study identifier.  # noqa: E501
 
         :param study_id: The study_id of this AssertionPrevalence.  # noqa: E501
         :type: str
@@ -91,6 +93,7 @@ class AssertionPrevalence(object):
     def percent(self):
         """Gets the percent of this AssertionPrevalence.  # noqa: E501
 
+        Ratio of people with variant within study population.  # noqa: E501
 
         :return: The percent of this AssertionPrevalence.  # noqa: E501
         :rtype: float
@@ -101,6 +104,7 @@ class AssertionPrevalence(object):
     def percent(self, percent):
         """Sets the percent of this AssertionPrevalence.
 
+        Ratio of people with variant within study population.  # noqa: E501
 
         :param percent: The percent of this AssertionPrevalence.  # noqa: E501
         :type: float
@@ -114,6 +118,7 @@ class AssertionPrevalence(object):
     def samples(self):
         """Gets the samples of this AssertionPrevalence.  # noqa: E501
 
+        Number of samples with mutation within study.  # noqa: E501
 
         :return: The samples of this AssertionPrevalence.  # noqa: E501
         :rtype: int
@@ -124,6 +129,7 @@ class AssertionPrevalence(object):
     def samples(self, samples):
         """Sets the samples of this AssertionPrevalence.
 
+        Number of samples with mutation within study.  # noqa: E501
 
         :param samples: The samples of this AssertionPrevalence.  # noqa: E501
         :type: int
@@ -137,6 +143,7 @@ class AssertionPrevalence(object):
     def count(self):
         """Gets the count of this AssertionPrevalence.  # noqa: E501
 
+        Number of occurrances of variant within study.  # noqa: E501
 
         :return: The count of this AssertionPrevalence.  # noqa: E501
         :rtype: int
@@ -147,6 +154,7 @@ class AssertionPrevalence(object):
     def count(self, count):
         """Sets the count of this AssertionPrevalence.
 
+        Number of occurrances of variant within study.  # noqa: E501
 
         :param count: The count of this AssertionPrevalence.  # noqa: E501
         :type: int
@@ -160,6 +168,7 @@ class AssertionPrevalence(object):
     def condition(self):
         """Gets the condition of this AssertionPrevalence.  # noqa: E501
 
+        The condition associated with the study.  # noqa: E501
 
         :return: The condition of this AssertionPrevalence.  # noqa: E501
         :rtype: str
@@ -170,6 +179,7 @@ class AssertionPrevalence(object):
     def condition(self, condition):
         """Sets the condition of this AssertionPrevalence.
 
+        The condition associated with the study.  # noqa: E501
 
         :param condition: The condition of this AssertionPrevalence.  # noqa: E501
         :type: str
@@ -181,6 +191,7 @@ class AssertionPrevalence(object):
     def molecular(self):
         """Gets the molecular of this AssertionPrevalence.  # noqa: E501
 
+        The variant associated with the study.  # noqa: E501
 
         :return: The molecular of this AssertionPrevalence.  # noqa: E501
         :rtype: str
@@ -191,6 +202,7 @@ class AssertionPrevalence(object):
     def molecular(self, molecular):
         """Sets the molecular of this AssertionPrevalence.
 
+        The variant associated with the study.  # noqa: E501
 
         :param molecular: The molecular of this AssertionPrevalence.  # noqa: E501
         :type: str

@@ -96,6 +96,7 @@ class AssertionSources(object):
     def id(self):
         """Gets the id of this AssertionSources.  # noqa: E501
 
+        Unique source identifier for this assertion.  # noqa: E501
 
         :return: The id of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -106,6 +107,7 @@ class AssertionSources(object):
     def id(self, id):
         """Sets the id of this AssertionSources.
 
+        Unique source identifier for this assertion.  # noqa: E501
 
         :param id: The id of this AssertionSources.  # noqa: E501
         :type: str
@@ -119,6 +121,7 @@ class AssertionSources(object):
     def type(self):
         """Gets the type of this AssertionSources.  # noqa: E501
 
+        Type of clinical evidence associated with publication.  # noqa: E501
 
         :return: The type of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -129,6 +132,7 @@ class AssertionSources(object):
     def type(self, type):
         """Sets the type of this AssertionSources.
 
+        Type of clinical evidence associated with publication.  # noqa: E501
 
         :param type: The type of this AssertionSources.  # noqa: E501
         :type: str
@@ -146,6 +150,7 @@ class AssertionSources(object):
     def sub_type(self):
         """Gets the sub_type of this AssertionSources.  # noqa: E501
 
+        A more specific sub type of clinical evidence associated with publication.  # noqa: E501
 
         :return: The sub_type of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -156,6 +161,7 @@ class AssertionSources(object):
     def sub_type(self, sub_type):
         """Sets the sub_type of this AssertionSources.
 
+        A more specific sub type of clinical evidence associated with publication.  # noqa: E501
 
         :param sub_type: The sub_type of this AssertionSources.  # noqa: E501
         :type: str
@@ -173,6 +179,7 @@ class AssertionSources(object):
     def pub_id(self):
         """Gets the pub_id of this AssertionSources.  # noqa: E501
 
+        A publication identifier.  # noqa: E501
 
         :return: The pub_id of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -183,6 +190,7 @@ class AssertionSources(object):
     def pub_id(self, pub_id):
         """Sets the pub_id of this AssertionSources.
 
+        A publication identifier.  # noqa: E501
 
         :param pub_id: The pub_id of this AssertionSources.  # noqa: E501
         :type: str
@@ -194,6 +202,7 @@ class AssertionSources(object):
     def trial_id(self):
         """Gets the trial_id of this AssertionSources.  # noqa: E501
 
+        A clinical trial identifier.  # noqa: E501
 
         :return: The trial_id of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -204,6 +213,7 @@ class AssertionSources(object):
     def trial_id(self, trial_id):
         """Sets the trial_id of this AssertionSources.
 
+        A clinical trial identifier.  # noqa: E501
 
         :param trial_id: The trial_id of this AssertionSources.  # noqa: E501
         :type: str
@@ -215,6 +225,7 @@ class AssertionSources(object):
     def trial_phase(self):
         """Gets the trial_phase of this AssertionSources.  # noqa: E501
 
+        A clinical trial phase.  # noqa: E501
 
         :return: The trial_phase of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -225,6 +236,7 @@ class AssertionSources(object):
     def trial_phase(self, trial_phase):
         """Sets the trial_phase of this AssertionSources.
 
+        A clinical trial phase.  # noqa: E501
 
         :param trial_phase: The trial_phase of this AssertionSources.  # noqa: E501
         :type: str
@@ -236,6 +248,7 @@ class AssertionSources(object):
     def functional_consequence(self):
         """Gets the functional_consequence of this AssertionSources.  # noqa: E501
 
+        Change to function of biomarker.  # noqa: E501
 
         :return: The functional_consequence of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -246,6 +259,7 @@ class AssertionSources(object):
     def functional_consequence(self, functional_consequence):
         """Sets the functional_consequence of this AssertionSources.
 
+        Change to function of biomarker.  # noqa: E501
 
         :param functional_consequence: The functional_consequence of this AssertionSources.  # noqa: E501
         :type: str
@@ -263,6 +277,7 @@ class AssertionSources(object):
     def name(self):
         """Gets the name of this AssertionSources.  # noqa: E501
 
+        Name of publication index if applicable.  # noqa: E501
 
         :return: The name of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -273,6 +288,7 @@ class AssertionSources(object):
     def name(self, name):
         """Sets the name of this AssertionSources.
 
+        Name of publication index if applicable.  # noqa: E501
 
         :param name: The name of this AssertionSources.  # noqa: E501
         :type: str
@@ -290,6 +306,7 @@ class AssertionSources(object):
     def link(self):
         """Gets the link of this AssertionSources.  # noqa: E501
 
+        A URL to publication if available.  # noqa: E501
 
         :return: The link of this AssertionSources.  # noqa: E501
         :rtype: str
@@ -300,6 +317,7 @@ class AssertionSources(object):
     def link(self, link):
         """Sets the link of this AssertionSources.
 
+        A URL to publication if available.  # noqa: E501
 
         :param link: The link of this AssertionSources.  # noqa: E501
         :type: str
@@ -311,6 +329,7 @@ class AssertionSources(object):
     def year(self):
         """Gets the year of this AssertionSources.  # noqa: E501
 
+        Year of publication.  # noqa: E501
 
         :return: The year of this AssertionSources.  # noqa: E501
         :rtype: int
@@ -321,6 +340,7 @@ class AssertionSources(object):
     def year(self, year):
         """Sets the year of this AssertionSources.
 
+        Year of publication.  # noqa: E501
 
         :param year: The year of this AssertionSources.  # noqa: E501
         :type: int
@@ -332,6 +352,7 @@ class AssertionSources(object):
     def trust_rating(self):
         """Gets the trust_rating of this AssertionSources.  # noqa: E501
 
+        A subjective assessment of evidence quality.  # noqa: E501
 
         :return: The trust_rating of this AssertionSources.  # noqa: E501
         :rtype: float
@@ -342,6 +363,7 @@ class AssertionSources(object):
     def trust_rating(self, trust_rating):
         """Sets the trust_rating of this AssertionSources.
 
+        A subjective assessment of evidence quality.  # noqa: E501
 
         :param trust_rating: The trust_rating of this AssertionSources.  # noqa: E501
         :type: float

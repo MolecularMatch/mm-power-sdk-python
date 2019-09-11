@@ -116,7 +116,7 @@ class Filter(object):
 
 
 
-    def __init__(self, term=None, root_term=None, facet=None, filter_type='include', distance_uom='mi', postal_code=None, country_code=None, gene_expand=None, exclude_filter_only=None, error=None, ambiguous=None):  # noqa: E501
+    def __init__(self, term=None, root_term=None, facet=None, filter_type='include', distance_uom=None, postal_code=None, country_code=None, gene_expand=None, exclude_filter_only=None, error=None, ambiguous=None):  # noqa: E501
 
         """Filter - a model defined in Swagger"""  # noqa: E501
 

@@ -157,6 +157,7 @@ class Contact(object):
     def degrees(self):
         """Gets the degrees of this Contact.  # noqa: E501
 
+        Degress earned by the contact person.  # noqa: E501
 
         :return: The degrees of this Contact.  # noqa: E501
         :rtype: str
@@ -167,6 +168,7 @@ class Contact(object):
     def degrees(self, degrees):
         """Sets the degrees of this Contact.
 
+        Degress earned by the contact person.  # noqa: E501
 
         :param degrees: The degrees of this Contact.  # noqa: E501
         :type: str

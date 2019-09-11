@@ -130,10 +130,12 @@ class Assertion(object):
         self.discriminator = None
         if score is not None:
             self.score = score
-        self.id = id
+        if id is not None:
+            self.id = id
         if external_id is not None:
             self.external_id = external_id
-        self.unique_key = unique_key
+        if unique_key is not None:
+            self.unique_key = unique_key
         if hash_key is not None:
             self.hash_key = hash_key
         if description is not None:
@@ -221,8 +223,6 @@ class Assertion(object):
         :param id: The id of this Assertion.  # noqa: E501
         :type: str
         """
-        if id is None:
-            raise ValueError("Invalid value for `id`, must not be `None`")  # noqa: E501
 
         self._id = id
 
@@ -230,6 +230,7 @@ class Assertion(object):
     def external_id(self):
         """Gets the external_id of this Assertion.  # noqa: E501
 
+        Optional institution specific identifier.  # noqa: E501
 
         :return: The external_id of this Assertion.  # noqa: E501
         :rtype: list[str]
@@ -240,6 +241,7 @@ class Assertion(object):
     def external_id(self, external_id):
         """Sets the external_id of this Assertion.
 
+        Optional institution specific identifier.  # noqa: E501
 
         :param external_id: The external_id of this Assertion.  # noqa: E501
         :type: list[str]
@@ -251,6 +253,7 @@ class Assertion(object):
     def unique_key(self):
         """Gets the unique_key of this Assertion.  # noqa: E501
 
+        Unique identifer inclusive of version.  # noqa: E501
 
         :return: The unique_key of this Assertion.  # noqa: E501
         :rtype: str
@@ -261,12 +264,11 @@ class Assertion(object):
     def unique_key(self, unique_key):
         """Sets the unique_key of this Assertion.
 
+        Unique identifer inclusive of version.  # noqa: E501
 
         :param unique_key: The unique_key of this Assertion.  # noqa: E501
         :type: str
         """
-        if unique_key is None:
-            raise ValueError("Invalid value for `unique_key`, must not be `None`")  # noqa: E501
 
         self._unique_key = unique_key
 
@@ -274,6 +276,7 @@ class Assertion(object):
     def hash_key(self):
         """Gets the hash_key of this Assertion.  # noqa: E501
 
+        Static identifier agnostic of version.  # noqa: E501
 
         :return: The hash_key of this Assertion.  # noqa: E501
         :rtype: str
@@ -284,6 +287,7 @@ class Assertion(object):
     def hash_key(self, hash_key):
         """Sets the hash_key of this Assertion.
 
+        Static identifier agnostic of version.  # noqa: E501
 
         :param hash_key: The hash_key of this Assertion.  # noqa: E501
         :type: str
@@ -295,6 +299,7 @@ class Assertion(object):
     def description(self):
         """Gets the description of this Assertion.  # noqa: E501
 
+        Detailed description of the assertion.  # noqa: E501
 
         :return: The description of this Assertion.  # noqa: E501
         :rtype: str
@@ -305,6 +310,7 @@ class Assertion(object):
     def description(self, description):
         """Sets the description of this Assertion.
 
+        Detailed description of the assertion.  # noqa: E501
 
         :param description: The description of this Assertion.  # noqa: E501
         :type: str
@@ -443,6 +449,7 @@ class Assertion(object):
     def regulatory_body_approved_by(self):
         """Gets the regulatory_body_approved_by of this Assertion.  # noqa: E501
 
+        Governing body granting approval.  # noqa: E501
 
         :return: The regulatory_body_approved_by of this Assertion.  # noqa: E501
         :rtype: str
@@ -453,6 +460,7 @@ class Assertion(object):
     def regulatory_body_approved_by(self, regulatory_body_approved_by):
         """Sets the regulatory_body_approved_by of this Assertion.
 
+        Governing body granting approval.  # noqa: E501
 
         :param regulatory_body_approved_by: The regulatory_body_approved_by of this Assertion.  # noqa: E501
         :type: str
@@ -464,6 +472,7 @@ class Assertion(object):
     def direction(self):
         """Gets the direction of this Assertion.  # noqa: E501
 
+        Indicates whether assertion supports or does not support the therapy.  # noqa: E501
 
         :return: The direction of this Assertion.  # noqa: E501
         :rtype: str
@@ -474,6 +483,7 @@ class Assertion(object):
     def direction(self, direction):
         """Sets the direction of this Assertion.
 
+        Indicates whether assertion supports or does not support the therapy.  # noqa: E501
 
         :param direction: The direction of this Assertion.  # noqa: E501
         :type: str
@@ -491,6 +501,7 @@ class Assertion(object):
     def guideline_body(self):
         """Gets the guideline_body of this Assertion.  # noqa: E501
 
+        A professional committee recommendation.  # noqa: E501
 
         :return: The guideline_body of this Assertion.  # noqa: E501
         :rtype: str
@@ -501,6 +512,7 @@ class Assertion(object):
     def guideline_body(self, guideline_body):
         """Sets the guideline_body of this Assertion.
 
+        A professional committee recommendation.  # noqa: E501
 
         :param guideline_body: The guideline_body of this Assertion.  # noqa: E501
         :type: str
@@ -518,6 +530,7 @@ class Assertion(object):
     def guideline_version(self):
         """Gets the guideline_version of this Assertion.  # noqa: E501
 
+        Release version of professional committee recommendation.  # noqa: E501
 
         :return: The guideline_version of this Assertion.  # noqa: E501
         :rtype: str
@@ -528,6 +541,7 @@ class Assertion(object):
     def guideline_version(self, guideline_version):
         """Sets the guideline_version of this Assertion.
 
+        Release version of professional committee recommendation.  # noqa: E501
 
         :param guideline_version: The guideline_version of this Assertion.  # noqa: E501
         :type: str
@@ -539,6 +553,7 @@ class Assertion(object):
     def clinical_significance(self):
         """Gets the clinical_significance of this Assertion.  # noqa: E501
 
+        Utility of biomarker in clinical setting.  # noqa: E501
 
         :return: The clinical_significance of this Assertion.  # noqa: E501
         :rtype: str
@@ -549,6 +564,7 @@ class Assertion(object):
     def clinical_significance(self, clinical_significance):
         """Sets the clinical_significance of this Assertion.
 
+        Utility of biomarker in clinical setting.  # noqa: E501
 
         :param clinical_significance: The clinical_significance of this Assertion.  # noqa: E501
         :type: str
@@ -566,6 +582,7 @@ class Assertion(object):
     def biomarker_class(self):
         """Gets the biomarker_class of this Assertion.  # noqa: E501
 
+        Indicator of response to therapy  # noqa: E501
 
         :return: The biomarker_class of this Assertion.  # noqa: E501
         :rtype: str
@@ -576,6 +593,7 @@ class Assertion(object):
     def biomarker_class(self, biomarker_class):
         """Sets the biomarker_class of this Assertion.
 
+        Indicator of response to therapy  # noqa: E501
 
         :param biomarker_class: The biomarker_class of this Assertion.  # noqa: E501
         :type: str
@@ -593,6 +611,7 @@ class Assertion(object):
     def expression(self):
         """Gets the expression of this Assertion.  # noqa: E501
 
+        mathematical expression characterizing the clinical scope of the assertion.  # noqa: E501
 
         :return: The expression of this Assertion.  # noqa: E501
         :rtype: str
@@ -603,6 +622,7 @@ class Assertion(object):
     def expression(self, expression):
         """Sets the expression of this Assertion.
 
+        mathematical expression characterizing the clinical scope of the assertion.  # noqa: E501
 
         :param expression: The expression of this Assertion.  # noqa: E501
         :type: str
@@ -813,6 +833,7 @@ class Assertion(object):
     def variant_info(self):
         """Gets the variant_info of this Assertion.  # noqa: E501
 
+        Genomic information pertaining to variant.  # noqa: E501
 
         :return: The variant_info of this Assertion.  # noqa: E501
         :rtype: list[VariantInfo]
@@ -823,6 +844,7 @@ class Assertion(object):
     def variant_info(self, variant_info):
         """Sets the variant_info of this Assertion.
 
+        Genomic information pertaining to variant.  # noqa: E501
 
         :param variant_info: The variant_info of this Assertion.  # noqa: E501
         :type: list[VariantInfo]

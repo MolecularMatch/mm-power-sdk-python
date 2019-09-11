@@ -55,6 +55,7 @@ class AssertionClassifications(object):
     def name(self):
         """Gets the name of this AssertionClassifications.  # noqa: E501
 
+        Mutation name.  # noqa: E501
 
         :return: The name of this AssertionClassifications.  # noqa: E501
         :rtype: str
@@ -65,6 +66,7 @@ class AssertionClassifications(object):
     def name(self, name):
         """Sets the name of this AssertionClassifications.
 
+        Mutation name.  # noqa: E501
 
         :param name: The name of this AssertionClassifications.  # noqa: E501
         :type: str
@@ -78,6 +80,7 @@ class AssertionClassifications(object):
     def classification(self):
         """Gets the classification of this AssertionClassifications.  # noqa: E501
 
+        Clinical actionability of mutation.  # noqa: E501
 
         :return: The classification of this AssertionClassifications.  # noqa: E501
         :rtype: str
@@ -88,6 +91,7 @@ class AssertionClassifications(object):
     def classification(self, classification):
         """Sets the classification of this AssertionClassifications.
 
+        Clinical actionability of mutation.  # noqa: E501
 
         :param classification: The classification of this AssertionClassifications.  # noqa: E501
         :type: str
@@ -107,6 +111,7 @@ class AssertionClassifications(object):
     def classification_override(self):
         """Gets the classification_override of this AssertionClassifications.  # noqa: E501
 
+        Manual override of classification.  # noqa: E501
 
         :return: The classification_override of this AssertionClassifications.  # noqa: E501
         :rtype: str
@@ -117,6 +122,7 @@ class AssertionClassifications(object):
     def classification_override(self, classification_override):
         """Sets the classification_override of this AssertionClassifications.
 
+        Manual override of classification.  # noqa: E501
 
         :param classification_override: The classification_override of this AssertionClassifications.  # noqa: E501
         :type: str

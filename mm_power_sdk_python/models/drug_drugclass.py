@@ -50,7 +50,7 @@ class DrugDrugclass(object):
     def name(self):
         """Gets the name of this DrugDrugclass.  # noqa: E501
 
-        The classes (pharmacological, treatment, chemical, etc.) of the drug inferred from the source or manually added  # noqa: E501
+        The target class of the drug.  # noqa: E501
 
         :return: The name of this DrugDrugclass.  # noqa: E501
         :rtype: str
@@ -61,7 +61,7 @@ class DrugDrugclass(object):
     def name(self, name):
         """Sets the name of this DrugDrugclass.
 
-        The classes (pharmacological, treatment, chemical, etc.) of the drug inferred from the source or manually added  # noqa: E501
+        The target class of the drug.  # noqa: E501
 
         :param name: The name of this DrugDrugclass.  # noqa: E501
         :type: str
@@ -75,6 +75,7 @@ class DrugDrugclass(object):
     def source(self):
         """Gets the source of this DrugDrugclass.  # noqa: E501
 
+        The data source where this information was obtained.  # noqa: E501
 
         :return: The source of this DrugDrugclass.  # noqa: E501
         :rtype: str
@@ -85,6 +86,7 @@ class DrugDrugclass(object):
     def source(self, source):
         """Sets the source of this DrugDrugclass.
 
+        The data source where this information was obtained.  # noqa: E501
 
         :param source: The source of this DrugDrugclass.  # noqa: E501
         :type: str

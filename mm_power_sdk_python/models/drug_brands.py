@@ -113,6 +113,7 @@ class DrugBrands(object):
     def indications(self):
         """Gets the indications of this DrugBrands.  # noqa: E501
 
+        The approved conditions, diseases, or states for which a drug can safely and effectively be used. An indication is considered to be FDA-approved when it has any of the following designations: NDA, ANDA, BLA, or OTC. May also include indications in other countries, such as Canada (through Health Canada) or in Europe (through the European Medicines Agency).  # noqa: E501
 
         :return: The indications of this DrugBrands.  # noqa: E501
         :rtype: str
@@ -123,6 +124,7 @@ class DrugBrands(object):
     def indications(self, indications):
         """Sets the indications of this DrugBrands.
 
+        The approved conditions, diseases, or states for which a drug can safely and effectively be used. An indication is considered to be FDA-approved when it has any of the following designations: NDA, ANDA, BLA, or OTC. May also include indications in other countries, such as Canada (through Health Canada) or in Europe (through the European Medicines Agency).  # noqa: E501
 
         :param indications: The indications of this DrugBrands.  # noqa: E501
         :type: str
@@ -134,6 +136,7 @@ class DrugBrands(object):
     def mechanism(self):
         """Gets the mechanism of this DrugBrands.  # noqa: E501
 
+        A component of pharmacodynamics that describes the biochemical interaction through which a drug produces its intended effect. May include the exact molecular protein or enzyme targets and/or a description of the physiological effects produced.  # noqa: E501
 
         :return: The mechanism of this DrugBrands.  # noqa: E501
         :rtype: str
@@ -144,6 +147,7 @@ class DrugBrands(object):
     def mechanism(self, mechanism):
         """Sets the mechanism of this DrugBrands.
 
+        A component of pharmacodynamics that describes the biochemical interaction through which a drug produces its intended effect. May include the exact molecular protein or enzyme targets and/or a description of the physiological effects produced.  # noqa: E501
 
         :param mechanism: The mechanism of this DrugBrands.  # noqa: E501
         :type: str
@@ -155,6 +159,7 @@ class DrugBrands(object):
     def name(self):
         """Gets the name of this DrugBrands.  # noqa: E501
 
+        The brand name of the drug  # noqa: E501
 
         :return: The name of this DrugBrands.  # noqa: E501
         :rtype: str
@@ -165,6 +170,7 @@ class DrugBrands(object):
     def name(self, name):
         """Sets the name of this DrugBrands.
 
+        The brand name of the drug  # noqa: E501
 
         :param name: The name of this DrugBrands.  # noqa: E501
         :type: str
@@ -178,6 +184,7 @@ class DrugBrands(object):
     def manufacturer(self):
         """Gets the manufacturer of this DrugBrands.  # noqa: E501
 
+        The company producing the brand name of drug.  # noqa: E501
 
         :return: The manufacturer of this DrugBrands.  # noqa: E501
         :rtype: str
@@ -188,6 +195,7 @@ class DrugBrands(object):
     def manufacturer(self, manufacturer):
         """Sets the manufacturer of this DrugBrands.
 
+        The company producing the brand name of drug.  # noqa: E501
 
         :param manufacturer: The manufacturer of this DrugBrands.  # noqa: E501
         :type: str

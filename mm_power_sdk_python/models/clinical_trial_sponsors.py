@@ -74,6 +74,7 @@ class ClinicalTrialSponsors(object):
     def collaborator(self):
         """Gets the collaborator of this ClinicalTrialSponsors.  # noqa: E501
 
+        An organization other than the sponsor that provides support for a clinical study. This support may include activities related to funding, design, implementation, data analysis, or reporting.  # noqa: E501
 
         :return: The collaborator of this ClinicalTrialSponsors.  # noqa: E501
         :rtype: list[Agency]
@@ -84,6 +85,7 @@ class ClinicalTrialSponsors(object):
     def collaborator(self, collaborator):
         """Sets the collaborator of this ClinicalTrialSponsors.
 
+        An organization other than the sponsor that provides support for a clinical study. This support may include activities related to funding, design, implementation, data analysis, or reporting.  # noqa: E501
 
         :param collaborator: The collaborator of this ClinicalTrialSponsors.  # noqa: E501
         :type: list[Agency]

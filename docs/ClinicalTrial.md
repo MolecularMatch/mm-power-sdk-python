@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **score** | **float** | indicator of the quality of the match. | [optional] 
 **mboost** | **float** | intrinsic boost to the record. | [optional] 
 **import_date** | **datetime** | date this record was imported into the MolecularMatch database. | [optional] 
-**id** | **str** | unique identifier. | 
-**source** | **str** | native data source of this record | 
+**id** | **str** | unique identifier. | [optional] 
+**source** | **str** | native data source of this record | [optional] 
 **brief_title** | **str** | A short title of the clinical study written in language intended for the lay public. The title should include, where possible, information on the participants, condition being evaluated, and intervention(s) studied. | [optional] 
 **patient_title** | **str** | Patient friendly title for the clinical trial. | [optional] 
 **title** | **str** | Official title for the clinical trial. | [optional] 
@@ -34,8 +34,8 @@ Name | Type | Description | Notes
 **other_outcomes** | [**list[Outcome]**](Outcome.md) |  | [optional] 
 **eligibility** | [**Eligibility**](Eligibility.md) |  | [optional] 
 **enrollment** | **int** | The estimated total number of participants to be enrolled (target number) or the actual total number of participants that are enrolled in the clinical study. | [optional] 
-**min_age** | **float** | The numerical value, if any, for the minimum age a potential participant must meet to be eligible for the clinical study. | 
-**max_age** | **float** | The numerical value, if any, for the maximum age a potential participant can be to be eligible for the clinical study. | 
+**min_age** | **float** | The numerical value, if any, for the minimum age a potential participant must meet to be eligible for the clinical study. | [optional] 
+**max_age** | **float** | The numerical value, if any, for the maximum age a potential participant can be to be eligible for the clinical study. | [optional] 
 **gender** | **list[str]** | The sex and, if applicable, gender of the participants eligible to participate in the clinical study. | [optional] 
 **overall_official** | [**list[Contact]**](Contact.md) | Person responsible for the overall scientific leadership of the protocol, including study principal investigator. | [optional] 
 **overall_contact** | [**Contact**](Contact.md) |  | [optional] 

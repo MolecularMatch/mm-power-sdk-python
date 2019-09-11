@@ -5,13 +5,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **score** | **float** | indicator of the quality of the match. | [optional] 
 **mboost** | **float** | intrinsic boost to the record. | [optional] 
-**id** | **str** | unique identifier. | 
+**id** | **str** | unique identifier. | [optional] 
 **pmid** | **str** | PubMed ID. | [optional] 
 **doi** | **str** | Digital Object Identifier (permanent link at doi.org/[doi]). | [optional] 
-**source** | **str** | data source of this record | 
-**journal_name** | **str** | Journal name. | 
+**source** | **str** | data source of this record | [optional] 
+**journal_name** | **str** | Journal name. | [optional] 
 **journal_iso_abbreviation** | **str** |  | [optional] 
-**title** | **str** | Official title for the publication. | 
+**title** | **str** | Official title for the publication. | [optional] 
 **purpose** | **str** | Abstract&#x27;s purpose section. | [optional] 
 **background** | **str** | Abstract&#x27;s background section. | [optional] 
 **methods** | **str** | Abstract&#x27;s methods section. | [optional] 
@@ -19,8 +19,8 @@ Name | Type | Description | Notes
 **conclusion** | **str** | Abstract&#x27;s conclusion section. | [optional] 
 **conflicts** | **str** | Author&#x27;s conflicts of interest section. | [optional] 
 **fulltext** | **str** | Full text (if available). | [optional] 
-**citation** | **str** | MLA formatted citation. | 
-**citation_date** | **datetime** | Article date used for citation | 
+**citation** | **str** | MLA formatted citation. | [optional] 
+**citation_date** | **datetime** | Article date used for citation | [optional] 
 **link** | **str** | Link to original source. | [optional] 
 **chemicals** | **list[str]** | Chemicals or drugs referenced in this publication. | [optional] 
 **keywords** | **list[str]** |  | [optional] 
