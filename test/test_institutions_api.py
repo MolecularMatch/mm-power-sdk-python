@@ -49,17 +49,17 @@ class TestInstitutionsApi(unittest.TestCase):
         """
         pass
 
-    def test_institution_post(self):
-        """Test case for institution_post
+    def test_get_institutions(self):
+        """Test case for get_institutions
 
-        Create an institution  # noqa: E501
+        Get a paginated list of institutions  # noqa: E501
         """
         pass
 
-    def test_institutions_get(self):
-        """Test case for institutions_get
+    def test_post_institution(self):
+        """Test case for post_institution
 
-        Get a paginated list of institutions  # noqa: E501
+        Create an institution  # noqa: E501
         """
         pass
 

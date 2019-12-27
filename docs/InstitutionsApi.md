@@ -7,8 +7,8 @@ Method | HTTP request | Description
 [**delete_institution**](InstitutionsApi.md#delete_institution) | **DELETE** /institution/{id} | Delete an institution
 [**get_institution**](InstitutionsApi.md#get_institution) | **GET** /institution/{id} | Get an institution
 [**get_institution_status**](InstitutionsApi.md#get_institution_status) | **GET** /institution/{id}/status | Get an institution record&#x27;s status
-[**institution_post**](InstitutionsApi.md#institution_post) | **POST** /institution | Create an institution
-[**institutions_get**](InstitutionsApi.md#institutions_get) | **GET** /institutions | Get a paginated list of institutions
+[**get_institutions**](InstitutionsApi.md#get_institutions) | **GET** /institutions | Get a paginated list of institutions
+[**post_institution**](InstitutionsApi.md#post_institution) | **POST** /institution | Create an institution
 [**put_institution**](InstitutionsApi.md#put_institution) | **PUT** /institution/{id} | Put/Update an institution
 
 # **delete_institution**
@@ -158,10 +158,10 @@ Name | Type | Description  | Notes
 
  
 
-# **institution_post**
-> Institution institution_post()
+# **get_institutions**
+> Institution get_institutions()
 
-Create an institution
+Get a paginated list of institutions
 
 ### Example
 ```python
@@ -176,11 +176,11 @@ from pprint import pprint
 api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
 
 try:
-    # Create an institution
-    api_response = api_instance.institution_post()
+    # Get a paginated list of institutions
+    api_response = api_instance.get_institutions()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling InstitutionsApi->institution_post: %s\n" % e)
+    print("Exception when calling InstitutionsApi->get_institutions: %s\n" % e)
 ```
 
 ### Parameters
@@ -201,10 +201,10 @@ This endpoint does not need any parameter.
 
  
 
-# **institutions_get**
-> Institution institutions_get()
+# **post_institution**
+> Institution post_institution()
 
-Get a paginated list of institutions
+Create an institution
 
 ### Example
 ```python
@@ -219,11 +219,11 @@ from pprint import pprint
 api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
 
 try:
-    # Get a paginated list of institutions
-    api_response = api_instance.institutions_get()
+    # Create an institution
+    api_response = api_instance.post_institution()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling InstitutionsApi->institutions_get: %s\n" % e)
+    print("Exception when calling InstitutionsApi->post_institution: %s\n" % e)
 ```
 
 ### Parameters
