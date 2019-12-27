@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.variant_info_fusions import VariantInfoFusions  # noqa: F401,E501
-from mm_power_sdk_python.models.variant_info_locations import VariantInfoLocations  # noqa: F401,E501
 
 
 class VariantInfo(object):

@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.tier_explanation import TierExplanation  # noqa: F401,E501
 
 
 class StandardizedTierTier(object):

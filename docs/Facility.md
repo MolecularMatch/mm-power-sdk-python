@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **lon** | **float** | Longitude | [optional] 
 **geo** | [**FacilityGeo**](FacilityGeo.md) |  | [optional] 
 **status** | **str** | Site specific recruiting status. | [optional] 
+**link** | **str** | Country (competent authority) specific link (available for EU trials only) | [optional] 
 **first_name** | **str** | Site primary contact first name. | [optional] 
 **middle_name** | **str** | Site primary contact middle name. | [optional] 
 **last_name** | **str** | Site primary contact last name. | [optional] 

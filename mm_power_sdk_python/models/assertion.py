@@ -14,13 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.assertion_classifications import AssertionClassifications  # noqa: F401,E501
-from mm_power_sdk_python.models.assertion_prevalence import AssertionPrevalence  # noqa: F401,E501
-from mm_power_sdk_python.models.assertion_sources import AssertionSources  # noqa: F401,E501
-from mm_power_sdk_python.models.assertion_therapeutic_context import AssertionTherapeuticContext  # noqa: F401,E501
-from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
-from mm_power_sdk_python.models.tier_explanation import TierExplanation  # noqa: F401,E501
-from mm_power_sdk_python.models.variant_info import VariantInfo  # noqa: F401,E501
 
 
 class Assertion(object):
@@ -569,7 +562,7 @@ class Assertion(object):
         :param clinical_significance: The clinical_significance of this Assertion.  # noqa: E501
         :type: str
         """
-        allowed_values = ["no_response", "sensitive", "favorable", "unfavorable", "unknown", "resistant", "intermediate", "adverse_response", "pathogenic"]  # noqa: E501
+        allowed_values = ["no_response", "sensitive", "favorable", "unfavorable", "unknown", "resistant", "intermediate", "adverse_response", "pathogenic", "not_implicated", "gain_of_function", "loss_of_function"]  # noqa: E501
         if clinical_significance not in allowed_values:
             raise ValueError(
                 "Invalid value for `clinical_significance` ({0}), must be one of {1}"  # noqa: E501
@@ -598,7 +591,7 @@ class Assertion(object):
         :param biomarker_class: The biomarker_class of this Assertion.  # noqa: E501
         :type: str
         """
-        allowed_values = ["predictive", "diagnostic", "prognostic", "unknown", "predisposing"]  # noqa: E501
+        allowed_values = ["predictive", "diagnostic", "prognostic", "unknown", "predisposing", "functional"]  # noqa: E501
         if biomarker_class not in allowed_values:
             raise ValueError(
                 "Invalid value for `biomarker_class` ({0}), must be one of {1}"  # noqa: E501

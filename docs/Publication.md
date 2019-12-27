@@ -18,7 +18,6 @@ Name | Type | Description | Notes
 **results** | **str** | Abstract&#x27;s results section. | [optional] 
 **conclusion** | **str** | Abstract&#x27;s conclusion section. | [optional] 
 **conflicts** | **str** | Author&#x27;s conflicts of interest section. | [optional] 
-**fulltext** | **str** | Full text (if available). | [optional] 
 **citation** | **str** | MLA formatted citation. | [optional] 
 **citation_date** | **datetime** | Article date used for citation | [optional] 
 **link** | **str** | Link to original source. | [optional] 

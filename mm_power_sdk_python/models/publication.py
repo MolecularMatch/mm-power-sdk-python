@@ -14,9 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
-from mm_power_sdk_python.models.publication_authors import PublicationAuthors  # noqa: F401,E501
-from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
 class Publication(object):
@@ -47,7 +44,6 @@ class Publication(object):
         'results': 'str',
         'conclusion': 'str',
         'conflicts': 'str',
-        'fulltext': 'str',
         'citation': 'str',
         'citation_date': 'datetime',
         'link': 'str',
@@ -76,7 +72,6 @@ class Publication(object):
         'results': 'results',
         'conclusion': 'conclusion',
         'conflicts': 'conflicts',
-        'fulltext': 'fulltext',
         'citation': 'citation',
         'citation_date': 'citation_date',
         'link': 'link',
@@ -89,7 +84,7 @@ class Publication(object):
         'molecular_alterations': 'molecularAlterations'
     }
 
-    def __init__(self, score=None, mboost=None, id=None, pmid=None, doi=None, source=None, journal_name=None, journal_iso_abbreviation=None, title=None, purpose=None, background=None, methods=None, results=None, conclusion=None, conflicts=None, fulltext=None, citation=None, citation_date=None, link=None, chemicals=None, keywords=None, extended_keywords=None, publication_type=None, authors=None, tags=None, molecular_alterations=None):  # noqa: E501
+    def __init__(self, score=None, mboost=None, id=None, pmid=None, doi=None, source=None, journal_name=None, journal_iso_abbreviation=None, title=None, purpose=None, background=None, methods=None, results=None, conclusion=None, conflicts=None, citation=None, citation_date=None, link=None, chemicals=None, keywords=None, extended_keywords=None, publication_type=None, authors=None, tags=None, molecular_alterations=None):  # noqa: E501
         """Publication - a model defined in Swagger"""  # noqa: E501
         self._score = None
         self._mboost = None
@@ -106,7 +101,6 @@ class Publication(object):
         self._results = None
         self._conclusion = None
         self._conflicts = None
-        self._fulltext = None
         self._citation = None
         self._citation_date = None
         self._link = None
@@ -148,8 +142,6 @@ class Publication(object):
             self.conclusion = conclusion
         if conflicts is not None:
             self.conflicts = conflicts
-        if fulltext is not None:
-            self.fulltext = fulltext
         if citation is not None:
             self.citation = citation
         if citation_date is not None:
@@ -513,29 +505,6 @@ class Publication(object):
         """
 
         self._conflicts = conflicts
-
-    @property
-    def fulltext(self):
-        """Gets the fulltext of this Publication.  # noqa: E501
-
-        Full text (if available).  # noqa: E501
-
-        :return: The fulltext of this Publication.  # noqa: E501
-        :rtype: str
-        """
-        return self._fulltext
-
-    @fulltext.setter
-    def fulltext(self, fulltext):
-        """Sets the fulltext of this Publication.
-
-        Full text (if available).  # noqa: E501
-
-        :param fulltext: The fulltext of this Publication.  # noqa: E501
-        :type: str
-        """
-
-        self._fulltext = fulltext
 
     @property
     def citation(self):

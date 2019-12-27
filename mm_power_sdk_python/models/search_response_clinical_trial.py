@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.clinical_trial import ClinicalTrial  # noqa: F401,E501
-from mm_power_sdk_python.models.filter import Filter  # noqa: F401,E501
 
 
 class SearchResponseClinicalTrial(object):

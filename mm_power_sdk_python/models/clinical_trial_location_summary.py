@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.clinical_trial_location_summary_countries import ClinicalTrialLocationSummaryCountries  # noqa: F401,E501
-from mm_power_sdk_python.models.facility import Facility  # noqa: F401,E501
 
 
 class ClinicalTrialLocationSummary(object):

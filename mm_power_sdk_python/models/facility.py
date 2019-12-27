@@ -14,8 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.facility_geo import FacilityGeo  # noqa: F401,E501
-from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
 class Facility(object):
@@ -44,6 +42,7 @@ class Facility(object):
         'lon': 'float',
         'geo': 'FacilityGeo',
         'status': 'str',
+        'link': 'str',
         'first_name': 'str',
         'middle_name': 'str',
         'last_name': 'str',
@@ -77,6 +76,7 @@ class Facility(object):
         'lon': 'lon',
         'geo': 'geo',
         'status': 'status',
+        'link': 'link',
         'first_name': 'first_name',
         'middle_name': 'middle_name',
         'last_name': 'last_name',
@@ -96,7 +96,7 @@ class Facility(object):
         'tags': 'tags'
     }
 
-    def __init__(self, id=None, street=None, number=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, lat=None, lon=None, geo=None, status=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, distance=None, is_in_institution=None, tags=None):  # noqa: E501
+    def __init__(self, id=None, street=None, number=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, lat=None, lon=None, geo=None, status=None, link=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, distance=None, is_in_institution=None, tags=None):  # noqa: E501
         """Facility - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._street = None
@@ -111,6 +111,7 @@ class Facility(object):
         self._lon = None
         self._geo = None
         self._status = None
+        self._link = None
         self._first_name = None
         self._middle_name = None
         self._last_name = None
@@ -155,6 +156,8 @@ class Facility(object):
             self.geo = geo
         if status is not None:
             self.status = status
+        if link is not None:
+            self.link = link
         if first_name is not None:
             self.first_name = first_name
         if middle_name is not None:
@@ -484,6 +487,29 @@ class Facility(object):
         """
 
         self._status = status
+
+    @property
+    def link(self):
+        """Gets the link of this Facility.  # noqa: E501
+
+        Country (competent authority) specific link (available for EU trials only)  # noqa: E501
+
+        :return: The link of this Facility.  # noqa: E501
+        :rtype: str
+        """
+        return self._link
+
+    @link.setter
+    def link(self, link):
+        """Sets the link of this Facility.
+
+        Country (competent authority) specific link (available for EU trials only)  # noqa: E501
+
+        :param link: The link of this Facility.  # noqa: E501
+        :type: str
+        """
+
+        self._link = link
 
     @property
     def first_name(self):

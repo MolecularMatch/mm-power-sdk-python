@@ -14,18 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.assertion import Assertion  # noqa: F401,E501
-from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_availability import DrugAvailability  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_brands import DrugBrands  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_composite_tags import DrugCompositeTags  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_dosages import DrugDosages  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_drugclass import DrugDrugclass  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_parents import DrugParents  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_pharmacology import DrugPharmacology  # noqa: F401,E501
-from mm_power_sdk_python.models.drug_prices import DrugPrices  # noqa: F401,E501
-from mm_power_sdk_python.models.external_id import ExternalId  # noqa: F401,E501
-from mm_power_sdk_python.models.synonym import Synonym  # noqa: F401,E501
 
 
 class Drug(object):

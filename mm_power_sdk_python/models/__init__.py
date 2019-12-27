@@ -42,6 +42,7 @@ from mm_power_sdk_python.models.external_id import ExternalId
 from mm_power_sdk_python.models.facility import Facility
 from mm_power_sdk_python.models.facility_geo import FacilityGeo
 from mm_power_sdk_python.models.filter import Filter
+from mm_power_sdk_python.models.institution import Institution
 from mm_power_sdk_python.models.intervention import Intervention
 from mm_power_sdk_python.models.outcome import Outcome
 from mm_power_sdk_python.models.publication import Publication

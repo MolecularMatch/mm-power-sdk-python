@@ -14,19 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.arm_group import ArmGroup  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_countries import ClinicalTrialCountries  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_location_summary import ClinicalTrialLocationSummary  # noqa: F401,E501
-from mm_power_sdk_python.models.clinical_trial_sponsors import ClinicalTrialSponsors  # noqa: F401,E501
-from mm_power_sdk_python.models.concept_association import ConceptAssociation  # noqa: F401,E501
-from mm_power_sdk_python.models.contact import Contact  # noqa: F401,E501
-from mm_power_sdk_python.models.eligibility import Eligibility  # noqa: F401,E501
-from mm_power_sdk_python.models.facility import Facility  # noqa: F401,E501
-from mm_power_sdk_python.models.intervention import Intervention  # noqa: F401,E501
-from mm_power_sdk_python.models.outcome import Outcome  # noqa: F401,E501
-from mm_power_sdk_python.models.study_design import StudyDesign  # noqa: F401,E501
-from mm_power_sdk_python.models.synonym import Synonym  # noqa: F401,E501
-from mm_power_sdk_python.models.tag import Tag  # noqa: F401,E501
 
 
 class ClinicalTrial(object):

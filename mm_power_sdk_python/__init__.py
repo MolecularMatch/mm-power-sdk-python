@@ -18,6 +18,7 @@ from __future__ import absolute_import
 from mm_power_sdk_python.api.assertions_api import AssertionsApi
 from mm_power_sdk_python.api.clinical_trials_api import ClinicalTrialsApi
 from mm_power_sdk_python.api.drugs_api import DrugsApi
+from mm_power_sdk_python.api.institutions_api import InstitutionsApi
 from mm_power_sdk_python.api.publication_api import PublicationApi
 # import ApiClient
 from mm_power_sdk_python.api_client import ApiClient
@@ -51,6 +52,7 @@ from mm_power_sdk_python.models.external_id import ExternalId
 from mm_power_sdk_python.models.facility import Facility
 from mm_power_sdk_python.models.facility_geo import FacilityGeo
 from mm_power_sdk_python.models.filter import Filter
+from mm_power_sdk_python.models.institution import Institution
 from mm_power_sdk_python.models.intervention import Intervention
 from mm_power_sdk_python.models.outcome import Outcome
 from mm_power_sdk_python.models.publication import Publication

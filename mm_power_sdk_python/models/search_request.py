@@ -14,10 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.filter import Filter  # noqa: F401,E501
-from mm_power_sdk_python.models.search_request_geopoint import SearchRequestGeopoint  # noqa: F401,E501
-from mm_power_sdk_python.models.search_request_location import SearchRequestLocation  # noqa: F401,E501
-from mm_power_sdk_python.models.search_request_min_should_match import SearchRequestMinShouldMatch  # noqa: F401,E501
 
 
 class SearchRequest(object):

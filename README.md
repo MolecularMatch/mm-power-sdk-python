@@ -90,6 +90,12 @@ Class | Method | HTTP request | Description
 *ClinicalTrialsApi* | [**search_trials**](docs/ClinicalTrialsApi.md#search_trials) | **POST** /trial/search | Search for clinical trials
 *DrugsApi* | [**get_drug**](docs/DrugsApi.md#get_drug) | **GET** /drug/{id} | Get a Drug
 *DrugsApi* | [**search_drugs**](docs/DrugsApi.md#search_drugs) | **POST** /drug/search | Search for drugs
+*InstitutionsApi* | [**delete_institution**](docs/InstitutionsApi.md#delete_institution) | **DELETE** /institution/{id} | Delete an institution
+*InstitutionsApi* | [**get_institution**](docs/InstitutionsApi.md#get_institution) | **GET** /institution/{id} | Get an institution
+*InstitutionsApi* | [**get_institution_status**](docs/InstitutionsApi.md#get_institution_status) | **GET** /institution/{id}/status | Get an institution record&#x27;s status
+*InstitutionsApi* | [**institution_post**](docs/InstitutionsApi.md#institution_post) | **POST** /institution | Create an institution
+*InstitutionsApi* | [**institutions_get**](docs/InstitutionsApi.md#institutions_get) | **GET** /institutions | Get a paginated list of institutions
+*InstitutionsApi* | [**put_institution**](docs/InstitutionsApi.md#put_institution) | **PUT** /institution/{id} | Put/Update an institution
 *PublicationApi* | [**count_publications**](docs/PublicationApi.md#count_publications) | **POST** /publication/count | Get the count of Publications matching a searchRequest
 *PublicationApi* | [**get_publication**](docs/PublicationApi.md#get_publication) | **GET** /publication/{id} | Get a Publication
 *PublicationApi* | [**search_publications**](docs/PublicationApi.md#search_publications) | **POST** /publication/search | Search for Publications
@@ -124,6 +130,7 @@ Class | Method | HTTP request | Description
  - [Facility](docs/Facility.md)
  - [FacilityGeo](docs/FacilityGeo.md)
  - [Filter](docs/Filter.md)
+ - [Institution](docs/Institution.md)
  - [Intervention](docs/Intervention.md)
  - [Outcome](docs/Outcome.md)
  - [Publication](docs/Publication.md)

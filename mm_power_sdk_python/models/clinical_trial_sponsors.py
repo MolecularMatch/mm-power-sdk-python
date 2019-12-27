@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from mm_power_sdk_python.models.agency import Agency  # noqa: F401,E501
 
 
 class ClinicalTrialSponsors(object):
