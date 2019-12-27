@@ -691,7 +691,7 @@ except ApiException as e:
 </ul>
 <h1 id="post_institution"><strong>post_institution</strong></h1>
 <blockquote>
-<p>Institution post_institution()</p>
+<p>Institution post_institution(body)</p>
 </blockquote>
 <p>Create an institution</p>
 <h3 id="example_4">Example</h3>
@@ -704,22 +704,40 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
+body = mm_power_sdk_python.Institution() # Institution | Institution object to send to MolecularMatch for processing
 
 try:
     # Create an institution
-    api_response = api_instance.post_institution()
+    api_response = api_instance.post_institution(body)
     pprint(api_response)
 except ApiException as e:
     print(&quot;Exception when calling InstitutionsApi-&gt;post_institution: %s\n&quot; % e)
 </code></pre>
 
 <h3 id="parameters_4">Parameters</h3>
-<p>This endpoint does not need any parameter.</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>body</strong></td>
+<td><a href="../Institution/"><strong>Institution</strong></a></td>
+<td>Institution object to send to MolecularMatch for processing</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h3 id="return-type_4">Return type</h3>
 <p><a href="../Institution/"><strong>Institution</strong></a></p>
 <h3 id="http-request-headers_4">HTTP request headers</h3>
 <ul>
-<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Content-Type</strong>: application/json</li>
 <li><strong>Accept</strong>: application/json</li>
 </ul>
 <h1 id="put_institution"><strong>put_institution</strong></h1>
