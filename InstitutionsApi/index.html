@@ -267,7 +267,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#institution_post">institution_post</a></li>
+    <li class="toctree-l2"><a href="#get_institutions">get_institutions</a></li>
     
         <ul>
         
@@ -282,7 +282,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#institutions_get">institutions_get</a></li>
+    <li class="toctree-l2"><a href="#post_institution">post_institution</a></li>
     
         <ul>
         
@@ -484,14 +484,14 @@
 <td>Get an institution record&#x27;s status</td>
 </tr>
 <tr>
-<td><a href="./#institution_post"><strong>institution_post</strong></a></td>
-<td><strong>POST</strong> /institution</td>
-<td>Create an institution</td>
-</tr>
-<tr>
-<td><a href="./#institutions_get"><strong>institutions_get</strong></a></td>
+<td><a href="./#get_institutions"><strong>get_institutions</strong></a></td>
 <td><strong>GET</strong> /institutions</td>
 <td>Get a paginated list of institutions</td>
+</tr>
+<tr>
+<td><a href="./#post_institution"><strong>post_institution</strong></a></td>
+<td><strong>POST</strong> /institution</td>
+<td>Create an institution</td>
 </tr>
 <tr>
 <td><a href="./#put_institution"><strong>put_institution</strong></a></td>
@@ -656,11 +656,11 @@ except ApiException as e:
 <li><strong>Content-Type</strong>: Not defined</li>
 <li><strong>Accept</strong>: application/json</li>
 </ul>
-<h1 id="institution_post"><strong>institution_post</strong></h1>
+<h1 id="get_institutions"><strong>get_institutions</strong></h1>
 <blockquote>
-<p>Institution institution_post()</p>
+<p>Institution get_institutions()</p>
 </blockquote>
-<p>Create an institution</p>
+<p>Get a paginated list of institutions</p>
 <h3 id="example_3">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
@@ -673,11 +673,11 @@ from pprint import pprint
 api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
 
 try:
-    # Create an institution
-    api_response = api_instance.institution_post()
+    # Get a paginated list of institutions
+    api_response = api_instance.get_institutions()
     pprint(api_response)
 except ApiException as e:
-    print(&quot;Exception when calling InstitutionsApi-&gt;institution_post: %s\n&quot; % e)
+    print(&quot;Exception when calling InstitutionsApi-&gt;get_institutions: %s\n&quot; % e)
 </code></pre>
 
 <h3 id="parameters_3">Parameters</h3>
@@ -689,11 +689,11 @@ except ApiException as e:
 <li><strong>Content-Type</strong>: Not defined</li>
 <li><strong>Accept</strong>: application/json</li>
 </ul>
-<h1 id="institutions_get"><strong>institutions_get</strong></h1>
+<h1 id="post_institution"><strong>post_institution</strong></h1>
 <blockquote>
-<p>Institution institutions_get()</p>
+<p>Institution post_institution()</p>
 </blockquote>
-<p>Get a paginated list of institutions</p>
+<p>Create an institution</p>
 <h3 id="example_4">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
@@ -706,11 +706,11 @@ from pprint import pprint
 api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
 
 try:
-    # Get a paginated list of institutions
-    api_response = api_instance.institutions_get()
+    # Create an institution
+    api_response = api_instance.post_institution()
     pprint(api_response)
 except ApiException as e:
-    print(&quot;Exception when calling InstitutionsApi-&gt;institutions_get: %s\n&quot; % e)
+    print(&quot;Exception when calling InstitutionsApi-&gt;post_institution: %s\n&quot; % e)
 </code></pre>
 
 <h3 id="parameters_4">Parameters</h3>
