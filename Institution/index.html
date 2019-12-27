@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>AssertionSources - MMPower Python SDK</title>
+  <title>Institution - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "AssertionSources";
-    var mkdocs_page_input_path = "AssertionSources.md";
+    var mkdocs_page_name = "Institution";
+    var mkdocs_page_input_path = "Institution.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -79,21 +79,9 @@
     <a class="" href="../AssertionPrevalence/">AssertionPrevalence</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">AssertionSources</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#assertionsources">AssertionSources</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../AssertionSources/">AssertionSources</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -221,9 +209,21 @@
     <a class="" href="../Filter/">Filter</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../Institution/">Institution</a>
+    <a class="current" href="./">Institution</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#institution">Institution</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -363,7 +363,7 @@
     
       
     
-    <li>AssertionSources</li>
+    <li>Institution</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -373,7 +373,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="assertionsources">AssertionSources</h1>
+                <h1 id="institution">Institution</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -388,67 +388,67 @@
 <tr>
 <td><strong>id</strong></td>
 <td><strong>str</strong></td>
-<td>Unique source identifier for this assertion.</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>type</strong></td>
-<td><strong>str</strong></td>
-<td>Type of clinical evidence associated with publication.</td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>sub_type</strong></td>
-<td><strong>str</strong></td>
-<td>A more specific sub type of clinical evidence associated with publication.</td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>pub_id</strong></td>
-<td><strong>str</strong></td>
-<td>A publication identifier.</td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>trial_id</strong></td>
-<td><strong>str</strong></td>
-<td>A clinical trial identifier.</td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>trial_phase</strong></td>
-<td><strong>str</strong></td>
-<td>A clinical trial phase.</td>
-<td>[optional]</td>
-</tr>
-<tr>
-<td><strong>functional_consequence</strong></td>
-<td><strong>str</strong></td>
-<td>Change to function of biomarker.</td>
+<td>unique identifier.</td>
 <td>[optional]</td>
 </tr>
 <tr>
 <td><strong>name</strong></td>
 <td><strong>str</strong></td>
-<td>Name of publication index if applicable.</td>
-<td>[optional]</td>
+<td>The name of the institution.</td>
+<td></td>
 </tr>
 <tr>
-<td><strong>link</strong></td>
+<td><strong>country</strong></td>
 <td><strong>str</strong></td>
-<td>A URL to publication if available.</td>
+<td>The ISO-3166 2 character country code where the institution is located.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>address</strong></td>
+<td><strong>str</strong></td>
+<td>Number and street portion of the address of the institution.</td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>year</strong></td>
-<td><strong>int</strong></td>
-<td>Year of publication.</td>
+<td><strong>sub_division</strong></td>
+<td><strong>str</strong></td>
+<td>State/Province portion of the address of the institution.</td>
 <td>[optional]</td>
 </tr>
 <tr>
-<td><strong>trust_rating</strong></td>
-<td><strong>float</strong></td>
-<td>A subjective assessment of evidence quality.</td>
+<td><strong>city</strong></td>
+<td><strong>str</strong></td>
+<td>City portion of the address of the institution.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>postal_code</strong></td>
+<td><strong>str</strong></td>
+<td>Postal code portion of the address of the institution.</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>idn</strong></td>
+<td><strong>str</strong></td>
+<td>The Integrated Delivery Network (IDN) for this institution.  Provide an id of another institution that is recognized by MoleculatMatch.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>synonyms</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Alternative names the institution is referred by.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td><strong>str</strong></td>
+<td>Indication of its level of readiness and incorporation into the MolecularMatch Knowledge base.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>test</strong></td>
+<td><strong>bool</strong></td>
+<td>A flag to mark test institutions.</td>
 <td>[optional]</td>
 </tr>
 </tbody>
@@ -460,10 +460,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../AssertionTherapeuticContext/" class="btn btn-neutral float-right" title="AssertionTherapeuticContext">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../InstitutionsApi/" class="btn btn-neutral float-right" title="mm_power_sdk_python.InstitutionsApi">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../AssertionPrevalence/" class="btn btn-neutral" title="AssertionPrevalence"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Filter/" class="btn btn-neutral" title="Filter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -489,10 +489,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../AssertionPrevalence/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Filter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../AssertionTherapeuticContext/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../InstitutionsApi/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
