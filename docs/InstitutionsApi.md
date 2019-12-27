@@ -202,7 +202,7 @@ This endpoint does not need any parameter.
  
 
 # **post_institution**
-> Institution post_institution()
+> Institution post_institution(body)
 
 Create an institution
 
@@ -217,17 +217,21 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
+body = mm_power_sdk_python.Institution() # Institution | Institution object to send to MolecularMatch for processing
 
 try:
     # Create an institution
-    api_response = api_instance.post_institution()
+    api_response = api_instance.post_institution(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling InstitutionsApi->post_institution: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**Institution**](Institution.md)| Institution object to send to MolecularMatch for processing | 
 
 ### Return type
 
@@ -239,7 +243,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
  

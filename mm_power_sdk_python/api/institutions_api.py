@@ -402,41 +402,43 @@ class InstitutionsApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def post_institution(self, **kwargs):  # noqa: E501
+    def post_institution(self, body, **kwargs):  # noqa: E501
         """Create an institution  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_institution(async_req=True)
+        >>> thread = api.post_institution(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param Institution body: Institution object to send to MolecularMatch for processing (required)
         :return: Institution
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.post_institution_with_http_info(**kwargs)  # noqa: E501
+            return self.post_institution_with_http_info(body, **kwargs)  # noqa: E501
         else:
-            (data) = self.post_institution_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.post_institution_with_http_info(body, **kwargs)  # noqa: E501
             return data
 
-    def post_institution_with_http_info(self, **kwargs):  # noqa: E501
+    def post_institution_with_http_info(self, body, **kwargs):  # noqa: E501
         """Create an institution  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.post_institution_with_http_info(async_req=True)
+        >>> thread = api.post_institution_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param Institution body: Institution object to send to MolecularMatch for processing (required)
         :return: Institution
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -451,6 +453,10 @@ class InstitutionsApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `post_institution`")  # noqa: E501
 
         collection_formats = {}
 
@@ -464,8 +470,14 @@ class InstitutionsApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
