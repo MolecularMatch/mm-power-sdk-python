@@ -91,11 +91,16 @@ Class | Method | HTTP request | Description
 *DrugsApi* | [**get_drug**](docs/DrugsApi.md#get_drug) | **GET** /drug/{id} | Get a Drug
 *DrugsApi* | [**search_drugs**](docs/DrugsApi.md#search_drugs) | **POST** /drug/search | Search for drugs
 *InstitutionsApi* | [**delete_institution**](docs/InstitutionsApi.md#delete_institution) | **DELETE** /institution/{id} | Delete an institution
+*InstitutionsApi* | [**delete_private_trial**](docs/InstitutionsApi.md#delete_private_trial) | **DELETE** /institution/{id}/trial/{trialId} | Delete a private trial
 *InstitutionsApi* | [**get_institution**](docs/InstitutionsApi.md#get_institution) | **GET** /institution/{id} | Get an institution
 *InstitutionsApi* | [**get_institution_status**](docs/InstitutionsApi.md#get_institution_status) | **GET** /institution/{id}/status | Get an institution record&#x27;s status
 *InstitutionsApi* | [**get_institutions**](docs/InstitutionsApi.md#get_institutions) | **GET** /institutions | Get a paginated list of institutions
+*InstitutionsApi* | [**get_private_trial**](docs/InstitutionsApi.md#get_private_trial) | **GET** /institution/{id}/trial/{trialId} | Get a private trial
+*InstitutionsApi* | [**get_private_trial_status**](docs/InstitutionsApi.md#get_private_trial_status) | **GET** /institution/{id}/trial/{trialId}/status | Get a private trial record&#x27;s status
 *InstitutionsApi* | [**post_institution**](docs/InstitutionsApi.md#post_institution) | **POST** /institution | Create an institution
+*InstitutionsApi* | [**post_private_trial**](docs/InstitutionsApi.md#post_private_trial) | **POST** /institution/{id}/trial | Create a private trial
 *InstitutionsApi* | [**put_institution**](docs/InstitutionsApi.md#put_institution) | **PUT** /institution/{id} | Put/Update an institution
+*InstitutionsApi* | [**put_private_trial**](docs/InstitutionsApi.md#put_private_trial) | **PUT** /institution/{id}/trial/{trialId} | Put/Update a private trial
 *PublicationApi* | [**count_publications**](docs/PublicationApi.md#count_publications) | **POST** /publication/count | Get the count of Publications matching a searchRequest
 *PublicationApi* | [**get_publication**](docs/PublicationApi.md#get_publication) | **GET** /publication/{id} | Get a Publication
 *PublicationApi* | [**search_publications**](docs/PublicationApi.md#search_publications) | **POST** /publication/search | Search for Publications
@@ -126,6 +131,7 @@ Class | Method | HTTP request | Description
  - [DrugPharmacology](docs/DrugPharmacology.md)
  - [DrugPrices](docs/DrugPrices.md)
  - [Eligibility](docs/Eligibility.md)
+ - [ExpandedAccess](docs/ExpandedAccess.md)
  - [ExternalId](docs/ExternalId.md)
  - [Facility](docs/Facility.md)
  - [FacilityGeo](docs/FacilityGeo.md)
@@ -133,8 +139,12 @@ Class | Method | HTTP request | Description
  - [Institution](docs/Institution.md)
  - [Intervention](docs/Intervention.md)
  - [Outcome](docs/Outcome.md)
+ - [Oversight](docs/Oversight.md)
+ - [PrivateTrial](docs/PrivateTrial.md)
  - [Publication](docs/Publication.md)
  - [PublicationAuthors](docs/PublicationAuthors.md)
+ - [Reference](docs/Reference.md)
+ - [ResponsibleParty](docs/ResponsibleParty.md)
  - [SearchRequest](docs/SearchRequest.md)
  - [SearchRequestGeopoint](docs/SearchRequestGeopoint.md)
  - [SearchRequestLocation](docs/SearchRequestLocation.md)

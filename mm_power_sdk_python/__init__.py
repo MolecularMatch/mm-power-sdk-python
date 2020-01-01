@@ -48,6 +48,7 @@ from mm_power_sdk_python.models.drug_parents import DrugParents
 from mm_power_sdk_python.models.drug_pharmacology import DrugPharmacology
 from mm_power_sdk_python.models.drug_prices import DrugPrices
 from mm_power_sdk_python.models.eligibility import Eligibility
+from mm_power_sdk_python.models.expanded_access import ExpandedAccess
 from mm_power_sdk_python.models.external_id import ExternalId
 from mm_power_sdk_python.models.facility import Facility
 from mm_power_sdk_python.models.facility_geo import FacilityGeo
@@ -55,8 +56,12 @@ from mm_power_sdk_python.models.filter import Filter
 from mm_power_sdk_python.models.institution import Institution
 from mm_power_sdk_python.models.intervention import Intervention
 from mm_power_sdk_python.models.outcome import Outcome
+from mm_power_sdk_python.models.oversight import Oversight
+from mm_power_sdk_python.models.private_trial import PrivateTrial
 from mm_power_sdk_python.models.publication import Publication
 from mm_power_sdk_python.models.publication_authors import PublicationAuthors
+from mm_power_sdk_python.models.reference import Reference
+from mm_power_sdk_python.models.responsible_party import ResponsibleParty
 from mm_power_sdk_python.models.search_request import SearchRequest
 from mm_power_sdk_python.models.search_request_geopoint import SearchRequestGeopoint
 from mm_power_sdk_python.models.search_request_location import SearchRequestLocation

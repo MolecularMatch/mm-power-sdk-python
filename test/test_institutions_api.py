@@ -35,6 +35,13 @@ class TestInstitutionsApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_private_trial(self):
+        """Test case for delete_private_trial
+
+        Delete a private trial  # noqa: E501
+        """
+        pass
+
     def test_get_institution(self):
         """Test case for get_institution
 
@@ -56,6 +63,20 @@ class TestInstitutionsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_private_trial(self):
+        """Test case for get_private_trial
+
+        Get a private trial  # noqa: E501
+        """
+        pass
+
+    def test_get_private_trial_status(self):
+        """Test case for get_private_trial_status
+
+        Get a private trial record's status  # noqa: E501
+        """
+        pass
+
     def test_post_institution(self):
         """Test case for post_institution
 
@@ -63,10 +84,24 @@ class TestInstitutionsApi(unittest.TestCase):
         """
         pass
 
+    def test_post_private_trial(self):
+        """Test case for post_private_trial
+
+        Create a private trial  # noqa: E501
+        """
+        pass
+
     def test_put_institution(self):
         """Test case for put_institution
 
         Put/Update an institution  # noqa: E501
+        """
+        pass
+
+    def test_put_private_trial(self):
+        """Test case for put_private_trial
+
+        Put/Update a private trial  # noqa: E501
         """
         pass
 
