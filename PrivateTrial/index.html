@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>ClinicalTrialCountries - MMPower Python SDK</title>
+  <title>PrivateTrial - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "ClinicalTrialCountries";
-    var mkdocs_page_input_path = "ClinicalTrialCountries.md";
+    var mkdocs_page_name = "PrivateTrial";
+    var mkdocs_page_input_path = "PrivateTrial.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -99,21 +99,9 @@
     <a class="" href="../ClinicalTrial/">ClinicalTrial</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">ClinicalTrialCountries</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#clinicaltrialcountries">ClinicalTrialCountries</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../ClinicalTrialCountries/">ClinicalTrialCountries</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -251,9 +239,21 @@
     <a class="" href="../Oversight/">Oversight</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../PrivateTrial/">PrivateTrial</a>
+    <a class="current" href="./">PrivateTrial</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#privatetrial">PrivateTrial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -388,7 +388,7 @@
     
       
     
-    <li>ClinicalTrialCountries</li>
+    <li>PrivateTrial</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -398,7 +398,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="clinicaltrialcountries">ClinicalTrialCountries</h1>
+                <h1 id="privatetrial">PrivateTrial</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -411,16 +411,268 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>name</strong></td>
+<td><strong>institution_id</strong></td>
 <td><strong>str</strong></td>
-<td></td>
-<td></td>
+<td>Unique institution identifier.</td>
+<td>[optional]</td>
 </tr>
 <tr>
-<td><strong>code</strong></td>
+<td><strong>institution_study_id</strong></td>
+<td><strong>str</strong></td>
+<td>Unique study identifier.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>registry_id</strong></td>
+<td><strong>str</strong></td>
+<td>The public registry study id.  This is only populated once the trial is no longer a private trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>brief_title</strong></td>
+<td><strong>str</strong></td>
+<td>A short title of the clinical study written in language intended for the lay public. The title should include, where possible, information on the participants, condition being evaluated, and intervention(s) studied.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>acronym</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Acronyms or abbreviations used publicly to identify the clinical study.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>official_title</strong></td>
+<td><strong>str</strong></td>
+<td>Official title for the clinical trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>sponsors</strong></td>
+<td><a href="../ClinicalTrialSponsors/"><strong>list[ClinicalTrialSponsors]</strong></a></td>
+<td>The list of organizations or persons who initiated the study and who have authority and control over the study.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>source</strong></td>
+<td><strong>str</strong></td>
+<td>Native data source of this record</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>oversight</strong></td>
+<td><a href="../Oversight/"><strong>Oversight</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>brief_summary</strong></td>
+<td><strong>str</strong></td>
+<td>A short description of the clinical study, including a brief statement of the clinical study&#x27;s hypothesis, written in language intended for the lay public.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>detailed_description</strong></td>
+<td><strong>str</strong></td>
+<td>Extended description of the protocol, including more technical information (as compared to the Brief Summary), if desired. Do not include the entire protocol; do not duplicate information recorded in other data elements, such as Eligibility Criteria or outcome measures.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>status</strong></td>
+<td><strong>str</strong></td>
+<td>Trial recruiting status.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>start_date</strong></td>
+<td><strong>datetime</strong></td>
+<td>The estimated date on which the clinical study will be open for recruitment of participants, or the actual date on which the first participant was enrolled.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>completion_date</strong></td>
+<td><strong>datetime</strong></td>
+<td>The date the final participant was examined or received an intervention for purposes of final collection of data for the primary and secondary outcome measures and adverse events (for example, last participant’s last visit), whether the clinical study concluded according to the pre-specified protocol or was terminated</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>phase</strong></td>
+<td><strong>str</strong></td>
+<td>For a clinical trial of a drug product (including a biological product), the numerical phase of such clinical trial, consistent with terminology in 21 CFR 312.21 and in 21 CFR 312.85 for phase 4 studies.</td>
+<td>[optional] [default to 'N/A']</td>
+</tr>
+<tr>
+<td><strong>study_type</strong></td>
+<td><strong>str</strong></td>
+<td>The nature of the investigation or investigational use for which clinical study information is being submitted.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>has_expanded_access</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether there is expanded access to the investigational product for patients who do not qualify for enrollment in a clinical trial. Expanded Access for investigational drug products (including biological products) includes all expanded access types under section 561 of the Federal Food, Drug, and Cosmetic Act: (1) for individual participants, including emergency use; (2) for intermediate-size participant populations; and (3) under a treatment IND or treatment protocol.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>expanded_access</strong></td>
+<td><a href="../ExpandedAccess/"><strong>ExpandedAccess</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>study_design</strong></td>
+<td><a href="../StudyDesign/"><strong>StudyDesign</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>primary_outcome</strong></td>
+<td><a href="../Outcome/"><strong>list[Outcome]</strong></a></td>
+<td>The outcome that an investigator considers to be the most important among the many outcomes that are to be examined in the study.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>secondary_outcome</strong></td>
+<td><a href="../Outcome/"><strong>list[Outcome]</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>other_outcome</strong></td>
+<td><a href="../Outcome/"><strong>list[Outcome]</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>number_of_arms</strong></td>
+<td><strong>int</strong></td>
+<td>The number of trial arms.</td>
+<td>[optional] [default to 1]</td>
+</tr>
+<tr>
+<td><strong>number_of_groups</strong></td>
+<td><strong>int</strong></td>
+<td>The number of trial groups.</td>
+<td>[optional] [default to 1]</td>
+</tr>
+<tr>
+<td><strong>enrollment</strong></td>
+<td><strong>int</strong></td>
+<td>The estimated total number of participants to be enrolled (target number) or the actual total number of participants that are enrolled in the clinical study.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>condition</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Diseases/Conditions related to this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>arm_group</strong></td>
+<td><a href="../ArmGroup/"><strong>list[ArmGroup]</strong></a></td>
+<td>Pre-specified groups of participants in a clinical trial assigned to receive specific interventions (or no intervention) according to a protocol.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>intervention</strong></td>
+<td><a href="../Intervention/"><strong>list[Intervention]</strong></a></td>
+<td>Specifies the intervention(s) associated with each arm or group.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>biospec_retention</strong></td>
 <td><strong>str</strong></td>
 <td></td>
+<td>[optional] [default to 'None Retained']</td>
+</tr>
+<tr>
+<td><strong>biospec_descr</strong></td>
+<td><strong>str</strong></td>
 <td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>eligibility</strong></td>
+<td><a href="../Eligibility/"><strong>Eligibility</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>overall_official</strong></td>
+<td><a href="../Contact/"><strong>list[Contact]</strong></a></td>
+<td>Person responsible for the overall scientific leadership of the protocol, including study principal investigator.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>overall_contact</strong></td>
+<td><a href="../Contact/"><strong>Contact</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>overall_contact_backup</strong></td>
+<td><a href="../Contact/"><strong>Contact</strong></a></td>
+<td></td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>location</strong></td>
+<td><a href="../Facility/"><strong>list[Facility]</strong></a></td>
+<td>Information about the sites offering this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>location_countries</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Countries with sites offering this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>link</strong></td>
+<td><strong>str</strong></td>
+<td>URL to institution (if private) or registry listing of this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>reference</strong></td>
+<td><a href="../Reference/"><strong>list[Reference]</strong></a></td>
+<td>Reference publications pertaining to this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>verification_date</strong></td>
+<td><strong>datetime</strong></td>
+<td>The date on which the responsible party last verified the clinical study information in the entire ClinicalTrials.gov record for the clinical study, even if no additional or updated information is being submitted.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>study_first_submitted</strong></td>
+<td><strong>datetime</strong></td>
+<td>The date on which the study sponsor or investigator first submitted a study record to the trial registry.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>study_first_posted</strong></td>
+<td><strong>datetime</strong></td>
+<td>The date on which the study was first made public on trial registry.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>last_update_posted</strong></td>
+<td><strong>datetime</strong></td>
+<td>The most recent date that any information was updated for this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>keyword</strong></td>
+<td><strong>list[str]</strong></td>
+<td>Words or phrases that best describe the protocol. Keywords help users find studies in the database. Use NLM&#x27;s Medical Subject Heading (MeSH)-controlled vocabulary terms where appropriate. Be as specific and precise as possible.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>responsible_party</strong></td>
+<td><a href="../ResponsibleParty/"><strong>list[ResponsibleParty]</strong></a></td>
+<td>The entities and individuals responsible for this trial.</td>
+<td>[optional]</td>
 </tr>
 </tbody>
 </table>
@@ -431,10 +683,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ClinicalTrialLocationSummary/" class="btn btn-neutral float-right" title="ClinicalTrialLocationSummary">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../Publication/" class="btn btn-neutral float-right" title="Publication">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ClinicalTrial/" class="btn btn-neutral" title="ClinicalTrial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Oversight/" class="btn btn-neutral" title="Oversight"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -460,10 +712,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ClinicalTrial/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Oversight/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ClinicalTrialLocationSummary/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../Publication/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

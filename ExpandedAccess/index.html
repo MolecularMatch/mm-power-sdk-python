@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>ClinicalTrialCountries - MMPower Python SDK</title>
+  <title>ExpandedAccess - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "ClinicalTrialCountries";
-    var mkdocs_page_input_path = "ClinicalTrialCountries.md";
+    var mkdocs_page_name = "ExpandedAccess";
+    var mkdocs_page_input_path = "ExpandedAccess.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -99,21 +99,9 @@
     <a class="" href="../ClinicalTrial/">ClinicalTrial</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">ClinicalTrialCountries</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#clinicaltrialcountries">ClinicalTrialCountries</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../ClinicalTrialCountries/">ClinicalTrialCountries</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -201,9 +189,21 @@
     <a class="" href="../Eligibility/">Eligibility</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../ExpandedAccess/">ExpandedAccess</a>
+    <a class="current" href="./">ExpandedAccess</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#expandedaccess">ExpandedAccess</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -388,7 +388,7 @@
     
       
     
-    <li>ClinicalTrialCountries</li>
+    <li>ExpandedAccess</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -398,7 +398,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="clinicaltrialcountries">ClinicalTrialCountries</h1>
+                <h1 id="expandedaccess">ExpandedAccess</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -411,16 +411,22 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>name</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td></td>
+<td><strong>expanded_access_type_individual</strong></td>
+<td><strong>bool</strong></td>
+<td>Individual Patients: For individual participants, including for emergency use, as specified in 21 CFR 312.310.</td>
+<td>[optional]</td>
 </tr>
 <tr>
-<td><strong>code</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td></td>
+<td><strong>expanded_access_type_intermediate</strong></td>
+<td><strong>bool</strong></td>
+<td>Intermediate-size Population: For intermediate-size participant populations, as specified in 21 CFR 312.315.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>expanded_access_type_treatment</strong></td>
+<td><strong>bool</strong></td>
+<td>Treatment IND/Protocol: Under a treatment IND or treatment protocol, as specified in 21 CFR 312.320.</td>
+<td>[optional]</td>
 </tr>
 </tbody>
 </table>
@@ -431,10 +437,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ClinicalTrialLocationSummary/" class="btn btn-neutral float-right" title="ClinicalTrialLocationSummary">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ExternalId/" class="btn btn-neutral float-right" title="ExternalId">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ClinicalTrial/" class="btn btn-neutral" title="ClinicalTrial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Eligibility/" class="btn btn-neutral" title="Eligibility"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -460,10 +466,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ClinicalTrial/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Eligibility/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ClinicalTrialLocationSummary/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ExternalId/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

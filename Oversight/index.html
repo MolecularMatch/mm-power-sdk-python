@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>ClinicalTrialCountries - MMPower Python SDK</title>
+  <title>Oversight - MMPower Python SDK</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -18,8 +18,8 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "ClinicalTrialCountries";
-    var mkdocs_page_input_path = "ClinicalTrialCountries.md";
+    var mkdocs_page_name = "Oversight";
+    var mkdocs_page_input_path = "Oversight.md";
     var mkdocs_page_url = null;
   </script>
   
@@ -99,21 +99,9 @@
     <a class="" href="../ClinicalTrial/">ClinicalTrial</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">ClinicalTrialCountries</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#clinicaltrialcountries">ClinicalTrialCountries</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#properties">Properties</a></li>
-        
-        </ul>
-    
-
-    </ul>
+    <a class="" href="../ClinicalTrialCountries/">ClinicalTrialCountries</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -246,9 +234,21 @@
     <a class="" href="../Outcome/">Outcome</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../Oversight/">Oversight</a>
+    <a class="current" href="./">Oversight</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#oversight">Oversight</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#properties">Properties</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -388,7 +388,7 @@
     
       
     
-    <li>ClinicalTrialCountries</li>
+    <li>Oversight</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -398,7 +398,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="clinicaltrialcountries">ClinicalTrialCountries</h1>
+                <h1 id="oversight">Oversight</h1>
 <h2 id="properties">Properties</h2>
 <table>
 <thead>
@@ -411,16 +411,40 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>name</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td></td>
+<td><strong>has_dmc</strong></td>
+<td><strong>bool</strong></td>
+<td>Indication that a clinical study has a data monitoring committee.</td>
+<td>[optional]</td>
 </tr>
 <tr>
-<td><strong>code</strong></td>
-<td><strong>str</strong></td>
-<td></td>
-<td></td>
+<td><strong>is_fda_regulated_drug</strong></td>
+<td><strong>bool</strong></td>
+<td>Indication that a clinical study is studying a drug product (including a biological product) subject to section 505 of the Federal Food, Drug, and Cosmetic Act or to section 351 of the Public Health Service Act.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>is_fda_regulated_device</strong></td>
+<td><strong>bool</strong></td>
+<td>Indication that a clinical study is studying a device product subject to section 510(k), 515, or 520(m) of the Federal Food, Drug, and Cosmetic Act.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>is_unapproved_device</strong></td>
+<td><strong>bool</strong></td>
+<td>Indication that at least one device product studied in the clinical study has not been previously approved or cleared by the U.S. Food and Drug Administration (FDA) for one or more uses. Yes: At least one studied FDA-regulated device product has not been previously approved or cleared by FDA.  No: All studied FDA-regulated device products have been previously approved or cleared by FDA.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>is_ppsd</strong></td>
+<td><strong>bool</strong></td>
+<td>Pediatric postmarket surveillance of a device.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>is_us_export</strong></td>
+<td><strong>bool</strong></td>
+<td>Whether any drug product (including a biological product) or device product studied in the clinical study is manufactured in the United States or one of its territories and exported for study in a clinical study in another country. Required if U.S. FDA-regulated Drug and/or U.S. FDA-regulated Device is \&quot;Yes,\&quot; U.S. FDA IND or IDE is \&quot;No\&quot;, and Facility Information does not include at least one U.S. location.</td>
+<td>[optional]</td>
 </tr>
 </tbody>
 </table>
@@ -431,10 +455,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../ClinicalTrialLocationSummary/" class="btn btn-neutral float-right" title="ClinicalTrialLocationSummary">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../PrivateTrial/" class="btn btn-neutral float-right" title="PrivateTrial">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../ClinicalTrial/" class="btn btn-neutral" title="ClinicalTrial"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../Outcome/" class="btn btn-neutral" title="Outcome"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -460,10 +484,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../ClinicalTrial/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../Outcome/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../ClinicalTrialLocationSummary/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../PrivateTrial/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
