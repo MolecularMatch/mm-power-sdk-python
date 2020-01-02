@@ -82,7 +82,7 @@ class Eligibility(object):
     def gender(self):
         """Gets the gender of this Eligibility.  # noqa: E501
 
-        Indicates male, femail or no limit on eligibility based on the sex of participants.  # noqa: E501
+        Indicates male, female or no limit on eligibility based on the sex of participants.  # noqa: E501
 
         :return: The gender of this Eligibility.  # noqa: E501
         :rtype: str
@@ -93,11 +93,17 @@ class Eligibility(object):
     def gender(self, gender):
         """Sets the gender of this Eligibility.
 
-        Indicates male, femail or no limit on eligibility based on the sex of participants.  # noqa: E501
+        Indicates male, female or no limit on eligibility based on the sex of participants.  # noqa: E501
 
         :param gender: The gender of this Eligibility.  # noqa: E501
         :type: str
         """
+        allowed_values = ["Female", "Male", "All"]  # noqa: E501
+        if gender not in allowed_values:
+            raise ValueError(
+                "Invalid value for `gender` ({0}), must be one of {1}"  # noqa: E501
+                .format(gender, allowed_values)
+            )
 
         self._gender = gender
 

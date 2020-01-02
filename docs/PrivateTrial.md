@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **institution_id** | **str** | Unique institution identifier. | [optional] 
 **institution_study_id** | **str** | Unique study identifier. | [optional] 
 **registry_id** | **str** | The public registry study id.  This is only populated once the trial is no longer a private trial. | [optional] 
+**visible_to_idn** | **bool** | If true, then this trial will be visible to the entire IDN, else it is visible only to the owning institution. | [optional] [default to True]
 **brief_title** | **str** | A short title of the clinical study written in language intended for the lay public. The title should include, where possible, information on the participants, condition being evaluated, and intervention(s) studied. | [optional] 
 **acronym** | **list[str]** | Acronyms or abbreviations used publicly to identify the clinical study. | [optional] 
 **official_title** | **str** | Official title for the clinical trial. | [optional] 

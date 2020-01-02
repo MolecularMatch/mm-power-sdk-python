@@ -141,7 +141,7 @@ class Oversight(object):
     def is_unapproved_device(self):
         """Gets the is_unapproved_device of this Oversight.  # noqa: E501
 
-        Indication that at least one device product studied in the clinical study has not been previously approved or cleared by the U.S. Food and Drug Administration (FDA) for one or more uses. Yes: At least one studied FDA-regulated device product has not been previously approved or cleared by FDA.  No: All studied FDA-regulated device products have been previously approved or cleared by FDA.  # noqa: E501
+        Indication that at least one device product studied in the clinical study has not been previously approved or cleared by the U.S. Food and Drug Administration (FDA) for one or more uses. true: At least one studied FDA-regulated device product has not been previously approved or cleared by FDA.  false: All studied FDA-regulated device products have been previously approved or cleared by FDA.  # noqa: E501
 
         :return: The is_unapproved_device of this Oversight.  # noqa: E501
         :rtype: bool
@@ -152,7 +152,7 @@ class Oversight(object):
     def is_unapproved_device(self, is_unapproved_device):
         """Sets the is_unapproved_device of this Oversight.
 
-        Indication that at least one device product studied in the clinical study has not been previously approved or cleared by the U.S. Food and Drug Administration (FDA) for one or more uses. Yes: At least one studied FDA-regulated device product has not been previously approved or cleared by FDA.  No: All studied FDA-regulated device products have been previously approved or cleared by FDA.  # noqa: E501
+        Indication that at least one device product studied in the clinical study has not been previously approved or cleared by the U.S. Food and Drug Administration (FDA) for one or more uses. true: At least one studied FDA-regulated device product has not been previously approved or cleared by FDA.  false: All studied FDA-regulated device products have been previously approved or cleared by FDA.  # noqa: E501
 
         :param is_unapproved_device: The is_unapproved_device of this Oversight.  # noqa: E501
         :type: bool
@@ -187,7 +187,7 @@ class Oversight(object):
     def is_us_export(self):
         """Gets the is_us_export of this Oversight.  # noqa: E501
 
-        Whether any drug product (including a biological product) or device product studied in the clinical study is manufactured in the United States or one of its territories and exported for study in a clinical study in another country. Required if U.S. FDA-regulated Drug and/or U.S. FDA-regulated Device is \"Yes,\" U.S. FDA IND or IDE is \"No\", and Facility Information does not include at least one U.S. location.  # noqa: E501
+        Whether any drug product (including a biological product) or device product studied in the clinical study is manufactured in the United States or one of its territories and exported for study in a clinical study in another country. Required if U.S. FDA-regulated Drug and/or U.S. FDA-regulated Device is true, U.S. FDA IND or IDE is false, and Facility Information does not include at least one U.S. location.  # noqa: E501
 
         :return: The is_us_export of this Oversight.  # noqa: E501
         :rtype: bool
@@ -198,7 +198,7 @@ class Oversight(object):
     def is_us_export(self, is_us_export):
         """Sets the is_us_export of this Oversight.
 
-        Whether any drug product (including a biological product) or device product studied in the clinical study is manufactured in the United States or one of its territories and exported for study in a clinical study in another country. Required if U.S. FDA-regulated Drug and/or U.S. FDA-regulated Device is \"Yes,\" U.S. FDA IND or IDE is \"No\", and Facility Information does not include at least one U.S. location.  # noqa: E501
+        Whether any drug product (including a biological product) or device product studied in the clinical study is manufactured in the United States or one of its territories and exported for study in a clinical study in another country. Required if U.S. FDA-regulated Drug and/or U.S. FDA-regulated Device is true, U.S. FDA IND or IDE is false, and Facility Information does not include at least one U.S. location.  # noqa: E501
 
         :param is_us_export: The is_us_export of this Oversight.  # noqa: E501
         :type: bool

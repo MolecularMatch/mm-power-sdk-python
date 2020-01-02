@@ -32,6 +32,7 @@ class PrivateTrial(object):
         'institution_id': 'str',
         'institution_study_id': 'str',
         'registry_id': 'str',
+        'visible_to_idn': 'bool',
         'brief_title': 'str',
         'acronym': 'list[str]',
         'official_title': 'str',
@@ -79,6 +80,7 @@ class PrivateTrial(object):
         'institution_id': 'institution_id',
         'institution_study_id': 'institution_study_id',
         'registry_id': 'registry_id',
+        'visible_to_idn': 'visible_to_IDN',
         'brief_title': 'brief_title',
         'acronym': 'acronym',
         'official_title': 'official_title',
@@ -122,11 +124,12 @@ class PrivateTrial(object):
         'responsible_party': 'responsible_party'
     }
 
-    def __init__(self, institution_id=None, institution_study_id=None, registry_id=None, brief_title=None, acronym=None, official_title=None, sponsors=None, source=None, oversight=None, brief_summary=None, detailed_description=None, status=None, start_date=None, completion_date=None, phase='N/A', study_type=None, has_expanded_access=None, expanded_access=None, study_design=None, primary_outcome=None, secondary_outcome=None, other_outcome=None, number_of_arms=1, number_of_groups=1, enrollment=None, condition=None, arm_group=None, intervention=None, biospec_retention='None Retained', biospec_descr=None, eligibility=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location=None, location_countries=None, link=None, reference=None, verification_date=None, study_first_submitted=None, study_first_posted=None, last_update_posted=None, keyword=None, responsible_party=None):  # noqa: E501
+    def __init__(self, institution_id=None, institution_study_id=None, registry_id=None, visible_to_idn=True, brief_title=None, acronym=None, official_title=None, sponsors=None, source=None, oversight=None, brief_summary=None, detailed_description=None, status=None, start_date=None, completion_date=None, phase='N/A', study_type=None, has_expanded_access=None, expanded_access=None, study_design=None, primary_outcome=None, secondary_outcome=None, other_outcome=None, number_of_arms=1, number_of_groups=1, enrollment=None, condition=None, arm_group=None, intervention=None, biospec_retention='None Retained', biospec_descr=None, eligibility=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location=None, location_countries=None, link=None, reference=None, verification_date=None, study_first_submitted=None, study_first_posted=None, last_update_posted=None, keyword=None, responsible_party=None):  # noqa: E501
         """PrivateTrial - a model defined in Swagger"""  # noqa: E501
         self._institution_id = None
         self._institution_study_id = None
         self._registry_id = None
+        self._visible_to_idn = None
         self._brief_title = None
         self._acronym = None
         self._official_title = None
@@ -175,6 +178,8 @@ class PrivateTrial(object):
             self.institution_study_id = institution_study_id
         if registry_id is not None:
             self.registry_id = registry_id
+        if visible_to_idn is not None:
+            self.visible_to_idn = visible_to_idn
         if brief_title is not None:
             self.brief_title = brief_title
         if acronym is not None:
@@ -326,6 +331,29 @@ class PrivateTrial(object):
         """
 
         self._registry_id = registry_id
+
+    @property
+    def visible_to_idn(self):
+        """Gets the visible_to_idn of this PrivateTrial.  # noqa: E501
+
+        If true, then this trial will be visible to the entire IDN, else it is visible only to the owning institution.  # noqa: E501
+
+        :return: The visible_to_idn of this PrivateTrial.  # noqa: E501
+        :rtype: bool
+        """
+        return self._visible_to_idn
+
+    @visible_to_idn.setter
+    def visible_to_idn(self, visible_to_idn):
+        """Sets the visible_to_idn of this PrivateTrial.
+
+        If true, then this trial will be visible to the entire IDN, else it is visible only to the owning institution.  # noqa: E501
+
+        :param visible_to_idn: The visible_to_idn of this PrivateTrial.  # noqa: E501
+        :type: bool
+        """
+
+        self._visible_to_idn = visible_to_idn
 
     @property
     def brief_title(self):
@@ -529,6 +557,12 @@ class PrivateTrial(object):
         :param status: The status of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        allowed_values = ["Active, not recruiting", "Approved for marketing", "Available", "Completed", "Enrolling by invitation", "No longer available", "Not yet recruiting", "Recruiting", "Suspended", "Temporarily not available", "Terminated", "Withdrawn", "Withheld", "Unknown status"]  # noqa: E501
+        if status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
+                .format(status, allowed_values)
+            )
 
         self._status = status
 
@@ -598,6 +632,12 @@ class PrivateTrial(object):
         :param phase: The phase of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        allowed_values = ["N/A", "Early Phase 1", "Phase 1", "Phase 1/Phase 2", "Phase 2", "Phase 2/Phase 3", "Phase 3", "Phase 4"]  # noqa: E501
+        if phase not in allowed_values:
+            raise ValueError(
+                "Invalid value for `phase` ({0}), must be one of {1}"  # noqa: E501
+                .format(phase, allowed_values)
+            )
 
         self._phase = phase
 
@@ -621,6 +661,12 @@ class PrivateTrial(object):
         :param study_type: The study_type of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        allowed_values = ["Expanded Access", "Interventional", "N/A", "Observational", "Observational [Patient Registry]"]  # noqa: E501
+        if study_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `study_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(study_type, allowed_values)
+            )
 
         self._study_type = study_type
 

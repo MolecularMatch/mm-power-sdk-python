@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**gender** | **str** | Indicates male, femail or no limit on eligibility based on the sex of participants. | [optional] 
+**gender** | **str** | Indicates male, female or no limit on eligibility based on the sex of participants. | [optional] 
 **gender_based** | **str** | Indicates whether participant eligibility is based on gender. | [optional] 
 **gender_description** | **str** | Descriptive information about Gender criteria. | [optional] 
 **minimum_age** | **str** | The numerical value, if any, for the minimum age a potential participant must meet to be eligible for the clinical study. | [optional] 

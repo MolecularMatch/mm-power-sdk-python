@@ -82,6 +82,12 @@ class Intervention(object):
         :param intervention_type: The intervention_type of this Intervention.  # noqa: E501
         :type: str
         """
+        allowed_values = ["Behavioral", "Biological", "Combination Product", "Device", "Diagnostic Test", "Dietary Supplement", "Drug", "Genetic", "Procedure", "Radiation", "Other"]  # noqa: E501
+        if intervention_type not in allowed_values:
+            raise ValueError(
+                "Invalid value for `intervention_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(intervention_type, allowed_values)
+            )
 
         self._intervention_type = intervention_type
 
