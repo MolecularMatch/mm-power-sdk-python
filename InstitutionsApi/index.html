@@ -56,6 +56,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../Address/">Address</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../Agency/">Agency</a>
 	    </li>
           
@@ -332,7 +337,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#post_institution">post_institution</a></li>
+    <li class="toctree-l2"><a href="#get_private_trials">get_private_trials</a></li>
     
         <ul>
         
@@ -347,7 +352,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#post_private_trial">post_private_trial</a></li>
+    <li class="toctree-l2"><a href="#post_institution">post_institution</a></li>
     
         <ul>
         
@@ -362,7 +367,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#put_institution">put_institution</a></li>
+    <li class="toctree-l2"><a href="#post_private_trial">post_private_trial</a></li>
     
         <ul>
         
@@ -377,7 +382,7 @@
         </ul>
     
 
-    <li class="toctree-l2"><a href="#put_private_trial">put_private_trial</a></li>
+    <li class="toctree-l2"><a href="#put_institution">put_institution</a></li>
     
         <ul>
         
@@ -392,12 +397,37 @@
         </ul>
     
 
+    <li class="toctree-l2"><a href="#put_private_trial">put_private_trial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#example_11">Example</a></li>
+        
+            <li><a class="toctree-l3" href="#parameters_11">Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#return-type_11">Return type</a></li>
+        
+            <li><a class="toctree-l3" href="#http-request-headers_11">HTTP request headers</a></li>
+        
+        </ul>
+    
+
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
     <a class="" href="../Intervention/">Intervention</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Investigator/">Investigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Location/">Location</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -478,6 +508,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../SearchResponsePublication/">SearchResponsePublication</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Site/">Site</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -602,6 +637,11 @@
 <td><a href="./#get_private_trial_status"><strong>get_private_trial_status</strong></a></td>
 <td><strong>GET</strong> /institution/{id}/trial/{trialId}/status</td>
 <td>Get a private trial record&#x27;s status</td>
+</tr>
+<tr>
+<td><a href="./#get_private_trials"><strong>get_private_trials</strong></a></td>
+<td><strong>GET</strong> /institution/{id}/trials</td>
+<td>Get a paginated list of private</td>
 </tr>
 <tr>
 <td><a href="./#post_institution"><strong>post_institution</strong></a></td>
@@ -991,12 +1031,63 @@ except ApiException as e:
 <li><strong>Content-Type</strong>: Not defined</li>
 <li><strong>Accept</strong>: application/json</li>
 </ul>
+<h1 id="get_private_trials"><strong>get_private_trials</strong></h1>
+<blockquote>
+<p>PrivateTrial get_private_trials(id)</p>
+</blockquote>
+<p>Get a paginated list of private </p>
+<h3 id="example_7">Example</h3>
+<pre><code class="python">from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Institution governing the private trial
+
+try:
+    # Get a paginated list of private 
+    api_response = api_instance.get_private_trials(id)
+    pprint(api_response)
+except ApiException as e:
+    print(&quot;Exception when calling InstitutionsApi-&gt;get_private_trials: %s\n&quot; % e)
+</code></pre>
+
+<h3 id="parameters_7">Parameters</h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>ID of the Institution governing the private trial</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="return-type_7">Return type</h3>
+<p><a href="../PrivateTrial/"><strong>PrivateTrial</strong></a></p>
+<h3 id="http-request-headers_7">HTTP request headers</h3>
+<ul>
+<li><strong>Content-Type</strong>: Not defined</li>
+<li><strong>Accept</strong>: application/json</li>
+</ul>
 <h1 id="post_institution"><strong>post_institution</strong></h1>
 <blockquote>
 <p>Institution post_institution(body)</p>
 </blockquote>
 <p>Create an institution</p>
-<h3 id="example_7">Example</h3>
+<h3 id="example_8">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
 import mm_power_sdk_python
@@ -1016,7 +1107,7 @@ except ApiException as e:
     print(&quot;Exception when calling InstitutionsApi-&gt;post_institution: %s\n&quot; % e)
 </code></pre>
 
-<h3 id="parameters_7">Parameters</h3>
+<h3 id="parameters_8">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1035,9 +1126,9 @@ except ApiException as e:
 </tr>
 </tbody>
 </table>
-<h3 id="return-type_7">Return type</h3>
+<h3 id="return-type_8">Return type</h3>
 <p><a href="../Institution/"><strong>Institution</strong></a></p>
-<h3 id="http-request-headers_7">HTTP request headers</h3>
+<h3 id="http-request-headers_8">HTTP request headers</h3>
 <ul>
 <li><strong>Content-Type</strong>: application/json</li>
 <li><strong>Accept</strong>: application/json</li>
@@ -1047,7 +1138,7 @@ except ApiException as e:
 <p>PrivateTrial post_private_trial(body)</p>
 </blockquote>
 <p>Create a private trial</p>
-<h3 id="example_8">Example</h3>
+<h3 id="example_9">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
 import mm_power_sdk_python
@@ -1067,7 +1158,7 @@ except ApiException as e:
     print(&quot;Exception when calling InstitutionsApi-&gt;post_private_trial: %s\n&quot; % e)
 </code></pre>
 
-<h3 id="parameters_8">Parameters</h3>
+<h3 id="parameters_9">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1086,9 +1177,9 @@ except ApiException as e:
 </tr>
 </tbody>
 </table>
-<h3 id="return-type_8">Return type</h3>
+<h3 id="return-type_9">Return type</h3>
 <p><a href="../PrivateTrial/"><strong>PrivateTrial</strong></a></p>
-<h3 id="http-request-headers_8">HTTP request headers</h3>
+<h3 id="http-request-headers_9">HTTP request headers</h3>
 <ul>
 <li><strong>Content-Type</strong>: application/json</li>
 <li><strong>Accept</strong>: application/json</li>
@@ -1099,7 +1190,7 @@ except ApiException as e:
 </blockquote>
 <p>Put/Update an institution</p>
 <p>Put an institution</p>
-<h3 id="example_9">Example</h3>
+<h3 id="example_10">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
 import mm_power_sdk_python
@@ -1119,7 +1210,7 @@ except ApiException as e:
     print(&quot;Exception when calling InstitutionsApi-&gt;put_institution: %s\n&quot; % e)
 </code></pre>
 
-<h3 id="parameters_9">Parameters</h3>
+<h3 id="parameters_10">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1138,9 +1229,9 @@ except ApiException as e:
 </tr>
 </tbody>
 </table>
-<h3 id="return-type_9">Return type</h3>
+<h3 id="return-type_10">Return type</h3>
 <p><a href="../Institution/"><strong>Institution</strong></a></p>
-<h3 id="http-request-headers_9">HTTP request headers</h3>
+<h3 id="http-request-headers_10">HTTP request headers</h3>
 <ul>
 <li><strong>Content-Type</strong>: Not defined</li>
 <li><strong>Accept</strong>: application/json</li>
@@ -1151,7 +1242,7 @@ except ApiException as e:
 </blockquote>
 <p>Put/Update a private trial</p>
 <p>Put a private trial</p>
-<h3 id="example_10">Example</h3>
+<h3 id="example_11">Example</h3>
 <pre><code class="python">from __future__ import print_function
 import time
 import mm_power_sdk_python
@@ -1172,7 +1263,7 @@ except ApiException as e:
     print(&quot;Exception when calling InstitutionsApi-&gt;put_private_trial: %s\n&quot; % e)
 </code></pre>
 
-<h3 id="parameters_10">Parameters</h3>
+<h3 id="parameters_11">Parameters</h3>
 <table>
 <thead>
 <tr>
@@ -1197,9 +1288,9 @@ except ApiException as e:
 </tr>
 </tbody>
 </table>
-<h3 id="return-type_10">Return type</h3>
+<h3 id="return-type_11">Return type</h3>
 <p><a href="../PrivateTrial/"><strong>PrivateTrial</strong></a></p>
-<h3 id="http-request-headers_10">HTTP request headers</h3>
+<h3 id="http-request-headers_11">HTTP request headers</h3>
 <ul>
 <li><strong>Content-Type</strong>: Not defined</li>
 <li><strong>Accept</strong>: application/json</li>

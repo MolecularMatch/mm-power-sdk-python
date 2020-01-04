@@ -56,6 +56,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../Address/">Address</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../Agency/">Agency</a>
 	    </li>
           
@@ -231,6 +236,16 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../Investigator/">Investigator</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Location/">Location</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../Outcome/">Outcome</a>
 	    </li>
           
@@ -323,6 +338,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../Site/">Site</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../StandardizedTier/">StandardizedTier</a>
 	    </li>
           
@@ -411,16 +431,22 @@
 </thead>
 <tbody>
 <tr>
+<td><strong>id</strong></td>
+<td><strong>str</strong></td>
+<td>unique study identifier.</td>
+<td>[optional]</td>
+</tr>
+<tr>
 <td><strong>institution_id</strong></td>
 <td><strong>str</strong></td>
 <td>Unique institution identifier.</td>
-<td>[optional]</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>institution_study_id</strong></td>
 <td><strong>str</strong></td>
-<td>Unique study identifier.</td>
-<td>[optional]</td>
+<td>Unique study identifier (for the institution).</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>registry_id</strong></td>
@@ -450,7 +476,7 @@
 <td><strong>official_title</strong></td>
 <td><strong>str</strong></td>
 <td>Official title for the clinical trial.</td>
-<td>[optional]</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>sponsors</strong></td>
@@ -486,13 +512,13 @@
 <td><strong>status</strong></td>
 <td><strong>str</strong></td>
 <td>Trial recruiting status.</td>
-<td>[optional]</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>start_date</strong></td>
 <td><strong>datetime</strong></td>
 <td>The estimated date on which the clinical study will be open for recruitment of participants, or the actual date on which the first participant was enrolled.</td>
-<td>[optional]</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>completion_date</strong></td>
@@ -510,7 +536,7 @@
 <td><strong>study_type</strong></td>
 <td><strong>str</strong></td>
 <td>The nature of the investigation or investigational use for which clinical study information is being submitted.</td>
-<td>[optional]</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>has_expanded_access</strong></td>
@@ -604,7 +630,7 @@
 </tr>
 <tr>
 <td><strong>overall_official</strong></td>
-<td><a href="../Contact/"><strong>list[Contact]</strong></a></td>
+<td><a href="../Investigator/"><strong>list[Investigator]</strong></a></td>
 <td>Person responsible for the overall scientific leadership of the protocol, including study principal investigator.</td>
 <td>[optional]</td>
 </tr>
@@ -622,14 +648,14 @@
 </tr>
 <tr>
 <td><strong>location</strong></td>
-<td><a href="../Facility/"><strong>list[Facility]</strong></a></td>
-<td>Information about the sites offering this trial.</td>
-<td>[optional]</td>
+<td><a href="../Location/"><strong>list[Location]</strong></a></td>
+<td>Information about the locations offering this trial.</td>
+<td></td>
 </tr>
 <tr>
 <td><strong>location_countries</strong></td>
 <td><strong>list[str]</strong></td>
-<td>Countries with sites offering this trial.</td>
+<td>Countries with locations offering this trial.</td>
 <td>[optional]</td>
 </tr>
 <tr>
@@ -678,6 +704,18 @@
 <td><strong>responsible_party</strong></td>
 <td><a href="../ResponsibleParty/"><strong>list[ResponsibleParty]</strong></a></td>
 <td>The entities and individuals responsible for this trial.</td>
+<td>[optional]</td>
+</tr>
+<tr>
+<td><strong>processing_status</strong></td>
+<td><strong>str</strong></td>
+<td>Indication of its level of readiness and incorporation into the MolecularMatch Knowledge base.</td>
+<td>[optional] [default to 'received']</td>
+</tr>
+<tr>
+<td><strong>test</strong></td>
+<td><strong>bool</strong></td>
+<td>A flag to mark test private trials.</td>
 <td>[optional]</td>
 </tr>
 </tbody>
