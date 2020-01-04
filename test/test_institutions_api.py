@@ -77,6 +77,13 @@ class TestInstitutionsApi(unittest.TestCase):
         """
         pass
 
+    def test_get_private_trials(self):
+        """Test case for get_private_trials
+
+        Get a paginated list of private   # noqa: E501
+        """
+        pass
+
     def test_post_institution(self):
         """Test case for post_institution
 

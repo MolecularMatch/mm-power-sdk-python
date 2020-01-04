@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *InstitutionsApi* | [**get_institutions**](docs/InstitutionsApi.md#get_institutions) | **GET** /institutions | Get a paginated list of institutions
 *InstitutionsApi* | [**get_private_trial**](docs/InstitutionsApi.md#get_private_trial) | **GET** /institution/{id}/trial/{trialId} | Get a private trial
 *InstitutionsApi* | [**get_private_trial_status**](docs/InstitutionsApi.md#get_private_trial_status) | **GET** /institution/{id}/trial/{trialId}/status | Get a private trial record&#x27;s status
+*InstitutionsApi* | [**get_private_trials**](docs/InstitutionsApi.md#get_private_trials) | **GET** /institution/{id}/trials | Get a paginated list of private 
 *InstitutionsApi* | [**post_institution**](docs/InstitutionsApi.md#post_institution) | **POST** /institution | Create an institution
 *InstitutionsApi* | [**post_private_trial**](docs/InstitutionsApi.md#post_private_trial) | **POST** /institution/{id}/trial | Create a private trial
 *InstitutionsApi* | [**put_institution**](docs/InstitutionsApi.md#put_institution) | **PUT** /institution/{id} | Put/Update an institution
@@ -107,6 +108,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Address](docs/Address.md)
  - [Agency](docs/Agency.md)
  - [ArmGroup](docs/ArmGroup.md)
  - [Assertion](docs/Assertion.md)
@@ -138,6 +140,8 @@ Class | Method | HTTP request | Description
  - [Filter](docs/Filter.md)
  - [Institution](docs/Institution.md)
  - [Intervention](docs/Intervention.md)
+ - [Investigator](docs/Investigator.md)
+ - [Location](docs/Location.md)
  - [Outcome](docs/Outcome.md)
  - [Oversight](docs/Oversight.md)
  - [PrivateTrial](docs/PrivateTrial.md)
@@ -153,6 +157,7 @@ Class | Method | HTTP request | Description
  - [SearchResponseClinicalTrial](docs/SearchResponseClinicalTrial.md)
  - [SearchResponseDrug](docs/SearchResponseDrug.md)
  - [SearchResponsePublication](docs/SearchResponsePublication.md)
+ - [Site](docs/Site.md)
  - [StandardizedTier](docs/StandardizedTier.md)
  - [StandardizedTierTier](docs/StandardizedTierTier.md)
  - [StudyDesign](docs/StudyDesign.md)

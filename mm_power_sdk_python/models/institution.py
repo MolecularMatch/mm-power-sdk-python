@@ -323,6 +323,12 @@ class Institution(object):
         :param status: The status of this Institution.  # noqa: E501
         :type: str
         """
+        allowed_values = ["received", "in-process", "registered"]  # noqa: E501
+        if status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
+                .format(status, allowed_values)
+            )
 
         self._status = status
 

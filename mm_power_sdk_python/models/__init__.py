@@ -14,6 +14,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from mm_power_sdk_python.models.address import Address
 from mm_power_sdk_python.models.agency import Agency
 from mm_power_sdk_python.models.arm_group import ArmGroup
 from mm_power_sdk_python.models.assertion import Assertion
@@ -45,6 +46,8 @@ from mm_power_sdk_python.models.facility_geo import FacilityGeo
 from mm_power_sdk_python.models.filter import Filter
 from mm_power_sdk_python.models.institution import Institution
 from mm_power_sdk_python.models.intervention import Intervention
+from mm_power_sdk_python.models.investigator import Investigator
+from mm_power_sdk_python.models.location import Location
 from mm_power_sdk_python.models.outcome import Outcome
 from mm_power_sdk_python.models.oversight import Oversight
 from mm_power_sdk_python.models.private_trial import PrivateTrial
@@ -60,6 +63,7 @@ from mm_power_sdk_python.models.search_response_assertion import SearchResponseA
 from mm_power_sdk_python.models.search_response_clinical_trial import SearchResponseClinicalTrial
 from mm_power_sdk_python.models.search_response_drug import SearchResponseDrug
 from mm_power_sdk_python.models.search_response_publication import SearchResponsePublication
+from mm_power_sdk_python.models.site import Site
 from mm_power_sdk_python.models.standardized_tier import StandardizedTier
 from mm_power_sdk_python.models.standardized_tier_tier import StandardizedTierTier
 from mm_power_sdk_python.models.study_design import StudyDesign

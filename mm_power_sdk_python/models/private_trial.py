@@ -29,6 +29,7 @@ class PrivateTrial(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'institution_id': 'str',
         'institution_study_id': 'str',
         'registry_id': 'str',
@@ -61,10 +62,10 @@ class PrivateTrial(object):
         'biospec_retention': 'str',
         'biospec_descr': 'str',
         'eligibility': 'Eligibility',
-        'overall_official': 'list[Contact]',
+        'overall_official': 'list[Investigator]',
         'overall_contact': 'Contact',
         'overall_contact_backup': 'Contact',
-        'location': 'list[Facility]',
+        'location': 'list[Location]',
         'location_countries': 'list[str]',
         'link': 'str',
         'reference': 'list[Reference]',
@@ -73,10 +74,13 @@ class PrivateTrial(object):
         'study_first_posted': 'datetime',
         'last_update_posted': 'datetime',
         'keyword': 'list[str]',
-        'responsible_party': 'list[ResponsibleParty]'
+        'responsible_party': 'list[ResponsibleParty]',
+        'processing_status': 'str',
+        'test': 'bool'
     }
 
     attribute_map = {
+        'id': 'id',
         'institution_id': 'institution_id',
         'institution_study_id': 'institution_study_id',
         'registry_id': 'registry_id',
@@ -121,11 +125,14 @@ class PrivateTrial(object):
         'study_first_posted': 'study_first_posted',
         'last_update_posted': 'last_update_posted',
         'keyword': 'keyword',
-        'responsible_party': 'responsible_party'
+        'responsible_party': 'responsible_party',
+        'processing_status': 'processing_status',
+        'test': 'test'
     }
 
-    def __init__(self, institution_id=None, institution_study_id=None, registry_id=None, visible_to_idn=True, brief_title=None, acronym=None, official_title=None, sponsors=None, source=None, oversight=None, brief_summary=None, detailed_description=None, status=None, start_date=None, completion_date=None, phase='N/A', study_type=None, has_expanded_access=None, expanded_access=None, study_design=None, primary_outcome=None, secondary_outcome=None, other_outcome=None, number_of_arms=1, number_of_groups=1, enrollment=None, condition=None, arm_group=None, intervention=None, biospec_retention='None Retained', biospec_descr=None, eligibility=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location=None, location_countries=None, link=None, reference=None, verification_date=None, study_first_submitted=None, study_first_posted=None, last_update_posted=None, keyword=None, responsible_party=None):  # noqa: E501
+    def __init__(self, id=None, institution_id=None, institution_study_id=None, registry_id=None, visible_to_idn=True, brief_title=None, acronym=None, official_title=None, sponsors=None, source=None, oversight=None, brief_summary=None, detailed_description=None, status=None, start_date=None, completion_date=None, phase='N/A', study_type=None, has_expanded_access=None, expanded_access=None, study_design=None, primary_outcome=None, secondary_outcome=None, other_outcome=None, number_of_arms=1, number_of_groups=1, enrollment=None, condition=None, arm_group=None, intervention=None, biospec_retention='None Retained', biospec_descr=None, eligibility=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location=None, location_countries=None, link=None, reference=None, verification_date=None, study_first_submitted=None, study_first_posted=None, last_update_posted=None, keyword=None, responsible_party=None, processing_status='received', test=None):  # noqa: E501
         """PrivateTrial - a model defined in Swagger"""  # noqa: E501
+        self._id = None
         self._institution_id = None
         self._institution_study_id = None
         self._registry_id = None
@@ -171,11 +178,13 @@ class PrivateTrial(object):
         self._last_update_posted = None
         self._keyword = None
         self._responsible_party = None
+        self._processing_status = None
+        self._test = None
         self.discriminator = None
-        if institution_id is not None:
-            self.institution_id = institution_id
-        if institution_study_id is not None:
-            self.institution_study_id = institution_study_id
+        if id is not None:
+            self.id = id
+        self.institution_id = institution_id
+        self.institution_study_id = institution_study_id
         if registry_id is not None:
             self.registry_id = registry_id
         if visible_to_idn is not None:
@@ -184,8 +193,7 @@ class PrivateTrial(object):
             self.brief_title = brief_title
         if acronym is not None:
             self.acronym = acronym
-        if official_title is not None:
-            self.official_title = official_title
+        self.official_title = official_title
         if sponsors is not None:
             self.sponsors = sponsors
         if source is not None:
@@ -196,16 +204,13 @@ class PrivateTrial(object):
             self.brief_summary = brief_summary
         if detailed_description is not None:
             self.detailed_description = detailed_description
-        if status is not None:
-            self.status = status
-        if start_date is not None:
-            self.start_date = start_date
+        self.status = status
+        self.start_date = start_date
         if completion_date is not None:
             self.completion_date = completion_date
         if phase is not None:
             self.phase = phase
-        if study_type is not None:
-            self.study_type = study_type
+        self.study_type = study_type
         if has_expanded_access is not None:
             self.has_expanded_access = has_expanded_access
         if expanded_access is not None:
@@ -242,8 +247,7 @@ class PrivateTrial(object):
             self.overall_contact = overall_contact
         if overall_contact_backup is not None:
             self.overall_contact_backup = overall_contact_backup
-        if location is not None:
-            self.location = location
+        self.location = location
         if location_countries is not None:
             self.location_countries = location_countries
         if link is not None:
@@ -262,6 +266,33 @@ class PrivateTrial(object):
             self.keyword = keyword
         if responsible_party is not None:
             self.responsible_party = responsible_party
+        if processing_status is not None:
+            self.processing_status = processing_status
+        if test is not None:
+            self.test = test
+
+    @property
+    def id(self):
+        """Gets the id of this PrivateTrial.  # noqa: E501
+
+        unique study identifier.  # noqa: E501
+
+        :return: The id of this PrivateTrial.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this PrivateTrial.
+
+        unique study identifier.  # noqa: E501
+
+        :param id: The id of this PrivateTrial.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def institution_id(self):
@@ -283,6 +314,8 @@ class PrivateTrial(object):
         :param institution_id: The institution_id of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        if institution_id is None:
+            raise ValueError("Invalid value for `institution_id`, must not be `None`")  # noqa: E501
 
         self._institution_id = institution_id
 
@@ -290,7 +323,7 @@ class PrivateTrial(object):
     def institution_study_id(self):
         """Gets the institution_study_id of this PrivateTrial.  # noqa: E501
 
-        Unique study identifier.  # noqa: E501
+        Unique study identifier (for the institution).  # noqa: E501
 
         :return: The institution_study_id of this PrivateTrial.  # noqa: E501
         :rtype: str
@@ -301,11 +334,13 @@ class PrivateTrial(object):
     def institution_study_id(self, institution_study_id):
         """Sets the institution_study_id of this PrivateTrial.
 
-        Unique study identifier.  # noqa: E501
+        Unique study identifier (for the institution).  # noqa: E501
 
         :param institution_study_id: The institution_study_id of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        if institution_study_id is None:
+            raise ValueError("Invalid value for `institution_study_id`, must not be `None`")  # noqa: E501
 
         self._institution_study_id = institution_study_id
 
@@ -421,6 +456,8 @@ class PrivateTrial(object):
         :param official_title: The official_title of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        if official_title is None:
+            raise ValueError("Invalid value for `official_title`, must not be `None`")  # noqa: E501
 
         self._official_title = official_title
 
@@ -557,6 +594,8 @@ class PrivateTrial(object):
         :param status: The status of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        if status is None:
+            raise ValueError("Invalid value for `status`, must not be `None`")  # noqa: E501
         allowed_values = ["Active, not recruiting", "Approved for marketing", "Available", "Completed", "Enrolling by invitation", "No longer available", "Not yet recruiting", "Recruiting", "Suspended", "Temporarily not available", "Terminated", "Withdrawn", "Withheld", "Unknown status"]  # noqa: E501
         if status not in allowed_values:
             raise ValueError(
@@ -586,6 +625,8 @@ class PrivateTrial(object):
         :param start_date: The start_date of this PrivateTrial.  # noqa: E501
         :type: datetime
         """
+        if start_date is None:
+            raise ValueError("Invalid value for `start_date`, must not be `None`")  # noqa: E501
 
         self._start_date = start_date
 
@@ -661,6 +702,8 @@ class PrivateTrial(object):
         :param study_type: The study_type of this PrivateTrial.  # noqa: E501
         :type: str
         """
+        if study_type is None:
+            raise ValueError("Invalid value for `study_type`, must not be `None`")  # noqa: E501
         allowed_values = ["Expanded Access", "Interventional", "N/A", "Observational", "Observational [Patient Registry]"]  # noqa: E501
         if study_type not in allowed_values:
             raise ValueError(
@@ -1014,7 +1057,7 @@ class PrivateTrial(object):
         Person responsible for the overall scientific leadership of the protocol, including study principal investigator.  # noqa: E501
 
         :return: The overall_official of this PrivateTrial.  # noqa: E501
-        :rtype: list[Contact]
+        :rtype: list[Investigator]
         """
         return self._overall_official
 
@@ -1025,7 +1068,7 @@ class PrivateTrial(object):
         Person responsible for the overall scientific leadership of the protocol, including study principal investigator.  # noqa: E501
 
         :param overall_official: The overall_official of this PrivateTrial.  # noqa: E501
-        :type: list[Contact]
+        :type: list[Investigator]
         """
 
         self._overall_official = overall_official
@@ -1076,10 +1119,10 @@ class PrivateTrial(object):
     def location(self):
         """Gets the location of this PrivateTrial.  # noqa: E501
 
-        Information about the sites offering this trial.  # noqa: E501
+        Information about the locations offering this trial.  # noqa: E501
 
         :return: The location of this PrivateTrial.  # noqa: E501
-        :rtype: list[Facility]
+        :rtype: list[Location]
         """
         return self._location
 
@@ -1087,11 +1130,13 @@ class PrivateTrial(object):
     def location(self, location):
         """Sets the location of this PrivateTrial.
 
-        Information about the sites offering this trial.  # noqa: E501
+        Information about the locations offering this trial.  # noqa: E501
 
         :param location: The location of this PrivateTrial.  # noqa: E501
-        :type: list[Facility]
+        :type: list[Location]
         """
+        if location is None:
+            raise ValueError("Invalid value for `location`, must not be `None`")  # noqa: E501
 
         self._location = location
 
@@ -1099,7 +1144,7 @@ class PrivateTrial(object):
     def location_countries(self):
         """Gets the location_countries of this PrivateTrial.  # noqa: E501
 
-        Countries with sites offering this trial.  # noqa: E501
+        Countries with locations offering this trial.  # noqa: E501
 
         :return: The location_countries of this PrivateTrial.  # noqa: E501
         :rtype: list[str]
@@ -1110,7 +1155,7 @@ class PrivateTrial(object):
     def location_countries(self, location_countries):
         """Sets the location_countries of this PrivateTrial.
 
-        Countries with sites offering this trial.  # noqa: E501
+        Countries with locations offering this trial.  # noqa: E501
 
         :param location_countries: The location_countries of this PrivateTrial.  # noqa: E501
         :type: list[str]
@@ -1301,6 +1346,58 @@ class PrivateTrial(object):
         """
 
         self._responsible_party = responsible_party
+
+    @property
+    def processing_status(self):
+        """Gets the processing_status of this PrivateTrial.  # noqa: E501
+
+        Indication of its level of readiness and incorporation into the MolecularMatch Knowledge base.  # noqa: E501
+
+        :return: The processing_status of this PrivateTrial.  # noqa: E501
+        :rtype: str
+        """
+        return self._processing_status
+
+    @processing_status.setter
+    def processing_status(self, processing_status):
+        """Sets the processing_status of this PrivateTrial.
+
+        Indication of its level of readiness and incorporation into the MolecularMatch Knowledge base.  # noqa: E501
+
+        :param processing_status: The processing_status of this PrivateTrial.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["received", "in-process", "registered"]  # noqa: E501
+        if processing_status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `processing_status` ({0}), must be one of {1}"  # noqa: E501
+                .format(processing_status, allowed_values)
+            )
+
+        self._processing_status = processing_status
+
+    @property
+    def test(self):
+        """Gets the test of this PrivateTrial.  # noqa: E501
+
+        A flag to mark test private trials.  # noqa: E501
+
+        :return: The test of this PrivateTrial.  # noqa: E501
+        :rtype: bool
+        """
+        return self._test
+
+    @test.setter
+    def test(self, test):
+        """Sets the test of this PrivateTrial.
+
+        A flag to mark test private trials.  # noqa: E501
+
+        :param test: The test of this PrivateTrial.  # noqa: E501
+        :type: bool
+        """
+
+        self._test = test
 
     def to_dict(self):
         """Returns the model properties as a dict"""

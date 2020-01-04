@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**get_institutions**](InstitutionsApi.md#get_institutions) | **GET** /institutions | Get a paginated list of institutions
 [**get_private_trial**](InstitutionsApi.md#get_private_trial) | **GET** /institution/{id}/trial/{trialId} | Get a private trial
 [**get_private_trial_status**](InstitutionsApi.md#get_private_trial_status) | **GET** /institution/{id}/trial/{trialId}/status | Get a private trial record&#x27;s status
+[**get_private_trials**](InstitutionsApi.md#get_private_trials) | **GET** /institution/{id}/trials | Get a paginated list of private 
 [**post_institution**](InstitutionsApi.md#post_institution) | **POST** /institution | Create an institution
 [**post_private_trial**](InstitutionsApi.md#post_private_trial) | **POST** /institution/{id}/trial | Create a private trial
 [**put_institution**](InstitutionsApi.md#put_institution) | **PUT** /institution/{id} | Put/Update an institution
@@ -343,6 +344,53 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| ID of the Institution governing the private trial | 
  **trial_id** | **str**| ID of the private trial to return status for | 
+
+### Return type
+
+[**PrivateTrial**](PrivateTrial.md)
+
+
+
+
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+ 
+
+# **get_private_trials**
+> PrivateTrial get_private_trials(id)
+
+Get a paginated list of private 
+
+### Example
+```python
+from __future__ import print_function
+import time
+import mm_power_sdk_python
+from mm_power_sdk_python.rest import ApiException
+from pprint import pprint
+
+
+# create an instance of the API class
+api_instance = mm_power_sdk_python.InstitutionsApi(mm_power_sdk_python.ApiClient(configuration))
+id = 'id_example' # str | ID of the Institution governing the private trial
+
+try:
+    # Get a paginated list of private 
+    api_response = api_instance.get_private_trials(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling InstitutionsApi->get_private_trials: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **str**| ID of the Institution governing the private trial | 
 
 ### Return type
 
