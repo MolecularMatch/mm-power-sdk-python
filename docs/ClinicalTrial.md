@@ -8,6 +8,8 @@ Name | Type | Description | Notes
 **import_date** | **datetime** | date this record was imported into the MolecularMatch database. | [optional] 
 **id** | **str** | unique identifier. | [optional] 
 **source** | **str** | native data source of this record | [optional] 
+**visible_to** | **list[str]** | Public trials (those listed in a public registry) will be visible to all, and private trials will indicate the institutions that this trial is visible to. | [optional] 
+**institution_id** | **str** | If private trial, this is the governing institution. | [optional] 
 **brief_title** | **str** | A short title of the clinical study written in language intended for the lay public. The title should include, where possible, information on the participants, condition being evaluated, and intervention(s) studied. | [optional] 
 **patient_title** | **str** | Patient friendly title for the clinical trial. | [optional] 
 **title** | **str** | Official title for the clinical trial. | [optional] 

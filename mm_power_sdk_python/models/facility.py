@@ -59,6 +59,7 @@ class Facility(object):
         'email_backup': 'str',
         'distance': 'float',
         'is_in_institution': 'bool',
+        'is_in_idn': 'bool',
         'tags': 'list[Tag]'
     }
 
@@ -93,10 +94,11 @@ class Facility(object):
         'email_backup': 'email_backup',
         'distance': 'distance',
         'is_in_institution': 'isInInstitution',
+        'is_in_idn': 'isInIDN',
         'tags': 'tags'
     }
 
-    def __init__(self, id=None, street=None, number=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, lat=None, lon=None, geo=None, status=None, link=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, distance=None, is_in_institution=None, tags=None):  # noqa: E501
+    def __init__(self, id=None, street=None, number=None, country=None, name=None, po_box=None, city=None, state=None, zip=None, lat=None, lon=None, geo=None, status=None, link=None, first_name=None, middle_name=None, last_name=None, degrees=None, phone=None, phone_ext=None, email=None, first_name_backup=None, middle_name_backup=None, last_name_backup=None, degrees_backup=None, phone_backup=None, phone_ext_backup=None, email_backup=None, distance=None, is_in_institution=None, is_in_idn=None, tags=None):  # noqa: E501
         """Facility - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._street = None
@@ -128,6 +130,7 @@ class Facility(object):
         self._email_backup = None
         self._distance = None
         self._is_in_institution = None
+        self._is_in_idn = None
         self._tags = None
         self.discriminator = None
         if id is not None:
@@ -190,6 +193,8 @@ class Facility(object):
             self.distance = distance
         if is_in_institution is not None:
             self.is_in_institution = is_in_institution
+        if is_in_idn is not None:
+            self.is_in_idn = is_in_idn
         if tags is not None:
             self.tags = tags
 
@@ -878,6 +883,29 @@ class Facility(object):
         """
 
         self._is_in_institution = is_in_institution
+
+    @property
+    def is_in_idn(self):
+        """Gets the is_in_idn of this Facility.  # noqa: E501
+
+        If an institutionId was provided for search, indicates if this site is associated with the institution's Integrated Delivery Network (IDN).  # noqa: E501
+
+        :return: The is_in_idn of this Facility.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_in_idn
+
+    @is_in_idn.setter
+    def is_in_idn(self, is_in_idn):
+        """Sets the is_in_idn of this Facility.
+
+        If an institutionId was provided for search, indicates if this site is associated with the institution's Integrated Delivery Network (IDN).  # noqa: E501
+
+        :param is_in_idn: The is_in_idn of this Facility.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_in_idn = is_in_idn
 
     @property
     def tags(self):

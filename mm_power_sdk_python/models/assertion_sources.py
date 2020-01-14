@@ -293,7 +293,7 @@ class AssertionSources(object):
         :param name: The name of this AssertionSources.  # noqa: E501
         :type: str
         """
-        allowed_values = ["PUBMED", "AACR", "ASCO", "ESMO"]  # noqa: E501
+        allowed_values = ["PUBMED", "AACR", "ASCO", "ESMO", "ASCOMEETING"]  # noqa: E501
         if name not in allowed_values:
             raise ValueError(
                 "Invalid value for `name` ({0}), must be one of {1}"  # noqa: E501

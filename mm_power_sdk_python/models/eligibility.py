@@ -98,7 +98,7 @@ class Eligibility(object):
         :param gender: The gender of this Eligibility.  # noqa: E501
         :type: str
         """
-        allowed_values = ["Female", "Male", "All"]  # noqa: E501
+        allowed_values = ["Female", "Male", "All", "Both"]  # noqa: E501
         if gender not in allowed_values:
             raise ValueError(
                 "Invalid value for `gender` ({0}), must be one of {1}"  # noqa: E501

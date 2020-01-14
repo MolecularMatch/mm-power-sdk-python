@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **email_backup** | **str** | Site backup contact email address. | [optional] 
 **distance** | **float** | Distance based on the distance unit of measure specified (miles if unspecified) from the search location (either geopoint, location object, or inferred search point bsaed on filters provided. | [optional] 
 **is_in_institution** | **bool** | If an institutionId was provided for search, indicates if this site is associated with the institution. | [optional] 
+**is_in_idn** | **bool** | If an institutionId was provided for search, indicates if this site is associated with the institution&#x27;s Integrated Delivery Network (IDN). | [optional] 
 **tags** | [**list[Tag]**](Tag.md) | Concept associations established for this site. | [optional] 
 
 

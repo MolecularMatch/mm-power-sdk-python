@@ -34,6 +34,8 @@ class ClinicalTrial(object):
         'import_date': 'datetime',
         'id': 'str',
         'source': 'str',
+        'visible_to': 'list[str]',
+        'institution_id': 'str',
         'brief_title': 'str',
         'patient_title': 'str',
         'title': 'str',
@@ -87,6 +89,8 @@ class ClinicalTrial(object):
         'import_date': 'importDate',
         'id': 'id',
         'source': 'source',
+        'visible_to': 'visibleTo',
+        'institution_id': 'institutionId',
         'brief_title': 'briefTitle',
         'patient_title': 'patientTitle',
         'title': 'title',
@@ -134,13 +138,15 @@ class ClinicalTrial(object):
         'stats': '_stats'
     }
 
-    def __init__(self, score=None, mboost=None, import_date=None, id=None, source=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase='N/A', study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None, stats=None):  # noqa: E501
+    def __init__(self, score=None, mboost=None, import_date=None, id=None, source=None, visible_to=None, institution_id=None, brief_title=None, patient_title=None, title=None, brief_summary=None, brief_summary_preserved=None, summary=None, summary_preserved=None, status=None, phase='N/A', study_type=None, study_design=None, start_date=None, completion_date=None, first_received_date=None, last_changed_date=None, verification_date=None, sponsors=None, conditions=None, interventions=None, keywords=None, arm_groups=None, primary_outcomes=None, secondary_outcomes=None, other_outcomes=None, eligibility=None, enrollment=None, min_age=None, max_age=None, gender=None, overall_official=None, overall_contact=None, overall_contact_backup=None, location_summary=None, locations=None, countries=None, inclusion_criteria=None, inclusion_criteria_preserved=None, exclusion_criteria=None, exclusion_criteria_preserved=None, synonyms=None, acronym=None, link=None, tags=None, molecular_alterations=None, stats=None):  # noqa: E501
         """ClinicalTrial - a model defined in Swagger"""  # noqa: E501
         self._score = None
         self._mboost = None
         self._import_date = None
         self._id = None
         self._source = None
+        self._visible_to = None
+        self._institution_id = None
         self._brief_title = None
         self._patient_title = None
         self._title = None
@@ -197,6 +203,10 @@ class ClinicalTrial(object):
             self.id = id
         if source is not None:
             self.source = source
+        if visible_to is not None:
+            self.visible_to = visible_to
+        if institution_id is not None:
+            self.institution_id = institution_id
         if brief_title is not None:
             self.brief_title = brief_title
         if patient_title is not None:
@@ -402,6 +412,52 @@ class ClinicalTrial(object):
         """
 
         self._source = source
+
+    @property
+    def visible_to(self):
+        """Gets the visible_to of this ClinicalTrial.  # noqa: E501
+
+        Public trials (those listed in a public registry) will be visible to all, and private trials will indicate the institutions that this trial is visible to.  # noqa: E501
+
+        :return: The visible_to of this ClinicalTrial.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._visible_to
+
+    @visible_to.setter
+    def visible_to(self, visible_to):
+        """Sets the visible_to of this ClinicalTrial.
+
+        Public trials (those listed in a public registry) will be visible to all, and private trials will indicate the institutions that this trial is visible to.  # noqa: E501
+
+        :param visible_to: The visible_to of this ClinicalTrial.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._visible_to = visible_to
+
+    @property
+    def institution_id(self):
+        """Gets the institution_id of this ClinicalTrial.  # noqa: E501
+
+        If private trial, this is the governing institution.  # noqa: E501
+
+        :return: The institution_id of this ClinicalTrial.  # noqa: E501
+        :rtype: str
+        """
+        return self._institution_id
+
+    @institution_id.setter
+    def institution_id(self, institution_id):
+        """Sets the institution_id of this ClinicalTrial.
+
+        If private trial, this is the governing institution.  # noqa: E501
+
+        :param institution_id: The institution_id of this ClinicalTrial.  # noqa: E501
+        :type: str
+        """
+
+        self._institution_id = institution_id
 
     @property
     def brief_title(self):
