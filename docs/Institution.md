@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **synonyms** | **list[str]** | Alternative names the institution is referred by. | [optional] 
 **status** | **str** | Indication of its level of readiness and incorporation into the MolecularMatch Knowledge base. | [optional] 
 **test** | **bool** | A flag to mark test institutions. | [optional] 
+**expiration_date** | **datetime** | The institution will auto delete on this date.  Only used for institutions marked as test. | [optional] 
 
 
 

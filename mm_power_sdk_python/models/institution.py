@@ -39,7 +39,8 @@ class Institution(object):
         'idn': 'str',
         'synonyms': 'list[str]',
         'status': 'str',
-        'test': 'bool'
+        'test': 'bool',
+        'expiration_date': 'datetime'
     }
 
     attribute_map = {
@@ -53,10 +54,11 @@ class Institution(object):
         'idn': 'idn',
         'synonyms': 'synonyms',
         'status': 'status',
-        'test': 'test'
+        'test': 'test',
+        'expiration_date': 'expirationDate'
     }
 
-    def __init__(self, id=None, name=None, country=None, address=None, sub_division=None, city=None, postal_code=None, idn=None, synonyms=None, status=None, test=None):  # noqa: E501
+    def __init__(self, id=None, name=None, country=None, address=None, sub_division=None, city=None, postal_code=None, idn=None, synonyms=None, status=None, test=None, expiration_date=None):  # noqa: E501
         """Institution - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._name = None
@@ -69,6 +71,7 @@ class Institution(object):
         self._synonyms = None
         self._status = None
         self._test = None
+        self._expiration_date = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -89,6 +92,8 @@ class Institution(object):
             self.status = status
         if test is not None:
             self.test = test
+        if expiration_date is not None:
+            self.expiration_date = expiration_date
 
     @property
     def id(self):
@@ -354,6 +359,29 @@ class Institution(object):
         """
 
         self._test = test
+
+    @property
+    def expiration_date(self):
+        """Gets the expiration_date of this Institution.  # noqa: E501
+
+        The institution will auto delete on this date.  Only used for institutions marked as test.  # noqa: E501
+
+        :return: The expiration_date of this Institution.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._expiration_date
+
+    @expiration_date.setter
+    def expiration_date(self, expiration_date):
+        """Sets the expiration_date of this Institution.
+
+        The institution will auto delete on this date.  Only used for institutions marked as test.  # noqa: E501
+
+        :param expiration_date: The expiration_date of this Institution.  # noqa: E501
+        :type: datetime
+        """
+
+        self._expiration_date = expiration_date
 
     def to_dict(self):
         """Returns the model properties as a dict"""
